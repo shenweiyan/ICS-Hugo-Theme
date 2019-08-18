@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <title>LaTeX 2018 安装与使用教程 - </title>
+    
+     
+    <meta property="og:title" content="LaTeX 2018 安装与使用教程 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/style.css"/>
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/mystyle.css"/> 
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/fonts.css" />
+    
+<link rel="stylesheet" href="https://blog.bioinit.com/css/custom.css" />
+
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      
+
+<h1><a href="../../"><img src="https://apps-db.oss-cn-shenzhen.aliyuncs.com/logos/shenweiyan.png" alt="Steven Shen" /></a></h1>
+
+
+
+      <nav class="menu">
+        <input id="menu-check" type="checkbox" />
+        <label id="menu-label" for="menu-check" class="unselectable">
+          <span class="icon close-icon">✕</span>
+          <span class="icon open-icon">☰</span>
+          <span class="text">Menu</span>
+        </label>
+        <ul>
+        
+        
+        <li><a href="https://blog.bioinit.com">首页</a></li>
+        
+        <li><a href="../../about/">关于</a></li>
+        
+        <li><a href="../../post/">博客</a></li>
+        
+        <li><a href="../../read/">读书</a></li>
+        
+        <li><a href="../../research/">研究</a></li>
+        
+        <li><a href="../../tools/">工具</a></li>
+        
+        <li><a href="../../resume/shenweiyan">简历</a></li>
+        
+        <li><a href="../../other/">其他</a></li>
+        
+        
+
+<li class="menu-extra"></li>
+
+
+
+<li><a href="https://github.com/shenweiyan/home/edit/master/content/post/2019-07-01-latex-2018-tutorial.md" target="_blank">编辑</a></li>
+
+
+<li><a href="../../post/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
+
+
+        </ul>
+      </nav>
+    </header>
+
+    <article class="main">
+      <header class="title">
+        
+
+<h1>LaTeX 2018 安装与使用教程</h1>
+
+
+
+<h3>
+2019-07-01</h3> 
+
+
+   
+  
+
+
+      </header>
+
+
+
+
+<p><a name="2e2d5a8d"></a></p>
+
+<h1 id="一-背景">一、背景</h1>
+
+<p>前两天在自己的 Jupyter 服务器上想要把 notebook(.ipynb) 导出为 pdf 时发现 xelatex 没有安装：<br />
+<img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1548653466526-645be58b-5a23-43d2-b82a-895bc7500d15.png#align=left&amp;display=inline&amp;height=685&amp;originHeight=709&amp;originWidth=772&amp;size=0&amp;width=746" alt="" /><br />500 : Internal Server Error 如下：</p>
+
+<pre><code>nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+</code></pre>
+
+<p>另外一点就是，对于经常做生信分析的童鞋而言，LaTeX，或者 Html+wkhtmltopdf 也许是当前生信报告生成与交付的两种主要解决方案（或许还有其他更好的，欢迎留言交流）。因此对于生信分析而言，LaTeX 也许并不陌生，但真正熟悉和掌握它的人却寥寥无几。</p>
+
+<p><a name="4cc7b727"></a></p>
+
+<h1 id="二-概念">二、概念</h1>
+
+<p>TEX 是诞生于 20 世纪 70 年代末到 80 年代初的一款计算机排版软件，而且是命令行格式的，用来排版高质量的书籍，特别是包含有数学公式的书籍。TEX 以追求高质量为目标，很早就实现了矢量描述的计算机字体、细致的分页断行算法和数学排版功能，因其数学排版能力得到了学术界的广泛使用，也启发了后来复杂的商业计算机排版软件。</p>
+
+<p>LATEX 开始于 20 世纪 80 年代初，是 Leslie Lamport 博士为了编写自己的一部书籍而设计的。LATEX 是对 TEX 的封装和拓展，实际上就是用 TEX 语言编写的一组宏代码，拥有比原来 TEX 格式（Plain TEX）更为规范的命令和一整套预定义的格式，隐藏了不少排版方面的细节，可以让完全不懂排版理论的学者们也可以比较容易地将书籍和文稿排版出来。</p>
+
+<p>TEXLive 是 Tex 的一种比较流行的发行版，它是由 TUG（TEX User Group，TEX 用户组）发布的，可以在类 UNIX/Linux、Mac OS X 和 Windows 等不同的操作系统平台下安装使用，并且提供相当可靠的工作环境。</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">引擎</th>
+<th>(Knuth)TeX</th>
+<th>真正的(原始的)TeX</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center"></td>
+<td>ε-TeX</td>
+<td>相对于原始的TeX它提供了一种扩展模式</td>
+</tr>
+
+<tr>
+<td align="center"></td>
+<td>pdfTeX</td>
+<td>它从tex文件不通过dvi文件直接生成pdf文件（开发者已经转向LuaTeX）</td>
+</tr>
+
+<tr>
+<td align="center"></td>
+<td><strong>XeTeX</strong></td>
+<td>相对于原始的TeX，主要增加了Unicode和 OpenType 的支持</td>
+</tr>
+
+<tr>
+<td align="center"></td>
+<td>LuaTeX</td>
+<td>它使用Lua作为扩展语言，对于LaTeX支持尚不完善？</td>
+</tr>
+
+<tr>
+<td align="center"></td>
+<td>&hellip;&hellip;</td>
+<td>&hellip;&hellip;</td>
+</tr>
+
+<tr>
+<td align="center">宏集</td>
+<td>plain TeX</td>
+<td>最古老的TeX宏集，提供了一些最基本的命令</td>
+</tr>
+
+<tr>
+<td align="center"></td>
+<td>AMSTeX</td>
+<td>是美国数学会提供的一个TeX宏集，它添加了许多数学符号和数学字体</td>
+</tr>
+
+<tr>
+<td align="center"></td>
+<td><strong>LaTeX</strong></td>
+<td>相对于 PlainTeX，它使得科技文档的排版更加直观和方便</td>
+</tr>
+
+<tr>
+<td align="center"></td>
+<td>ConTeXt</td>
+<td>和 LaTeX 相比，它更加灵活和自由。</td>
+</tr>
+
+<tr>
+<td align="center"></td>
+<td>ctex</td>
+<td>小写的 ctex 是可以很好支持中文的宏包。</td>
+</tr>
+
+<tr>
+<td align="center"></td>
+<td>&hellip;&hellip;</td>
+<td>&hellip;&hellip;</td>
+</tr>
+
+<tr>
+<td align="center"><br /><br />发行版</td>
+<td><strong>TeX Live</strong></td>
+<td>国际 TeX 用户组织 TUG 开发，支持不同的操作系统。</td>
+</tr>
+
+<tr>
+<td align="center"></td>
+<td>MiKTeX</td>
+<td>Windows 下广泛使用的一个 TeX 发行版。</td>
+</tr>
+
+<tr>
+<td align="center"></td>
+<td>ConTeXt Minimals</td>
+<td>它包含了最新版本的 ConTeXt。</td>
+</tr>
+
+<tr>
+<td align="center"></td>
+<td>teTeX</td>
+<td>一个 Unix 下的 TeX 发行版，现在已经停止更新且并入 TeXLive。</td>
+</tr>
+
+<tr>
+<td align="center"></td>
+<td>fpTeX</td>
+<td>一个 Windows 的 TeX 发行版，已不再更新。</td>
+</tr>
+
+<tr>
+<td align="center"></td>
+<td>CTeX</td>
+<td><a href="http://www.ctex.org/CTeX">CTeX</a> 是基于 Windows 下的 <a href="http://www.ctex.org/MiKTeX">MiKTeX</a> 系统的一个中文套装（ctex 是可以很好支持中文的宏包）。</td>
+</tr>
+
+<tr>
+<td align="center"></td>
+<td>&hellip;&hellip;</td>
+<td>&hellip;&hellip;</td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="http://www.ctex.org/CTeX">CTeX</a> 中文套装是基于 Windows 下的 <a href="http://www.ctex.org/MiKTeX">MiKTeX</a> 系统，集成了编辑器 <a href="http://www.ctex.org/WinEdt">WinEdt</a> 和 <a href="http://www.ctex.org/PostScript/edit">PostScript</a> 处理软件 Ghostscript 和 GSview 等主要工具。 <a href="http://www.ctex.org/CTeX">CTeX</a> 中文套装在 <a href="http://www.ctex.org/MiKTeX">MiKTeX</a> 的基础上增加了对中文的完整支持。 <a href="http://www.ctex.org/CTeX">CTeX</a> 中文套装支持 CJK, xeCJK, CCT, TY 等多种中文 <a href="http://www.ctex.org/TeX">TeX</a> 处理方式。</p>
+
+<p><a name="3e00b449"></a></p>
+
+<h1 id="三-安装">三、安装</h1>
+
+<p>TEXLive 常用有两种安装方式：从 TEXLive 光盘进行安装和从网络在线安装。这里我们介绍第二种。</p>
+
+<p><a name="9b49ea7b"></a></p>
+
+<h2 id="1-镜像文件下载">1. 镜像文件下载</h2>
+
+<p>TexLive 历史版本下载地址：[<a href="ftp://tug.org/historic/systems/texlive/](">ftp://tug.org/historic/systems/texlive/](</a>)<br />
+TexLive 的镜像文件下载推荐使用 <a href="https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/">清华大学开源软件镜像站</a>，国内下载速度极快。<br /><a href="https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2018.iso">https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2018.iso</a></p>
+
+<p><a name="ecdc4a45"></a></p>
+
+<h2 id="2-镜像挂载">2. 镜像挂载</h2>
+
+<p>TEXLive 镜像文件下载完之后，推荐使用 root 用户进行安装。</p>
+
+<pre><code class="language-bash">$ sudo mkdir /mnt/textlive
+$ sudo mount -o loop texlive2018.iso /mnt/textlive
+mount: /dev/loop0 is write-protected, mounting read-only
+</code></pre>
+
+<p>注意：<br />使用 mount 挂载出现以上提示 <code>mount: /dev/loop0 is write-protected, mounting read-only</code>。这是因为 mount 命令默认以读写方式挂载一个设备，而光盘是只读的，所以在挂载光盘这个块设备时会出现上述从读写方式切换为以只读方式挂载光盘的提示。我们可以忽视不必管它。</p>
+
+<p>如果不想看到这个提示，就请在 mount 命令后面添加参数,指定以只读方式来挂载设备。</p>
+
+<pre><code class="language-bash">$ sudo mount -o loop texlive2018.iso /mnt/textlive -o ro
+</code></pre>
+
+<p><a name="dc60845b"></a></p>
+
+<h2 id="3-镜像安装">3. 镜像安装</h2>
+
+<p>TEXLive 镜像的安装有两种方法：一是可以启动安装程序的图形化界面进行安装配置；二是直接在命令行中进行。这里主要介绍一下命令行下的安装。</p>
+
+<pre><code class="language-bash">$ cd /mnt/textlive
+$ sudo ./install-tl
+Loading ./tlpkg/texlive.tlpdb
+Installing TeX Live 2018 from: . (verified)
+Platform: x86_64-linux =&gt; 'GNU/Linux on x86_64'
+Distribution: inst (compressed)
+Directory for temporary files: /tmp/j3dA84tbet
+======================&gt; TeX Live installation procedure &lt;=====================
+======&gt;   Letters/digits in  indicate   &lt;=======
+======&gt;   menu items for actions or customizations      &lt;=======
+ Detected platform: GNU/Linux on x86_64
+  set binary platforms: 1 out of 8
+  set installation scheme: scheme-full
+  set installation collections:
+     40 collections out of 41, disk space required: 5381 MB
+  set directories:
+   TEXDIR (the main TeX directory):
+     /usr/local/texlive/2018
+   TEXMFLOCAL (directory for site-wide local files):
+     /usr/local/texlive/texmf-local
+   TEXMFSYSVAR (directory for variable and automatically generated data):
+     /usr/local/texlive/2018/texmf-var
+   TEXMFSYSCONFIG (directory for local config):
+     /usr/local/texlive/2018/texmf-config
+   TEXMFVAR (personal directory for variable and automatically generated data):
+     ~/.texlive2018/texmf-var
+   TEXMFCONFIG (personal directory for local config):
+     ~/.texlive2018/texmf-config
+   TEXMFHOME (directory for user-specific files):
+     ~/texmf
+  options:
+   [ ] use letter size instead of A4 by default
+   [X] allow execution of restricted list of programs via \write18
+   [X] create all format files
+   [X] install macro/font doc tree
+   [X] install macro/font source tree
+   [ ] create symlinks to standard directories
+   [X] after install, use tlnet on CTAN for package updates
+  set up for portable installation
+Actions:
+  start installation to hard disk
+  save installation profile to 'texlive.profile' and exit
+  help
+  quit
+Enter command: D
+===============================================================================
+Directories customization:
+ &lt;1&gt; TEXDIR:       /usr/local/texlive/2018
+     support tree: /usr/local/texlive/2018/texmf-dist
+ &lt;2&gt; TEXMFLOCAL:     /usr/local/texlive/texmf-local
+ &lt;3&gt; TEXMFSYSVAR:    /usr/local/texlive/2018/texmf-var
+ &lt;4&gt; TEXMFSYSCONFIG: /usr/local/texlive/2018/texmf-config
+ &lt;5&gt; TEXMFVAR:       ~/.texlive2018/texmf-var
+ &lt;6&gt; TEXMFCONFIG:    ~/.texlive2018/texmf-config
+ &lt;7&gt; TEXMFHOME:      ~/texmf
+ Note: ~ will expand to $HOME (or to %USERPROFILE% on Windows)
+Actions:
+  return to main menu
+  quit
+Enter command: 1
+New value for TEXDIR [/usr/local/texlive/2018]: /usr/local/software/texlive/2018
+===============================================================================
+Directories customization:
+ &lt;1&gt; TEXDIR:       /usr/local/software/texlive/2018
+     support tree: /usr/local/software/texlive/2018/texmf-dist
+ &lt;2&gt; TEXMFLOCAL:     /usr/local/software/texlive/texmf-local
+ &lt;3&gt; TEXMFSYSVAR:    /usr/local/software/texlive/2018/texmf-var
+ &lt;4&gt; TEXMFSYSCONFIG: /usr/local/software/texlive/2018/texmf-config
+ &lt;5&gt; TEXMFVAR:       ~/.texlive2018/texmf-var
+ &lt;6&gt; TEXMFCONFIG:    ~/.texlive2018/texmf-config
+ &lt;7&gt; TEXMFHOME:      ~/texmf
+ Note: ~ will expand to $HOME (or to %USERPROFILE% on Windows)
+Actions:
+  return to main menu
+  quit
+Enter command:R
+......
+Actions:
+  start installation to hard disk
+ 
+ save installation profile to 'texlive.profile' and exit
+  help
+  quit
+Enter command: I
+Installing to: /usr/local/software/texlive/2018
+Installing [0001/3590, time/total: ??:??/??:??]: 12many [376k]
+Installing [0002/3590, time/total: 00:00/00:00]: 2up [66k]
+Installing [0003/3590, time/total: 00:00/00:00]: Asana-Math [482k]
+Installing [0004/3590, time/total: 00:00/00:00]: ESIEEcv [137k]
+Installing [0005/3590, time/total: 00:00/00:00]: FAQ-en [4971k]
+......
+finished with package-specific postactions
+Welcome to TeX Live!
+......
+</code></pre>
+
+<p>** FAQ-1：Digest::MD5 <strong> </strong><del>__
+__</del>**</p>
+
+<pre><code class="language-bash">Can't locate Digest/MD5.pm in @INC (@INC contains: ./tlpkg /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at tlpkg/TeXLive/TLCrypto.pm line 9.
+BEGIN failed--compilation aborted at tlpkg/TeXLive/TLCrypto.pm line 9.
+Compilation failed in require at tlpkg/TeXLive/TLPOBJ.pm line 16.
+BEGIN failed--compilation aborted at tlpkg/TeXLive/TLPOBJ.pm line 16.
+Compilation failed in require at ./install-tl line 55.
+BEGIN failed--compilation aborted at ./install-tl line 55.
+</code></pre>
+
+<p><code>Can't locate Digest/MD5.pm</code> 是因为系统的 perl(/usr/bin/perl) 中没有安装 <code>Digest::MD5</code> 模块，我们可以去 <a href="https://metacpan.org/pod/Digest::MD5">CPAN</a> 下载手动安装，也可以在线安装：</p>
+
+<pre><code class="language-bash">$ sudo yum install perl-Digest-MD5
+</code></pre>
+
+<p><strong>__</strong>FAQ-2：perl-TK<strong>__</strong></p>
+
+<pre><code class="language-bash">Error message from loading Tk:
+  Can't locate Tk.pm in @INC (@INC contains: ./tlpkg /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at ./install-tl line 398.
+</code></pre>
+
+<p>在线安装 Tk 的 perl 模块(通过 <a href="https://metacpan.org/pod/distribution/Tk/Tk.pod">CPAN</a>手动安装，这里不详述，有兴趣的可自行谷歌一下)：</p>
+
+<pre><code>$ sudo yum install perl-Tk
+</code></pre>
+
+<p>最后，卸载镜像：</p>
+
+<pre><code class="language-bash">$ sudo umount /mnt/textlive/
+umount: /mnt/textlive: target is busy.
+        (In some cases useful info about processes that use
+         the device is found by lsof(8) or fuser(1))
+# fuser/lsof 能识别出正在对某个文件或端口访问的进程
+$ sudo fuser -m /mnt/textlive/
+/mnt/textlive:        6436c  6548c  6549c
+$ ps aux|grep 6436
+shenwei+  6436  0.0  0.0 115568  2220 pts/3    Ss   10:36   0:00 -bash
+shenwei+ 18041  0.0  0.0 112704   952 pts/1    S+   11:11   0:00 grep --color 6436
+$ ps aux|grep 6548
+root      6548  0.0  0.1 218528  4020 pts/3    S+   10:37   0:00 sudo ./install-tl
+shenwei+ 18062  0.0  0.0 112704   952 pts/1    S+   11:11   0:00 grep --color 6548
+# 杀掉占用此设备的进程
+$ sudo fuser -m -v -k /mnt/textlive/
+# 执行 umount 就可以正常卸载
+$ sudo umount /mnt/textlive/
+</code></pre>
+
+<p>Texlive2017 有一个<a href="https://www.tug.org/texlive/doc/texlive-zh-cn/texlive-zh-cn.pdf">详细指南</a>，其中也有详细介绍各平台各种安装方法。</p>
+
+<p><a name="63d567f6"></a></p>
+
+<h1 id="四-设置环境变量">四、设置环境变量</h1>
+
+<p>将 texlive 部分目录添加到环境变量(~/.bashrc)，编辑完记得 source 刷新一下：</p>
+
+<pre><code class="language-bash">export PATH=/usr/local/software/texlive/2018/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/software/texlive/2018/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/software/texlive/2018/texmf-dist/doc/info:$INFOPATH
+</code></pre>
+
+<p><a name="58c7d78d"></a></p>
+
+<h1 id="五-使用与测试">五、使用与测试</h1>
+
+<p>编辑一个 tex-test.tex 文件：</p>
+
+<pre><code class="language-katex">\documentclass{article}
+\begin{document}
+Hello \LaTeX! 你好，这是一个测试文档。
+\end{document}
+</code></pre>
+
+<p>使用命令，最后打开生成的 tex-test.pdf 文件：</p>
+
+<pre><code>xelatex tex-test.tex
+</code></pre>
+
+<p><a name="402dedcb"></a></p>
+
+<h1 id="六-中文支持">六、中文支持</h1>
+
+<p>LaTeX 默认是不支持中文的，想要支持中文排版，这里需要引入一个&rdquo;宏包&rdquo; 的概念。关于宏包，我们可以理解为一些指令的集合，用于专门处理某个特定的专题（如排版，字体等方面的细节问题），使用者可以方便地根据需要选用某个宏包。</p>
+
+<p>LaTeX 中比较常用的中文排版处理宏包主要有 ctex、CJK、xeCJK 等等，这里主要介绍一下后面两个。CJK 是由 Werner Lemberg 开发的，是中文（Chinese）、日文（Japanese）、韩文（Korean）三国文字的缩写。顾名思义，它能够支持这三种文字。实际上，CJK 能够支持在 LaTeX 中使用包括中文、日文、韩文在内的多种亚洲双字节文字。</p>
+
+<p>CJK 宏包提供了两种环境：CJK 环境和 CJK* 环境，这两种环境的区别为：对于汉字后面的空格，前者不忽略，后者忽略，我们推荐使用 CJK* 环境。</p>
+
+<p>xeCJK 是在 CCT 和 CJK 包基础上发展起来的，支持多种标点格式。也有人说，xeCJK package 搭上 XeLaTeX 是最好的中文 TeX 处理方式。总的来说 xeCJK 主要特点：</p>
+
+<ol>
+<li>分别设置 CJK 和英文字体；</li>
+<li>自动忽略 CJK 文字间的空格而保留其它空格，允许在非标点汉字和英文字母 (a-z, A-Z) 间断行；</li>
+<li>提供多种标点处理方式：全角式、半角式、开明式、行末半角式；</li>
+<li>自动调整中英文间空白。</li>
+<li>TexLive 2018 已经默认安装了 xeCJK，我们可以使用下面的命令查看 TexLive 已经安装的包以及包的具体信息：</li>
+</ol>
+
+<pre><code class="language-bash"># 查看 TexLive 所有已经安装的包
+$ tlmgr list --only-installed
+# 查看具体某个包的信息
+$ tlmgr info xecjk
+# 安装新的宏包
+$ tlmgr install pkgname
+</code></pre>
+
+<p>结合 xeCJK 宏包来配置字体，下面是一个小例子：</p>
+
+<pre><code>\documentclass{article}
+\usepackage{xeCJK}
+\setCJKmainfont{SimSun}
+\begin{document}
+你好，TeX Live 2018！
+\end{document}
+</code></pre>
+
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1548653863498-04986e41-7e3d-4edf-b8f8-47feaa60720c.png#align=left&amp;display=inline&amp;height=566&amp;originHeight=566&amp;originWidth=633&amp;size=0&amp;width=633" alt="" /></p>
+
+<hr />
+
+<p><a name="60f1f5c3"></a></p>
+
+<h1 id="七-参考资料">七、参考资料</h1>
+
+<ul>
+<li>CTAN，<a href="https://ctan.org/pkg/xecjk">xecjk – Support for CJK documents in XeLaTeX</a></li>
+<li>Tass，Regular Tass Office Hour，《<a href="http://rtassoh.blogspot.com/2010/08/cjk-xecjk-cwtex.html">CJK, xeCJK 與 cwTeX 對於中文支援的比較</a>》</li>
+<li><a href="http://CTEX.ORG">CTEX.ORG</a>，《<a href="http://mirrors.sjtug.sjtu.edu.cn/ctan/macros/xetex/latex/xecjk/xeCJK.pdf">xeCJK 宏包（中文文档）</a>》</li>
+<li>CTAN，<a href="https://ctan.org/pkg/xecjk">xecjk – Support for CJK documents in XELATEX</a></li>
+<li>Jiedong Hao，jdhao blog，<a href="https://jdhao.github.io/2018/03/29/latex-chinese.zh/">LaTeX 中如何使用中文</a></li>
+</ul>
+
+<p><br /></p>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev"><a href="../../post/2019-07-01-tkinter-unicode-issues/">Python 中 tkinter 中文乱码</a><br/>&larr;</span>
+  <span class="nav-next"><a href="../../post/2019-07-01-centos-7-nginx-cgi/">CentOS Linux 7 配置 nginx 支持 CGI</a><br/>&rarr;</span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/post\/2019-07-01-tkinter-unicode-issues\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/post\/2019-07-01-centos-7-nginx-cgi\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var disqus_js = '//bioinit.disqus.com/embed.js';
+    var d = document, s = d.createElement('script');
+    s.src = disqus_js; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    var b = false, l = function() {
+      if (b) return;
+      (d.head || d.body).appendChild(s); b = true;
+    }
+    var t = d.getElementById('disqus_thread');
+    s.onerror = function(e) {
+      if (sessionStorage.getItem('failure-note')) return;
+      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
+      t.style.border = '1px dashed';
+      t.style.padding = '.5em';
+      t.style.background = 'lightyellow';
+      sessionStorage.setItem('failure-note', true);
+    };
+    
+    if (location.hash.match(/^#comment/)) return l();
+    var c = function() {
+      if (b) return;
+      var rect = t.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
+    };
+    window.addEventListener('load', c);
+    d.addEventListener('scroll', c);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+<script async src="../../js/fix-toc.js"></script>
+
+<script async src="../../js/center-img.js"></script>
+
+<script async src="../../js/right-quote.js"></script>
+
+<script async src="../../js/no-highlight.js"></script>
+
+<script async src="../../js/fix-footnote.js"></script>
+
+<script async src="../../js/math-code.js"></script>
+
+<script async src="../../js/external-link.js"></script>
+
+<script async src="../../js/alt-title.js"></script>
+
+<script async src="../../js/header-link.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

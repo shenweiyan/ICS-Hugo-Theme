@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <title>R 软件 openssl 包与 libssl.so.1.0.0 的一个坑 - </title>
+    
+     
+    <meta property="og:title" content="R 软件 openssl 包与 libssl.so.1.0.0 的一个坑 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/style.css"/>
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/mystyle.css"/> 
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/fonts.css" />
+    
+<link rel="stylesheet" href="https://blog.bioinit.com/css/custom.css" />
+
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      
+
+<h1><a href="../../"><img src="https://apps-db.oss-cn-shenzhen.aliyuncs.com/logos/shenweiyan.png" alt="Steven Shen" /></a></h1>
+
+
+
+      <nav class="menu">
+        <input id="menu-check" type="checkbox" />
+        <label id="menu-label" for="menu-check" class="unselectable">
+          <span class="icon close-icon">✕</span>
+          <span class="icon open-icon">☰</span>
+          <span class="text">Menu</span>
+        </label>
+        <ul>
+        
+        
+        <li><a href="https://blog.bioinit.com">首页</a></li>
+        
+        <li><a href="../../about/">关于</a></li>
+        
+        <li><a href="../../post/">博客</a></li>
+        
+        <li><a href="../../read/">读书</a></li>
+        
+        <li><a href="../../research/">研究</a></li>
+        
+        <li><a href="../../tools/">工具</a></li>
+        
+        <li><a href="../../resume/shenweiyan">简历</a></li>
+        
+        <li><a href="../../other/">其他</a></li>
+        
+        
+
+<li class="menu-extra"></li>
+
+
+
+<li><a href="https://github.com/shenweiyan/home/edit/master/content/post/2019-05-24-nt820f.md" target="_blank">编辑</a></li>
+
+
+<li><a href="../../post/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
+
+
+        </ul>
+      </nav>
+    </header>
+
+    <article class="main">
+      <header class="title">
+        
+
+<h1>R 软件 openssl 包与 libssl.so.1.0.0 的一个坑</h1>
+
+
+
+<h3>
+2019-05-24</h3> 
+
+
+   
+  
+
+
+      </header>
+
+
+<p>在使用 enrichplot 包解决 openssl 包依赖的时候，发现提示 libssl.so.1.0.0 动态库找不到：</p>
+
+<pre><code class="language-r">&gt; install.packages(&quot;openssl&quot;)
+--- Please select a CRAN mirror for use in this session ---
+trying URL 'http://mirrors.tuna.tsinghua.edu.cn/CRAN/src/contrib/openssl_1.3.tar.gz'
+Content type 'application/x-gzip' length 1218896 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+* installing *source* package ‘openssl’ ...
+** package ‘openssl’ successfully unpacked and MD5 sums checked
+** using staged installation
+Found pkg-config cflags and libs!
+Using PKG_CFLAGS=-I/Bioinfo/Pipeline/SoftWare/Anaconda2/include
+Using PKG_LIBS=-L/Bioinfo/Pipeline/SoftWare/Anaconda2/lib -l:libssl.so.1.0.0 -l:libcrypto.so.1.0.0
+** libs
+......
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Error: package or namespace load failed for ‘openssl’ in dyn.load(file, DLLpath = DLLpath, ...):
+ unable to load shared object '/Bioinfo/Pipeline/SoftWare/R/R-3.6.0/lib64/R/library/00LOCK-openssl/00new/openssl/libs/openssl.so':
+  libssl.so.1.0.0: cannot open shared object file: No such file or directory
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/Bioinfo/Pipeline/SoftWare/R/R-3.6.0/lib64/R/library/openssl’
+
+The downloaded source packages are in
+        ‘/tmp/RtmpTySsWL/downloaded_packages’
+Updating HTML index of packages in '.Library'
+Making 'packages.html' ... done
+Warning message:
+In install.packages(&quot;openssl&quot;) :
+  installation of package ‘openssl’ had non-zero exit status
+</code></pre>
+
+<p>仔细翻查 log 才发现我所用的 R-3.6.0 在安装 R 包的时候，默认调用了 Anaconda2 下面的 PKG_CFLAGS 和 PKG_LIBS，想要更改这两个变量需要更改在安装 R 包时调用的 pkg-config，我的 R-3.6.0 默认使用的是 /Bioinfo/Pipeline/SoftWare/Anaconda2/bin/pkg-config。</p>
+
+<p>重新安装 pkg-config-0.29.2：</p>
+
+<pre><code class="language-bash">$ wget https://pkg-config.freedesktop.org/releases/pkg-config-0.29.2.tar.gz --no-check-certificate
+$ tar zvxf pkg-config-0.29.2.tar.gz
+$ cd pkg-config-0.29.2
+$ ./configure --prefix=/Bioinfo/Pipeline/SoftWare/pkg-config-0.29.2
+$ make
+$ make install
+</code></pre>
+
+<p>把 pkg-config-0.29.2 添加到环境变量：</p>
+
+<pre><code class="language-bash">export PATH=&quot;/Bioinfo/Pipeline/SoftWare/pkg-config-0.29.2/bin:$PATH
+</code></pre>
+
+<p>最后，source ~/.bashrc，使用 install.packages(&ldquo;openssl&rdquo;) 安装，一切正常。</p>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev"><a href="../../post/2019-05-21-kzicg7/">Python 执行 shell 命令</a><br/>&larr;</span>
+  <span class="nav-next"><a href="../../post/2019-05-24-dadyai/">R 软件的 &#34;CXX11 is not defined&#34; 解决</a><br/>&rarr;</span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/post\/2019-05-21-kzicg7\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/post\/2019-05-24-dadyai\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var disqus_js = '//bioinit.disqus.com/embed.js';
+    var d = document, s = d.createElement('script');
+    s.src = disqus_js; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    var b = false, l = function() {
+      if (b) return;
+      (d.head || d.body).appendChild(s); b = true;
+    }
+    var t = d.getElementById('disqus_thread');
+    s.onerror = function(e) {
+      if (sessionStorage.getItem('failure-note')) return;
+      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
+      t.style.border = '1px dashed';
+      t.style.padding = '.5em';
+      t.style.background = 'lightyellow';
+      sessionStorage.setItem('failure-note', true);
+    };
+    
+    if (location.hash.match(/^#comment/)) return l();
+    var c = function() {
+      if (b) return;
+      var rect = t.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
+    };
+    window.addEventListener('load', c);
+    d.addEventListener('scroll', c);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+<script async src="../../js/fix-toc.js"></script>
+
+<script async src="../../js/center-img.js"></script>
+
+<script async src="../../js/right-quote.js"></script>
+
+<script async src="../../js/no-highlight.js"></script>
+
+<script async src="../../js/fix-footnote.js"></script>
+
+<script async src="../../js/math-code.js"></script>
+
+<script async src="../../js/external-link.js"></script>
+
+<script async src="../../js/alt-title.js"></script>
+
+<script async src="../../js/header-link.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

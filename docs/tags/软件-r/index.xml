@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件 R on Steven Shen | 沈维燕</title>
+    <link>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6-r/</link>
+    <description>Recent content in 软件 R on Steven Shen | 沈维燕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 01 Jul 2019 03:50:35 +0000</lastBuildDate>
+    
+	<atom:link href="https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6-r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>手把手教你如何在 Linux 源码安装最新版本的 R</title>
+      <link>https://ivc.bioinit.com/blog/2019-07-01-install-latest-r-from-source/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-07-01-install-latest-r-from-source/</guid>
+      <description>如果你使用的 Linux 系统 GCC 版本太低，又没有 root 权限（即使有 root 权限又担心升级 GCC 带来的风险）；同时你又不想入坑 conda，但是你又希望安装一个最新版本的</description>
+    </item>
+    
+  </channel>
+</rss>

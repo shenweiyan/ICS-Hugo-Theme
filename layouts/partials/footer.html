@@ -1,0 +1,25 @@
+  <footer>
+  {{ partial "foot_custom.html" . }}
+
+
+  {{ if eq .URL "/" }}
+
+  {{ with .Site.Params.footer.home }}
+   <!--- <hr> ---> <!--- Remove horizontal line 20180205 by Likan Zhan --->
+  <div class="copyright">{{ . | markdownify }}</div>
+  {{ end }}
+
+  {{ else }}
+  {{ $section := default .Section ($.Scratch.Get "section") }}
+  {{ with (index $.Site.Params.footer $section) }}
+<!---  <hr style="border: 1px dashed gray;" /> --->
+  <div class="copyright">{{ . | markdownify }} </div>
+  {{ end }}
+  {{ end }}
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  {{ template "_internal/google_analytics.html" . }}
+  </body>
+</html>

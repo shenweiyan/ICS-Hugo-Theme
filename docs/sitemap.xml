@@ -8,13 +8,373 @@
   </url>
   
   <url>
+    <loc>https://ivc.bioinit.com/</loc>
+    <lastmod>2019-08-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/other/</loc>
+    <lastmod>2019-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-08-08-build-hugo-blogs/</loc>
+    <lastmod>2019-08-08T09:05:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-08-08-sync-from-yuque-to-qiniu/</loc>
+    <lastmod>2019-08-08T03:44:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-08-07-flex-slider-and-raxus-slider/</loc>
+    <lastmod>2019-08-07T08:54:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-08-05-rgvbqq/</loc>
+    <lastmod>2019-08-05T07:12:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-08-05-nd8gh3/</loc>
+    <lastmod>2019-08-05T06:17:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-25-fedora-redhat-centos/</loc>
+    <lastmod>2019-07-25T01:29:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-23-coding-cancel-account/</loc>
+    <lastmod>2019-07-23T03:19:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-19-linux-lvm/</loc>
+    <lastmod>2019-07-19T06:06:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-19-cvmlfu/</loc>
+    <lastmod>2019-07-19T02:22:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-19-ucig1a/</loc>
+    <lastmod>2019-07-19T01:01:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-17-jupyter-notebook-toturial-3/</loc>
+    <lastmod>2019-07-17T08:25:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-17-jupyter-notebook-toturial-2/</loc>
+    <lastmod>2019-07-17T07:48:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-17-bugs-of-aliyun-app/</loc>
+    <lastmod>2019-07-17T06:26:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-17-google-code-prettify/</loc>
+    <lastmod>2019-07-17T05:43:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-17-jupyter-notebook-toturial-1/</loc>
+    <lastmod>2019-07-17T03:38:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-15-r-ramigo/</loc>
+    <lastmod>2019-07-15T09:24:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-12-hpc-experience-glibc/</loc>
+    <lastmod>2019-07-12T23:02:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-09-books-from-jiweiyang/</loc>
+    <lastmod>2019-07-09T06:07:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-09-the-words/</loc>
+    <lastmod>2019-07-09T05:56:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-08-unicom_broadband/</loc>
+    <lastmod>2019-07-08T01:51:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-08-to-be-good/</loc>
+    <lastmod>2019-07-08T01:07:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-04-anaconda-experience/</loc>
+    <lastmod>2019-07-04T06:20:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-04-ecs-docker-wordpress-ssl/</loc>
+    <lastmod>2019-07-04T06:16:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-04-clumpify/</loc>
+    <lastmod>2019-07-04T06:11:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-04-leanote-for-ecs-tutorial/</loc>
+    <lastmod>2019-07-04T06:03:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-04-reading-flags/</loc>
+    <lastmod>2019-07-04T06:00:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-pages-view-on-jekyll/</loc>
+    <lastmod>2019-07-01T04:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-vim-skills/</loc>
+    <lastmod>2019-07-01T03:57:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-focus-on-writing/</loc>
+    <lastmod>2019-07-01T03:55:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-bioconductor-packages/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-centos-firewall/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ivc.bioinit.com/reseach/2019-07-01-centos-firewall/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-security-for-centos-7/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-centos-7-nginx-cgi/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-latex-2018-tutorial/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-tkinter-unicode-issues/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-python-file-directory-toturial/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-r-packages-guide/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-vscode-remote-ssh/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-windows-ports/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-irf3na/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-ssh-attack/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-install-mysql-from-source/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-python-mygene/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-rss-for-top-news/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-different-on-bytes/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-install-perl-from-source/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-lsf-gpfs/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-webterminal-for-linux/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-r-gganatogram/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-cloud-services-for-jupyter-notebook/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-install-latest-r-from-source/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-jupyter-notebook-tutorial/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-pyclone-install/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-conda-env-roll-back/</loc>
     <lastmod>2019-07-01T03:50:35+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ivc.bioinit.com/readding/2019-07-01-centos-firewall/</loc>
     <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-lqc7hd/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-07-01-ai-logo-desig/</loc>
+    <lastmod>2019-07-01T03:47:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-06-28-firefox-quantum/</loc>
+    <lastmod>2019-06-28T08:23:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-06-26-phmze3/</loc>
+    <lastmod>2019-06-26T07:34:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-06-21-ksczr1/</loc>
+    <lastmod>2019-06-21T03:58:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/research/apobec3b_signature/</loc>
+    <lastmod>2019-06-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/research/tmb_diff_in_sex/</loc>
+    <lastmod>2019-06-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/read/sci-writing-composing-a-first-draft/</loc>
+    <lastmod>2019-06-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-06-17-qrtsf1/</loc>
+    <lastmod>2019-06-17T09:12:54+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-06-12-onzp1v/</loc>
+    <lastmod>2019-06-12T03:49:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-06-12-spectrum-lsf/</loc>
+    <lastmod>2019-06-12T03:29:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-06-11-iddn10/</loc>
+    <lastmod>2019-06-11T09:24:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/read/biocworkshop-100-r-and-bioconductor-intro/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-06-03-jekyll-add-page-view/</loc>
+    <lastmod>2019-06-03T05:57:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-06-01-pypiserver-trial/</loc>
+    <lastmod>2019-06-01T07:06:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/todo/</loc>
+    <lastmod>2019-07-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -28,8 +388,148 @@
   </url>
   
   <url>
+    <loc>https://ivc.bioinit.com/resume/shenweiyan/</loc>
+    <lastmod>2019-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-29-bio-blogs-forums/</loc>
+    <lastmod>2019-05-29T06:12:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-29-blogs-and-sites-collected/</loc>
+    <lastmod>2019-05-29T06:05:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-27-kgrnx4/</loc>
+    <lastmod>2019-05-27T00:40:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-25-qznkyp/</loc>
+    <lastmod>2019-05-25T09:26:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-24-dadyai/</loc>
+    <lastmod>2019-05-24T09:16:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-24-nt820f/</loc>
+    <lastmod>2019-05-24T07:47:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-21-kzicg7/</loc>
+    <lastmod>2019-05-21T03:48:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-18-python-sorted/</loc>
+    <lastmod>2019-05-18T12:50:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-18-python-match/</loc>
+    <lastmod>2019-05-18T12:48:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-18-how-to-use-vim/</loc>
+    <lastmod>2019-05-18T12:47:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-18-python-os-path/</loc>
+    <lastmod>2019-05-18T12:44:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-18-kefse-install/</loc>
+    <lastmod>2019-05-18T12:43:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-18-redhat-install-pyqt-4/</loc>
+    <lastmod>2019-05-18T12:39:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-18-chrome-tutorial/</loc>
+    <lastmod>2019-05-18T12:29:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-18-ai-logo-design/</loc>
+    <lastmod>2019-05-18T12:28:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-18-clumpify-1714585/</loc>
+    <lastmod>2019-05-18T12:26:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-18-pyclone-install-1714572/</loc>
+    <lastmod>2019-05-18T12:21:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-18-yarn-install/</loc>
+    <lastmod>2019-05-18T12:19:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-18-python-enable-shared/</loc>
+    <lastmod>2019-05-18T12:17:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-18-install-python-from-source/</loc>
+    <lastmod>2019-05-18T12:10:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-15-pdf-copy/</loc>
+    <lastmod>2019-05-15T06:13:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-10-oquebf/</loc>
+    <lastmod>2019-05-10T03:54:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-05-09-xpurpl/</loc>
+    <lastmod>2019-05-09T00:53:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-04-29-xdlz2f/</loc>
+    <lastmod>2019-04-29T00:41:03+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ivc.bioinit.com/blog/katex-math-typesetting/</loc>
     <lastmod>2019-03-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-03-01-180712/</loc>
+    <lastmod>2019-03-01T12:44:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2019-03-01-180810/</loc>
+    <lastmod>2019-03-01T12:27:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/test/2019-03-01-180810/</loc>
+    <lastmod>2019-03-01T12:27:35+00:00</lastmod>
   </url>
   
   <url>
@@ -38,8 +538,23 @@
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/blog/cupper-shortcodes/</loc>
-    <lastmod>2019-02-12T23:39:06-06:00</lastmod>
+    <loc>https://ivc.bioinit.com/research/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/read/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tools/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/blog/2018-12-29-shell-practice/</loc>
+    <lastmod>2018-12-29T09:21:11+00:00</lastmod>
   </url>
   
   <url>
@@ -48,13 +563,13 @@
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/blog/bioinfo/quotes-by-carl-jung/</loc>
-    <lastmod>2018-12-26T00:29:41-06:00</lastmod>
+    <loc>https://ivc.bioinit.com/blog/</loc>
+    <lastmod>2017-01-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/</loc>
-    <lastmod>2017-06-26T18:27:58+01:00</lastmod>
+    <loc>https://ivc.bioinit.com/about/</loc>
+    <lastmod>2016-05-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -80,6 +595,29 @@
   <url>
     <loc>https://ivc.bioinit.com/blog/bioinfo/migrate-from-jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tags/anaconda/</loc>
+    <lastmod>2019-07-04T06:20:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tags/centos/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tags/chrome/</loc>
+    <lastmod>2019-05-18T12:29:57+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -119,8 +657,20 @@
   </url>
   
   <url>
+    <loc>https://ivc.bioinit.com/tags/jupyter/</loc>
+    <lastmod>2019-07-17T08:25:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ivc.bioinit.com/tags/katex/</loc>
     <lastmod>2019-03-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tags/linux/</loc>
+    <lastmod>2019-07-19T06:06:53+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -149,8 +699,20 @@
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/tags/quotes/</loc>
-    <lastmod>2018-12-26T00:29:41-06:00</lastmod>
+    <loc>https://ivc.bioinit.com/tags/others/</loc>
+    <lastmod>2019-08-08T03:44:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tags/python/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tags/r/</loc>
+    <lastmod>2019-07-15T09:24:35+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -161,26 +723,50 @@
   </url>
   
   <url>
+    <loc>https://ivc.bioinit.com/tags/redhat-centos/</loc>
+    <lastmod>2019-07-25T01:29:15+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tags/redhat-%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2019-05-18T12:39:52+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ivc.bioinit.com/reseach/</loc>
     <lastmod>2019-07-01T03:50:35+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/tags/shortcodes/</loc>
-    <lastmod>2019-02-12T23:39:06-06:00</lastmod>
+    <loc>https://ivc.bioinit.com/resume/</loc>
+    <lastmod>2019-08-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tags/shell/</loc>
+    <lastmod>2018-12-29T09:21:11+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ivc.bioinit.com/tags/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-04T06:20:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ivc.bioinit.com/tags/templates/</loc>
     <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/test/</loc>
+    <lastmod>2019-03-01T12:27:35+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -197,8 +783,55 @@
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/blog/</loc>
-    <lastmod>2019-03-28T00:00:00+00:00</lastmod>
+    <loc>https://ivc.bioinit.com/tags/vim/</loc>
+    <lastmod>2019-07-01T03:57:31+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/archives/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tags/%E6%9D%82%E8%B0%88/</loc>
+    <lastmod>2019-08-08T09:05:21+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6-%E6%9D%82%E8%B0%88/</loc>
+    <lastmod>2019-05-29T06:12:49+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tags/%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2019-07-23T03:19:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6-perl/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6-python/</loc>
+    <lastmod>2019-05-18T12:10:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6-r/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

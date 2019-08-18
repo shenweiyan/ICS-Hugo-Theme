@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件 on Steven Shen | 沈维燕</title>
+    <link>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6/</link>
+    <description>Recent content in 软件 on Steven Shen | 沈维燕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 01 Jul 2019 03:50:35 +0000</lastBuildDate>
+    
+	<atom:link href="https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>从 Blast2GO 到 MySQL 源码编译安装</title>
+      <link>https://ivc.bioinit.com/blog/2019-07-01-install-mysql-from-source/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-07-01-install-mysql-from-source/</guid>
+      <description>Blast2GO 是一个基于序列相似性搜索的 GO 注释和功能分析工具，它可以直接统计分析基因功能信息，并可视化 GO 有向非循环图（DAG）上的相关功能特征，分析 BL</description>
+    </item>
+    
+    <item>
+      <title>癌症克隆种群结构分析软件PyClone安装</title>
+      <link>https://ivc.bioinit.com/blog/2019-07-01-pyclone-install/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-07-01-pyclone-install/</guid>
+      <description>PyClone 是一种用于推断癌症中克隆种群结构的统计模型。 它是一种贝叶斯聚类方法，用于将深度测序的体细胞突变集分组到假定的克隆簇中，同时估计其细胞流行率</description>
+    </item>
+    
+    <item>
+      <title>LEfSe 分析软件安装小记</title>
+      <link>https://ivc.bioinit.com/blog/2019-05-18-kefse-install/</link>
+      <pubDate>Sat, 18 May 2019 12:43:17 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-05-18-kefse-install/</guid>
+      <description>问题 源码下载的 LEfSe，或者使用 conda install -c bioconda lefse 安装完成后，执行分析出现报错： $ lefse-format_input.py hmp_aerobiosis_small.txt hmp_aerobiosis_small.in -c 1 -s 2 -u 3 -o 1000000 $ run_lefse.py hmp_aerobiosis_small.in hmp_aerobiosis_small.res Number of significantly discriminative features: 51 ( 131 ) before internal wilcoxon Number of discriminative features with</description>
+    </item>
+    
+    <item>
+      <title>癌症中克隆种群结构统计推断分析软件PyClone安装小记</title>
+      <link>https://ivc.bioinit.com/blog/2019-05-18-pyclone-install-1714572/</link>
+      <pubDate>Sat, 18 May 2019 12:21:13 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-05-18-pyclone-install-1714572/</guid>
+      <description>PyClone 是一种用于推断癌症中克隆种群结构的统计模型。 它是一种贝叶斯聚类方法，用于将深度测序的体细胞突变集分组到假定的克隆簇中，同时估计其细胞流行率</description>
+    </item>
+    
+    <item>
+      <title>从 Galaxy Project 用户界面聊聊 Linux 下 Yarn 安装</title>
+      <link>https://ivc.bioinit.com/blog/2019-05-18-yarn-install/</link>
+      <pubDate>Sat, 18 May 2019 12:19:29 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-05-18-yarn-install/</guid>
+      <description>Galaxy 从 release 18.01 版本起，为其用户界面提供支持的客户端代码架构已经过了彻底的变更。 基础代码库已经转换为 ES6，同时启用了 Yarn 支持代码的构建和依赖管理，启</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,7 +1,7 @@
 /* Fonts */
 @font-face {
     font-family: 'Miriam Libre';
-    src: url('https://ivc.bioinit.com/css/fonts/miriamlibre-bold.woff2') format('woff2'), url('https://ivc.bioinit.com/css/fonts/miriamlibre-bold.woff') format('woff');
+    src: url('//120.77.32.53:43986/css/fonts/miriamlibre-bold.woff2') format('woff2'), url('//120.77.32.53:43986/css/fonts/miriamlibre-bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
@@ -532,7 +532,7 @@ a.post_tags {text-decoration: none;}
 }
 .note.warning {
     border-left: 0;
-    background-image: url(https://ivc.bioinit.com/css/images/stripe.svg);
+    background-image: url(//120.77.32.53:43986/css/images/stripe.svg);
     background-size: 0.5rem auto;
     background-repeat: repeat-y;
 }
@@ -551,7 +551,7 @@ a.post_tags {text-decoration: none;}
     width: 1rem;
     height: 1rem;
     margin-right: 0.25rem;
-    background-image: url(https://ivc.bioinit.com/css/images/icon-tick.svg);
+    background-image: url(//120.77.32.53:43986/css/images/icon-tick.svg);
     background-size: 100% auto;
     position: absolute;
     left: -1.25rem;

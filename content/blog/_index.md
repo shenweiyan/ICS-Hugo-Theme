@@ -1,4 +1,4 @@
 ---
-title: 博客
-type: blog
+title: 中文博客
+date: '2017-01-31'
 ---

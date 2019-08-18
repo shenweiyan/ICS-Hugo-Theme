@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <title>国内 GitHub 访问加速 - </title>
+    
+     
+    <meta property="og:title" content="国内 GitHub 访问加速 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/style.css"/>
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/mystyle.css"/> 
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/fonts.css" />
+    
+<link rel="stylesheet" href="https://blog.bioinit.com/css/custom.css" />
+
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      
+
+<h1><a href="../../"><img src="https://apps-db.oss-cn-shenzhen.aliyuncs.com/logos/shenweiyan.png" alt="Steven Shen" /></a></h1>
+
+
+
+      <nav class="menu">
+        <input id="menu-check" type="checkbox" />
+        <label id="menu-label" for="menu-check" class="unselectable">
+          <span class="icon close-icon">✕</span>
+          <span class="icon open-icon">☰</span>
+          <span class="text">Menu</span>
+        </label>
+        <ul>
+        
+        
+        <li><a href="https://blog.bioinit.com">首页</a></li>
+        
+        <li><a href="../../about/">关于</a></li>
+        
+        <li><a href="../../post/">博客</a></li>
+        
+        <li><a href="../../read/">读书</a></li>
+        
+        <li><a href="../../research/">研究</a></li>
+        
+        <li><a href="../../tools/">工具</a></li>
+        
+        <li><a href="../../resume/shenweiyan">简历</a></li>
+        
+        <li><a href="../../other/">其他</a></li>
+        
+        
+
+<li class="menu-extra"></li>
+
+
+
+<li><a href="https://github.com/shenweiyan/home/edit/master/content/post/2019-05-09-xpurpl.md" target="_blank">编辑</a></li>
+
+
+<li><a href="../../post/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
+
+
+        </ul>
+      </nav>
+    </header>
+
+    <article class="main">
+      <header class="title">
+        
+
+<h1>国内 GitHub 访问加速</h1>
+
+
+
+<h3>
+2019-05-09</h3> 
+
+
+   
+  
+
+
+      </header>
+
+
+
+
+<p>GitHub 自从私有库免费后，涌入大批量的开发爱好者，小 S 也将自己的部分代码转为了私库，但是在中国访问 GitHub 的速度不忍直视，那就叫一个慢！下面小 C 就用下面的问题告诉大家中国地区访问 GitHub 为什么很慢以及如何加速访问 GitHub。<br /></p>
+
+<p><a name="PSPfV"></a></p>
+
+<h2 id="中国地区访问-github-为什么-很-慢">*<strong><em>中国地区访问 GitHub 为什么</em></strong>*很*<strong><em>慢</em></strong>*？****</h2>
+
+<p><strong><br /></strong><strong>Q：为什么访问速度会很慢？</strong><strong><br /></strong><strong>A：</strong><strong>GitHub 的 CDN 域名遭到 DNS 污染。GitHub 在中国大陆访问速度慢的问题原因有很多，但最直接和最主要的原因是 GitHub 的分发加速网络的域名遭到 DNS 污染。由于 GitHub 的加速分发 CDN 域名 assets-cdn.github.com 遭到 DNS 污染，导致无法连接使用 GitHub 的加速分发服务器，才使得中国大陆访问速度很慢。<br />
+<br /></strong><strong>Q：如何解决 DNS 污染？</strong><strong><br /></strong><strong>A：</strong>**通过修改 Hosts 解决污染问题。一般的 DNS 问题都可以通过修改 Hosts 文件来解决，GitHub 的 CDN 域名被污染问题也不例外，同样可以通过修改 Hosts 文件解决。将域名解析直接指向 IP 地址来绕过 DNS 的解析，以此解决污染问题。<br /></p>
+
+<p><a name="bltvF"></a></p>
+
+<h2 id="如何加速访问-github">*<strong><em>如何加速访问</em></strong>*GitHub？****</h2>
+
+<p>**</p>
+
+<ol>
+<li>打开 <a href="https://www.ipaddress.com/">IPAddress.com</a> 网站，查询下面 3 个网址对应的 IP 地址：</li>
+</ol>
+
+<pre><code>github.com，192.30.253.112 192.30.253.113
+assets-cdn.github.com，101.184.133
+global.ssl.fastly.net，151.101.185.194
+</code></pre>
+
+<ol>
+<li><p>修改本地电脑系统 hosts 文件（PS：路径一般都是 C:\Windows\System32\drivers\etc），在末尾添加三行记录并保存(需管理员权限，注意 IP 地址与域名间需留有空格)。
+```</p>
+
+<h1 id="copyright-c-1993-2009-microsoft-corp">Copyright &copy; 1993-2009 Microsoft Corp.</h1>
+
+<p>#</p>
+
+<h1 id="this-is-a-sample-hosts-file-used-by-microsoft-tcp-ip-for-windows">This is a sample HOSTS file used by Microsoft TCP/IP for Windows.</h1>
+
+<p>#</p>
+
+<h1 id="this-file-contains-the-mappings-of-ip-addresses-to-host-names-each">This file contains the mappings of IP addresses to host names. Each</h1>
+
+<h1 id="entry-should-be-kept-on-an-individual-line-the-ip-address-should">entry should be kept on an individual line. The IP address should</h1>
+
+<h1 id="be-placed-in-the-first-column-followed-by-the-corresponding-host-name">be placed in the first column followed by the corresponding host name.</h1>
+
+<h1 id="the-ip-address-and-the-host-name-should-be-separated-by-at-least-one">The IP address and the host name should be separated by at least one</h1>
+
+<h1 id="space">space.</h1>
+
+<p>#</p>
+
+<h1 id="additionally-comments-such-as-these-may-be-inserted-on-individual">Additionally, comments (such as these) may be inserted on individual</h1>
+
+<h1 id="lines-or-following-the-machine-name-denoted-by-a-symbol">lines or following the machine name denoted by a &lsquo;#&rsquo; symbol.</h1>
+
+<p>#</p>
+
+<h1 id="for-example">For example:</h1>
+
+<p>#</p>
+
+<h1 id="102-54-94-97-rhino-acme-com-source-server">102.54.94.97     rhino.acme.com          # source server</h1>
+
+<h1 id="38-25-63-10-x-acme-com-x-client-host">38.25.63.10     x.acme.com              # x client host</h1></li>
+</ol>
+
+<h1 id="localhost-name-resolution-is-handled-within-dns-itself">localhost name resolution is handled within DNS itself.</h1>
+
+<p>#	127.0.0.1       localhost
+#	::1             localhost</p>
+
+<p>64.233.183.103 code.google.com</p>
+
+<h1 id="github-加速">GitHub 加速</h1>
+
+<p>192.30.253.112 github.com
+192.30.253.113 github.com
+151.101.184.133 assets-cdn.github.com
+151.101.185.194 github.global.ssl.fastly.net
+```</p>
+
+<ol>
+<li>用 &ldquo;WIN +R&rdquo; 快捷键打开运行窗口，输入命令：cmd 并回车进入命令行窗口，接着输入命令： <code>ipconfig /flushdns</code> 回车后执行刷新本地 DNS 缓存数据即可。</li>
+</ol>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev"><a href="../../post/2019-04-29-xdlz2f/">命名风格</a><br/>&larr;</span>
+  <span class="nav-next"><a href="../../post/2019-05-10-oquebf/">Git 的一些常用用法笔记</a><br/>&rarr;</span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/post\/2019-04-29-xdlz2f\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/post\/2019-05-10-oquebf\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var disqus_js = '//bioinit.disqus.com/embed.js';
+    var d = document, s = d.createElement('script');
+    s.src = disqus_js; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    var b = false, l = function() {
+      if (b) return;
+      (d.head || d.body).appendChild(s); b = true;
+    }
+    var t = d.getElementById('disqus_thread');
+    s.onerror = function(e) {
+      if (sessionStorage.getItem('failure-note')) return;
+      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
+      t.style.border = '1px dashed';
+      t.style.padding = '.5em';
+      t.style.background = 'lightyellow';
+      sessionStorage.setItem('failure-note', true);
+    };
+    
+    if (location.hash.match(/^#comment/)) return l();
+    var c = function() {
+      if (b) return;
+      var rect = t.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
+    };
+    window.addEventListener('load', c);
+    d.addEventListener('scroll', c);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+<script async src="../../js/fix-toc.js"></script>
+
+<script async src="../../js/center-img.js"></script>
+
+<script async src="../../js/right-quote.js"></script>
+
+<script async src="../../js/no-highlight.js"></script>
+
+<script async src="../../js/fix-footnote.js"></script>
+
+<script async src="../../js/math-code.js"></script>
+
+<script async src="../../js/external-link.js"></script>
+
+<script async src="../../js/alt-title.js"></script>
+
+<script async src="../../js/header-link.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

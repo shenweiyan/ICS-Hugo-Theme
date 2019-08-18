@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件 Python on Steven Shen | 沈维燕</title>
+    <link>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6-python/</link>
+    <description>Recent content in 软件 Python on Steven Shen | 沈维燕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 18 May 2019 12:10:10 +0000</lastBuildDate>
+    
+	<atom:link href="https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6-python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux 下 Python 源码编译安装</title>
+      <link>https://ivc.bioinit.com/blog/2019-05-18-install-python-from-source/</link>
+      <pubDate>Sat, 18 May 2019 12:10:10 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-05-18-install-python-from-source/</guid>
+      <description>基于 CentOS Linux release 6.5 源码编译安装 python-2.7.xx(Python-3.x.xx) 的一些步骤，以下为安装记录。 1. 安装环境 os : CentOS Linux release 6.5 (x86_64) gcc: 4.8.5 20150623 2. 安装步骤 如果您拥有 root 权限，请执以下依赖安装： yum install zlib yum install</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Command Line on Cupper</title>
+    <title>Command Line on Steven Shen | 沈维燕</title>
     <link>https://ivc.bioinit.com/tags/command-line/</link>
-    <description>Recent content in Command Line on Cupper</description>
+    <description>Recent content in Command Line on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh</language>
     <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ivc.bioinit.com/tags/command-line/index.xml" rel="self" type="application/rss+xml" />

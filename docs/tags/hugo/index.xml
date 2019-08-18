@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on Cupper</title>
+    <title>Hugo on Steven Shen | 沈维燕</title>
     <link>https://ivc.bioinit.com/tags/hugo/</link>
-    <description>Recent content in Hugo on Cupper</description>
+    <description>Recent content in Hugo on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh</language>
     <lastBuildDate>Mon, 01 Jul 2019 03:50:35 +0000</lastBuildDate>
     
 	<atom:link href="https://ivc.bioinit.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
@@ -17,12 +17,7 @@
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/reseach/2019-07-01-centos-firewall/</guid>
-      <description>Centos7 默认安装了 firewalld，如果没有安装的话，则需要 YUM 命令安装；firewalld 真的用不习惯，与之前的 iptable 防火墙区别太大，但毕竟是未来主流讲究慢慢磨合它的设置规则。
-
-安装 Firewall 命令 yum install firewalld firewalld-config  
-Firewall 开启常见端口命令 firewall-cmd --zone=public --add-port=80/tcp --permanent firewall-cmd --zone=public --add-port=443/tcp --permanent firewall-cmd --zone=public --add-port=22/tcp --permanent firewall-cmd --zone=public --add-port=21/tcp --permanent firewall-cmd --zone=public --add-port=53/udp --permanent  
-Firewall 关闭常见端口命令 firewall-cmd --zone=public --remove-port=80/tcp --permanent firewall-cmd --zone=public --remove-port=443/tcp --permanent firewall-cmd --zone=public --remove-port=22/tcp --permanent firewall-cmd --zone=public --remove-port=21/tcp --permanent firewall-cmd --zone=public --remove-port=53/udp --permanent  
-批量添加区间端口 firewall-cmd --zone=public --add-port=4400-4600/udp --permanent firewall-cmd --zone=public --add-port=4400-4600/tcp --permanent</description>
+      <description>Centos7 默认安装了 firewalld，如果没有安装的话，则需要 YUM 命令安装；firewalld 真的用不习惯，与之前的 iptable 防火墙区别太大，但毕竟是未来主</description>
     </item>
     
     <item>
@@ -31,12 +26,7 @@ Firewall 关闭常见端口命令 firewall-cmd --zone=public --remove-port=80/tc
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/readding/2019-07-01-centos-firewall/</guid>
-      <description>Centos7 默认安装了 firewalld，如果没有安装的话，则需要 YUM 命令安装；firewalld 真的用不习惯，与之前的 iptable 防火墙区别太大，但毕竟是未来主流讲究慢慢磨合它的设置规则。
-
-安装 Firewall 命令 yum install firewalld firewalld-config  
-Firewall 开启常见端口命令 firewall-cmd --zone=public --add-port=80/tcp --permanent firewall-cmd --zone=public --add-port=443/tcp --permanent firewall-cmd --zone=public --add-port=22/tcp --permanent firewall-cmd --zone=public --add-port=21/tcp --permanent firewall-cmd --zone=public --add-port=53/udp --permanent  
-Firewall 关闭常见端口命令 firewall-cmd --zone=public --remove-port=80/tcp --permanent firewall-cmd --zone=public --remove-port=443/tcp --permanent firewall-cmd --zone=public --remove-port=22/tcp --permanent firewall-cmd --zone=public --remove-port=21/tcp --permanent firewall-cmd --zone=public --remove-port=53/udp --permanent  
-批量添加区间端口 firewall-cmd --zone=public --add-port=4400-4600/udp --permanent firewall-cmd --zone=public --add-port=4400-4600/tcp --permanent</description>
+      <description>Centos7 默认安装了 firewalld，如果没有安装的话，则需要 YUM 命令安装；firewalld 真的用不习惯，与之前的 iptable 防火墙区别太大，但毕竟是未来主</description>
     </item>
     
     <item>
@@ -62,15 +52,6 @@ $$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$  $$ \varphi = 
       <description>Headings # Heading 1 ## Heading 2 ### Heading 3 #### Heading 4 ##### Heading 5 ###### Heading 6  Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Text *This text will be italic* _This will also be italic_ **This text will be bold** __This will also be bold__ _You **can** combine them_  This text will be italic
 This will also be italic
 This text will be bold</description>
-    </item>
-    
-    <item>
-      <title>Cupper Shortcodes</title>
-      <link>https://ivc.bioinit.com/blog/cupper-shortcodes/</link>
-      <pubDate>Tue, 12 Feb 2019 23:39:06 -0600</pubDate>
-      
-      <guid>https://ivc.bioinit.com/blog/cupper-shortcodes/</guid>
-      <description>blockquote {{% blockquote author=&amp;quot;Carl Jung&amp;quot; %}} Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness. It is far better to take things as they come along with patience and equanimity. {{% /blockquote %}}   Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness.</description>
     </item>
     
     <item>

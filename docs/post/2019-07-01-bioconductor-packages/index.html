@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <title>Bioconductor 中的 R 包安装方法总结 - </title>
+    
+     
+    <meta property="og:title" content="Bioconductor 中的 R 包安装方法总结 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/style.css"/>
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/mystyle.css"/> 
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/fonts.css" />
+    
+<link rel="stylesheet" href="https://blog.bioinit.com/css/custom.css" />
+
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      
+
+<h1><a href="../../"><img src="https://apps-db.oss-cn-shenzhen.aliyuncs.com/logos/shenweiyan.png" alt="Steven Shen" /></a></h1>
+
+
+
+      <nav class="menu">
+        <input id="menu-check" type="checkbox" />
+        <label id="menu-label" for="menu-check" class="unselectable">
+          <span class="icon close-icon">✕</span>
+          <span class="icon open-icon">☰</span>
+          <span class="text">Menu</span>
+        </label>
+        <ul>
+        
+        
+        <li><a href="https://blog.bioinit.com">首页</a></li>
+        
+        <li><a href="../../about/">关于</a></li>
+        
+        <li><a href="../../post/">博客</a></li>
+        
+        <li><a href="../../read/">读书</a></li>
+        
+        <li><a href="../../research/">研究</a></li>
+        
+        <li><a href="../../tools/">工具</a></li>
+        
+        <li><a href="../../resume/shenweiyan">简历</a></li>
+        
+        <li><a href="../../other/">其他</a></li>
+        
+        
+
+<li class="menu-extra"></li>
+
+
+
+<li><a href="https://github.com/shenweiyan/home/edit/master/content/post/2019-07-01-bioconductor-packages.md" target="_blank">编辑</a></li>
+
+
+<li><a href="../../post/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
+
+
+        </ul>
+      </nav>
+    </header>
+
+    <article class="main">
+      <header class="title">
+        
+
+<h1>Bioconductor 中的 R 包安装方法总结</h1>
+
+
+
+<h3>
+2019-07-01</h3> 
+
+
+   
+  
+
+
+      </header>
+
+
+
+
+<p>Bioconductor 是一个基于 R 语言的生物信息软件包，主要用于生物数据的注释、分析、统计、以及可视化 （<a href="http://www.bioconductor.org">http://www.bioconductor.org</a> ）。</p>
+
+<p>总所周知，Bioconductor 是和 R 版本绑定的，这是为了确保用户不把包安装在错误的版本上。Bioconductor 发行版每年更新两次，它在任何时候都有一个发行版本（release version），对应于 R 的发行版本。此外，Bioconductor 还有一个开发版本（development version），它对应于 R 的开发版本。</p>
+
+<p>R 每年（通常是 4 月中旬）在 &lsquo;x.y.z&rsquo; 中发布一个 &lsquo;.y&rsquo; 版本，但 Bioconductor 每 6 个月（4 月中旬和 10 月中旬）发布一个 &lsquo;.y&rsquo; 版本。</p>
+
+<p>Bioconductor 与 R 各自对应的版本如下：（参考：<a href="https://bioconductor.org/about/release-announcements/">Bioconductor releases</a>）<br />
+<img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550202460103-7ec215b0-d738-41a2-8290-ddb85bdc94d3.png#align=left&amp;display=inline&amp;height=463&amp;originHeight=463&amp;originWidth=625&amp;size=0&amp;status=done&amp;width=625" alt="" /></p>
+
+<hr />
+
+<p><a name="biocLite"></a></p>
+
+<h1 id="bioclite">biocLite</h1>
+
+<p>在 R-3.5（Bioconductor-3.7） 前，Bioconductor 都是通过 biocLite 安装相关的 R 包：</p>
+
+<pre><code class="language-r">source(&quot;https://bioconductor.org/biocLite.R&quot;)
+biocLite(pkg_name)
+</code></pre>
+
+<p>但是，从 R-3.5（Bioconductor-3.8）起，Bioconductor 更改了 R 包的安装方式：它们通过发布在 CRAN 的 <a href="https://cran.r-project.org/web/packages/BiocManager/index.html"><code>BiocManager</code></a> 包来对 Bioconductor 的包进行安装和管理——通过 CRAN 安装 <code>BiocManager</code>，再通过这个包来安装 Bioconductor 的包。</p>
+
+<hr />
+
+<p><a name="BiocManager"></a></p>
+
+<h1 id="biocmanager">BiocManager</h1>
+
+<ul>
+<li><p><strong>安装 BiocManager 包</strong></p>
+
+<pre><code class="language-r">chooseCRANmirror()
+install.packages(&quot;BiocManager&quot;)
+</code></pre></li>
+
+<li><p><strong>安装 Bioconductor (or CRAN) 的 R 包</strong></p>
+
+<pre><code class="language-r">BiocManager::install(c(&quot;GenomicRanges&quot;, &quot;Organism.dplyr&quot;))
+</code></pre></li>
+
+<li><p><strong>更新所有已经安装的 R 包到最新版本</strong></p>
+
+<pre><code class="language-r">BiocManager::install()
+</code></pre></li>
+
+<li><p><strong>查看 Bioconductor 的版本</strong></p>
+
+<pre><code class="language-r">BiocManager::version()
+## '3.8'
+</code></pre></li>
+
+<li><p><strong>旧和意外版本的 R 包</strong></p></li>
+</ul>
+
+<p>当 Bioconductor 的包都来自同一版本时，它们的效果最佳。 使用 <code>valid()</code> 来查看过期（out-of-date）或意外版本（unexpected versions）的 R 包。</p>
+
+<pre><code class="language-r">BiocManager::valid()
+
+## Warning: 21 packages out-of-date; 2 packages too new
+## 
+## * sessionInfo()
+## 
+## R Under development (unstable) (2018-11-02 r75540)
+## Platform: x86_64-pc-linux-gnu (64-bit)
+## Running under: Ubuntu 18.04.1 LTS
+## 
+## Matrix products: default
+## BLAS: /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.7.1
+## LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.7.1
+## 
+## locale:
+##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=C              
+##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] BiocStyle_2.11.0
+## 
+## loaded via a namespace (and not attached):
+##  [1] Rcpp_1.0.0         bookdown_0.7       digest_0.6.18     
+##  [4] rprojroot_1.3-2    backports_1.1.2    magrittr_1.5      
+##  [7] evaluate_0.12      stringi_1.2.4      rmarkdown_1.10    
+## [10] tools_3.6.0        stringr_1.3.1      xfun_0.4          
+## [13] yaml_2.2.0         compiler_3.6.0     BiocManager_1.30.4
+## [16] htmltools_0.3.6    knitr_1.20        
+## 
+## Bioconductor version '3.9'
+## 
+##   * 21 packages out-of-date
+##   * 2 packages too new
+## 
+## create a valid installation with
+## 
+##   BiocManager::install(c(
+##     &quot;BiocManager&quot;, &quot;GenomicDataCommons&quot;, &quot;GenomicRanges&quot;, &quot;IRanges&quot;,
+##     &quot;RJSONIO&quot;, &quot;RcppArmadillo&quot;, &quot;S4Vectors&quot;, &quot;TCGAbiolinks&quot;, &quot;TCGAutils&quot;,
+##     &quot;TMB&quot;, &quot;biocViews&quot;, &quot;biomaRt&quot;, &quot;bumphunter&quot;, &quot;curatedMetagenomicData&quot;,
+##     &quot;dimRed&quot;, &quot;dplyr&quot;, &quot;flowCore&quot;, &quot;ggpubr&quot;, &quot;ggtree&quot;, &quot;lme4&quot;, &quot;rcmdcheck&quot;,
+##     &quot;shinyFiles&quot;, &quot;tximportData&quot;
+##   ), update = TRUE, ask = FALSE)
+## 
+## more details: BiocManager::valid()$too_new, BiocManager::valid()$out_of_date
+</code></pre>
+
+<p><code>valid()</code> 返回一个对象，可以查询该对象以获取有关无效包的详细信息：</p>
+
+<pre><code class="language-r">&gt; v &lt;- valid()
+Warning message:
+6 packages out-of-date; 0 packages too new
+&gt; names(v)
+[1] &quot;out_of_date&quot; &quot;too_new&quot;
+&gt; head(v$out_of_date, 2)
+    Package LibPath
+bit &quot;bit&quot;   &quot;/home/shenweiyan/R/x86_64-pc-linux-gnu-library/3.5-Bioc-3.8&quot;
+ff  &quot;ff&quot;    &quot;/home/shenweiyan/R/x86_64-pc-linux-gnu-library/3.5-Bioc-3.8&quot;
+    Installed Built   ReposVer Repository
+bit &quot;1.1-12&quot;  &quot;3.5.0&quot; &quot;1.1-13&quot; &quot;https://cran.rstudio.com/src/contrib&quot;
+ff  &quot;2.2-13&quot;  &quot;3.5.0&quot; &quot;2.2-14&quot; &quot;https://cran.rstudio.com/src/contrib&quot;
+&gt;
+</code></pre>
+
+<ul>
+<li><strong>适用的 R 包</strong></li>
+</ul>
+
+<p>可以使用 <code>available()</code> 发现适用于我们的 Bioconductor 版本的软件包; 第一个参数是可用于根据正则表达式过滤包名称，例如，可用于 Homo sapiens 的 &lsquo;BSgenome&rsquo; 包：</p>
+
+<pre><code class="language-r">avail &lt;- BiocManager::available()
+length(avail)
+## [1] 16261
+
+BiocManager::available(&quot;BSgenome.Hsapiens&quot;)
+##  [1] &quot;BSgenome.Hsapiens.1000genomes.hs37d5&quot;
+##  [2] &quot;BSgenome.Hsapiens.NCBI.GRCh38&quot;       
+##  [3] &quot;BSgenome.Hsapiens.UCSC.hg17&quot;         
+##  [4] &quot;BSgenome.Hsapiens.UCSC.hg17.masked&quot;  
+##  [5] &quot;BSgenome.Hsapiens.UCSC.hg18&quot;         
+##  [6] &quot;BSgenome.Hsapiens.UCSC.hg18.masked&quot;  
+##  [7] &quot;BSgenome.Hsapiens.UCSC.hg19&quot;         
+##  [8] &quot;BSgenome.Hsapiens.UCSC.hg19.masked&quot;  
+##  [9] &quot;BSgenome.Hsapiens.UCSC.hg38&quot;         
+## [10] &quot;BSgenome.Hsapiens.UCSC.hg38.masked&quot;
+</code></pre>
+
+<hr />
+
+<p><a name="b00634c6"></a></p>
+
+<h1 id="bioconductor-中安装旧版本的-r-包">Bioconductor 中安装旧版本的 R 包</h1>
+
+<p>对于 R &gt;= 3.5，Bioconductor-3.8 可以使用 BiocManager 安装相关与版本匹配的 R 包。那么使用 3.5 以下 R 版本的用户是继续使用 biocLite，还是 BiocManager，还是其他的方法安装匹配相关版本的 R 包呢？</p>
+
+<p>首先，对于 R &lt; 3.5.0，如果 biocLite 和 BiocManager 都无法安装对应的包。</p>
+
+<pre><code class="language-r">&gt; source(&quot;https://bioconductor.org/biocLite.R&quot;)
+Bioconductor version 3.6 (BiocInstaller 1.28.0), ?biocLite for help
+A new version of Bioconductor is available after installing the most recent
+  version of R; see http://bioconductor.org/install
+&gt; biocLite(&quot;clusterProfile&quot;)
+......
+
+Warning message:
+package ‘clusterProfile’ is not available (for R version 3.4.3)
+
+&gt; chooseCRANmirror()
+&gt; install.packages(&quot;BiocManager&quot;)
+Warning message:
+package ‘BiocManager’ is not available (for R version 3.4.3) 
+&gt;
+</code></pre>
+
+<p>这时候，Bioconductor 推荐使用以下命令安装相应的 R 包。</p>
+
+<pre><code class="language-r">source(&quot;https://bioconductor.org/biocLite.R&quot;)
+BiocInstaller::biocLite(c(&quot;GenomicFeatures&quot;, &quot;AnnotationDbi&quot;))
+</code></pre>
+
+<p>其次，对于 R &lt; 3.5.0，如果可以使用 biocLite 或者 BiocManager 安装对应的 R 包，请使用 biocLite 或者 BiocManager。</p>
+
+<hr />
+
+<p><a name="f5105426"></a></p>
+
+<h1 id="实战操作实例-clusterprofiler">实战操作实例：clusterProfiler</h1>
+
+<p>在 R-3.4（Bioconductor-3.6）中安装最新版本的 clusterProfiler：</p>
+
+<p>在 Aanconda2 环境 R==3.4.3 中安装 clusterProfiler，发现 <code>package ‘clusterProfile’ is not available (for R version 3.4.3)</code>。</p>
+
+<pre><code class="language-r">&gt; source(&quot;https://bioconductor.org/biocLite.R&quot;)
+Bioconductor version 3.6 (BiocInstaller 1.28.0), ?biocLite for help
+A new version of Bioconductor is available after installing the most recent
+  version of R; see http://bioconductor.org/install
+&gt; biocLite(&quot;clusterProfile&quot;)
+BioC_mirror: https://bioconductor.org
+Using Bioconductor 3.6 (BiocInstaller 1.28.0), R 3.4.3 (2017-11-30).
+Installing package(s) ‘clusterProfile’
+Old packages: 'ade4', 'ape', 'backports', 'caret', ......
+
+Update all/some/none? [a/s/n]: n
+Warning message:
+package ‘clusterProfile’ is not available (for R version 3.4.3)
+</code></pre>
+
+<p>使用 <code>BiocInstaller</code> 安装 clusterProfiler：</p>
+
+<pre><code class="language-r">&gt; source(&quot;https://bioconductor.org/biocLite.R&quot;)
+Bioconductor version 3.6 (BiocInstaller 1.28.0), ?biocLite for help
+A new version of Bioconductor is available after installing the most recent
+  version of R; see http://bioconductor.org/install
+
+&gt; BiocInstaller::biocLite(&quot;clusterProfiler&quot;)
+BioC_mirror: https://bioconductor.org
+Using Bioconductor 3.6 (BiocInstaller 1.28.0), R 3.4.3 (2017-11-30).
+Installing package(s) ‘clusterProfiler’
+trying URL 'https://bioconductor.org/packages/3.6/bioc/src/contrib/clusterProfiler_3.6.0.tar.gz'
+Content type 'application/x-gzip' length 4478098 bytes (4.3 MB)
+==================================================
+downloaded 4.3 MB
+
+* installing *source* package ‘clusterProfiler’ ...
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (clusterProfiler)
+
+&gt; packageVersion('clusterProfiler')
+[1] ‘3.6.0’
+</code></pre>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev"><a href="../../post/2019-07-01-centos-firewall/">CentOS 7 防火墙开启常见端口命令</a><br/>&larr;</span>
+  <span class="nav-next"><a href="../../post/2019-07-01-focus-on-writing/">只要能坚持下来就是好博客</a><br/>&rarr;</span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/post\/2019-07-01-centos-firewall\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/post\/2019-07-01-focus-on-writing\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var disqus_js = '//bioinit.disqus.com/embed.js';
+    var d = document, s = d.createElement('script');
+    s.src = disqus_js; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    var b = false, l = function() {
+      if (b) return;
+      (d.head || d.body).appendChild(s); b = true;
+    }
+    var t = d.getElementById('disqus_thread');
+    s.onerror = function(e) {
+      if (sessionStorage.getItem('failure-note')) return;
+      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
+      t.style.border = '1px dashed';
+      t.style.padding = '.5em';
+      t.style.background = 'lightyellow';
+      sessionStorage.setItem('failure-note', true);
+    };
+    
+    if (location.hash.match(/^#comment/)) return l();
+    var c = function() {
+      if (b) return;
+      var rect = t.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
+    };
+    window.addEventListener('load', c);
+    d.addEventListener('scroll', c);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+<script async src="../../js/fix-toc.js"></script>
+
+<script async src="../../js/center-img.js"></script>
+
+<script async src="../../js/right-quote.js"></script>
+
+<script async src="../../js/no-highlight.js"></script>
+
+<script async src="../../js/fix-footnote.js"></script>
+
+<script async src="../../js/math-code.js"></script>
+
+<script async src="../../js/external-link.js"></script>
+
+<script async src="../../js/alt-title.js"></script>
+
+<script async src="../../js/header-link.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <title>Anaconda 使用的一些体验与困惑 - </title>
+    
+     
+    <meta property="og:title" content="Anaconda 使用的一些体验与困惑 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/style.css"/>
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/mystyle.css"/> 
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/fonts.css" />
+    
+<link rel="stylesheet" href="https://blog.bioinit.com/css/custom.css" />
+
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      
+
+<h1><a href="../../"><img src="https://apps-db.oss-cn-shenzhen.aliyuncs.com/logos/shenweiyan.png" alt="Steven Shen" /></a></h1>
+
+
+
+      <nav class="menu">
+        <input id="menu-check" type="checkbox" />
+        <label id="menu-label" for="menu-check" class="unselectable">
+          <span class="icon close-icon">✕</span>
+          <span class="icon open-icon">☰</span>
+          <span class="text">Menu</span>
+        </label>
+        <ul>
+        
+        
+        <li><a href="https://blog.bioinit.com">首页</a></li>
+        
+        <li><a href="../../about/">关于</a></li>
+        
+        <li><a href="../../post/">博客</a></li>
+        
+        <li><a href="../../read/">读书</a></li>
+        
+        <li><a href="../../research/">研究</a></li>
+        
+        <li><a href="../../tools/">工具</a></li>
+        
+        <li><a href="../../resume/shenweiyan">简历</a></li>
+        
+        <li><a href="../../other/">其他</a></li>
+        
+        
+
+<li class="menu-extra"></li>
+
+
+
+<li><a href="https://github.com/shenweiyan/home/edit/master/content/post/2019-07-04-anaconda-experience.md" target="_blank">编辑</a></li>
+
+
+<li><a href="../../post/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
+
+
+        </ul>
+      </nav>
+    </header>
+
+    <article class="main">
+      <header class="title">
+        
+
+<h1>Anaconda 使用的一些体验与困惑</h1>
+
+
+
+<h3>
+2019-07-04</h3> 
+
+
+   
+  
+
+
+      </header>
+
+
+
+
+<p><a name="Y60JN"></a></p>
+
+<h1 id="1-channels-使用">1. channels 使用</h1>
+
+<p>需要注意的是做生信分析的童鞋使用 conda 环境时一定要特别注意 conda channels 的设置，滥用 channels 很有可能会导致你的软件升降级（甚至环境）错乱。推荐设置如下（<strong>~/.condarc</strong>）：</p>
+
+<pre><code class="language-bash">channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro
+  - defaults
+show_channels_urls: true
+</code></pre>
+
+<ul>
+<li>mirrors.tuna.tsinghua.edu.cn/anaconda 是清华大学提供了一个 conda 的镜像；</li>
+<li>mirrors.ustc.edu.cn/anaconda 是中科大 conda 镜像，有需要的也可以使用；</li>
+<li>生物信息软件 channel： mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda。</li>
+</ul>
+
+<p><strong>从 2019.04 起清华大学和中科大宣布停止 Anaconda 镜像服务，但是出于教育科研机构使用的前提，在 2019-05-15 清华大学又宣布重新恢复了 Anaconda 镜像！</strong></p>
+
+<p>因此原来使用国内镜像的 conda 可以根据自身需求决定是否需要变更新的 channels：</p>
+
+<pre><code class="language-shell">channels:
+  - conda-forge
+  - bioconda
+  - main
+  - free
+  - r
+  - pro
+  - defaults
+show_channels_urls: true
+</code></pre>
+
+<p>更多 Anaconda channels，可以参考：<a href="https://repo.continuum.io/pkgs/">https://repo.continuum.io/pkgs/</a>。</p>
+
+<p>[]()
+<a name="6e008e24"></a></p>
+
+<h1 id="2-软件安装使用">2. 软件安装使用</h1>
+
+<p>conda 环境下的软件尽量使用 conda、pip 命令去安装。但同时也产生了一个问题，即 conda 中安装了 R，有些使用了 <code>install.packages()</code> , <code>install_github</code> , <code>biocLite</code> 等方式安装的 R 包，在环境迁移的时候，这些包如何迁移？<br />[]()<br />[]()
+<a name="31326bda"></a></p>
+
+<h1 id="3-环境激活">3. 环境激活</h1>
+
+<p>conda 4.6.x 切换环境使用的是：</p>
+
+<pre><code class="language-bash">$ source activate bio-base
+</code></pre>
+
+<p>conda 4.7.x 后切换环境变成了：</p>
+
+<pre><code class="language-bash"># To activate this environment, use:
+&gt; conda activate bio-base
+
+# To deactivate an active environment, use:
+&gt; conda deactivate
+</code></pre>
+
+<p>问题是，conda-4.7.x 使用推荐的命令切换环境，还要你 init 初始化一下 conda，不想 init 的话可以用回 4.6.x 的方式切换环境：</p>
+
+<pre><code class="language-bash">$ conda --version
+conda 4.7.5
+
+$ conda activate bio-base
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+$ conda init &lt;SHELL_NAME&gt;
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+$ source activate bio-base
+(bio-base) shenweiyan@ecs-steven 10:49:59 /home/shenweiyan
+$ which python
+/Bioinfo/Pipeline/SoftWare/Anaconda3/envs/bio-base/bin/python
+$ source deactivate bio-base
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
+
+shenweiyan@ecs-steven 11:03:40 /home/shenweiyan
+$ source activate bio-base
+(bio-base) shenweiyan@ecs-steven 11:03:50 /home/shenweiyan
+$ conda deactivate
+(bio-base) shenweiyan@ecs-steven  11:03:57 /home/shenweiyan
+$
+</code></pre>
+
+<p><a name="qPgWA"></a></p>
+
+<h1 id="4-环境导出与恢复">4. 环境导出与恢复</h1>
+
+<p>使用 conda 命令安装的包，都可以使用下面的命令导出依赖包/环境并批量恢复：</p>
+
+<pre><code class="language-shell"># To create a requirements.txt file
+# Gives you list of packages used for the environment
+conda list 
+
+# Save all the info about packages to your folder
+conda list -e &gt; requirements.txt 
+
+
+# To export environment file
+activate &lt;environment-name&gt;
+conda env export &gt; &lt;environment-name&gt;.yml
+
+# For other person to use the environment
+conda env create -f &lt;environment-name&gt;.yml
+
+# Install via `conda` directly.
+# This will fail to install all dependencies. If one fails, all dependencies will fail to install.
+conda install --yes --file requirements.txt
+
+# To go around issue above, one can iterate over all lines in the requirements.txt file.
+while read requirement; do conda install --yes $requirement; done &lt; requirements.txt
+</code></pre>
+
+<p>[]()
+<a name="71a62493"></a></p>
+
+<h1 id="5-r-与-r-包安装">5. R 与 R 包安装</h1>
+
+<p>R Essentials 软件包包含 IRKernel 和 80 多种最流行的数据科学 R 软件包，包括 dplyr，shiny，ggplot2，tidyr，caret 和 nnet 等。<br />[]()
+<a name="d46d2538"></a></p>
+
+<h2 id="5-1-r-软件">5.1 R 软件</h2>
+
+<p>conda 安装 R 有很多种方法，如可以通过 r=3.6.x，或者 r-base、r-irkernel、r-essentials 都可以。需要注意：</p>
+
+<p>如果需要在 Anaconda 的 Jupyter Notebook 中使用 R，建议使用 <code>conda install -c r r-irkernel</code> 或者 <code>conda install -c r r-essentials</code> 的方式安装，因为 <code>conda install -c r r=3.6.x/r-base</code> 默认不会安装 irkernel，而且先安装的 r=3.6.x/r-base 可能与后安装的 r-irkernel/r-essentials 产生冲突。
+<a name="7T9Pd"></a></p>
+
+<p><a name="rlP8q"></a></p>
+
+<h2 id="5-2-r-包">5.2 R 包</h2>
+
+<p>通过 conda 安装的 R，在安装 R 包时，最好使用 conda 命令去安装，conda 无法安装的（如 github 的包）再考虑其他的安装方式。</p>
+
+<p><a name="32p58"></a></p>
+
+<h3 id="1-install-packages">1. install.packages</h3>
+
+<p><code>install.packages()</code> 所有 R 包：</p>
+
+<pre><code class="language-r">&gt; data = read.table(&quot;r-packages.txt&quot;,  header=T, check.names=F, quote=&quot;&quot;)
+&gt; soft = as.vector(data[,1])
+&gt; install.packages(soft)
+</code></pre>
+
+<p><a name="EoLVl"></a></p>
+
+<p><a name="pZbCA"></a></p>
+
+<h3 id="2-bioconductor">2. bioconductor </h3>
+
+<p><strong>Bioconductor 镜像：</strong></p>
+
+<ul>
+<li><p>Bioconductor 镜像源配置文件之一是 <code>.Rprofile</code> (linux 下位于 <code>~/.Rprofile</code> )。在文末添加如下语句：</p>
+
+<pre><code>#清华大学开源镜像
+options(BioC_mirror=&quot;https://mirrors.tuna.tsinghua.edu.cn/bioconductor&quot;)
+</code></pre></li>
+
+<li><p>也可以在安装过程中指定镜像：</p>
+
+<pre><code class="language-bash">source(&quot;http://bioconductor.org/biocLite.R&quot;)
+#指定一个离你最近的国内镜像
+options(BioC_mirror=&quot;http://mirrors.ustc.edu.cn/bioc/&quot;)
+biocLite(&quot;包名&quot;)
+</code></pre></li>
+</ul>
+
+<p><strong>biocLite 包安装：</strong></p>
+
+<ul>
+<li><p>在 R-3.5（Bioconductor-3.7） 前，Bioconductor 都是通过 <strong>biocLite</strong> 安装相关的 R 包：</p>
+
+<pre><code class="language-r">&gt; source(&quot;http://bioconductor.org/biocLite.R&quot;)
+&gt; options(BioC_mirror=&quot;http://mirrors.tuna.tsinghua.edu.cn/bioconductor&quot;)
+&gt; data = read.table(&quot;r-biocLite.txt&quot;,  header=T, check.names=F, quote=&quot;&quot;)
+&gt; head(data)
+biocLite_Packages_Name
+1                RSQLite
+2               KEGGREST
+3                    png
+4                   Rcpp
+5                 digest
+6          AnnotationDbi
+&gt; soft = as.vector(data[,1])
+&gt; biocLite(soft)
+</code></pre></li>
+
+<li><p>从 R-3.5(Bioconductor-3.8) 起，Bioconductor 开始使用 <strong>BiocManager</strong> 安装 R 包：</p>
+
+<pre><code class="language-r">if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
+install.packages(&quot;BiocManager&quot;)
+BiocManager::install()
+</code></pre>
+
+<p>[]()</p></li>
+</ul>
+
+<p><a name="uTjG9"></a></p>
+
+<h3 id="3-github-install">3. github_install</h3>
+
+<p>GitHub 上的一些最新 R 包，可以使用 <code>devtools</code> 进行安装：</p>
+
+<pre><code class="language-r">install.packages(&quot;devtools&quot;)
+library(devtools)
+install_github(&quot;jokergoo/ComplexHeatmap&quot;)
+</code></pre>
+
+<p>[]()
+<a name="c3806f74"></a></p>
+
+<h1 id="6-特别注意的软件">6. 特别注意的软件</h1>
+
+<p>[]()
+<a name="18cd0dcd"></a></p>
+
+<h2 id="6-1-gcc">6.1 gcc</h2>
+
+<p>对于使用 <code>conda install --yes --file requirements.txt</code> 重装某一个环境的所有软件时，如果软件中包含了 gcc，安装了 R 后，在使用 R 时会可能会引发错误：</p>
+
+<pre><code class="language-r">/path/to/SoftWare/Anaconda/v2/lib/R/bin/exec/R: /path/to/SoftWare/Anaconda/v2/lib/R/bin/exec/../../lib/../../libgomp.so.1: version `GOMP_4.0' not found (required by /path/to/SoftWare/Anaconda/v2/lib/R/bin/exec/../../lib/libR.so)
+</code></pre>
+
+<p>[]()
+<a name="8b17553d"></a></p>
+
+<h2 id="6-2-glibc">6.2 glibc</h2>
+
+<blockquote>
+<p>glibc 是 GNU 发布的 libc 库，即 c 运行库。glibc 是 linux 系统中最底层的 api，几乎其它任何运行库都会依赖于 glibc。glibc 除了封装 linux 操作系统所提供的系统服务外，它本身也提供了许多其它一些必要功能服务的实现。由于 glibc 囊括了几乎所有的 UNIX 通行的标准，可以想见其内容包罗万象。而就像其他的 UNIX 系统一样，其内含的档案群分散于系统的树状目录结构中，像一个支架一般撑起整个作业系统。在 GNU/Linux 系统中，其 C 函式库发展史点出了 GNU/Linux 演进的几个重要里程碑，用 glibc 作为系统的 C 函式库，是 GNU/Linux 演进的一个重要里程碑。</p>
+</blockquote>
+
+<p>有一些软件对于 glibc 的版本会有要求，如 cnvnator-0.3.3 要求 glibc &gt;= 2.14。虽然在 anaconda 中有很多 channel 都提供了 glibc，但<strong>千万注意一定要注意不要轻易去安装</strong>，否则有很大的概率会导致整个环境挂掉，甚至会导致当前环境中的 conda、python 出现动态库混乱错误，恢复起来相当麻烦！</p>
+
+<p>我在《<a href="https://www.yuque.com/shenweiyan/cookbook/hpc-experience-glibc">一次&rdquo;胆战心惊&rdquo;的真实集群运维经历</a>》记录了 gblic 的一些集群吐血经历，感兴趣的可以了解一下。</p>
+
+<p><a name="2VR30"></a></p>
+
+<h1 id="7-什么时候使用-anaconda">7. 什么时候使用 Anaconda</h1>
+
+<p>对于 Anaconda(conda) 软件安装以及依赖解决的原理，我对这个黑盒子表示一头雾水。真实的情况是，如果在一个环境中安装了几百个软件(包)，再去新装软件，这时候 Anaconda 常常会卡在 Collecting package metadata 和 Solving environment 过程中，甚至一个晚上都没法解决环境的依赖。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562893289384-0a32c390-b76f-4a4c-bf36-63ed998de07c.png#align=left&amp;display=inline&amp;height=359&amp;name=image.png&amp;originHeight=479&amp;originWidth=856&amp;size=81664&amp;status=done&amp;width=642" alt="image.png" /></p>
+
+<p>conda 官方说他们在 conda-4.7 中花了很多的精力去提升了 conda 的速度（参考官方文章：《<a href="https://www.anaconda.com/how-we-made-conda-faster-4-7/">How We Made Conda Faster in 4.7</a>》），但从 4.6 升级到 4.7 过程很容易导致环境崩溃，修复起来极其麻烦（反正我折腾了一个晚上都没能把我的 base 给恢复回来，吐血的经历）！<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562894737005-07511220-673c-4ad2-9849-3917b72725ef.png#align=left&amp;display=inline&amp;height=238&amp;name=image3-768x475.png&amp;originHeight=475&amp;originWidth=768&amp;size=14993&amp;status=done&amp;width=384" alt="image3-768x475.png" /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562894770827-e7dc8bbc-18f8-4fe0-a3e7-d3b2c16a1947.png#align=left&amp;display=inline&amp;height=238&amp;name=i2-768x475.png&amp;originHeight=475&amp;originWidth=768&amp;size=25596&amp;status=done&amp;width=384" alt="i2-768x475.png" /></p>
+
+<p>对于新手而言，Anaconda 的确是非常简单易用，如果对于多用户的服务器端，或者是提供公共使用的软件库是否需要采用 Anaconda，个人觉得的确需要慎重考虑一下，最起码需要考虑：</p>
+
+<ul>
+<li>是否需要根据流程划分环境？如果每个流程都需要使用 Python+R+Perl，每个环境都安装这三个软件（包），如何避免空间浪费？</li>
+<li>需要考虑如何备份和恢复环境。万一某个环境崩溃，有什么快速替代的方案而不影响业务。</li>
+</ul>
+
+<p>或许还有更多的问题，这里没有列出来，如果大家有什么更好的想法或者建议，也欢迎留言交流。</p>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev"><a href="../../post/2019-07-04-ecs-docker-wordpress-ssl/">阿里云 ECS&#43;Docker&#43;WordPress 搭建个人博客</a><br/>&larr;</span>
+  <span class="nav-next"><a href="../../post/2019-07-08-to-be-good/">周末小折腾，愿你安好</a><br/>&rarr;</span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/post\/2019-07-04-ecs-docker-wordpress-ssl\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/post\/2019-07-08-to-be-good\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var disqus_js = '//bioinit.disqus.com/embed.js';
+    var d = document, s = d.createElement('script');
+    s.src = disqus_js; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    var b = false, l = function() {
+      if (b) return;
+      (d.head || d.body).appendChild(s); b = true;
+    }
+    var t = d.getElementById('disqus_thread');
+    s.onerror = function(e) {
+      if (sessionStorage.getItem('failure-note')) return;
+      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
+      t.style.border = '1px dashed';
+      t.style.padding = '.5em';
+      t.style.background = 'lightyellow';
+      sessionStorage.setItem('failure-note', true);
+    };
+    
+    if (location.hash.match(/^#comment/)) return l();
+    var c = function() {
+      if (b) return;
+      var rect = t.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
+    };
+    window.addEventListener('load', c);
+    d.addEventListener('scroll', c);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+<script async src="../../js/fix-toc.js"></script>
+
+<script async src="../../js/center-img.js"></script>
+
+<script async src="../../js/right-quote.js"></script>
+
+<script async src="../../js/no-highlight.js"></script>
+
+<script async src="../../js/fix-footnote.js"></script>
+
+<script async src="../../js/math-code.js"></script>
+
+<script async src="../../js/external-link.js"></script>
+
+<script async src="../../js/alt-title.js"></script>
+
+<script async src="../../js/header-link.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

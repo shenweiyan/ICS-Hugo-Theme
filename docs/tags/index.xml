@@ -1,15 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Cupper</title>
+    <title>Tags on Steven Shen | 沈维燕</title>
     <link>https://ivc.bioinit.com/tags/</link>
-    <description>Recent content in Tags on Cupper</description>
+    <description>Recent content in Tags on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <language>zh</language>
+    <lastBuildDate>Thu, 04 Jul 2019 06:20:26 +0000</lastBuildDate>
     
 	<atom:link href="https://ivc.bioinit.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Anaconda</title>
+      <link>https://ivc.bioinit.com/tags/anaconda/</link>
+      <pubDate>Thu, 04 Jul 2019 06:20:26 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/tags/anaconda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Centos</title>
+      <link>https://ivc.bioinit.com/tags/centos/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/tags/centos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chrome</title>
+      <link>https://ivc.bioinit.com/tags/chrome/</link>
+      <pubDate>Sat, 18 May 2019 12:29:57 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/tags/chrome/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Command Line</title>
@@ -66,11 +93,29 @@
     </item>
     
     <item>
+      <title>Jupyter</title>
+      <link>https://ivc.bioinit.com/tags/jupyter/</link>
+      <pubDate>Wed, 17 Jul 2019 08:25:34 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/tags/jupyter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Katex</title>
       <link>https://ivc.bioinit.com/tags/katex/</link>
       <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/tags/katex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://ivc.bioinit.com/tags/linux/</link>
+      <pubDate>Fri, 19 Jul 2019 06:06:53 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/tags/linux/</guid>
       <description></description>
     </item>
     
@@ -111,20 +156,56 @@
     </item>
     
     <item>
-      <title>Quotes</title>
-      <link>https://ivc.bioinit.com/tags/quotes/</link>
-      <pubDate>Wed, 26 Dec 2018 00:29:41 -0600</pubDate>
+      <title>Others</title>
+      <link>https://ivc.bioinit.com/tags/others/</link>
+      <pubDate>Thu, 08 Aug 2019 03:44:11 +0000</pubDate>
       
-      <guid>https://ivc.bioinit.com/tags/quotes/</guid>
+      <guid>https://ivc.bioinit.com/tags/others/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Shortcodes</title>
-      <link>https://ivc.bioinit.com/tags/shortcodes/</link>
-      <pubDate>Tue, 12 Feb 2019 23:39:06 -0600</pubDate>
+      <title>Python</title>
+      <link>https://ivc.bioinit.com/tags/python/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://ivc.bioinit.com/tags/shortcodes/</guid>
+      <guid>https://ivc.bioinit.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://ivc.bioinit.com/tags/r/</link>
+      <pubDate>Mon, 15 Jul 2019 09:24:35 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Redhat Centos</title>
+      <link>https://ivc.bioinit.com/tags/redhat-centos/</link>
+      <pubDate>Thu, 25 Jul 2019 01:29:15 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/tags/redhat-centos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Redhat 软件</title>
+      <link>https://ivc.bioinit.com/tags/redhat-%E8%BD%AF%E4%BB%B6/</link>
+      <pubDate>Sat, 18 May 2019 12:39:52 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/tags/redhat-%E8%BD%AF%E4%BB%B6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>https://ivc.bioinit.com/tags/shell/</link>
+      <pubDate>Sat, 29 Dec 2018 09:21:11 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/tags/shell/</guid>
       <description></description>
     </item>
     
@@ -152,6 +233,78 @@
       <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/tags/typesetting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>https://ivc.bioinit.com/tags/vim/</link>
+      <pubDate>Mon, 01 Jul 2019 03:57:31 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>杂谈</title>
+      <link>https://ivc.bioinit.com/tags/%E6%9D%82%E8%B0%88/</link>
+      <pubDate>Thu, 08 Aug 2019 09:05:21 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/tags/%E6%9D%82%E8%B0%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>生物信息学 杂谈</title>
+      <link>https://ivc.bioinit.com/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6-%E6%9D%82%E8%B0%88/</link>
+      <pubDate>Wed, 29 May 2019 06:12:49 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6-%E6%9D%82%E8%B0%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>编程</title>
+      <link>https://ivc.bioinit.com/tags/%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Tue, 23 Jul 2019 03:19:17 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/tags/%E7%BC%96%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>软件</title>
+      <link>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>软件 Perl</title>
+      <link>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6-perl/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6-perl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>软件 Python</title>
+      <link>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6-python/</link>
+      <pubDate>Sat, 18 May 2019 12:10:10 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6-python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>软件 R</title>
+      <link>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6-r/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6-r/</guid>
       <description></description>
     </item>
     

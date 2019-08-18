@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <title>如何解决服务器I/O过高的问题 - </title>
+    
+     
+    <meta property="og:title" content="如何解决服务器I/O过高的问题 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/style.css"/>
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/mystyle.css"/> 
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/fonts.css" />
+    
+<link rel="stylesheet" href="https://blog.bioinit.com/css/custom.css" />
+
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      
+
+<h1><a href="../../"><img src="https://apps-db.oss-cn-shenzhen.aliyuncs.com/logos/shenweiyan.png" alt="Steven Shen" /></a></h1>
+
+
+
+      <nav class="menu">
+        <input id="menu-check" type="checkbox" />
+        <label id="menu-label" for="menu-check" class="unselectable">
+          <span class="icon close-icon">✕</span>
+          <span class="icon open-icon">☰</span>
+          <span class="text">Menu</span>
+        </label>
+        <ul>
+        
+        
+        <li><a href="https://blog.bioinit.com">首页</a></li>
+        
+        <li><a href="../../about/">关于</a></li>
+        
+        <li><a href="../../post/">博客</a></li>
+        
+        <li><a href="../../read/">读书</a></li>
+        
+        <li><a href="../../research/">研究</a></li>
+        
+        <li><a href="../../tools/">工具</a></li>
+        
+        <li><a href="../../resume/shenweiyan">简历</a></li>
+        
+        <li><a href="../../other/">其他</a></li>
+        
+        
+
+<li class="menu-extra"></li>
+
+
+
+<li><a href="https://github.com/shenweiyan/home/edit/master/content/post/2019-05-07-ysegnx.md" target="_blank">编辑</a></li>
+
+
+<li><a href="../../post/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
+
+
+        </ul>
+      </nav>
+    </header>
+
+    <article class="main">
+      <header class="title">
+        
+
+<h1>如何解决服务器I/O过高的问题</h1>
+
+
+
+<h3>
+2019-05-07</h3> 
+
+
+   
+  
+
+
+      </header>
+
+
+<p><strong>问题缘起</strong>: 当我习惯性地用<code>top</code>查看任务运行状态时，发现我运行的100个任务，只有3个在运行，其他都在摸鱼状态。同时发现我的任务进程都是&rdquo;D&rdquo;状态(未截图)，而不是R(运行)状态。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550453183052-3a5d12e2-a295-40a5-b7c0-8bd99676c8d7.png#align=left&amp;display=inline&amp;height=89&amp;name=top_status.png&amp;originHeight=124&amp;originWidth=1045&amp;size=8597&amp;status=done&amp;width=746" alt="top_status.png" /></p>
+
+<p>这个时候，我直觉上感觉这是硬盘读写除了问题，于是我开始检索查找相关工具去验证我的猜想先用的是 <code>iostat -x 2 10</code>，如果 <code>%util</code>  接近 100% 说明产生的 I/O 请求太多，I/O 系统满负荷，<code>%idle</code>小于70%，IO压力就很大。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550453263470-298b42a2-abd7-41e2-aedf-a2256c065b3d.png#align=left&amp;display=inline&amp;height=128&amp;name=iostat_result.png&amp;originHeight=273&amp;originWidth=1587&amp;size=12944&amp;status=done&amp;width=746" alt="iostat_result.png" /></p>
+
+<p>从上图明显发现我的IO压力过大。当然作为科研人员，我们都知道我们需要多个证据才能证实自己的猜想，于是进一步用<code>iotop</code>, 发现有许多进程的IO居然是99%。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550453303058-456772f9-b1cf-48a7-803e-7ca42028ce05.png#align=left&amp;display=inline&amp;height=303&amp;name=iotop_result.png&amp;originHeight=315&amp;originWidth=775&amp;size=11674&amp;status=done&amp;width=746" alt="iotop_result.png" /></p>
+
+<p>既然确定服务器性能下降的原因是IO。那么下一步就是找到导致磁盘压力过大的真凶。用<code>dstat --top-bio-adv</code>找到那个进程占用 IO 最多， 此处发现是 jdb2/sda1-8 的写出数据超多：<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550453360609-76c32bb2-568a-4cc5-8cc1-47438cb84b62.png#align=left&amp;display=inline&amp;height=265&amp;name=dstat_result.png&amp;originHeight=265&amp;originWidth=569&amp;size=12595&amp;status=done&amp;width=569" alt="dstat_result.png" /></p>
+
+<p>利用关键字&rdquo;jdb2/sda1-8&rdquo;经过搜索，发现很多人都遇到这种情况。</p>
+
+<ul>
+<li>有些认为是RAID磁盘矩阵导致的问题</li>
+<li>有人认为是MySQL的问题。</li>
+</ul>
+
+<p>刚好，我的服务器是RAID，又刚好我今天改动了 MySQL。但是直觉告诉我，应该不是这两个问题，因为我虽然改了MySQL的配置文件，但是我基本不用MySQL, 所以排除这个可能。但是，目前我已经顺利确认就是&rdquo;jdb2/sdax-y&rdquo;的问题(x表示是分区)，于是我就主要检索了 jdb2：
+&gt; jbd2的全称是journaling block driver 。这个进程实现的是文件系统的日志功能，磁盘使用日志功能来保证数据的完整性。这个需要评估一下安全和性能哪个更重要，对于一个应用服务器来说，并不保存重要的用户数据，只是实现业务逻辑。如果是数据库的话，就需要考虑启动磁盘写入的完整性检查。但是现在大部分系统在业务和架构层面已经考虑了业务完整性。所以为性能计，这里并不是非常有必须启动日志功能。
+&gt;</p>
+
+<p>网络上的人提供了如下三种解决方案：</p>
+
+<ul>
+<li>升级内核；</li>
+<li>更改commit的次数， &ldquo;mount -o remount,commit=60 /dev/sda1&rdquo;；</li>
+<li>关闭文件系统日志功能: 操作类似于<code>dumpe2fs</code> 获取文件系统属性信息, <code>tune2fs</code> 调整文件系统属性, 之后<code>e2fsck</code> 检查文件系统(几乎大部分都不推荐这样做)。</li>
+</ul>
+
+<p>当然这些方案，我一个都没有采纳，因为我突然想到今天服务器上似乎运行了许多IO操作很频繁的程序，jdb2的特点就是牺牲了性能保证了数据完整性，也就是说是我运行的程序太多让jdb2忙不过来了。因此我的最终解决方案就是，用<code>kill</code>把所有当前运行的高IO程序都干掉。最后解决了问题。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550453490483-06f63c04-b634-4ae7-a17d-d955b321043a.png#align=left&amp;display=inline&amp;height=115&amp;name=kill_top_io.png&amp;originHeight=161&amp;originWidth=1045&amp;size=10761&amp;status=done&amp;width=746" alt="kill_top_io.png" /></p>
+
+<p>最后，问题解决。</p>
+
+<hr />
+
+<p>作者：hoptop<br />链接：<a href="https://www.jianshu.com/p/d7edbff7dda6">https://www.jianshu.com/p/d7edbff7dda6</a><br />來源：简书</p>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev"><a href="../../post/2019-04-29-xdlz2f/">命名风格</a><br/>&larr;</span>
+  <span class="nav-next"><a href="../../post/2019-05-09-xpurpl/">国内 GitHub 访问加速</a><br/>&rarr;</span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/post\/2019-04-29-xdlz2f\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/post\/2019-05-09-xpurpl\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script src="../../js/disqusloader.min.js"></script>
+  <script>
+  var disqus_config = function () {
+  
+    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var disqus_js = '//bioinit.disqus.com/embed.js';
+    
+    if (location.hash.match(/^#comment/)) {
+      var d = document, s = d.createElement('script');
+      s.src = disqus_js; s.async = true;
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    } else {
+      disqusLoader('#disqus_thread', {
+        scriptUrl: disqus_js, laziness: 0, disqusConfig: disqus_config
+      });
+    }
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+<script async src="../../js/fix-toc.js"></script>
+
+<script async src="../../js/center-img.js"></script>
+
+<script async src="../../js/right-quote.js"></script>
+
+<script async src="../../js/no-highlight.js"></script>
+
+<script async src="../../js/fix-footnote.js"></script>
+
+<script async src="../../js/math-code.js"></script>
+
+<script async src="../../js/external-link.js"></script>
+
+<script async src="../../js/alt-title.js"></script>
+
+<script async src="../../js/header-link.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

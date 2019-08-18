@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <title>python3 中 os.path 模块常用用法总结 - </title>
+    
+     
+    <meta property="og:title" content="python3 中 os.path 模块常用用法总结 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://ivc.bioinit.com/css/style.css"/>
+    <link rel="stylesheet" href="https://ivc.bioinit.com/css/mystyle.css"/> 
+    <link rel="stylesheet" href="https://ivc.bioinit.com/css/fonts.css" />
+    
+<link rel="stylesheet" href="https://ivc.bioinit.com/css/template-styles.css" />
+<link rel="stylesheet" href="https://ivc.bioinit.com/css/custom.css" />
+
+  </head>
+
+  
+  <body class="blog">
+    
+    
+    <header class="intro-and-nav" role="banner">
+    <div>
+    <div class="intro">
+      <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
+        <img src="https://ivc.bioinit.com/img/logo.png" alt="">
+      </a>
+      <p class="library-desc">
+        
+          Welcome to the personal website of Steven Shen.
+        
+      </p>
+    </div>
+    <nav id="patterns-nav" class="patterns" role="navigation">
+  <h2 class="vh">Main navigation</h2>
+  <button id="menu-button" aria-expanded="false">
+    <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
+      <use xlink:href="#menu"></use>
+    </svg>
+    Menu
+  </button>
+  
+  <ul id="patterns-list">
+    
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../" >
+        
+        首页
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../about/" >
+        
+        关于
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../blog/" >
+        
+        博客
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../zhuanlan/" >
+        
+        专栏
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../research/" >
+        
+        研究
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../resume/shenweiyan" >
+        
+        简历
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../archives/" >
+        
+        归档
+      </a>
+    </li>
+  
+  
+
+<li class="pattern">&nbsp;&nbsp;</li>
+
+
+
+<li class="pattern"><a href="https://github.com/shenweiyan/home/edit/master/content/blog/2019-05-18-python-os-path.md" target="_blank">编辑</a></li>
+
+
+<li class="pattern"><a href="../../blog/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li class="pattern"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
+
+
+  </ul>
+</nav>
+
+    </div>
+   </header>
+
+    <article class="main">
+      <header class="title">
+        
+
+<h1>python3 中 os.path 模块常用用法总结</h1>
+
+
+
+<h3>
+2019-05-18</h3> 
+
+
+   
+  
+
+
+      </header>
+
+
+
+
+<p>os.path：常见的路径名操作模块。原文文档链接：<a href="https://docs.python.org/3.6/library/os.path.html">https://docs.python.org/3.6/library/os.path.html</a></p>
+
+<p><a name="abspath"></a></p>
+
+<h2 id="abspath">abspath</h2>
+
+<blockquote>
+<p>返回一个目录的绝对路径
+Return an absolute path.</p>
+</blockquote>
+
+<pre><code>&gt;&gt;&gt; os.path.abspath(&quot;/etc/sysconfig/selinux&quot;)
+'/etc/sysconfig/selinux'
+&gt;&gt;&gt; os.getcwd()
+'/root'
+&gt;&gt;&gt; os.path.abspath(&quot;python_modu&quot;)
+'/root/python_modu'
+</code></pre>
+
+<p><a name="basename"></a></p>
+
+<h2 id="basename">basename</h2>
+
+<blockquote>
+<p>返回一个路径名的最终名称
+Returns the final component of a pathname</p>
+</blockquote>
+
+<pre><code>&gt;&gt;&gt; os.path.basename(&quot;/etc/sysconfig/selinux&quot;)
+'selinux'
+&gt;&gt;&gt; os.path.basename(&quot;/usr/local/python3/bin/python3&quot;)
+'python3'
+</code></pre>
+
+<hr />
+
+<p><a name="dirname"></a></p>
+
+<h2 id="dirname">dirname</h2>
+
+<blockquote>
+<p>返回一个目录的目录名
+Returns the directory component of a pathname</p>
+</blockquote>
+
+<pre><code>&gt;&gt;&gt; os.path.dirname(&quot;/etc/sysconfig/selinux&quot;)
+'/etc/sysconfig'
+&gt;&gt;&gt; os.path.dirname(&quot;/usr/local/python3/bin/python3&quot;)
+'/usr/local/python3/bin'
+</code></pre>
+
+<hr />
+
+<p><a name="exists"></a></p>
+
+<h2 id="exists">exists</h2>
+
+<blockquote>
+<p>测试指定文件是否存在
+Test whether a path exists.  Returns False for broken symbolic links</p>
+</blockquote>
+
+<pre><code>&gt;&gt;&gt; os.path.exists(&quot;/home/egon&quot;)
+False
+&gt;&gt;&gt; os.path.exists(&quot;/root&quot;)
+True
+&gt;&gt;&gt; os.path.exists(&quot;/usr/bin/python&quot;)
+True
+</code></pre>
+
+<hr />
+
+<p><a name="getatime"></a></p>
+
+<h2 id="getatime">getatime</h2>
+
+<blockquote>
+<p>得到指定文件最后一次的访问时间
+Return the last access time of a file, reported by os.stat().</p>
+</blockquote>
+
+<pre><code>&gt;&gt;&gt; os.stat(&quot;/root/test.sh&quot;)
+os.stat_result(st_mode=33261, st_ino=100684935, st_dev=2050, st_nlink=1, st_uid=0, st_gid=0, st_size=568, st_atime=1498117664, st_mtime=1496629059, st_ctime=1498117696)
+&gt;&gt;&gt; os.path.getatime(&quot;/root/test.sh&quot;)
+1498117664.2808378
+</code></pre>
+
+<hr />
+
+<p><a name="getctime"></a></p>
+
+<h2 id="getctime">getctime</h2>
+
+<blockquote>
+<p>得到指定文件最后一次的改变时间
+Return the metadata change time of a file, reported by os.stat().</p>
+</blockquote>
+
+<pre><code>&gt;&gt;&gt; os.stat(&quot;/root/test.sh&quot;)
+os.stat_result(st_mode=33261, st_ino=100684935, st_dev=2050, st_nlink=1, st_uid=0, st_gid=0, st_size=568, st_atime=1498117664, st_mtime=1496629059, st_ctime=1498117696)
+&gt;&gt;&gt; os.path.getctime(&quot;/root/test.sh&quot;)
+1498117696.039542
+</code></pre>
+
+<hr />
+
+<p><a name="getmtime"></a></p>
+
+<h2 id="getmtime">getmtime</h2>
+
+<blockquote>
+<p>得到指定文件最后一次的修改时间
+Return the last modification time of a file, reported by os.stat().</p>
+</blockquote>
+
+<pre><code>&gt;&gt;&gt; os.stat(&quot;/root/test.sh&quot;)
+os.stat_result(st_mode=33261, st_ino=100684935, st_dev=2050, st_nlink=1, st_uid=0, st_gid=0, st_size=568, st_atime=1498117664, st_mtime=1496629059, st_ctime=1498117696)
+&gt;&gt;&gt; os.path.getmtime(&quot;/root/test.sh&quot;)
+1496629059.9313989
+</code></pre>
+
+<hr />
+
+<p><a name="getsize"></a></p>
+
+<h2 id="getsize">getsize</h2>
+
+<blockquote>
+<p>得到得到文件的大小
+Return the size, in bytes, of path. Raise OSError if the file does not exist or is inaccessible.</p>
+</blockquote>
+
+<pre><code>&gt;&gt;&gt; os.stat(&quot;/root/test.sh&quot;)
+os.stat_result(st_mode=33261, st_ino=100684935, st_dev=2050, st_nlink=1, st_uid=0, st_gid=0, st_size=568, st_atime=1498117664, st_mtime=1496629059, st_ctime=1498117696)
+&gt;&gt;&gt; os.path.getsize(&quot;/root/test.sh&quot;)
+568
+</code></pre>
+
+<hr />
+
+<p><a name="isabs"></a></p>
+
+<h2 id="isabs">isabs</h2>
+
+<blockquote>
+<p>测试参数是否是绝对路径
+Return True if path is an absolute pathname. On Unix, that means it begins with a slash, on Windows that it begins with a (back)slash after chopping off a potential drive letter.</p>
+</blockquote>
+
+<pre><code>&gt;&gt;&gt; os.path.isabs(&quot;python_modu&quot;)
+False
+&gt;&gt;&gt; os.path.isabs(&quot;/etc/sysconfig&quot;)
+True
+</code></pre>
+
+<hr />
+
+<p><a name="isfile"></a></p>
+
+<h2 id="isfile">isfile</h2>
+
+<blockquote>
+<p>测试指定参数是否是一个文件
+Return True if path is an existing regular file. This follows symbolic links, so both islink() and isfile() can be true for the same path.</p>
+</blockquote>
+
+<pre><code>&gt;&gt;&gt; os.path.isfile(&quot;/home&quot;)
+False
+&gt;&gt;&gt; os.path.isfile(&quot;/etc/sysconfig/selinux&quot;)
+True
+</code></pre>
+
+<hr />
+
+<p><a name="isdir"></a></p>
+
+<h2 id="isdir">isdir</h2>
+
+<blockquote>
+<p>测试指定参数是否是目录名
+Return True if path is an existing directory. This follows symbolic links, so both islink() and isdir() can be true for the same path.</p>
+</blockquote>
+
+<pre><code>&gt;&gt;&gt; os.path.isdir(&quot;/etc/sysconfig/selinux&quot;)
+False
+&gt;&gt;&gt; os.path.isdir(&quot;/home&quot;)
+True
+</code></pre>
+
+<hr />
+
+<p><a name="islink"></a></p>
+
+<h2 id="islink">islink</h2>
+
+<blockquote>
+<p>测试指定参数是否是一个软链接
+Return True if path refers to an existing directory entry that is a symbolic link. Always False if symbolic links are not supported by the Python runtime.</p>
+</blockquote>
+
+<pre><code>&gt;&gt;&gt; os.path.islink(&quot;/etc/sysconfig/selinux&quot;)
+True
+&gt;&gt;&gt; os.path.islink(&quot;/etc/sysconfig/nfs&quot;)
+False
+</code></pre>
+
+<hr />
+
+<p><a name="ismount"></a></p>
+
+<h2 id="ismount">ismount</h2>
+
+<blockquote>
+<p>测试指定参数是否是挂载点
+Return True if pathname path is a mount point: a point in a file system where a different file system has been mounted. The function checks whether path’s parent, path/.., is on a different device than path, or whether path/.. and path point to the same i-node on the same device — this should detect mount points for all Unix and POSIX variants.</p>
+</blockquote>
+
+<pre><code>&gt;&gt;&gt; os.path.ismount(&quot;/mnt/cdrom&quot;)
+False
+以上是未挂载光盘，现在把光盘挂载到/mnt/cdrom下，再进行测试
+&gt;&gt;&gt; os.path.ismount(&quot;/mnt/cdrom&quot;)
+True
+</code></pre>
+
+<hr />
+
+<p><a name="join"></a></p>
+
+<h2 id="join">join</h2>
+
+<blockquote>
+<p>join(a, *p)：将目录名和文件的基名拼接成一个完整的路径
+Join one or more path components intelligently.</p>
+</blockquote>
+
+<pre><code>&gt;&gt;&gt; for filename in os.listdir(&quot;/home&quot;):
+...     print(os.path.join(&quot;/tmp&quot;,filename))
+... 
+/tmp/a
+/tmp/f1.txt
+</code></pre>
+
+<hr />
+
+<p><a name="realpath"></a></p>
+
+<h2 id="realpath">realpath</h2>
+
+<blockquote>
+<p>返回指定文件的标准路径，而非软链接所在的路径
+Return the canonical path of the specified filename, eliminating any symbolic links encountered in the path (if they are supported by the operating system).</p>
+</blockquote>
+
+<pre><code>&gt;&gt;&gt; os.path.realpath(&quot;/etc/sysconfig/selinux&quot;)
+'/etc/selinux/config'
+&gt;&gt;&gt; os.path.realpath(&quot;/usr/bin/python&quot;)
+'/usr/bin/python2.7'
+</code></pre>
+
+<hr />
+
+<p><a name="samefile"></a></p>
+
+<h2 id="samefile">samefile</h2>
+
+<blockquote>
+<p>测试两个路径是否指向同一个文件
+Return True if both pathname arguments refer to the same file or directory. This is determined by the device number and i-node number and raises an exception if an os.stat() call on either pathname fails.</p>
+</blockquote>
+
+<pre><code>-
+</code></pre>
+
+<hr />
+
+<p><a name="sameopenfile"></a></p>
+
+<h2 id="sameopenfile">sameopenfile</h2>
+
+<blockquote>
+<p>测试两个打开的文件是否指向同一个文件
+Return True if the file descriptors fp1 and fp2 refer to the same file.</p>
+</blockquote>
+
+<pre><code>-
+</code></pre>
+
+<hr />
+
+<p><a name="split"></a></p>
+
+<h2 id="split">split</h2>
+
+<blockquote>
+<p>分割目录名，返回由其目录名和基名给成的元组
+Split the pathname path into a pair, (head, tail) where tail is the last pathname component and head is everything leading up to that. The tail part will never contain a slash; if path ends in a slash, tail will be empty. If there is no slash in path, head will be empty. If path is empty, both head and tail are empty. Trailing slashes are stripped from head unless it is the root (one or more slashes only). In all cases, join(head, tail) returns a path to the same location as path (but the strings may differ).</p>
+</blockquote>
+
+<pre><code>&gt;&gt;&gt; os.path.split(&quot;/tmp/f1.txt&quot;)
+('/tmp', 'f1.txt')
+&gt;&gt;&gt; os.path.split(&quot;/home/test.sh&quot;)
+('/home', 'test.sh')
+</code></pre>
+
+<hr />
+
+<p><a name="splitext"></a></p>
+
+<h2 id="splitext">splitext</h2>
+
+<blockquote>
+<p>分割文件名，返回由文件名和扩展名组成的元组
+Split the pathname path into a pair (root, ext) such that root + ext == path, and ext is empty or begins with a period and contains at most one period. Leading periods on the basename are ignored; splitext(&lsquo;.cshrc&rsquo;) returns (&lsquo;.cshrc&rsquo;, &ldquo;).</p>
+</blockquote>
+
+<pre><code>&gt;&gt;&gt; os.path.splitext(&quot;/home/test.sh&quot;)
+('/home/test', '.sh')
+&gt;&gt;&gt; os.path.splitext(&quot;/tmp/f1.txt&quot;)
+('/tmp/f1', '.txt')
+</code></pre>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev"><a href="../../blog/2019-05-18-kefse-install/">LEfSe 分析软件安装小记</a><br/>&larr;</span>
+  <span class="nav-next"><a href="../../blog/2019-05-18-how-to-use-vim/">vim 使用的一些小技巧</a><br/>&rarr;</span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/blog\/2019-05-18-kefse-install\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/blog\/2019-05-18-how-to-use-vim\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var disqus_js = '//bioinit.disqus.com/embed.js';
+    var d = document, s = d.createElement('script');
+    s.src = disqus_js; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    var b = false, l = function() {
+      if (b) return;
+      (d.head || d.body).appendChild(s); b = true;
+    }
+    var t = d.getElementById('disqus_thread');
+    s.onerror = function(e) {
+      if (sessionStorage.getItem('failure-note')) return;
+      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
+      t.style.border = '1px dashed';
+      t.style.padding = '.5em';
+      t.style.background = 'lightyellow';
+      sessionStorage.setItem('failure-note', true);
+    };
+    
+    if (location.hash.match(/^#comment/)) return l();
+    var c = function() {
+      if (b) return;
+      var rect = t.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
+    };
+    window.addEventListener('load', c);
+    d.addEventListener('scroll', c);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+<script async src="../../js/fix-toc.js"></script>
+
+<script async src="../../js/center-img.js"></script>
+
+<script async src="../../js/right-quote.js"></script>
+
+<script async src="../../js/no-highlight.js"></script>
+
+<script async src="../../js/fix-footnote.js"></script>
+
+<script async src="../../js/math-code.js"></script>
+
+<script async src="../../js/external-link.js"></script>
+
+<script async src="../../js/alt-title.js"></script>
+
+<script async src="../../js/header-link.js"></script>
+
+<script async src="../../js/dom-scripts.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

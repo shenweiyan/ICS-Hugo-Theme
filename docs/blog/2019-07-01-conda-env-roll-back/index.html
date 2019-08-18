@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <title>让你的 conda &#34;回滚&#34; 到以前版本的环境 - </title>
+    
+     
+    <meta property="og:title" content="让你的 conda &#34;回滚&#34; 到以前版本的环境 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://ivc.bioinit.com/css/style.css"/>
+    <link rel="stylesheet" href="https://ivc.bioinit.com/css/mystyle.css"/> 
+    <link rel="stylesheet" href="https://ivc.bioinit.com/css/fonts.css" />
+    
+<link rel="stylesheet" href="https://ivc.bioinit.com/css/template-styles.css" />
+<link rel="stylesheet" href="https://ivc.bioinit.com/css/custom.css" />
+
+  </head>
+
+  
+  <body class="blog">
+    
+    
+    <header class="intro-and-nav" role="banner">
+    <div>
+    <div class="intro">
+      <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
+        <img src="https://ivc.bioinit.com/img/logo.png" alt="">
+      </a>
+      <p class="library-desc">
+        
+          Welcome to the personal website of Steven Shen.
+        
+      </p>
+    </div>
+    <nav id="patterns-nav" class="patterns" role="navigation">
+  <h2 class="vh">Main navigation</h2>
+  <button id="menu-button" aria-expanded="false">
+    <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
+      <use xlink:href="#menu"></use>
+    </svg>
+    Menu
+  </button>
+  
+  <ul id="patterns-list">
+    
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../" >
+        
+        首页
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../about/" >
+        
+        关于
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../blog/" >
+        
+        博客
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../zhuanlan/" >
+        
+        专栏
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../research/" >
+        
+        研究
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../resume/shenweiyan" >
+        
+        简历
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../archives/" >
+        
+        归档
+      </a>
+    </li>
+  
+  
+
+<li class="pattern">&nbsp;&nbsp;</li>
+
+
+
+<li class="pattern"><a href="https://github.com/shenweiyan/home/edit/master/content/blog/2019-07-01-conda-env-roll-back.md" target="_blank">编辑</a></li>
+
+
+<li class="pattern"><a href="../../blog/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li class="pattern"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
+
+
+  </ul>
+</nav>
+
+    </div>
+   </header>
+
+    <article class="main">
+      <header class="title">
+        
+
+<h1>让你的 conda &#34;回滚&#34; 到以前版本的环境</h1>
+
+
+
+<h3>
+2019-07-01</h3> 
+
+
+   
+  
+
+
+      </header>
+
+
+<p>我现在使用 Anaconda 作为我的主要 Python 发行版，同样，我们公司也将它用于所有开发人员机器以及他们的服务器。然而，前几天我在浏览一些论坛技术文章时遇到了一个我以前从未知道的 conda 精彩功能——conda 版本回滚！在这里给大家分享一下。</p>
+
+<p>举一个最简单的例子。如果我们运行 <code>conda list --revisions</code> ，我们会得到这样的输出：</p>
+
+<pre><code class="language-shell">$ conda list --revisions
+2018-04-03 09:26:14  (rev 0)
+    +_ipyw_jlab_nb_ext_conf-0.1.0
+    +alabaster-0.7.10
+    +anaconda-5.1.0
+    +anaconda-client-1.6.9
+     ...
+2018-04-03 09:30:48  (rev 1)
+     anaconda  {5.1.0 -&gt; custom}
+     ca-certificates  {2017.08.26 -&gt; 2018.03.07}
+     cairo  {1.14.12 -&gt; 1.12.18}
+     fontconfig  {2.12.4 -&gt; 2.11.1}
+     freetype  {2.8 -&gt; 2.5.5}
+     harfbuzz  {1.7.4 -&gt; 0.9.39}
+     icu  {58.2 -&gt; 54.1}
+     ...
+     
+...
+
+2019-02-14 11:48:21  (rev 36)
+     _r-mutex  {1.0.0 -&gt; 1.0.0}
+     blas  {1.1 (https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge) -&gt; 1.0 (https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main)}
+     cairo  {1.14.12 (https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main) -&gt; 1.14.12 (https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main)}
+     conda  {4.5.11 (https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge) -&gt; 4.6.3 (https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge)}
+     ...
+</code></pre>
+
+<p>在上面的输出中，我们可以看到我的 conda 环境的许多特定版本（或修订版），以及它们的创建日期/时间以及差异（已安装的软件包显示为 <code>+</code> ，已卸载的显示为 <code>-</code>  和升级的显示为 <code>-&gt;</code> ）。 如果要恢复到以前的版本，只需运行 <code>conda install --revision N</code> （其中N是修订号）即可。 这将要求你确认相关的软件包卸载/安装，并让您回到原来的位置！</p>
+
+<p>所以，我认为这非常棒！如果你搞砸了，想要回到以前的工作环境，真的很方便。</p>
+
+<p>首先，如果你“恢复”到之前的修订版，那么你会发现创建了一个“逆”修订版，只是做了与之前修订版相反的版本。例如，如果您的修订列表如下所示：</p>
+
+<pre><code class="language-shell">2019-01-14 21:12:34  (rev 1)
+    +mkl-11.3.3
+    +numpy-1.11.0
+    +pandas-0.18.1
+    +python-dateutil-2.5.3
+    +pytz-2016.4
+    +six-1.10.0
+
+2019-01-14 21:13:08  (rev 2)
+    +cycler-0.10.0
+    +freetype-2.6.3
+    +libpng-1.6.22
+    +matplotlib-1.5.1
+    +pyparsing-2.1.4
+</code></pre>
+
+<p>接着，通过运行 <code>conda install --revision 1</code> 恢复到修订版1，然后再次运行 <code>conda list --revisions</code> ，你会得到：</p>
+
+<pre><code class="language-shell">2019-01-14 21:13:08 (rev 2)
+    +cycler-0.10.0
+    +freetype-2.6.3
+    +libpng-1.6.22
+    +matplotlib-1.5.1
+    +pyparsing-2.1.4
+
+2019-01-14 21:15:45 (rev 3)
+    -cycler-0.10.0
+    -freetype-2.6.3
+    -libpng-1.6.22
+    -matplotlib-1.5.1
+    -pyparsing-2.1.4
+</code></pre>
+
+<p>我们可以看到修订版 3 的更改只是修订版 2 的反转。</p>
+
+<p>还有一点是我发现所有这些数据都存储在环境的 conda-meta 目录中的历史文件中（默认环境对应于 <code>CONDA_ROOT/conda-meta</code> ；其他环境对应于 <code>CONDA_ROOT/envs/ENV_NAME/conda-meta</code>）。你不想知道为什么我去搜索这个文件（这是一个长篇故事，涉及我的一些愚蠢），但它有一些非常有用的内容：</p>
+
+<pre><code class="language-shell">$ less /usr/local/software/anaconda3/conda-meta/history
+==&gt; 2018-04-10 16:15:45 &lt;==
+# cmd: /usr/local/software/anaconda3/bin/conda install netcdf4
++defaults::hdf4-4.2.13-h3ca952b_2
++defaults::libnetcdf-4.4.1.1-h816af47_8
++defaults::netcdf4-1.3.1-py36hfd655bd_2
+# update specs: ['netcdf4']
+==&gt; 2018-04-11 11:50:02 &lt;==
+# cmd: /usr/local/software/anaconda3/bin/conda install r-cairo
++defaults::r-cairo-1.5_9-r342hbf22089_0
+# update specs: ['r-cairo']
+==&gt; 2018-04-11 13:41:09 &lt;==
+# cmd: /usr/local/software/anaconda3/bin/conda remove R
+-defaults::r-3.4.2-h65d9972_0
+# remove specs: ['r']
+......
+</code></pre>
+
+<p>具体来说，它不仅仅提供已安装，卸载或升级的列表，它还为您提供了运行的命令！ 如果需要，可以使用一些命令行魔法来提取这些命令：</p>
+
+<pre><code class="language-shell"># 获取历史文件的内容，搜索以#cm开头的所有行，然后按空格分割行并从第3组开始提取所有内容
+$ cat /usr/local/software/anaconda3/conda-meta/history | grep '# cmd' | cut -d&quot; &quot; -f3-
+
+/usr/local/software/anaconda3/bin/conda update -n base conda
+/usr/local/software/anaconda3/bin/conda install -c bioconda r-plotrix --only-deps
+/usr/local/software/anaconda3/bin/conda install r=3.4.2
+/usr/local/software/anaconda3/bin/conda install gcc_linux-64
+/usr/local/software/anaconda3/bin/conda install -c conda-forge ggplot --no-deps
+/usr/local/software/anaconda3/bin/conda install -c r r-essentials
+/usr/local/software/anaconda3/bin/conda install netcdf4
+/usr/local/software/anaconda3/bin/conda install r-cairo
+/usr/local/software/anaconda3/bin/conda remove R
+/usr/local/software/anaconda3/bin/conda remove -c r r-essentials
+/usr/local/software/anaconda3/bin/conda install altair --channel conda-forge
+/usr/local/software/anaconda3/bin/conda install r-essentials
+/usr/local/software/anaconda3/bin/conda install -c r r-essentials
+......
+</code></pre>
+
+<p>最后，我发现 environment.yml 文件有时会有点痛苦（它们并不总是跨平台兼容 - 请参阅 <a href="https://github.com/ContinuumIO/anaconda-issues/issues/546">anaconda-issues: 546</a>）， 所以通过 <code>conda install --revision N</code>  实现 conda 回滚非常有用，因为它实际上给了我运行创建环境的命令。</p>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev"><a href="../../blog/2019-07-01-lqc7hd/">非 root 用户手动编译安装 GCC</a><br/>&larr;</span>
+  <span class="nav-next"><a href="../../blog/2019-07-01-pyclone-install/">癌症克隆种群结构分析软件PyClone安装</a><br/>&rarr;</span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/blog\/2019-07-01-lqc7hd\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/blog\/2019-07-01-pyclone-install\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var disqus_js = '//bioinit.disqus.com/embed.js';
+    var d = document, s = d.createElement('script');
+    s.src = disqus_js; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    var b = false, l = function() {
+      if (b) return;
+      (d.head || d.body).appendChild(s); b = true;
+    }
+    var t = d.getElementById('disqus_thread');
+    s.onerror = function(e) {
+      if (sessionStorage.getItem('failure-note')) return;
+      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
+      t.style.border = '1px dashed';
+      t.style.padding = '.5em';
+      t.style.background = 'lightyellow';
+      sessionStorage.setItem('failure-note', true);
+    };
+    
+    if (location.hash.match(/^#comment/)) return l();
+    var c = function() {
+      if (b) return;
+      var rect = t.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
+    };
+    window.addEventListener('load', c);
+    d.addEventListener('scroll', c);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+<script async src="../../js/fix-toc.js"></script>
+
+<script async src="../../js/center-img.js"></script>
+
+<script async src="../../js/right-quote.js"></script>
+
+<script async src="../../js/no-highlight.js"></script>
+
+<script async src="../../js/fix-footnote.js"></script>
+
+<script async src="../../js/math-code.js"></script>
+
+<script async src="../../js/external-link.js"></script>
+
+<script async src="../../js/alt-title.js"></script>
+
+<script async src="../../js/header-link.js"></script>
+
+<script async src="../../js/dom-scripts.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>编程 on Steven Shen | 沈维燕</title>
+    <link>https://ivc.bioinit.com/tags/%E7%BC%96%E7%A8%8B/</link>
+    <description>Recent content in 编程 on Steven Shen | 沈维燕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 23 Jul 2019 03:19:17 +0000</lastBuildDate>
+    
+	<atom:link href="https://ivc.bioinit.com/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>不提供账号注销等于耍流氓</title>
+      <link>https://ivc.bioinit.com/blog/2019-07-23-coding-cancel-account/</link>
+      <pubDate>Tue, 23 Jul 2019 03:19:17 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-07-23-coding-cancel-account/</guid>
+      <description>作为一个生信工程师，不知道大家平时是怎么管理和备份自己的一些流程和脚本？而我个人则比较喜欢用 git。 说到 git 代码托管，国外的 GitHub、Gi</description>
+    </item>
+    
+    <item>
+      <title>Google Code Prettify 代码高亮使用教程</title>
+      <link>https://ivc.bioinit.com/blog/2019-07-17-google-code-prettify/</link>
+      <pubDate>Wed, 17 Jul 2019 05:43:07 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-07-17-google-code-prettify/</guid>
+      <description>Google Code Prettify 是 Google 的一款代码高亮插件，它由 js 代码和 css 代码构成，用来高亮显示 HTML 页面中的源代码。 Google Code Prettify 支持的语言数量比较多、比较全，支持自动识别代码语言</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <title>各个平台下 Perl 源码安装教程 - </title>
+    
+     
+    <meta property="og:title" content="各个平台下 Perl 源码安装教程 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://ivc.bioinit.com/css/style.css"/>
+    <link rel="stylesheet" href="https://ivc.bioinit.com/css/mystyle.css"/> 
+    <link rel="stylesheet" href="https://ivc.bioinit.com/css/fonts.css" />
+    
+<link rel="stylesheet" href="https://ivc.bioinit.com/css/template-styles.css" />
+<link rel="stylesheet" href="https://ivc.bioinit.com/css/custom.css" />
+
+  </head>
+
+  
+  <body class="blog">
+    
+    
+    <header class="intro-and-nav" role="banner">
+    <div>
+    <div class="intro">
+      <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
+        <img src="https://ivc.bioinit.com/img/logo.png" alt="">
+      </a>
+      <p class="library-desc">
+        
+          Welcome to the personal website of Steven Shen.
+        
+      </p>
+    </div>
+    <nav id="patterns-nav" class="patterns" role="navigation">
+  <h2 class="vh">Main navigation</h2>
+  <button id="menu-button" aria-expanded="false">
+    <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
+      <use xlink:href="#menu"></use>
+    </svg>
+    Menu
+  </button>
+  
+  <ul id="patterns-list">
+    
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../" >
+        
+        首页
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../about/" >
+        
+        关于
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../blog/" >
+        
+        博客
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../zhuanlan/" >
+        
+        专栏
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../research/" >
+        
+        研究
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../resume/shenweiyan" >
+        
+        简历
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../archives/" >
+        
+        归档
+      </a>
+    </li>
+  
+  
+
+<li class="pattern">&nbsp;&nbsp;</li>
+
+
+
+<li class="pattern"><a href="https://github.com/shenweiyan/home/edit/master/content/blog/2019-07-01-install-perl-from-source.md" target="_blank">编辑</a></li>
+
+
+<li class="pattern"><a href="../../blog/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li class="pattern"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
+
+
+  </ul>
+</nav>
+
+    </div>
+   </header>
+
+    <article class="main">
+      <header class="title">
+        
+
+<h1>各个平台下 Perl 源码安装教程</h1>
+
+
+
+<h3>
+2019-07-01</h3> 
+
+
+   
+  
+
+
+      </header>
+
+
+
+
+<p>Perl 是一种功能丰富的计算机程序语言，运行在超过 100 种计算机平台上，适用广泛，从大型机到便携设备，从快速原型创建到大规模可扩展开发。在生物信息分析领域，Perl 主要是做数据预处理、文本处理和格式转换、对算法效率要求不高的分析软件开发，系统管理和 pipeline 搭建等工作。这里对 Linux（主要是 CentOS）、windows 下 Perl 的安装做一个备忘。</p>
+
+<p><a name="jgJYZ"></a></p>
+
+<h1 id="一-centos-7-下安装-perl">一、CentOS 7 下安装 Perl</h1>
+
+<p><a name="4f2b0709"></a></p>
+
+<h2 id="1-源码包下载">1. 源码包下载</h2>
+
+<p>在官方网站下载新版本的源码包：<a href="http://www.perl.org/get.html">http://www.perl.org/get.html</a>，我下载的是 <a href="http://www.cpan.org/src/5.0/perl-5.26.1.tar.gz">perl-5.26.1.tar.gz</a>。</p>
+
+<p><a name="a598c68f"></a></p>
+
+<h2 id="2-解压-设置源码">2. 解压，设置源码</h2>
+
+<pre><code class="language-bash">$ tar zvxf perl-5.26.1.tar.gz
+$ cd perl-5.26.1
+$ ./Configure --help
+Usage: Configure [-dehrsEKOSV] [-f config.sh] [-D symbol] [-D symbol=value]
+                 [-U symbol] [-U symbol=] [-A command:symbol...]
+  -d : use defaults for all answers.
+  -e : go on without questioning past the production of config.sh.
+  -f : specify an alternate default configuration file.
+  -h : print this help message and exit (with an error status).
+  -r : reuse C symbols value if possible (skips costly nm extraction).
+  -s : silent mode, only echoes questions and essential information.
+  -D : define symbol to have some value:
+         -D symbol         symbol gets the value 'define'
+         -D symbol=value   symbol gets the value 'value'
+       common used examples (see INSTALL for more info):
+         -Duse64bitint            use 64bit integers
+         -Duse64bitall            use 64bit integers and pointers
+         -Dusethreads             use thread support
+         -Dinc_version_list=none  do not include older perl trees in @INC
+         -DEBUGGING=none          DEBUGGING options
+         -Dcc=gcc                 choose your compiler
+         -Dprefix=/opt/perl5      choose your destination
+  -E : stop at the end of questions, after having produced config.sh.
+  -K : do not use unless you know what you are doing.
+  -O : ignored for backward compatibility
+  -S : perform variable substitutions on all .SH files (can mix with -f)
+  -U : undefine symbol:
+         -U symbol    symbol gets the value 'undef'
+         -U symbol=   symbol gets completely empty
+       e.g.:  -Uversiononly
+  -A : manipulate symbol after the platform specific hints have been applied:
+         -A append:symbol=value   append value to symbol
+         -A symbol=value          like append:, but with a separating space
+         -A define:symbol=value   define symbol to have value
+         -A clear:symbol          define symbol to be ''
+         -A define:symbol         define symbol to be 'define'
+         -A eval:symbol=value     define symbol to be eval of value
+         -A prepend:symbol=value  prepend value to symbol
+         -A undef:symbol          define symbol to be 'undef'
+         -A undef:symbol=         define symbol to be ''
+       e.g.:  -A prepend:libswanted='cl pthread '
+              -A ccflags=-DSOME_MACRO
+  -V : print version number and exit (with a zero status).
+
+# 设置源码
+$ ./Configure -des -Dprefix=/usr/local/software/Perl-5.26 -Dusethreads -Uversiononly
+</code></pre>
+
+<p><a name="be70d80d"></a></p>
+
+<h2 id="3-编译安装">3. 编译安装</h2>
+
+<pre><code class="language-bash">$ make
+......
+make[1]: *** [IO.o] Error 1
+make[1]: Leaving directory `/users/rmi1/build/perl-5.12.0/dist/IO'
+Unsuccessful make(dist/IO): code=512 at make_ext.pl line 449.
+make: *** [lib/auto/IO/IO.so] Error 2
+</code></pre>
+
+<p>如果在 make 编译过程中出现如上报错，请参考 <a href="https://serverfault.com/questions/145288/make-error-when-compiling-perl-5-12-1-rhel-5-5">Make error when compiling Perl 5.12.1 (RHEL 5.5)</a> 执行下面操作：</p>
+
+<pre><code class="language-bash">$ make clean
+$ unset C_INCLUDE_PATH
+$ ./Configure -des -Dprefix=/usr/local/software/Perl-5.26 -Dusethreads -Uversiononly
+$ make
+</code></pre>
+
+<p>继续验证编译，执行安装：</p>
+
+<pre><code class="language-bash">$ make test
+$ make install   # 命令完成后，基本安装就完成了
+</code></pre>
+
+<p><a name="781fbe87"></a></p>
+
+<h2 id="4-调整环境变量">4. 调整环境变量</h2>
+
+<p>在 ~/.bashrc 中把 perl 添加到 PATH 中，然后 source ~/.bashrc 刷新。</p>
+
+<pre><code class="language-bash">export PATH=&quot;/usr/local/software/Perl-5.26/bin:$PATH&quot;
+</code></pre>
+
+<p><a name="a9bdca2c"></a></p>
+
+<h2 id="5-安装完成">5. 安装完成</h2>
+
+<pre><code class="language-bash">$ perl -version
+
+This is perl 5, version 26, subversion 1 (v5.26.1) built for x86_64-linux-thread
+
+Copyright 1987-2017, Larry Wall
+
+Perl may be copied only under the terms of either the Artistic License or the
+GNU General Public License, which may be found in the Perl 5 source kit.
+
+Complete documentation for Perl, including FAQ lists, should be found on
+this system using &quot;man perl&quot; or &quot;perldoc perl&quot;.  If you have access to the
+Internet, point your browser at http://www.perl.org/, the Perl Home Page.
+</code></pre>
+
+<p>查看 perl 配置汇总信息：</p>
+
+<pre><code class="language-bash">$ perl -V    # 该命令会把对应 perl 配置、模块路径所有信息汇总打印出来
+Summary of my perl5 (revision 5 version 26 subversion 0) configuration:
+   
+  Platform:
+    osname=linux
+    osvers=2.6.32-696.10.1.el6.x86_64
+......
+
+Built under linux
+  Compiled at Sep 17 2017 16:35:49
+  @INC:
+    /usr/local/software/Perl-5.26/lib/perl5/site_perl/5.26.1/x86_64-linux
+    /usr/local/software/Perl-5.26/lib/perl5/site_perl/5.26.1
+    /usr/local/software/Perl-5.26/lib/perl5/5.26.1/x86_64-linux
+    /usr/local/software/Perl-5.26/lib/perl5/5.26.1
+</code></pre>
+
+<p><a name="gGmJF"></a></p>
+
+<h1 id="二-windows-7-下安装-perl">二、Windows 7 下安装 Perl</h1>
+
+<p>windows 下的 Perl 安装推荐使用 ActivePerl（<a href="https://www.activestate.com/products/activeperl/">https://www.activestate.com/products/activeperl/</a>），安装步骤如下。</p>
+
+<p><a name="f0jbD"></a></p>
+
+<h2 id="2-1-安装包下载">2.1 安装包下载</h2>
+
+<p>在这里我们下载 64-bit 的 <a href="https://www.activestate.com/products/activeperl/downloads/thank-you/?dl=https://downloads.activestate.com/ActivePerl/releases/5.26.3.2603/ActivePerl-5.26.3.2603-MSWin32-x64-a95bce075.exe">Perl-5.26.3</a>。</p>
+
+<p><a name="lRCT5"></a></p>
+
+<h2 id="2-2-安装与设置">2.2 安装与设置</h2>
+
+<p>ActivePerl-5.26.3.2603-MSWin32-x64-a95bce075.exe 安装包下载完后，我们直接点击进行安装。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1556700512724-bb805074-52d4-4307-be9e-0d8ac20c8b3a.png#align=left&amp;display=inline&amp;height=394&amp;name=image.png&amp;originHeight=394&amp;originWidth=504&amp;size=60550&amp;status=done&amp;width=504" alt="image.png" /></p>
+
+<p>选择 &ldquo;Custom&rdquo; 自定义安装：<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1556700665868-7793ac41-e803-4243-9ece-02fbea5844e1.png#align=left&amp;display=inline&amp;height=398&amp;name=image.png&amp;originHeight=398&amp;originWidth=511&amp;size=47129&amp;status=done&amp;width=511" alt="image.png" /></p>
+
+<p>自定义安装路径：<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1556700921091-6a049d3f-5592-46f5-9c88-df904daafb84.png#align=left&amp;display=inline&amp;height=401&amp;name=image.png&amp;originHeight=401&amp;originWidth=512&amp;size=43927&amp;status=done&amp;width=512" alt="image.png" /></p>
+
+<p>把 Perl 添加到系统环境变量：<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1556700957932-1b87240b-d4c1-4978-ba29-61121e3cf316.png#align=left&amp;display=inline&amp;height=402&amp;name=image.png&amp;originHeight=402&amp;originWidth=512&amp;size=27876&amp;status=done&amp;width=512" alt="image.png" /></p>
+
+<p>Perl 安装完成后，我们在 DOC 命令行输入 perl -V，可以看到详细的相关信息：<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1556701474909-059552ea-d6bf-46d3-8241-c8d97115d471.png#align=left&amp;display=inline&amp;height=597&amp;name=image.png&amp;originHeight=597&amp;originWidth=725&amp;size=91064&amp;status=done&amp;width=725" alt="image.png" /></p>
+
+<p>如果我们在安装过程中没有勾选把 Perl 添加到系统环境变量，DOC 中直接执行 perl -V 会出现&rdquo;&ldquo;提示，这时候我们需要手动把 perl 添加到 Windows 的系统环境变量中就可以了。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1556701347137-15b268b6-17fa-455a-878f-adca0ebf9804.png#align=left&amp;display=inline&amp;height=601&amp;name=image.png&amp;originHeight=601&amp;originWidth=852&amp;size=191508&amp;status=done&amp;width=852" alt="image.png" /></p>
+
+<p><a name="6g77N"></a></p>
+
+<h2 id="2-3-配置cpan">2.3 配置cpan</h2>
+
+<p>为了更好对 Perl 进行扩展，方便以后的模块安装，我们最好配置一下 cpan。ActivePerl 有个好处就是在初始化 cpan 的时候会自动把 dmake、gcc、g++、mingw32-make 等 windows 常用的编译工具一起安装到 &ldquo;<strong>$Dprefix/site/bin</strong>&rdquo; 目录下，免去了我们手动安装这些编译器的各种麻烦。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1556702232382-4f856e00-21e8-408e-8cb3-a4023f83ae58.png#align=left&amp;display=inline&amp;height=713&amp;name=image.png&amp;originHeight=713&amp;originWidth=729&amp;size=134813&amp;status=done&amp;width=729" alt="image.png" /></p>
+
+<p><a name="SxiRf"></a></p>
+
+<h2 id="2-4-安装完成">2.4 安装完成</h2>
+
+<p>到这里，windows 下的 ActivePerl（perl-5.26）就安装完成了！</p>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev"><a href="../../blog/2019-07-01-lsf-gpfs/">基于 Linux 集群环境上 GPFS 的问题诊断</a><br/>&larr;</span>
+  <span class="nav-next"><a href="../../blog/2019-07-01-different-on-bytes/">兆碱基中关于Kb、KB、Bps、bps的区别</a><br/>&rarr;</span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/blog\/2019-07-01-lsf-gpfs\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/blog\/2019-07-01-different-on-bytes\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var disqus_js = '//bioinit.disqus.com/embed.js';
+    var d = document, s = d.createElement('script');
+    s.src = disqus_js; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    var b = false, l = function() {
+      if (b) return;
+      (d.head || d.body).appendChild(s); b = true;
+    }
+    var t = d.getElementById('disqus_thread');
+    s.onerror = function(e) {
+      if (sessionStorage.getItem('failure-note')) return;
+      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
+      t.style.border = '1px dashed';
+      t.style.padding = '.5em';
+      t.style.background = 'lightyellow';
+      sessionStorage.setItem('failure-note', true);
+    };
+    
+    if (location.hash.match(/^#comment/)) return l();
+    var c = function() {
+      if (b) return;
+      var rect = t.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
+    };
+    window.addEventListener('load', c);
+    d.addEventListener('scroll', c);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+<script async src="../../js/fix-toc.js"></script>
+
+<script async src="../../js/center-img.js"></script>
+
+<script async src="../../js/right-quote.js"></script>
+
+<script async src="../../js/no-highlight.js"></script>
+
+<script async src="../../js/fix-footnote.js"></script>
+
+<script async src="../../js/math-code.js"></script>
+
+<script async src="../../js/external-link.js"></script>
+
+<script async src="../../js/alt-title.js"></script>
+
+<script async src="../../js/header-link.js"></script>
+
+<script async src="../../js/dom-scripts.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

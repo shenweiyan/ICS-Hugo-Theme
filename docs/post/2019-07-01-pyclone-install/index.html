@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <title>癌症克隆种群结构分析软件PyClone安装 - </title>
+    
+     
+    <meta property="og:title" content="癌症克隆种群结构分析软件PyClone安装 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/style.css"/>
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/mystyle.css"/> 
+    <link rel="stylesheet" href="https://blog.bioinit.com/css/fonts.css" />
+    
+<link rel="stylesheet" href="https://blog.bioinit.com/css/custom.css" />
+
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      
+
+<h1><a href="../../"><img src="https://apps-db.oss-cn-shenzhen.aliyuncs.com/logos/shenweiyan.png" alt="Steven Shen" /></a></h1>
+
+
+
+      <nav class="menu">
+        <input id="menu-check" type="checkbox" />
+        <label id="menu-label" for="menu-check" class="unselectable">
+          <span class="icon close-icon">✕</span>
+          <span class="icon open-icon">☰</span>
+          <span class="text">Menu</span>
+        </label>
+        <ul>
+        
+        
+        <li><a href="https://blog.bioinit.com">首页</a></li>
+        
+        <li><a href="../../about/">关于</a></li>
+        
+        <li><a href="../../post/">博客</a></li>
+        
+        <li><a href="../../read/">读书</a></li>
+        
+        <li><a href="../../research/">研究</a></li>
+        
+        <li><a href="../../tools/">工具</a></li>
+        
+        <li><a href="../../resume/shenweiyan">简历</a></li>
+        
+        <li><a href="../../other/">其他</a></li>
+        
+        
+
+<li class="menu-extra"></li>
+
+
+
+<li><a href="https://github.com/shenweiyan/home/edit/master/content/post/2019-07-01-pyclone-install.md" target="_blank">编辑</a></li>
+
+
+<li><a href="../../post/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
+
+
+        </ul>
+      </nav>
+    </header>
+
+    <article class="main">
+      <header class="title">
+        
+
+<h1>癌症克隆种群结构分析软件PyClone安装</h1>
+
+
+
+<h3>
+2019-07-01</h3> 
+
+
+   
+  
+
+
+      </header>
+
+
+
+
+<p>PyClone 是一种用于推断癌症中克隆种群结构的统计模型。 它是一种贝叶斯聚类方法，用于将深度测序的体细胞突变集分组到假定的克隆簇中，同时估计其细胞流行率（prevalences）并解释由于分段拷贝数变化（segmental copy-number changes）和正常细胞污染（normal-cell contamination）引起的等位基因失衡。 单细胞测序验证证明了 PyClone 的准确性。</p>
+
+<blockquote>
+<p>The input data for PyClone consists of a set read counts from a deep sequencing experiment, the copy number of the genomic region containing the mutation and an estimate of tumour content.</p>
+</blockquote>
+
+<p><a name="nw1wzf"></a></p>
+
+<h1 id="nw1wzf-简易安装">[](#nw1wzf)简易安装</h1>
+
+<p>官方推荐使用 <a href="https://conda.io/miniconda.html">MiniConda</a> 来安装 PyClone。为了保证环境的稳定，可为 PyClone 单独建立一个环境，因为 PyClone 基于 Python2.7。在这里，我们使用 Anaconda3(conda 4.5.11) 来安装 PyClone。</p>
+
+<pre><code># 创建基于 Python2.7 名字为 pyclone 独立环境
+conda create --name pyclone python=2
+
+# 激活 pyclone 环境
+source activate pyclone
+
+# 退出 pyclone 环境
+source deactivate
+
+# 安装 PyClone
+conda install pyclone -c aroth85
+</code></pre>
+
+<p>Anaconda3 中安装完 PyClone，激活环境后，执行 <code>PyClone -h</code> 出现 RuntimeWarning。同样的，我们在 pyclone 的环境中导入 pandas 模板，出现一样的 RuntimeWarning：</p>
+
+<pre><code>(pyclone) shenweiyan@ecs-steven 13:38:25 /home/shenweiyan
+$ PyClone -h
+/usr/local/software/anaconda3/envs/pyclone/lib/python2.7/site-packages/pandas/_libs/__init__.py:4: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  from .tslib import iNaT, NaT, Timestamp, Timedelta, OutOfBoundsDatetime
+/usr/local/software/anaconda3/envs/pyclone/lib/python2.7/site-packages/pandas/__init__.py:26: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+
+......
+
+  from pandas._libs import algos, lib, writers as libwriters
+/usr/local/software/anaconda3/envs/pyclone/lib/python2.7/site-packages/statsmodels/nonparametric/kde.py:22: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  from .linbin import fast_linbin
+/usr/local/software/anaconda3/envs/pyclone/lib/python2.7/site-packages/statsmodels/nonparametric/smoothers_lowess.py:11: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  from ._smoothers_lowess import lowess as _lowess
+usage: PyClone [-h] [--version]
+               {setup_analysis,run_analysis,run_analysis_pipeline,build_mutations_file,plot_clusters,plot_loci,build_table}
+               ...
+
+positional arguments:
+  {setup_analysis,run_analysis,run_analysis_pipeline,build_mutations_file,plot_clusters,plot_loci,build_table}
+    setup_analysis      Setup a config file and mutations files for a PyClone
+                        analysis.
+    run_analysis        Run an MCMC sampler to sample from the posterior of
+                        the PyClone model.
+    run_analysis_pipeline
+                        Run a full PyClone analysis.
+    build_mutations_file
+                        Build a YAML format file with mutation data and states
+                        prior to be used for PyClone analysis.
+    plot_clusters       Plot features of the clusters.
+    plot_loci           Plot features of the loci.
+    build_table         Build results table which contains cluster ids and
+                        (mean) cellular prevalence estimates.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit
+
+(pyclone) shenweiyan@ecs-steven 14:47:17 /home/shenweiyan
+$ python
+Python 2.7.15 | packaged by conda-forge | (default, Oct 12 2018, 14:10:50)
+[GCC 4.8.2 20140120 (Red Hat 4.8.2-15)] on linux2
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt; &gt;&gt;&gt; import pandas
+/usr/local/software/anaconda3/envs/pyclone/lib/python2.7/site-packages/pandas/_libs/__init__.py:4: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  from .tslib import iNaT, NaT, Timestamp, Timedelta, OutOfBoundsDatetime
+/usr/local/software/anaconda3/envs/pyclone/lib/python2.7/site-packages/pandas/__init__.py:26: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  from pandas._libs import (hashtable as _hashtable,
+
+......
+
+/usr/local/software/anaconda3/envs/pyclone/lib/python2.7/site-packages/pandas/io/pytables.py:50: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  from pandas._libs import algos, lib, writers as libwriters
+&gt;&gt;&gt; pandas.__version__
+u'0.23.4'
+</code></pre>
+
+<p>原因与解决：(参考 <a href="https://github.com/ContinuumIO/anaconda-issues/issues/6678">anaconda-issues：#6678</a>、<a href="https://github.com/numpy/numpy/issues/11628">numpy issues：#11628</a>)</p>
+
+<blockquote>
+<p>The pandas were build agains different version of numpy. we need to rebuild pandas agains the local numpy.</p>
+</blockquote>
+
+<pre><code class="language-bash"># 方法一（耗时长）
+pip install --no-binary pandas -I pandas
+
+# 方法二（推荐使用）
+conda install numpy==1.14.5 --yes
+</code></pre>
+
+<p><a name="my61mo"></a></p>
+
+<h1 id="my61mo-手动安装">[](#my61mo)手动安装</h1>
+
+<p>要手动安装 PyClone，请确保安装了必要的库（如下所列）。 之后就可以像任何其他 Python 包一样通过 <code>python setup.py install</code> 安装 PyClone。</p>
+
+<p>PyClone 必须满足依赖包如下：</p>
+
+<pre><code>PyDP &gt;= 0.2.3
+PyYAML &gt;= 3.10
+matplotlib &gt;= 1.2.0 - Required for plotting.
+numpy &gt;= 1.6.2 - Required for plotting and clustering.
+pandas &gt;= 0.11 - Required for multi sample plotting.
+scipy &gt;= 0.11 - Required for plotting and clustering.
+seaborn &gt;= 0.6.0
+</code></pre>
+
+<p>手动安装 PyClone:</p>
+
+<pre><code>$ git clone https://github.com/aroth85/pyclone.git
+$ cd pyclone
+$ python setup.py install
+running install
+running bdist_egg
+running egg_info
+creating PyClone.egg-info
+writing PyClone.egg-info/PKG-INFO
+
+......
+
+Installed /usr/local/software/python2.7/pyclone/lib/python2.7/site-packages/PyClone-0.13.1-py2.7.egg
+Processing dependencies for PyClone==0.13.1
+Finished processing dependencies for PyClone==0.13.1
+</code></pre>
+
+<p>到这里，PyClone 就安装完成了，关于该软件具体的使用说明，请参考 <code>PyClone -h</code> 或者 <a href="https://bitbucket.org/aroth85/pyclone/wiki/Usage">PyClone wiki: Usage</a>。</p>
+
+<p><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/11/01-Thu/pyclone-help.png#width=" alt="" /></p>
+
+<p>参考资料：</p>
+
+<ul>
+<li><p>numpy issues，<a href="https://github.com/numpy/numpy/issues/11628">#11628</a></p></li>
+
+<li><p>anaconda-issues，<a href="https://github.com/ContinuumIO/anaconda-issues/issues/6678">#6678</a></p></li>
+
+<li><p><a href="https://github.com/aroth85/pyclone">aroth85/pyclone</a>，GitHub</p></li>
+
+<li><p>YTer，<a href="https://yantinger.com/2018/01/24/pyclone%E8%AF%B4%E6%98%8E/index.html?d=1541053376887">Pyclone 说明</a>，Hexo 个人博客</p></li>
+
+<li><p>用户1680321，<a href="https://cloud.tencent.com/developer/article/1111984">安装使用pyclone进行克隆演化推断</a>，yw的数据分析</p></li>
+</ul>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev"><a href="../../post/2019-07-01-conda-env-roll-back/">让你的 conda &#34;回滚&#34; 到以前版本的环境</a><br/>&larr;</span>
+  <span class="nav-next"><a href="../../post/2019-07-01-jupyter-notebook-tutorial/">数据科学工具 Jupyter Notebook 教程</a><br/>&rarr;</span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/post\/2019-07-01-conda-env-roll-back\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/post\/2019-07-01-jupyter-notebook-tutorial\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var disqus_js = '//bioinit.disqus.com/embed.js';
+    var d = document, s = d.createElement('script');
+    s.src = disqus_js; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    var b = false, l = function() {
+      if (b) return;
+      (d.head || d.body).appendChild(s); b = true;
+    }
+    var t = d.getElementById('disqus_thread');
+    s.onerror = function(e) {
+      if (sessionStorage.getItem('failure-note')) return;
+      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
+      t.style.border = '1px dashed';
+      t.style.padding = '.5em';
+      t.style.background = 'lightyellow';
+      sessionStorage.setItem('failure-note', true);
+    };
+    
+    if (location.hash.match(/^#comment/)) return l();
+    var c = function() {
+      if (b) return;
+      var rect = t.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
+    };
+    window.addEventListener('load', c);
+    d.addEventListener('scroll', c);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+<script async src="../../js/fix-toc.js"></script>
+
+<script async src="../../js/center-img.js"></script>
+
+<script async src="../../js/right-quote.js"></script>
+
+<script async src="../../js/no-highlight.js"></script>
+
+<script async src="../../js/fix-footnote.js"></script>
+
+<script async src="../../js/math-code.js"></script>
+
+<script async src="../../js/external-link.js"></script>
+
+<script async src="../../js/alt-title.js"></script>
+
+<script async src="../../js/header-link.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

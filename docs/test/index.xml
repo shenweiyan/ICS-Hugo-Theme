@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tests on Steven Shen | 沈维燕</title>
+    <link>https://ivc.bioinit.com/test/</link>
+    <description>Recent content in Tests on Steven Shen | 沈维燕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 01 Mar 2019 12:27:35 +0000</lastBuildDate>
+    
+	<atom:link href="https://ivc.bioinit.com/test/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>读书测试</title>
+      <link>https://ivc.bioinit.com/test/2019-03-01-180810/</link>
+      <pubDate>Fri, 01 Mar 2019 12:27:35 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/test/2019-03-01-180810/</guid>
+      <description>《必然》是 2016 年 01 月电子工业出版社出版发行的中译图书，作者是凯文·凯利（Kevin Kelly），该书全面介绍了科技这个新物种的基因特征、所思所</description>
+    </item>
+    
+  </channel>
+</rss>

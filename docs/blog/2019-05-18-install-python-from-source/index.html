@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <title>Linux 下 Python 源码编译安装 - </title>
+    
+     
+    <meta property="og:title" content="Linux 下 Python 源码编译安装 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://ivc.bioinit.com/css/style.css"/>
+    <link rel="stylesheet" href="https://ivc.bioinit.com/css/mystyle.css"/> 
+    <link rel="stylesheet" href="https://ivc.bioinit.com/css/fonts.css" />
+    
+<link rel="stylesheet" href="https://ivc.bioinit.com/css/template-styles.css" />
+<link rel="stylesheet" href="https://ivc.bioinit.com/css/custom.css" />
+
+  </head>
+
+  
+  <body class="blog">
+    
+    
+    <header class="intro-and-nav" role="banner">
+    <div>
+    <div class="intro">
+      <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
+        <img src="https://ivc.bioinit.com/img/logo.png" alt="">
+      </a>
+      <p class="library-desc">
+        
+          Welcome to the personal website of Steven Shen.
+        
+      </p>
+    </div>
+    <nav id="patterns-nav" class="patterns" role="navigation">
+  <h2 class="vh">Main navigation</h2>
+  <button id="menu-button" aria-expanded="false">
+    <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
+      <use xlink:href="#menu"></use>
+    </svg>
+    Menu
+  </button>
+  
+  <ul id="patterns-list">
+    
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../" >
+        
+        首页
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../about/" >
+        
+        关于
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../blog/" >
+        
+        博客
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../zhuanlan/" >
+        
+        专栏
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../research/" >
+        
+        研究
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../resume/shenweiyan" >
+        
+        简历
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../archives/" >
+        
+        归档
+      </a>
+    </li>
+  
+  
+
+<li class="pattern">&nbsp;&nbsp;</li>
+
+
+
+<li class="pattern"><a href="https://github.com/shenweiyan/home/edit/master/content/blog/2019-05-18-install-python-from-source.md" target="_blank">编辑</a></li>
+
+
+<li class="pattern"><a href="../../blog/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li class="pattern"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
+
+
+  </ul>
+</nav>
+
+    </div>
+   </header>
+
+    <article class="main">
+      <header class="title">
+        
+
+<h1>Linux 下 Python 源码编译安装</h1>
+
+
+
+<h3>
+2019-05-18</h3> 
+
+
+   
+  
+
+
+      </header>
+
+
+
+
+<p>基于 CentOS Linux release 6.5 源码编译安装 python-2.7.xx(Python-3.x.xx) 的一些步骤，以下为安装记录。</p>
+
+<p><a name="d635bbce"></a></p>
+
+<h2 id="1-安装环境">1. 安装环境</h2>
+
+<pre><code class="language-bash">os : CentOS Linux release 6.5 (x86_64) 
+gcc: 4.8.5 20150623
+</code></pre>
+
+<p><a name="5590e8c9"></a></p>
+
+<h2 id="2-安装步骤">2. 安装步骤</h2>
+
+<p>如果您拥有 root 权限，请执以下依赖安装：</p>
+
+<pre><code class="language-bash">yum install zlib
+yum install zlib-devel
+yum install openssl
+yum install openssl-devel
+yum install libffi
+yum install libffi-devel
+</code></pre>
+
+<p><a name="AVtPw"></a></p>
+
+<h3 id="2-1-ssl">2.1 ssl</h3>
+
+<p>python3 需要引用 openssl 模块，但是 CentOS 需要的 openssl 版本最低为 1.0.2，而 CentOS 默认的为 1.0.1（Centos-6.x 通过 yum 源安装的 openssl 的最高版本是1.0.1），所以需要手动更新 openssl。</p>
+
+<pre><code class="language-bash"># 下载
+wget http://www.openssl.org/source/openssl-1.1.1.tar.gz
+
+# 解压缩
+tar -zxvf openssl-1.1.1.tar.gz
+
+# 进入目录安装
+cd openssl-1.1.1
+
+# 进行配置下，自定义
+./config --prefix=$HOME/soft-repos/openssl shared zlib
+
+# 编译并安装
+make &amp;&amp; make install
+
+# 配置到用户环境变量，随处使用
+echo &quot;export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/soft-repos/openssl/lib&quot; &gt;&gt; $HOME/.bashrc
+
+# 是环境变量配置生效
+source $HOME/.bashrc
+</code></pre>
+
+<p><strong>请注意：</strong></p>
+
+<ol>
+<li><strong>openssl</strong> 编译（config）的时候 <strong>必须要加上 shared 参数</strong>，否者源码安装 Python 即使添加了 <code>--with-openssl</code> 的自定义路径，依然会导致 <code>Could not build the ssl module!</code> 报错！</li>
+<li>从 <a href="https://www.openssl.org/source/">https://www.openssl.org/source/</a> 下载的源码 openssl-1.0.2s、openssl-1.0.2m 目前发现依然会导致 <code>Could not build the ssl module</code> ，建议从 <a href="https://www.openssl.org/source/old/">https://www.openssl.org/source/old/</a> 下载 1.1.1 的源码编译安装。</li>
+</ol>
+
+<p><a name="MtwQq"></a></p>
+
+<h3 id="2-2-ctypes">2.2 ctypes</h3>
+
+<p>在 CentOS 6.x 安装 <code>libffi-devel</code> 的时候出现以下问题：</p>
+
+<pre><code class="language-bash">$ yum install -y libffi-devel
+Loaded plugins: product-id, refresh-packagekit, search-disabled-repos, security, subscription-manager
+This system is not registered to Red Hat Subscription Management. You can use subscription-manager to register.
+Setting up Install Process
+cdrom                                                                                                                                         | 4.1 kB     00:00 ...
+No package libffi-devel available.
+Error: Nothing to do
+</code></pre>
+
+<p>可以使用下面的方法安装：</p>
+
+<pre><code class="language-shell">[root@log01 ~]# rpm -ivh http://mirror.centos.org/centos/6/os/x86_64/Packages/libffi-devel-3.0.5-3.2.el6.x86_64.rpm
+Retrieving http://mirror.centos.org/centos/6/os/x86_64/Packages/libffi-devel-3.0.5-3.2.el6.x86_64.rpm
+warning: /var/tmp/rpm-tmp.V9ihbu: Header V3 RSA/SHA256 Signature, key ID c105b9de: NOKEY
+Preparing...                ########################################### [100%]
+   1:libffi-devel           ########################################### [100%]
+[root@log01 ~]# rpm -qa|grep libffi
+libffi-3.0.5-3.2.el6.x86_64
+libffi-devel-3.0.5-3.2.el6.x86_64
+</code></pre>
+
+<p>源码方法安装如下：</p>
+
+<pre><code class="language-bash">$ wget ftp://sourceware.org/pub/libffi/libffi-3.2.1.tar.gz
+$ tar zvxf libffi-3.2.1.tar.gz
+$ ./configure --prefix=/Bioinfo/Pipeline/SoftWare/LibDependence/libffi-3.2.1
+$ make 
+$ make install 
+</code></pre>
+
+<p><a name="eE4JC"></a></p>
+
+<h3 id="2-3-pygraphviz">2.3 pygraphviz</h3>
+
+<pre><code class="language-bash">$ /Bioinfo/Pipeline/SoftWare/Python-3.7.3/bin/pip3 install pygraphviz
+Collecting pygraphviz
+  Using cached https://files.pythonhosted.org/packages/7e/b1/d6d849ddaf6f11036f9980d433f383d4c13d1ebcfc3cd09bc845bda7e433/pygraphviz-1.5.zip
+Installing collected packages: pygraphviz
+  Running setup.py install for pygraphviz ... error
+    Complete output from command /Bioinfo/Pipeline/SoftWare/Python-3.7.3/bin/python3.7 -u -c &quot;import setuptools, tokenize;__file__='/tmp/pip-install-_zdjdg0j/pygraphviz/setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))&quot; install --record /tmp/pip-record-g0mz7lrq/install-record.txt --single-version-externally-managed --compile:
+    running install
+    Trying dpkg
+    Failed to find dpkg
+    Trying pkg-config
+    Package libcgraph was not found in the pkg-config search path.
+    Perhaps you should add the directory containing `libcgraph.pc'
+    to the PKG_CONFIG_PATH environment variable
+    No package 'libcgraph' found
+    Traceback (most recent call last):
+      File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt;
+      File &quot;/tmp/pip-install-_zdjdg0j/pygraphviz/setup.py&quot;, line 93, in &lt;module&gt;
+        tests_require=['nose&gt;=1.3.7', 'doctest-ignore-unicode&gt;=0.1.2', 'mock&gt;=2.0.0'],
+      File &quot;/Bioinfo/Pipeline/SoftWare/Python-3.7.3/lib/python3.7/site-packages/setuptools/__init__.py&quot;, line 145, in setup
+        return distutils.core.setup(**attrs)
+      File &quot;/Bioinfo/Pipeline/SoftWare/Python-3.7.3/lib/python3.7/distutils/core.py&quot;, line 148, in setup
+        dist.run_commands()
+      File &quot;/Bioinfo/Pipeline/SoftWare/Python-3.7.3/lib/python3.7/distutils/dist.py&quot;, line 966, in run_commands
+        self.run_command(cmd)
+      File &quot;/Bioinfo/Pipeline/SoftWare/Python-3.7.3/lib/python3.7/distutils/dist.py&quot;, line 985, in run_command
+        cmd_obj.run()
+      File &quot;/tmp/pip-install-_zdjdg0j/pygraphviz/setup_commands.py&quot;, line 44, in modified_run
+        self.include_path, self.library_path = get_graphviz_dirs()
+      File &quot;/tmp/pip-install-_zdjdg0j/pygraphviz/setup_extra.py&quot;, line 162, in get_graphviz_dirs
+        include_dirs, library_dirs = _try_configure(include_dirs, library_dirs, _pkg_config)
+      File &quot;/tmp/pip-install-_zdjdg0j/pygraphviz/setup_extra.py&quot;, line 117, in _try_configure
+        i, l = try_function()
+      File &quot;/tmp/pip-install-_zdjdg0j/pygraphviz/setup_extra.py&quot;, line 72, in _pkg_config
+        output = S.check_output(['pkg-config', '--libs-only-L', 'libcgraph'])
+      File &quot;/Bioinfo/Pipeline/SoftWare/Python-3.7.3/lib/python3.7/subprocess.py&quot;, line 395, in check_output
+        **kwargs).stdout
+      File &quot;/Bioinfo/Pipeline/SoftWare/Python-3.7.3/lib/python3.7/subprocess.py&quot;, line 487, in run
+        output=stdout, stderr=stderr)
+    subprocess.CalledProcessError: Command '['pkg-config', '--libs-only-L', 'libcgraph']' returned non-zero exit status 1.
+
+    ----------------------------------------
+Command &quot;/Bioinfo/Pipeline/SoftWare/Python-3.7.3/bin/python3.7 -u -c &quot;import setuptools, tokenize;__file__='/tmp/pip-install-_zdjdg0j/pygraphviz/setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))&quot; install --record /tmp/pip-record-g0mz7lrq/install-record.txt --single-version-externally-managed --compile&quot; failed with error code 1 in /tmp/pip-install-_zdjdg0j/pygraphviz/
+
+</code></pre>
+
+<p>参考：《<a href="https://github.com/pygraphviz/pygraphviz/issues/11">Installation:fatal error: &lsquo;graphviz/cgraph.h&rsquo; file not found</a>》</p>
+
+<pre><code class="language-bash">$ wget https://graphviz.gitlab.io/pub/graphviz/stable/SOURCES/graphviz.tar.gz
+$ tar zvxf graphviz.tar.gz
+$ cd graphviz-2.40.1
+$ ./configure --prefix=/Bioinfo/Pipeline/SoftWare/graphviz-2.40.1
+$ make &amp;&amp; make install
+</code></pre>
+
+<p>推荐把安装好的 graphviz 添加到环境变量，这样可以避免运行过程中出现：&rdquo;<strong>pygraphviz/graphviz_wrap.c:2987:29: fatal error: graphviz/cgraph.h: No such file or directory&rdquo; </strong>无法找到头文件的异常。</p>
+
+<pre><code class="language-bash">export PKG_CONFIG_PATH=/Bioinfo/Pipeline/SoftWare/graphviz-2.40.1/lib/pkgconfig:$PKG_CONFIG_PATH
+export LD_LIBRARY_PATH=/Bioinfo/Pipeline/SoftWare/graphviz-2.40.1/lib:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=/Bioinfo/Pipeline/SoftWare/graphviz-2.40.1/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/Bioinfo/Pipeline/SoftWare/graphviz-2.40.1/include:$CPLUS_INCLUDE_PATH
+</code></pre>
+
+<p>如果 graphviz 添加到环境变量， <code>pygraphviz</code> 的 python 包可以参考下面的方法安装：</p>
+
+<pre><code class="language-bash">$ /Bioinfo/Pipeline/SoftWare/Python-3.7.3/bin/pip3 install --global-option=build_ext --global-option=&quot;-I/Bioinfo/Pipeline/SoftWare/graphviz-2.40.1/include&quot; --global-option=&quot;-L/Bioinfo/Pipeline/SoftWare/graphviz-2.40.1/lib&quot; pygraphviz
+/Bioinfo/Pipeline/SoftWare/Python-3.7.3/lib/python3.7/site-packages/pip/_internal/commands/install.py:207: UserWarning: Disabling all use of wheels due to the use of --build-options / --global-options / --install-options.
+  cmdoptions.check_install_build_global(options)
+Collecting pygraphviz
+  Using cached https://files.pythonhosted.org/packages/7e/b1/d6d849ddaf6f11036f9980d433f383d4c13d1ebcfc3cd09bc845bda7e433/pygraphviz-1.5.zip
+Installing collected packages: pygraphviz
+  Running setup.py install for pygraphviz ... done
+Successfully installed pygraphviz-1.5
+</code></pre>
+
+<p><a name="uB8Mi"></a></p>
+
+<h3 id="2-4-编译安装">2.4 编译安装</h3>
+
+<p>第一，下载 Python 源码，解压。</p>
+
+<pre><code class="language-bash"># 官网下载地址 https://www.python.org/downloads
+wget https://www.python.org/ftp/python/2.7.15/Python-2.7.15.tgz
+wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz
+
+# 解压到指定目录 
+tar zvxf Python-3.7.3.tgz -C /usr/local/src
+</code></pre>
+
+<p>第二，进入解压的源码路径，编译 python 源码。</p>
+
+<pre><code class="language-bash">export PKG_CONFIG_PATH=/Bioinfo/Pipeline/SoftWare/LibDependence/libffi-3.2.1/lib/pkgconfig:/Bioinfo/Pipeline/SoftWare/graphviz-2.40.1/lib/pkgconfig:$PKG_CONFIG_PATH
+export LD_LIBRARY_PATH=/Bioinfo/Pipeline/SoftWare/LibDependence/libffi-3.2.1/lib64:/Bioinfo/Pipeline/SoftWare/graphviz-2.40.1/lib:$LD_LIBRARY_PATH
+
+$ ./configure \
+--enable-optimizations \
+--prefix=/Bioinfo/Pipeline/SoftWare/Python-3.7.3 \
+--with-openssl=/Bioinfo/Pipeline/SoftWare/LibDependence/openssl-1.1.1 \
+CC=/Bioinfo/Pipeline/SoftWare/gcc-4.8.5/bin/gcc \
+CXX=/RiboBio/Bioinfo/Pipeline/SoftWare/gcc-4.8.5/bin/c++ \
+LDFLAGS=&quot;-L/Bioinfo/Pipeline/SoftWare/LibDependence/libffi-3.2.1/lib64 -L/Bioinfo/Pipeline/SoftWare/graphviz-2.40.1/lib&quot; \
+CPPFLAGS=&quot;-I/Bioinfo/Pipeline/SoftWare/graphviz-2.40.1/include&quot; \
+PKG_CONFIG_PATH=&quot;/Bioinfo/Pipeline/SoftWare/LibDependence/libffi-3.2.1/lib/pkgconfig:/Bioinfo/Pipeline/SoftWare/graphviz-2.40.1/lib/pkgconfig&quot; 
+</code></pre>
+
+<ul>
+<li><code>--enable-optimizations</code> 是优化选项（LTO,PGO 等）加上这个 flag 编译后，性能有 10% 左右的优化，但是这会明显的增加编译时间。建议使用这个参数；</li>
+<li><code>--prefix</code>  声明安装路径；</li>
+<li>安装多个 python 的版本，如果不开启 <code>--enable-shared</code>，指定不同路径即可。当开启 <code>--enable-shared</code> 时，默认只有一个版本的 python。</li>
+<li>python 3 编译可以使用 <code>--with-openssl=DIR</code> 指定 OpenSSL 安装路径进行编译的方式解决 OpenSSL 依赖，否则 <code>make</code> 过程可能出错。 
+```shell
+$ make
+&hellip;&hellip;
+The following modules found by detect_modules() in setup.py, have been
+built by the Makefile instead, as configured by the Setup files:
+_abc                  atexit                pwd
+time</li>
+</ul>
+
+<p>Failed to build these modules:
+_ctypes               _hashlib              _ssl</p>
+
+<p>Could not build the ssl module!
+Python requires an OpenSSL 1.0.2 or 1.1 compatible libssl with X509_VERIFY_PARAM_set1_host().
+LibreSSL 2.6.4 and earlier do not provide the necessary APIs, <a href="https://github.com/libressl-portable/portable/issues/381">https://github.com/libressl-portable/portable/issues/381</a></p>
+
+<p>&hellip;&hellip;</p>
+
+<pre><code>
+- `make` 过程如果出现 `ModuleNotFoundError: No module named '_ctypes'` 或者 `INFO: Could not locate ffi libs and/or headers` 参考：[https://groups.google.com/forum/#!topic/comp.lang.python/npv-wzmytzo](https://groups.google.com/forum/#!topic/comp.lang.python/npv-wzmytzo)
+
+![image.png](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562923411627-eb429b96-2ec8-408e-abbb-05f4e8a320f8.png#align=left&amp;display=inline&amp;height=316&amp;name=image.png&amp;originHeight=316&amp;originWidth=581&amp;size=34010&amp;status=done&amp;width=581)
+
+- 如果指定 `--with-openssl=DIR` 依然无法解决 ssl 模块的问题，可以参考修改 Modules/Setup.dist 文件（默认这块是注释的，放开注释即可。这块功能是开启 SSL 模块，不然会出现安装完毕后，提示找不到 ssl 模块的错误）再执行 configure，修改内容如下：
+```bash
+# Socket module helper for SSL support; you must comment out the other
+# socket line above, and possibly edit the SSL variable:
+SSL=/usr/local/ssl
+_ssl _ssl.c \
+    -DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \
+    -L$(SSL)/lib -lssl -lcrypto
+</code></pre>
+
+<p>第三，Makefile 生后依次在当前路径执行编译和安装命令。</p>
+
+<pre><code class="language-bash">make &amp;&amp; make install
+</code></pre>
+
+<p>第四，安装完成。以上命令执行完毕，且无报错的情况下，我们将默认 python 换将切换至 3.7.xx/2.7.xx（一般不建议替换，个人建议把自定义安装的 Python bin 路径添加到 PATH 环境变量即可）：</p>
+
+<pre><code class="language-bash"># 替换系统自带的 python（不建议）
+mv /usr/bin/python /usr/bin/python2
+ln -s /Bioinfo/Pipeline/SoftWare/Python-3.7.3/bin/python3 /usr/bin/python
+
+# 添加新 Python 到 PATH 环境变量（建议）
+echo &quot;export PATH=/Bioinfo/Pipeline/SoftWare/Python-3.7.3/bin:$PATH&quot; &gt;&gt;~/.bashrc
+source ~/.bashrc
+</code></pre>
+
+<p>运行命令 <code>python -V</code> ，查看是否出现 3.7.xx（2.7.xx）的版本，出现即为安装成功。</p>
+
+<p><a name="b9acf683"></a></p>
+
+<h2 id="3-安装-pip-setuptools">3. 安装 pip+setuptools</h2>
+
+<pre><code class="language-bash"># 下载 setuptools 和 pip 安装程序
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
+</code></pre>
+
+<p>至此，python 全部安装完成。</p>
+
+<p><a name="a6a2ae93"></a></p>
+
+<h2 id="4-参考资料">4. 参考资料</h2>
+
+<ol>
+<li>行者无疆-ITer,《<a href="https://www.cnblogs.com/ITer-jack/p/8305912.html">python2.7源码编译安装</a>》, 博客园</li>
+<li>Scott Frazer,《<a href="https://stackoverflow.com/questions/23548188/how-do-i-compile-python-3-4-with-custom-openssl">How do I compile Python 3.4 with custom OpenSSL?</a>》, Stack Overflow</li>
+</ol>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev"><a href="../../blog/2019-05-15-pdf-copy/">扫描版与非扫描版 PDF 文字复制</a><br/>&larr;</span>
+  <span class="nav-next"><a href="../../blog/2019-05-18-python-enable-shared/">聊一聊 Python 安装中的 --enable-shared</a><br/>&rarr;</span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/blog\/2019-05-15-pdf-copy\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/blog\/2019-05-18-python-enable-shared\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var disqus_js = '//bioinit.disqus.com/embed.js';
+    var d = document, s = d.createElement('script');
+    s.src = disqus_js; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    var b = false, l = function() {
+      if (b) return;
+      (d.head || d.body).appendChild(s); b = true;
+    }
+    var t = d.getElementById('disqus_thread');
+    s.onerror = function(e) {
+      if (sessionStorage.getItem('failure-note')) return;
+      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
+      t.style.border = '1px dashed';
+      t.style.padding = '.5em';
+      t.style.background = 'lightyellow';
+      sessionStorage.setItem('failure-note', true);
+    };
+    
+    if (location.hash.match(/^#comment/)) return l();
+    var c = function() {
+      if (b) return;
+      var rect = t.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
+    };
+    window.addEventListener('load', c);
+    d.addEventListener('scroll', c);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+<script async src="../../js/fix-toc.js"></script>
+
+<script async src="../../js/center-img.js"></script>
+
+<script async src="../../js/right-quote.js"></script>
+
+<script async src="../../js/no-highlight.js"></script>
+
+<script async src="../../js/fix-footnote.js"></script>
+
+<script async src="../../js/math-code.js"></script>
+
+<script async src="../../js/external-link.js"></script>
+
+<script async src="../../js/alt-title.js"></script>
+
+<script async src="../../js/header-link.js"></script>
+
+<script async src="../../js/dom-scripts.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

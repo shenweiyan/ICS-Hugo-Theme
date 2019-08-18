@@ -1,92 +1,110 @@
-baseURL = "https://ivc.bioinit.com"
-languageCode = "en-us"
-defaultContentLanguage = "en"
-title = "Cupper"
-theme = "cupper-hugo-theme"
-googleAnalytics = "UA-123456789-1"
-disqusShortname = "yourdiscussshortname"
+baseurl = "https://ivc.bioinit.com"
+RelativeURLs=true
+CanonifyURLs=true
+languageCode = "zh"	# html的lang属性值
+DefaultContentLanguage = "zh" # 默认内容语言用于选择i18n语言模板
+title = "Steven Shen | 沈维燕"
+theme = "hugo-ivy"
+#googleAnalytics = "UA-112592341-1"
+disqusShortname = "bioinit"
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+hasCJKLanguage = true  # .WordCount works correctly for chinese
+enableEmoji = true
+footnotereturnlinkcontents = "↩"
+MetaDataFormat = "yaml" # format of a new post
 enableGitInfo = false
 publishDir = "docs"
 
-[taxonomies]
-  tag = "tags"
 
-[permalinks]
-  post = "/:filename/"
 
-[imaging]
-  quality = 99
-
-[[menu.nav]]
+[[menu.main]]
     name = "首页"
     url = "/"
     weight = 1
 
-[[menu.nav]]
-    identifier = "blog"
-    name = "博客"
-    url = "/blog/"
-    weight = 2
-
-[[menu.nav]]
-    name = "标签"
-    url = "/tags/"
-    weight = 3
-[[menu.nav]]
+[[menu.main]]
     name = "关于"
     url = "/about/"
+    weight = 2
+
+[[menu.main]]
+    name = "博客"
+    url = "/blog/"
+    weight = 3
+
+[[menu.main]]
+    name = "专栏"
+    url = "/zhuanlan/"
     weight = 4
-[[menu.nav]]
+
+[[menu.main]]
+    name = "研究"
+    url = "/research/"
+    weight = 5
+
+[[menu.main]]
+    name = "简历"
+    url = "/resume/shenweiyan"
+    weight = 6
+
+[[menu.main]]
     name = "归档"
     url = "/archives/"
-    weight = 5
-[[menu.nav]]
-    name = "订阅"
-    url = "/index.xml"
-    weight = 30
-[[menu.nav]]
-    name = "研究"
-    url = "/reseach/"
-    weight = 6
-[[menu.nav]]
-    name = "简历"
-    url = "/resume/"
     weight = 7
-[[menu.nav]]
-    name = "读书"
-    url = "/readding/"
-    weight = 8
-[[menu.nav]]
-    name = "测试"
-    url = "/debug/"
-    weight = 9
 
-[[menu.nav]]
-    parent = "blog"
+
+[[menu.zhuanlan]]
     name = "首页"
     url = "/"
     weight = 1
-[[menu.nav]]
-    parent = "blog"
+[[menu.zhuanlan]]
     name = "生信"
-    url = "/blog/bioinfo/"
+    url = "/zhuanlan/bioinfo/"
     weight = 2
+[[menu.zhuanlan]]
+    name = "软件"
+    url = "/zhuanlan/tools/"
+    weight = 3
+[[menu.zhuanlan]]
+    name = "读书"
+    url = "/zhuanlan/read/"
+    weight = 4
+[[menu.zhuanlan]]
+    name = "文摘"
+    url = "/zhuanlan/talk/"
+    weight = 5
 
+[params]
+    siteurl = "https://ivc.bioinit.com"
+    description = "Welcome to the personal website of Steven Shen."
+    disqusURL = "https://shenweiyan.github.io/home/"
+    customJS = ["js/fix-toc.js", "js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js", "js/external-link.js", "js/alt-title.js", "js/header-link.js", "js/dom-scripts.js"]
+    githubContentURL = "https://github.com/shenweiyan/home/edit/master/content/"
+    # options for highlight.js (version, additional languages, and theme)
+    highlightjsVersion = "9.12.0"
+    highlightjsLang = ["r", "yaml", "tex"]
+    highlightjsCDN = "//cdn.bootcss.com"
+    highlightjsTheme = "github"
+    dateFormat = "2019-01-01" # "2019-01-01, Mon, "
 
+[params.footer]
+    home = "<br/><br/>Powered by [Hugo](https://gohugo.io) and [Blogdown](https://bookdown.org/yihui/blogdown/) &copy; [Steven Shen](/) 2018 - 2019 <br/><br/>[<i class='far fa-envelope fa-1x'></i>](mailto:ishenweiyan@qq.com) &middot; [<i class='fab fa-github fa-1x'></i>](https://github.com/shenweiyan) &middot; [<i class='fab fa-stack-overflow fa-1x'></i>](https://stackoverflow.com/users/9701168/steven-shen)"
+
+    cn   = "[<i class='far fa-envelope fa-1x'></i>](mailto:ishenweiyan@qq.com) &middot; [<i class='fab fa-github fa-1x'></i>](https://github.com/shenweiyan) &middot; [<i class='fab fa-stack-overflow fa-1x'></i>](https://stackoverflow.com/users/9701168/steven-shen) <br> 本站由 [Hugo](https://gohugo.io) 和 [Blogdown](https://bookdown.org/yihui/blogdown/) 强力驱动 &copy; [沈维燕](/) 2018 - 2019"
+
+[params.author]
+    en = "Steven Shen"
+    cn = "沈维燕"
+
+[params.logo.en]
+    img = "https://apps-db.oss-cn-shenzhen.aliyuncs.com/logos/shenweiyan.png"
+    url = "/"
+    alt = "Steven Shen"
+    tag = ""
 
 [params.lang.edit]
     cn = "编辑"
 [params.lang.license]
     cn = "版权"
-
-
-[params]
-  description = "An accessibility-friendly Hugo theme, ported from the [original Cupper](https://github.com/ThePacielloGroup/cupper) project."
-  homeMetaContent = "An accessibility-friendly Hugo theme, ported from the original Cupper project."
-  footer = "Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme). Deployed to [Netlify](https://www.netlify.com/)."
-  # For more date formats see https://gohugo.io/functions/format/
-  dateFormat = "Jan 2, 2006"
-  codePenUser = "someUser"
-  katex = true
-  githubContentURL = "https://github.com/shenweiyan/ivc-hugo/edit/master/content/"
-
+[params.lang.subscribe]
+    cn = "订阅"
