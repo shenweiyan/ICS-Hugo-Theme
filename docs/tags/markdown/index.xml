@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Markdown on Cupper</title>
+    <link>https://ivc.bioinit.com/tags/markdown/</link>
+    <description>Recent content in Markdown on Cupper</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Feb 2019 15:36:09 -0600</lastBuildDate>
+    
+	<atom:link href="https://ivc.bioinit.com/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cupper Typography</title>
+      <link>https://ivc.bioinit.com/blog/bioinfo/cupper-typography/</link>
+      <pubDate>Thu, 14 Feb 2019 15:36:09 -0600</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/bioinfo/cupper-typography/</guid>
+      <description>Headings # Heading 1 ## Heading 2 ### Heading 3 #### Heading 4 ##### Heading 5 ###### Heading 6  Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Text *This text will be italic* _This will also be italic_ **This text will be bold** __This will also be bold__ _You **can** combine them_  This text will be italic
+This will also be italic
+This text will be bold</description>
+    </item>
+    
+  </channel>
+</rss>

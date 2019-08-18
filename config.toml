@@ -1,0 +1,92 @@
+baseURL = "https://ivc.bioinit.com"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+title = "Cupper"
+theme = "cupper-hugo-theme"
+googleAnalytics = "UA-123456789-1"
+disqusShortname = "yourdiscussshortname"
+enableGitInfo = false
+publishDir = "docs"
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  post = "/:filename/"
+
+[imaging]
+  quality = 99
+
+[[menu.nav]]
+    name = "首页"
+    url = "/"
+    weight = 1
+
+[[menu.nav]]
+    identifier = "blog"
+    name = "博客"
+    url = "/blog/"
+    weight = 2
+
+[[menu.nav]]
+    name = "标签"
+    url = "/tags/"
+    weight = 3
+[[menu.nav]]
+    name = "关于"
+    url = "/about/"
+    weight = 4
+[[menu.nav]]
+    name = "归档"
+    url = "/archives/"
+    weight = 5
+[[menu.nav]]
+    name = "订阅"
+    url = "/index.xml"
+    weight = 30
+[[menu.nav]]
+    name = "研究"
+    url = "/reseach/"
+    weight = 6
+[[menu.nav]]
+    name = "简历"
+    url = "/resume/"
+    weight = 7
+[[menu.nav]]
+    name = "读书"
+    url = "/readding/"
+    weight = 8
+[[menu.nav]]
+    name = "测试"
+    url = "/debug/"
+    weight = 9
+
+[[menu.nav]]
+    parent = "blog"
+    name = "首页"
+    url = "/"
+    weight = 1
+[[menu.nav]]
+    parent = "blog"
+    name = "生信"
+    url = "/blog/bioinfo/"
+    weight = 2
+
+
+
+[params.lang.edit]
+    cn = "编辑"
+[params.lang.license]
+    cn = "版权"
+
+
+[params]
+  description = "An accessibility-friendly Hugo theme, ported from the [original Cupper](https://github.com/ThePacielloGroup/cupper) project."
+  homeMetaContent = "An accessibility-friendly Hugo theme, ported from the original Cupper project."
+  footer = "Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme). Deployed to [Netlify](https://www.netlify.com/)."
+  # For more date formats see https://gohugo.io/functions/format/
+  dateFormat = "Jan 2, 2006"
+  codePenUser = "someUser"
+  katex = true
+  githubContentURL = "https://github.com/shenweiyan/ivc-hugo/edit/master/content/"
+

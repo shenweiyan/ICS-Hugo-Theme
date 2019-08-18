@@ -1,0 +1,42 @@
+{{/*
+{{ define "main" }}
+  <main id="main">
+    <h1>{{ .Title }}</h1>
+    <ul class="patterns-list">
+    {{ range .Pages.ByPublishDate.Reverse }}
+      <li>
+          <span>{{ .Date.Format "2006/01/02" }}</span>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>        
+    {{ end }}
+    </ul>
+  </main>
+{{ end }}
+*/}}
+
+{{ define "main" }}
+  <main id="main">
+  {{ if .Params.show_toc }} {{ .TableOfContents }} {{ end }}
+  {{ if .Content }}
+    {{ .Content }}
+  {{ else }}
+
+<div class="archive">
+  {{ range .Pages.GroupByDate "2006" }}
+  <h2 class="archive-title">{{ .Key }}</h2>
+  {{ range .Pages.GroupByDate "2006-01-02" }}
+  {{ range .Pages }}
+  <ul>
+    <li>
+      <span>{{ .Date.Format "2006/01/02" }}</span>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+  </ul>
+  {{ end }}
+  {{ end }}
+  {{ end }}
+</div>
+
+{{ end }}
+  </main>
+{{ end }}
