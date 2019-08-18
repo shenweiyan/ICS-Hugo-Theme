@@ -128,6 +128,11 @@
   </url>
   
   <url>
+    <loc>https://ivc.bioinit.com/zhuanlan/bioinfo/2019-07-04-anaconda-experience/</loc>
+    <lastmod>2019-07-04T06:20:26+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ivc.bioinit.com/blog/2019-07-04-ecs-docker-wordpress-ssl/</loc>
     <lastmod>2019-07-04T06:16:29+00:00</lastmod>
   </url>
@@ -218,6 +223,11 @@
   </url>
   
   <url>
+    <loc>https://ivc.bioinit.com/zhuanlan/bioinfo/2019-07-01-centos-firewall/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ivc.bioinit.com/blog/2019-07-01-ssh-attack/</loc>
     <lastmod>2019-07-01T03:50:35+00:00</lastmod>
   </url>
@@ -284,11 +294,6 @@
   
   <url>
     <loc>https://ivc.bioinit.com/blog/2019-07-01-conda-env-roll-back/</loc>
-    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/zhuanlan/bioinfo/2019-07-01-centos-firewall/</loc>
     <lastmod>2019-07-01T03:50:35+00:00</lastmod>
   </url>
   
@@ -634,7 +639,7 @@
   
   <url>
     <loc>https://ivc.bioinit.com/tags/git/</loc>
-    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -646,13 +651,13 @@
   
   <url>
     <loc>https://ivc.bioinit.com/tags/hugo/</loc>
-    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+    <lastmod>2019-03-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ivc.bioinit.com/tags/jekyll/</loc>
-    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -688,7 +693,7 @@
   
   <url>
     <loc>https://ivc.bioinit.com/tags/migration/</loc>
-    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -748,7 +753,7 @@
   
   <url>
     <loc>https://ivc.bioinit.com/tags/templates/</loc>
-    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

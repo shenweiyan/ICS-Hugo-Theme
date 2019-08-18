@@ -3,13 +3,7 @@ date: "2019-07-01T03:50:35.000Z"
 draft: false
 lastmod: "2019-07-01T03:50:35.000Z"
 publishdate: "2019-07-01T03:50:35.000Z"
-tags:
-- hugo
-- jekyll
-- migration
-- git
-- templates
-title: 读书文章
+title: "[生信专栏]Centos7 防火墙设置"
 type: post
 ---
 

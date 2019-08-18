@@ -219,6 +219,15 @@
     </item>
     
     <item>
+      <title>[生信专栏]Anaconda 使用的一些体验与困惑</title>
+      <link>https://ivc.bioinit.com/zhuanlan/bioinfo/2019-07-04-anaconda-experience/</link>
+      <pubDate>Thu, 04 Jul 2019 06:20:26 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/zhuanlan/bioinfo/2019-07-04-anaconda-experience/</guid>
+      <description>1. channels 使用 需要注意的是做生信分析的童鞋使用 conda 环境时一定要特别注意 conda channels 的设置，滥用 channels 很有可能会导致你的软件升降级（甚至环境）错乱。推荐设置如下（</description>
+    </item>
+    
+    <item>
       <title>阿里云 ECS&#43;Docker&#43;WordPress 搭建个人博客</title>
       <link>https://ivc.bioinit.com/blog/2019-07-04-ecs-docker-wordpress-ssl/</link>
       <pubDate>Thu, 04 Jul 2019 06:16:29 +0000</pubDate>
@@ -381,6 +390,15 @@
     </item>
     
     <item>
+      <title>[生信专栏]Centos7 防火墙设置</title>
+      <link>https://ivc.bioinit.com/zhuanlan/bioinfo/2019-07-01-centos-firewall/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/zhuanlan/bioinfo/2019-07-01-centos-firewall/</guid>
+      <description>Centos7 默认安装了 firewalld，如果没有安装的话，则需要 YUM 命令安装；firewalld 真的用不习惯，与之前的 iptable 防火墙区别太大，但毕竟是未来主</description>
+    </item>
+    
+    <item>
       <title>一次 SSH 攻击与处理记录</title>
       <link>https://ivc.bioinit.com/blog/2019-07-01-ssh-attack/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
@@ -504,15 +522,6 @@
       
       <guid>https://ivc.bioinit.com/blog/2019-07-01-conda-env-roll-back/</guid>
       <description>我现在使用 Anaconda 作为我的主要 Python 发行版，同样，我们公司也将它用于所有开发人员机器以及他们的服务器。然而，前几天我在浏览一些论坛技术文章时遇到了一个</description>
-    </item>
-    
-    <item>
-      <title>读书文章</title>
-      <link>https://ivc.bioinit.com/zhuanlan/bioinfo/2019-07-01-centos-firewall/</link>
-      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
-      
-      <guid>https://ivc.bioinit.com/zhuanlan/bioinfo/2019-07-01-centos-firewall/</guid>
-      <description>Centos7 默认安装了 firewalld，如果没有安装的话，则需要 YUM 命令安装；firewalld 真的用不习惯，与之前的 iptable 防火墙区别太大，但毕竟是未来主</description>
     </item>
     
     <item>

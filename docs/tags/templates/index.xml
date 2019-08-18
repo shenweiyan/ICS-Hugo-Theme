@@ -6,19 +6,10 @@
     <description>Recent content in Templates on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 01 Jul 2019 03:50:35 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ivc.bioinit.com/tags/templates/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>读书文章</title>
-      <link>https://ivc.bioinit.com/zhuanlan/bioinfo/2019-07-01-centos-firewall/</link>
-      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
-      
-      <guid>https://ivc.bioinit.com/zhuanlan/bioinfo/2019-07-01-centos-firewall/</guid>
-      <description>Centos7 默认安装了 firewalld，如果没有安装的话，则需要 YUM 命令安装；firewalld 真的用不习惯，与之前的 iptable 防火墙区别太大，但毕竟是未来主</description>
-    </item>
     
     <item>
       <title>(Hu)go Template Primer</title>
