@@ -68,10 +68,6 @@ publishDir = "docs"
     name = "读书"
     url = "/zhuanlan/read/"
     weight = 4
-[[menu.zhuanlan]]
-    name = "文摘"
-    url = "/zhuanlan/talk/"
-    weight = 5
 
 [params]
     siteurl = "https://ivc.bioinit.com"

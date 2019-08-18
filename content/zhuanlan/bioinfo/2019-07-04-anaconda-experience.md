@@ -3,6 +3,7 @@ title: "[生信专栏]Anaconda 使用的一些体验与困惑"
 category: 软件
 date: 2019-07-04T06:20:26.000Z
 tags: Anaconda
+type: post
 published: true
 ---
 

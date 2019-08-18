@@ -573,7 +573,17 @@
   </url>
   
   <url>
+    <loc>https://ivc.bioinit.com/zhuanlan/read/</loc>
+    <lastmod>2017-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ivc.bioinit.com/zhuanlan/bioinfo/</loc>
+    <lastmod>2017-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/zhuanlan/tools/</loc>
     <lastmod>2017-01-31T00:00:00+00:00</lastmod>
   </url>
   
