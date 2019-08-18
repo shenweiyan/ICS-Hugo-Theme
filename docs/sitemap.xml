@@ -173,11 +173,6 @@
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/reseach/2019-07-01-centos-firewall/</loc>
-    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ivc.bioinit.com/blog/2019-07-01-security-for-centos-7/</loc>
     <lastmod>2019-07-01T03:50:35+00:00</lastmod>
   </url>
@@ -578,11 +573,6 @@
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/about/</loc>
-    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ivc.bioinit.com/blog/bioinfo/goisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
@@ -731,12 +721,6 @@
   <url>
     <loc>https://ivc.bioinit.com/tags/redhat-%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2019-05-18T12:39:52+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/reseach/</loc>
-    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
     <priority>0</priority>
   </url>
   

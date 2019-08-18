@@ -300,15 +300,6 @@
     </item>
     
     <item>
-      <title>CentOS 7 防火墙开启常见端口命令</title>
-      <link>https://ivc.bioinit.com/reseach/2019-07-01-centos-firewall/</link>
-      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
-      
-      <guid>https://ivc.bioinit.com/reseach/2019-07-01-centos-firewall/</guid>
-      <description>Centos7 默认安装了 firewalld，如果没有安装的话，则需要 YUM 命令安装；firewalld 真的用不习惯，与之前的 iptable 防火墙区别太大，但毕竟是未来主</description>
-    </item>
-    
-    <item>
       <title>CentOS Linux 7 安全基线设置</title>
       <link>https://ivc.bioinit.com/blog/2019-07-01-security-for-centos-7/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
@@ -982,15 +973,6 @@ This text will be bold</description>
       <guid>https://ivc.bioinit.com/blog/bioinfo/creating-a-new-theme/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
-      <title>关于</title>
-      <link>https://ivc.bioinit.com/about/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://ivc.bioinit.com/about/</guid>
-      <description>Hugo is the world’s fastest framework for building websites. It is written in Go. It makes use of a variety of open source projects including: https://github.com/russross/blackfriday https://github.com/alecthomas/chroma https://github.com/muesli/smartcrop https://github.com/spf13/cobra https://github.com/spf13/viper Learn more and contribute on GitHub.</description>
     </item>
     
     <item>
