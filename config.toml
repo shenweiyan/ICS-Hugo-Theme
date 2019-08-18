@@ -18,7 +18,7 @@ publishDir = "docs"
 
 [[menu.main]]
     name = "首页"
-    url = "https://ivc.bioinit.com"
+    url = "/"
     weight = 1
 
 [[menu.main]]
@@ -38,17 +38,17 @@ publishDir = "docs"
 
 [[menu.main]]
     name = "研究"
-    url = "/research/"
+    url = "https://ivc.bioinit.com/research/"
     weight = 5
 
 [[menu.main]]
     name = "简历"
-    url = "/resume/shenweiyan"
+    url = "https://ivc.bioinit.com/resume/shenweiyan"
     weight = 6
 
 [[menu.main]]
     name = "归档"
-    url = "/archives/"
+    url = "https://ivc.bioinit.com/archives/"
     weight = 7
 
 
