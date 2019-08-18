@@ -23,12 +23,12 @@ publishDir = "docs"
 
 [[menu.main]]
     name = "关于"
-    url = "/about/"
+    url = "https://ivc.bioinit.com/about/"
     weight = 2
 
 [[menu.main]]
     name = "博客"
-    url = "/blog/"
+    url = "https://ivc.bioinit.com/blog/"
     weight = 3
 
 [[menu.main]]
