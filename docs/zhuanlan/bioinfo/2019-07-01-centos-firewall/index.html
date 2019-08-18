@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <title>读书文章 - </title>
+    
+     
+    <meta property="og:title" content="读书文章 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://ivc.bioinit.com/css/style.css"/>
+    <link rel="stylesheet" href="https://ivc.bioinit.com/css/mystyle.css"/> 
+    <link rel="stylesheet" href="https://ivc.bioinit.com/css/fonts.css" />
+    
+<link rel="stylesheet" href="https://ivc.bioinit.com/css/template-styles.css" />
+<link rel="stylesheet" href="https://ivc.bioinit.com/css/custom.css" />
+
+  </head>
+
+  
+  <body class="zhuanlan">
+    
+    
+    <header class="intro-and-nav" role="banner">
+    <div>
+    <div class="intro">
+      <a class="logo" href="../../../" aria-label="Steven Shen | 沈维燕 home page">
+        <img src="https://ivc.bioinit.com/img/logo.png" alt="">
+      </a>
+      <p class="library-desc">
+        
+          Welcome to the personal website of Steven Shen.
+        
+      </p>
+    </div>
+    <nav id="patterns-nav" class="patterns" role="navigation">
+  <h2 class="vh">Main navigation</h2>
+  <button id="menu-button" aria-expanded="false">
+    <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
+      <use xlink:href="#menu"></use>
+    </svg>
+    Menu
+  </button>
+  
+  <ul id="patterns-list">
+    
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../../" >
+        
+        首页
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../../zhuanlan/bioinfo/" >
+        
+        生信
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../../zhuanlan/tools/" >
+        
+        软件
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../../zhuanlan/read/" >
+        
+        读书
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="../../../zhuanlan/talk/" >
+        
+        文摘
+      </a>
+    </li>
+  
+  
+
+<li class="pattern">&nbsp;&nbsp;</li>
+
+
+
+<li class="pattern"><a href="https://github.com/shenweiyan/home/edit/master/content/zhuanlan/bioinfo/2019-07-01-centos-firewall.md" target="_blank">编辑</a></li>
+
+
+<li class="pattern"><a href="../../../zhuanlan/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li class="pattern"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
+
+
+  </ul>
+</nav>
+
+    </div>
+   </header>
+
+    <article class="main">
+      <header class="title">
+        
+
+<h1>读书文章</h1>
+
+
+
+<h3>
+2019-07-01</h3> 
+
+
+   
+  
+
+
+      </header>
+
+
+
+
+<p>Centos7 默认安装了 firewalld，如果没有安装的话，则需要 YUM 命令安装；firewalld 真的用不习惯，与之前的 iptable 防火墙区别太大，但毕竟是未来主流讲究慢慢磨合它的设置规则。</p>
+
+<p><a name="4aaf5d24"></a></p>
+
+<h2 id="安装-firewall-命令">安装 Firewall 命令</h2>
+
+<pre><code class="language-shell">yum install firewalld firewalld-config
+</code></pre>
+
+<p><a name="e49f88df"></a></p>
+
+<h2 id="firewall-开启常见端口命令">Firewall 开启常见端口命令</h2>
+
+<pre><code class="language-shell">firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --zone=public --add-port=443/tcp --permanent
+firewall-cmd --zone=public --add-port=22/tcp --permanent
+firewall-cmd --zone=public --add-port=21/tcp --permanent
+firewall-cmd --zone=public --add-port=53/udp --permanent
+</code></pre>
+
+<p><a name="96bfd945"></a></p>
+
+<h2 id="firewall-关闭常见端口命令">Firewall 关闭常见端口命令</h2>
+
+<pre><code class="language-shell">firewall-cmd --zone=public --remove-port=80/tcp --permanent
+firewall-cmd --zone=public --remove-port=443/tcp --permanent
+firewall-cmd --zone=public --remove-port=22/tcp --permanent
+firewall-cmd --zone=public --remove-port=21/tcp --permanent
+firewall-cmd --zone=public --remove-port=53/udp --permanent
+</code></pre>
+
+<p><a name="c9769260"></a></p>
+
+<h2 id="批量添加区间端口">批量添加区间端口</h2>
+
+<pre><code class="language-shell">firewall-cmd --zone=public --add-port=4400-4600/udp --permanent
+firewall-cmd --zone=public --add-port=4400-4600/tcp --permanent
+</code></pre>
+
+<p><a name="d4b16b51"></a></p>
+
+<h2 id="开启防火墙命令">开启防火墙命令</h2>
+
+<pre><code class="language-shell">systemctl start firewalld.service
+</code></pre>
+
+<p><a name="3f64273c"></a></p>
+
+<h2 id="重启防火墙命令">重启防火墙命令</h2>
+
+<pre><code class="language-shell">firewall-cmd --reload  或者   service firewalld restart
+</code></pre>
+
+<p><a name="b9750533"></a></p>
+
+<h2 id="查看端口列表">查看端口列表</h2>
+
+<pre><code class="language-shell">firewall-cmd --permanent --list-port
+</code></pre>
+
+<p><a name="880fde70"></a></p>
+
+<h2 id="禁用防火墙">禁用防火墙</h2>
+
+<pre><code class="language-shell">systemctl stop firewalld
+</code></pre>
+
+<p><a name="4b9f9f02"></a></p>
+
+<h2 id="设置开机启动">设置开机启动</h2>
+
+<pre><code class="language-shell">systemctl enable firewalld
+</code></pre>
+
+<p><a name="8070c2ee"></a></p>
+
+<h2 id="停止并禁用开机启动">停止并禁用开机启动</h2>
+
+<pre><code class="language-shell">sytemctl disable firewalld
+</code></pre>
+
+<p><a name="45d9d51f"></a></p>
+
+<h2 id="查看防火墙状态">查看防火墙状态</h2>
+
+<pre><code class="language-shell">systemctl status firewalld    或者 firewall-cmd --state
+</code></pre>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev"></span>
+  <span class="nav-next"></span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+  } else if (e.which == 39) {  
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var disqus_js = '//bioinit.disqus.com/embed.js';
+    var d = document, s = d.createElement('script');
+    s.src = disqus_js; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    var b = false, l = function() {
+      if (b) return;
+      (d.head || d.body).appendChild(s); b = true;
+    }
+    var t = d.getElementById('disqus_thread');
+    s.onerror = function(e) {
+      if (sessionStorage.getItem('failure-note')) return;
+      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
+      t.style.border = '1px dashed';
+      t.style.padding = '.5em';
+      t.style.background = 'lightyellow';
+      sessionStorage.setItem('failure-note', true);
+    };
+    
+    if (location.hash.match(/^#comment/)) return l();
+    var c = function() {
+      if (b) return;
+      var rect = t.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
+    };
+    window.addEventListener('load', c);
+    d.addEventListener('scroll', c);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+<script async src="../../../js/fix-toc.js"></script>
+
+<script async src="../../../js/center-img.js"></script>
+
+<script async src="../../../js/right-quote.js"></script>
+
+<script async src="../../../js/no-highlight.js"></script>
+
+<script async src="../../../js/fix-footnote.js"></script>
+
+<script async src="../../../js/math-code.js"></script>
+
+<script async src="../../../js/external-link.js"></script>
+
+<script async src="../../../js/alt-title.js"></script>
+
+<script async src="../../../js/header-link.js"></script>
+
+<script async src="../../../js/dom-scripts.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

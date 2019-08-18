@@ -288,7 +288,7 @@
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/readding/2019-07-01-centos-firewall/</loc>
+    <loc>https://ivc.bioinit.com/zhuanlan/bioinfo/2019-07-01-centos-firewall/</loc>
     <lastmod>2019-07-01T03:50:35+00:00</lastmod>
   </url>
   
@@ -558,6 +558,11 @@
   </url>
   
   <url>
+    <loc>https://ivc.bioinit.com/zhuanlan/</loc>
+    <lastmod>2017-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ivc.bioinit.com/blog/</loc>
     <lastmod>2017-01-31T00:00:00+00:00</lastmod>
   </url>
@@ -703,12 +708,6 @@
   <url>
     <loc>https://ivc.bioinit.com/tags/r/</loc>
     <lastmod>2019-07-15T09:24:35+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/readding/</loc>
-    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
     <priority>0</priority>
   </url>
   

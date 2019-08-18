@@ -13,10 +13,10 @@
     
     <item>
       <title>读书文章</title>
-      <link>https://ivc.bioinit.com/readding/2019-07-01-centos-firewall/</link>
+      <link>https://ivc.bioinit.com/zhuanlan/bioinfo/2019-07-01-centos-firewall/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://ivc.bioinit.com/readding/2019-07-01-centos-firewall/</guid>
+      <guid>https://ivc.bioinit.com/zhuanlan/bioinfo/2019-07-01-centos-firewall/</guid>
       <description>Centos7 默认安装了 firewalld，如果没有安装的话，则需要 YUM 命令安装；firewalld 真的用不习惯，与之前的 iptable 防火墙区别太大，但毕竟是未来主</description>
     </item>
     
