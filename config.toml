@@ -16,10 +16,9 @@ enableGitInfo = false
 publishDir = "docs"
 
 
-
 [[menu.main]]
     name = "首页"
-    url = "/"
+    url = "https://ivc.bioinit.com"
     weight = 1
 
 [[menu.main]]
@@ -55,7 +54,7 @@ publishDir = "docs"
 
 [[menu.zhuanlan]]
     name = "首页"
-    url = "/"
+    url = "https://ivc.bioinit.com"
     weight = 1
 [[menu.zhuanlan]]
     name = "生信"
