@@ -1,7 +1,7 @@
 /* Micro Reset */
 
 html {
-  font-size: 100%;
+  font-size: 13px;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   box-sizing: border-box;
@@ -171,7 +171,7 @@ body {
 }
 
 .main {
-  width: 900px;
+  width: 700px;
   padding: 32px 10px 20px 50px;
   margin-left: 260px;
   border-left: 3px solid black;
@@ -307,7 +307,7 @@ thead, tfoot, tr:nth-child(even) {
 
   body {
     width: auto;
-    max-width: 900px;
+    max-width: 700px;
   }
 
   .masthead {
