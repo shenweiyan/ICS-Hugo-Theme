@@ -23,12 +23,12 @@ publishDir = "docs"
 
 [[menu.main]]
     name = "关于"
-    url = "https://ivc.bioinit.com/about/"
+    url = "/about/"
     weight = 2
 
 [[menu.main]]
     name = "博客"
-    url = "https://ivc.bioinit.com/blog/"
+    url = "/blog/"
     weight = 3
 
 [[menu.main]]
@@ -38,23 +38,23 @@ publishDir = "docs"
 
 [[menu.main]]
     name = "研究"
-    url = "https://ivc.bioinit.com/research/"
+    url = "/research/"
     weight = 5
 
 [[menu.main]]
     name = "简历"
-    url = "https://ivc.bioinit.com/resume/shenweiyan"
+    url = "/resume/shenweiyan"
     weight = 6
 
 [[menu.main]]
     name = "归档"
-    url = "https://ivc.bioinit.com/archives/"
+    url = "/archives/"
     weight = 7
 
 
 [[menu.zhuanlan]]
     name = "首页"
-    url = "https://ivc.bioinit.com"
+    url = "/"
     weight = 1
 [[menu.zhuanlan]]
     name = "生信"
