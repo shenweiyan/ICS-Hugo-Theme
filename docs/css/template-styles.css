@@ -25,7 +25,6 @@ div:not([tabindex]):focus {
 button {
     font-size: 1.25rem;
     border-radius: 0.33em;
-    font-family: inherit;
     background: #111;
     color: #fefefe;
     padding: 0.75rem;
@@ -235,7 +234,7 @@ h1 svg {
 }
 .print {
     white-space: nowrap;
-    font-style: normal;
+    /*font-style: normal;*/
 }
 
 

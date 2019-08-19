@@ -1,4 +1,3 @@
-{{ if or .IsHome (len (findRE "^/cn/" .URL)) }}
 <script async src="{{ $.Site.Params.siteurl }}/js/load-typekit.js"></script>
 {{ if lt (.Date.Year) 2017 }}
 <script>
@@ -11,7 +10,6 @@
   pangu.spacingPage();
 });
 </script>
-{{ end }}
 {{ end }}
 <link rel="stylesheet" href="{{ $.Site.Params.siteurl }}/css/template-styles.css" />
 <link rel="stylesheet" href="{{ $.Site.Params.siteurl }}/css/custom.css" />
