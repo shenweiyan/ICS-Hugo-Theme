@@ -2,7 +2,7 @@
 title: 生物信息学博客与论坛
 category: 生信
 date: 2019-05-29T06:12:49.000Z
-tags: 生物信息学 杂谈
+tags: ["生物信息学", "杂谈"]
 published: true
 ---
 

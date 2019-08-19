@@ -32,11 +32,6 @@ publishDir = "docs"
     weight = 3
 
 [[menu.main]]
-    name = "专栏"
-    url = "/zhuanlan/"
-    weight = 4
-
-[[menu.main]]
     name = "研究"
     url = "/research/"
     weight = 5
@@ -47,8 +42,8 @@ publishDir = "docs"
     weight = 6
 
 [[menu.main]]
-    name = "归档"
-    url = "/archives/"
+    name = "标签"
+    url = "/tags/"
     weight = 7
 
 
@@ -103,3 +98,8 @@ publishDir = "docs"
     cn = "版权"
 [params.lang.subscribe]
     cn = "订阅"
+
+[taxonomies]
+    tag = "tags"
+    series = "series"
+    category = "categories"

@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
     
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <link rel="stylesheet" href="./fonts/academicons-1.8.6/css/academicons.min.css"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/logo.png"> 
+    <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     
@@ -14,8 +14,8 @@
     
     
     
-    <title>404 Page not found - Steven Shen | 沈维燕</title> 
-    <meta property="og:title" content="404 Page not found - Steven Shen | 沈维燕">
+    <title>生物信息学 - Steven Shen | 沈维燕</title> 
+    <meta property="og:title" content="生物信息学 - Steven Shen | 沈维燕">
     
 
     
@@ -24,6 +24,8 @@
 
     
 
+    
+    <link href="../../tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/index.xml" rel="alternate" type="application/rss+xml" title="生物信息学" />
     
   
     <link rel="stylesheet" href="https://ivc.bioinit.com/css/style.css"/>
@@ -36,13 +38,13 @@
   </head>
 
   
-  <body class="">
+  <body class="tags">
     
     
     <header class="intro-and-nav" role="banner">
     <div>
       <div class="intro">
-        <a class="logo" href="./" aria-label="Steven Shen | 沈维燕 home page">
+        <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
           <img src="https://ivc.bioinit.com/img/logo.png" alt="">
         </a>
         <p class="library-desc">
@@ -65,7 +67,7 @@
           
           
           
-            <a href="./" >
+            <a href="../../" >
               
               首页
             </a>
@@ -76,7 +78,7 @@
           
           
           
-            <a href="./about/" >
+            <a href="../../about/" >
               
               关于
             </a>
@@ -87,7 +89,7 @@
           
           
           
-            <a href="./blog/" >
+            <a href="../../blog/" >
               
               博客
             </a>
@@ -98,7 +100,7 @@
           
           
           
-            <a href="./research/" >
+            <a href="../../research/" >
               
               研究
             </a>
@@ -109,7 +111,7 @@
           
           
           
-            <a href="./resume/shenweiyan" >
+            <a href="../../resume/shenweiyan" >
               
               简历
             </a>
@@ -120,7 +122,7 @@
           
           
           
-            <a href="./tags/" >
+            <a href="../../tags/" >
               
               标签
             </a>
@@ -137,7 +139,7 @@
       <header class="title">
         
 
-<h1>404 Page not found</h1>
+<h1>生物信息学</h1>
 
 
    
@@ -147,82 +149,73 @@
       </header>
 
 
-<p style="text-align:center;">Page not found. Feel confused? Please go ahead and leave a message below to notify me. Thanks!</p>
 
-<p style="text-align:center;"><img src="https://blog.bioinit.com/img/elevator.gif" alt="404 not found" /></p>
+
+
+
+
+
+<div class="archive">
+  
+  <h2 class="archive-title">2019</h2>
+  
+  
+  <ul>
+    <li>
+      <span>2019/05/29</span>
+      <a href="../../blog/2019-05-29-bio-blogs-forums/">生物信息学博客与论坛</a>
+    </li>
+  </ul>
+  
+  
+  
+</div>
+
+
 
   <footer>
   
-
-
-<section class="comments">
-  <div id="disqus_thread"></div>
-  <script>
-  var disqus_config = function () {
-  
-    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + "/404.html" ;
-  
-  };
-  (function() {
-    var inIFrame = function() {
-      var iframe = true;
-      try { iframe = window.self !== window.top; } catch (e) {}
-      return iframe;
-    };
-    if (inIFrame()) return;
-    var disqus_js = '//bioinit.disqus.com/embed.js';
-    var d = document, s = d.createElement('script');
-    s.src = disqus_js; s.async = true;
-    s.setAttribute('data-timestamp', +new Date());
-    var b = false, l = function() {
-      if (b) return;
-      (d.head || d.body).appendChild(s); b = true;
-    }
-    var t = d.getElementById('disqus_thread');
-    s.onerror = function(e) {
-      if (sessionStorage.getItem('failure-note')) return;
-      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
-      t.style.border = '1px dashed';
-      t.style.padding = '.5em';
-      t.style.background = 'lightyellow';
-      sessionStorage.setItem('failure-note', true);
-    };
+<nav class="post-nav">
+  <span class="nav-prev"></span>
+  <span class="nav-next"></span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
     
-    if (location.hash.match(/^#comment/)) return l();
-    var c = function() {
-      if (b) return;
-      var rect = t.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
-    };
-    window.addEventListener('load', c);
-    d.addEventListener('scroll', c);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
+  } else if (e.which == 39) {  
+    
+  }
+  if (url) window.location = url;
+});
+</script>
 
 
 
 
-<script async src="./js/fix-toc.js"></script>
 
-<script async src="./js/center-img.js"></script>
 
-<script async src="./js/right-quote.js"></script>
+<script async src="../../js/fix-toc.js"></script>
 
-<script async src="./js/no-highlight.js"></script>
+<script async src="../../js/center-img.js"></script>
 
-<script async src="./js/fix-footnote.js"></script>
+<script async src="../../js/right-quote.js"></script>
 
-<script async src="./js/math-code.js"></script>
+<script async src="../../js/no-highlight.js"></script>
 
-<script async src="./js/external-link.js"></script>
+<script async src="../../js/fix-footnote.js"></script>
 
-<script async src="./js/alt-title.js"></script>
+<script async src="../../js/math-code.js"></script>
 
-<script async src="./js/header-link.js"></script>
+<script async src="../../js/external-link.js"></script>
 
-<script async src="./js/dom-scripts.js"></script>
+<script async src="../../js/alt-title.js"></script>
+
+<script async src="../../js/header-link.js"></script>
+
+<script async src="../../js/dom-scripts.js"></script>
 
 
 <script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
@@ -240,3 +233,4 @@
   
   </body>
 </html>
+

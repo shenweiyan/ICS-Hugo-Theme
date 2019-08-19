@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>归档</title>
-      <link>https://ivc.bioinit.com/archives/</link>
-      <pubDate>Fri, 16 Aug 2019 16:35:25 +0800</pubDate>
-      
-      <guid>https://ivc.bioinit.com/archives/</guid>
-      <description>针对所有 type: post 的文章进行归类.</description>
-    </item>
-    
-    <item>
       <title>Hugo 博客折腾的一些记录</title>
       <link>https://ivc.bioinit.com/blog/2019-08-08-build-hugo-blogs/</link>
       <pubDate>Thu, 08 Aug 2019 09:05:21 +0000</pubDate>

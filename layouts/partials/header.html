@@ -15,9 +15,10 @@
     {{ else }}
     <!--- Use different titles in different Language versions, 20180210 by Likan Zhan --->
     {{ $section := default .Section ($.Scratch.Get "section") }}
-    <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ (index $.Site.Params.author $section) }}</title>
+    <!-- <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ (index $.Site.Params.author $section) }}</title> -->
     <!--- Use different titles in different Language versions, 20180210 by Likan Zhan --->
-    <!--- <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ .Site.Title }}</title> ---> <!--- LZ 20180210 --->
+    <!--steven 20190819 -->
+    <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ .Site.Title }}</title> 
     <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
     {{ end }}
 
@@ -68,47 +69,46 @@
     
     <header class="intro-and-nav" role="banner">
     <div>
-    <div class="intro">
-      <a class="logo" href="/" aria-label="{{ .Site.Title }} home page">
-        <img src="{{ "img/logo.png" | absURL }}" alt="">
-      </a>
-      <p class="library-desc">
-        {{ with .Site.Params.description }}
-          {{ . | markdownify }}
-        {{ end }}
-      </p>
+      <div class="intro">
+        <a class="logo" href="/" aria-label="{{ .Site.Title }} home page">
+          <img src="{{ "img/logo.png" | absURL }}" alt="">
+        </a>
+        <p class="library-desc">
+          {{ with .Site.Params.description }}
+            {{ . | markdownify }}
+          {{ end }}
+        </p>
+      </div>
+      <nav id="patterns-nav" class="patterns" role="navigation">
+        <h2 class="vh">Main navigation</h2>
+        <button id="menu-button" aria-expanded="false">
+          <!--svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
+            <use xlink:href="#menu"></use>
+          </svg-->
+          Menu
+        </button>
+        {{ $current := . }}
+        <ul id="patterns-list">
+          {{ range (default .Site.Menus.main (index .Site.Menus ($.Scratch.Get "section"))) }}
+          <li class="pattern">
+          {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+          {{ $active = or $active (eq .Name $current.Title) }}
+          {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "post")) }}
+          {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
+            <a href="{{ .URL }}" {{ if $active }}aria-current="page"{{ end }}>
+              <!--svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+                <use xlink:href="#bookmark"></use>
+              </svg>
+              <span class="text">{{ .Name }}</span-->
+              {{ .Name }}
+            </a>
+          </li>
+          {{ end }}
+          {{ partial "menu_extra.html" . }}
+        </ul>
+      </nav>
     </div>
-    <nav id="patterns-nav" class="patterns" role="navigation">
-  <h2 class="vh">Main navigation</h2>
-  <button id="menu-button" aria-expanded="false">
-    <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
-      <use xlink:href="#menu"></use>
-    </svg>
-    Menu
-  </button>
-  {{ $current := . }}
-  <ul id="patterns-list">
-    {{ range (default .Site.Menus.main (index .Site.Menus ($.Scratch.Get "section"))) }}
-    <li class="pattern">
-      {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
-      {{ $active = or $active (eq .Name $current.Title) }}
-      {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "post")) }}
-      {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
-      <a href="{{ .URL }}" {{ if $active }}aria-current="page"{{ end }}>
-        <!--svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-          <use xlink:href="#bookmark"></use>
-        </svg>
-        <span class="text">{{ .Name }}</span-->
-        {{ .Name }}
-      </a>
-    </li>
-  {{ end }}
-  {{ partial "menu_extra.html" . }}
-  </ul>
-</nav>
-
-    </div>
-   </header>
+    </header>
 
     <article class="main">
       <header class="title">

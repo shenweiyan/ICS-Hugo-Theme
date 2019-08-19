@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ivc.bioinit.com/archives/</loc>
-    <lastmod>2019-08-16T16:35:25+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ivc.bioinit.com/</loc>
     <lastmod>2019-08-12T00:00:00+00:00</lastmod>
   </url>
@@ -750,6 +745,11 @@
   </url>
   
   <url>
+    <loc>https://ivc.bioinit.com/series/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ivc.bioinit.com/tags/shell/</loc>
     <lastmod>2018-12-29T09:21:11+00:00</lastmod>
     <priority>0</priority>
@@ -802,7 +802,7 @@
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6-%E6%9D%82%E8%B0%88/</loc>
+    <loc>https://ivc.bioinit.com/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/</loc>
     <lastmod>2019-05-29T06:12:49+00:00</lastmod>
     <priority>0</priority>
   </url>
