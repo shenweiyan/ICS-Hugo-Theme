@@ -1,15 +1,16 @@
 ---
 title: LaTeX 2018 安装与使用教程
-category: 软件
+types: post
+tags: ["others", "软件"]
 date: 2019-07-01T03:50:35.000Z
-tags: others
+category: 软件
 published: true
 ---
 
 <a name="2e2d5a8d"></a>
 # 一、背景
 前两天在自己的 Jupyter 服务器上想要把 notebook(.ipynb) 导出为 pdf 时发现 xelatex 没有安装：<br />
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1548653466526-645be58b-5a23-43d2-b82a-895bc7500d15.png#align=left&display=inline&height=685&originHeight=709&originWidth=772&size=0&width=746)<br />500 : Internal Server Error 如下：
+!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1548653466526-645be58b-5a23-43d2-b82a-895bc7500d15.png#align=left&display=inline&height=685&originHeight=709&originWidth=772&size=0&width=746)<br />500 : Internal Server Error 如下：
 ```
 nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
 ```
@@ -285,7 +286,7 @@ $ tlmgr install pkgname
 你好，TeX Live 2018！
 \end{document}
 ```
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1548653863498-04986e41-7e3d-4edf-b8f8-47feaa60720c.png#align=left&display=inline&height=566&originHeight=566&originWidth=633&size=0&width=633)
+!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1548653863498-04986e41-7e3d-4edf-b8f8-47feaa60720c.png#align=left&display=inline&height=566&originHeight=566&originWidth=633&size=0&width=633)
 
 ---
 

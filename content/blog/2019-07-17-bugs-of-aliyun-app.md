@@ -1,8 +1,9 @@
 ---
 title: 发现了阿里云 APP 的一个小 BUG
-category: 杂谈
+types: post
+tags: ["others", "杂谈"]
 date: 2019-07-17T06:26:57.000Z
-tags: others
+category: 杂谈
 published: true
 ---
 
@@ -15,7 +16,7 @@ published: true
 
 为了验证问题，我在手机的文件管理中找到了这张图片所在的目录，进去重新刷新该文件夹，然后打开系统相册，果然就可以看到这张下载的图片了。
 
-后来，向阿里云反馈也的确证实了该问题：<br />![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563344876240-5828f914-7c3b-47b0-8a98-ee866bdfc41c.png#align=left&display=inline&height=220&originHeight=220&originWidth=721&size=0&status=done&width=721)
+后来，向阿里云反馈也的确证实了该问题：<br />!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563344876240-5828f914-7c3b-47b0-8a98-ee866bdfc41c.png#align=left&display=inline&height=220&originHeight=220&originWidth=721&size=0&status=done&width=721)
 
 虽然本人对 Android 开发完全不懂， 但也想了解一下，在 Android 手机中下载图片怎么样才能实时刷新系统相册呢？
 

@@ -1,8 +1,9 @@
 ---
 title: 中国联通家庭宽带
-category: 杂谈
+types: post
+tags: ["others", "杂谈"]
 date: 2019-07-08T01:51:47.000Z
-tags: others
+category: 杂谈
 published: true
 ---
 

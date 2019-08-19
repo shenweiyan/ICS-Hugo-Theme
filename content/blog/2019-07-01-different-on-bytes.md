@@ -1,15 +1,16 @@
 ---
 title: 兆碱基中关于Kb、KB、Bps、bps的区别
-category: 杂谈
+types: post
+tags: ["others", "杂谈"]
 date: 2019-07-01T03:50:35.000Z
-tags: others
+category: 杂谈
 published: true
 ---
 
 生物信息很多文章都提到 DNA 序列的 100 万个碱基数据（兆碱基）大致相当于计算机 1 兆的存储空间。借着这个问题，我们今天来聊一聊计算机存储和数据传输中 Kb、KB、Bps、bps 的一些区别，分析一下所谓的兆碱基到底是使用哪一种标准（单位）怎么计算出来的。
 
 <a name="4wkioc"></a>
-# [](#4wkioc)计算机存储容量单位
+# (#4wkioc)计算机存储容量单位
 
 Bit (binary digit)：亦称二进制位，指二进制中的一位，是信息的最小单位。位的值只会是 0 或 1。虽然计算机也提供对位的判断和操作，但是计算机指令一般以字节(Byte)为单位。在大多数的计算机系统中，八位是一个字节。一位的值通常以存储电容是否带电来衡量。
 
@@ -27,12 +28,12 @@ K、M、G 都是 KB、MB、GB 的简称。由于混淆已经普遍化，Gigabyte
 在说明其他储存单位的换算前，我们来看看两个标准：SI、IEC。
 
 <a name="b00hat"></a>
-## [](#b00hat)国际单位制（SI）
+## (#b00hat)国际单位制（SI）
 
 国际单位制(简称 SI，来自于法语 Système International d'Unités)，是世界上最普遍采用的标准度量系统。国际单位制以七个基本单位(米（m），千克（kg），秒（s），安培（A），开尔文（K），摩尔（mol），坎德拉（cd）)为基础，由此建立起一系列相互换算关系明确的"一致单位"。另有二十个基于十进制的词头，当加在单位名称或符号前的时候，可用于表达该单位的倍数或分数。
 
 <a name="t38lnm"></a>
-## [](#t38lnm)国际电工委员会（IEC）
+## (#t38lnm)国际电工委员会（IEC）
 
 国际电工委员会（IEC, International Electrotechnical Commission）成立于 1906 年，至今已有 90 多年的历史。它是世界上成立最早的国际性电工标准化机构，负责有关电气工程和电子工程领域中的国际标准化工作。
 
@@ -40,14 +41,14 @@ IEC 的宗旨是，促进电气、电子工程领域中标准化及有关问题�
 
 目前 IEC 的工作领域已由单纯研究电气设备、电机的名词术语和功率等问题扩展到电子、电力、微电子及其应用、通讯、视听、机器人、信息技术、新型医疗器械和核仪表等电工技术的各个方面。IEC标准的权威性是世界公认的，截止到2008年12月底，IEC 已制定了 5425 个国际标准。
 
-不同标准下储存单位的次方单位( ![](https://qiniu.bioinit.com/yuque/__latex/d97d16fbb399fa909887f8349724a08a.svg#align=left&card=math&code=2%5E%7B10%7D%20%3D%201024&height=24&width=76))：<br />
-![](https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/10/16-Tue/byte.png#width=)
+不同标准下储存单位的次方单位( !(https://qiniu.bioinit.com/yuque/__latex/d97d16fbb399fa909887f8349724a08a.svg#align=left&card=math&code=2%5E%7B10%7D%20%3D%201024&height=24&width=76))：<br />
+!(https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/10/16-Tue/byte.png#width=)
 
 ---
 
 
 <a name="eyh0zf"></a>
-# [](#eyh0zf)比特率单位
+# (#eyh0zf)比特率单位
 
 在电信和计算领域，比特率（Bit rate）是指单位时间内传输送或处理的比特的数量。比特率经常在电信领域用作连接速度、传输速度、信息传输速率和数字带宽容量的同义词。
 
@@ -65,7 +66,7 @@ IEC 的宗旨是，促进电气、电子工程领域中标准化及有关问题�
 其中，bit 即比特，通常用 b（小写）表示，指一位二进制位，Milionbit=1000Kilobit=1000 000bit，所以1Mbps=1000 000bps；
 
 <a name="a3yfhg"></a>
-## [](#a3yfhg)bps 和 Bps
+## (#a3yfhg)bps 和 Bps
 
 bps 是通常用来**衡量带宽**的单位，常见于表示数据机及网络通讯的传输速率，指每秒钟传输的二进制位数。例如 GigabitEthernet 端口。
 ```
@@ -84,9 +85,9 @@ bps 是通常用来**衡量带宽**的单位，常见于表示数据机及网络
 
 我们通常说的 1M 带宽即指 1Mbps，因此 1M 的带宽下载的速度一般不会超过 125KB 每秒。2M、3M 带宽的下载速度分别不会超过 250KB、375KB 每秒。
 
-![](https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/10/16-Tue/ossbrowser_upload.png/bioinit#width=)
+!(https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/10/16-Tue/ossbrowser_upload.png/bioinit#width=)
 
-![](https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/10/16-Tue/chrome_download_1.png/bioinit#width=)
+!(https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/10/16-Tue/chrome_download_1.png/bioinit#width=)
 
 ---
 
@@ -112,7 +113,7 @@ bps 是通常用来**衡量带宽**的单位，常见于表示数据机及网络
 
 
 <a name="kuy2bh"></a>
-# [](#kuy2bh)兆碱基
+# (#kuy2bh)兆碱基
 
 所以，在文章开头提到的 DNA 序列的 100 万个碱基数据（兆碱基）大致相当于计算机 1 兆的存储空间。其实也就是这么计算来得：
 
@@ -122,7 +123,7 @@ bps 是通常用来**衡量带宽**的单位，常见于表示数据机及网络
 
 
 <a name="srq1gx"></a>
-# [](#srq1gx)参考资料
+# (#srq1gx)参考资料
 
 - [Wiki: Gibibyte](https://zh.wikipedia.org/wiki/Gibibyte)，维基百科
 

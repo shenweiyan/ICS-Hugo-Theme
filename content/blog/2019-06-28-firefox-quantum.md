@@ -1,8 +1,9 @@
 ---
 title: Firefox Quantum 向左，Google Chrome 向右
-category: 杂谈
+types: post
+tags: ["others", "杂谈"]
 date: 2019-06-28T08:23:08.000Z
-tags: others
+category: 杂谈
 published: true
 ---
 

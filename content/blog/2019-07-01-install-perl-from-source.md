@@ -1,8 +1,9 @@
 ---
 title: 各个平台下 Perl 源码安装教程
-category: 软件
+types: post
+tags: ["软件", "Perl", "软件"]
 date: 2019-07-01T03:50:35.000Z
-tags: 软件 Perl
+category: 软件
 published: true
 ---
 

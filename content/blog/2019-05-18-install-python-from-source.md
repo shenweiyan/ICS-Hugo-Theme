@@ -1,8 +1,9 @@
 ---
 title: Linux 下 Python 源码编译安装
-category: 软件
+types: post
+tags: ["软件", "Python", "软件"]
 date: 2019-05-18T12:10:10.000Z
-tags: 软件 Python
+category: 软件
 published: true
 ---
 
@@ -57,9 +58,9 @@ echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/soft-repos/openssl/lib" >> $
 source $HOME/.bashrc
 ```
 
-**请注意：** 
+**请注意：**
 
-1. **openssl** 编译（config）的时候 **必须要加上 shared 参数**，否者源码安装 Python 即使添加了 `--with-openssl` 的自定义路径，依然会导致 `Could not build the ssl module!` 报错！
+1. **openssl **编译（config）的时候 **必须要加上 shared 参数**，否者源码安装 Python 即使添加了 `--with-openssl` 的自定义路径，依然会导致 `Could not build the ssl module!` 报错！
 1. 从 [https://www.openssl.org/source/](https://www.openssl.org/source/) 下载的源码 openssl-1.0.2s、openssl-1.0.2m 目前发现依然会导致 `Could not build the ssl module` ，建议从 [https://www.openssl.org/source/old/](https://www.openssl.org/source/old/) 下载 1.1.1 的源码编译安装。
 
 

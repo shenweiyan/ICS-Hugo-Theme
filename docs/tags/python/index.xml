@@ -65,5 +65,14 @@
       <description>今天在 CentOS 7.4 使用源码编译安装 Python-2.7.15 的时候，发现了一个非常奇怪的问题： $ ./configure --prefix=/home/steven/python-2.7 --enable-shared $ make $ make install 安装完成，进入 /home/steven/python-2.7/bin/python 命令行，发现 Python 变成了 2.7.5。安装过程中既</description>
     </item>
     
+    <item>
+      <title>Linux 下 Python 源码编译安装</title>
+      <link>https://ivc.bioinit.com/blog/2019-05-18-install-python-from-source/</link>
+      <pubDate>Sat, 18 May 2019 12:10:10 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-05-18-install-python-from-source/</guid>
+      <description>基于 CentOS Linux release 6.5 源码编译安装 python-2.7.xx(Python-3.x.xx) 的一些步骤，以下为安装记录。 1. 安装环境 os : CentOS Linux release 6.5 (x86_64) gcc: 4.8.5 20150623 2. 安装步骤 如果您拥有 root 权限，请执以下依赖安装： yum install zlib yum install</description>
+    </item>
+    
   </channel>
 </rss>

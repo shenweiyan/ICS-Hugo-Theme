@@ -1,8 +1,9 @@
 ---
 title: 基于 Web 的 Linux 终端 WebTerminal
-category: 软件
+types: post
+tags: ["Linux", "软件"]
 date: 2019-07-01T03:50:35.000Z
-tags: Linux
+category: 软件
 published: true
 ---
 

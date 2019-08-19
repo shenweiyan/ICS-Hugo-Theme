@@ -1,8 +1,9 @@
 ---
 title: 手把手教你如何在 Linux 源码安装最新版本的 R
-category: 运维
+types: post
+tags: ["软件", "R", "运维"]
 date: 2019-07-01T03:50:35.000Z
-tags: 软件 R
+category: 运维
 published: true
 ---
 

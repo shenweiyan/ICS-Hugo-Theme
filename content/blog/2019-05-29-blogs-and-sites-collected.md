@@ -1,8 +1,9 @@
 ---
 title: 一些博客与站点搜集
-category: 杂谈
+types: post
+tags: ["杂谈", "杂谈"]
 date: 2019-05-29T06:05:40.000Z
-tags: 杂谈
+category: 杂谈
 published: true
 ---
 

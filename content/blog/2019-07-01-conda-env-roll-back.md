@@ -1,8 +1,9 @@
 ---
 title: 让你的 conda "回滚" 到以前版本的环境
-category: 软件
+types: post
+tags: ["others", "软件"]
 date: 2019-07-01T03:50:35.000Z
-tags: others
+category: 软件
 published: true
 ---
 

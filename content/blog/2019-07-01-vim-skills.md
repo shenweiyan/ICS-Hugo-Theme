@@ -1,8 +1,9 @@
 ---
 title: vim 使用的一些小技巧
-category: 软件
+types: post
+tags: ["vim", "软件"]
 date: 2019-07-01T03:57:31.000Z
-tags: vim
+category: 软件
 published: true
 ---
 

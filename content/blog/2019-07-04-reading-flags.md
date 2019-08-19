@@ -1,8 +1,9 @@
 ---
 title: 给自己定个读书小目标
-category: 读书
+types: post
+tags: ["others", "读书"]
 date: 2019-07-04T06:00:53.000Z
-tags: others
+category: 读书
 published: true
 ---
 

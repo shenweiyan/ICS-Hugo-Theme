@@ -38,5 +38,14 @@
       <description>摘要 将数据显示到解剖结构上，是一种可以快速观察组织相关信息的便捷技术。然而，绘制组织是一项复杂的任务（a complex task），需要解剖学和艺术方面的</description>
     </item>
     
+    <item>
+      <title>手把手教你如何在 Linux 源码安装最新版本的 R</title>
+      <link>https://ivc.bioinit.com/blog/2019-07-01-install-latest-r-from-source/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-07-01-install-latest-r-from-source/</guid>
+      <description>如果你使用的 Linux 系统 GCC 版本太低，又没有 root 权限（即使有 root 权限又担心升级 GCC 带来的风险）；同时你又不想入坑 conda，但是你又希望安装一个最新版本的</description>
+    </item>
+    
   </channel>
 </rss>

@@ -29,5 +29,86 @@
       <description>Google Code Prettify 是 Google 的一款代码高亮插件，它由 js 代码和 css 代码构成，用来高亮显示 HTML 页面中的源代码。 Google Code Prettify 支持的语言数量比较多、比较全，支持自动识别代码语言</description>
     </item>
     
+    <item>
+      <title>Python 文件与目录操作方法总结</title>
+      <link>https://ivc.bioinit.com/blog/2019-07-01-python-file-directory-toturial/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-07-01-python-file-directory-toturial/</guid>
+      <description>Python 有很多内置的模块和函数可用于文件的操作处理，这些函数都分布在几个模块上：如 os，os.path，shutil 和pathlib 等等。本文收集</description>
+    </item>
+    
+    <item>
+      <title>R 包初学者指南</title>
+      <link>https://ivc.bioinit.com/blog/2019-07-01-r-packages-guide/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-07-01-r-packages-guide/</guid>
+      <description>基于 11 个最常见的用户问题介绍 R 软件包。 R 包是由社区开发（developed by the community）的功能（functions）和数据集（da</description>
+    </item>
+    
+    <item>
+      <title>数据科学工具 Jupyter Notebook 教程</title>
+      <link>https://ivc.bioinit.com/blog/2019-07-01-jupyter-notebook-tutorial/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-07-01-jupyter-notebook-tutorial/</guid>
+      <description>一、简介 ipython notebook 是一个基于浏览器的 python 数据分析工具，使用起来非常方便，具有极强的交互方式和富文本的展示效果。jupyter 是它的升级版，它的安装也</description>
+    </item>
+    
+    <item>
+      <title>Python 读取大文件</title>
+      <link>https://ivc.bioinit.com/blog/2019-06-11-iddn10/</link>
+      <pubDate>Tue, 11 Jun 2019 09:24:24 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-06-11-iddn10/</guid>
+      <description>https://www.jianshu.com/p/560ff3adfee3 Python 读取文件一般可以使用 read()，readlines()，但这两种方法在读取大文件时都会存储内存缺陷。 1. read() 接口的问题 f = open(filename, &#39;rb&#39;) f.read() 我们来读取</description>
+    </item>
+    
+    <item>
+      <title>Python 执行 shell 命令</title>
+      <link>https://ivc.bioinit.com/blog/2019-05-21-kzicg7/</link>
+      <pubDate>Tue, 21 May 2019 03:48:13 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-05-21-kzicg7/</guid>
+      <description>subprocess python import subprocess transid = str(subprocess.check_output([&#39;grep&#39; , &#39;-w&#39;, geneid, trans2gene])).strip()</description>
+    </item>
+    
+    <item>
+      <title>利用 python 的 sorted 函数对字典按 key 排序和按 value 排序</title>
+      <link>https://ivc.bioinit.com/blog/2019-05-18-python-sorted/</link>
+      <pubDate>Sat, 18 May 2019 12:50:51 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-05-18-python-sorted/</guid>
+      <description>我们知道 Python 的内置 dictionary 数据类型是无序的，通过 key 来获取对应的 value。可是有时我们需要对 dictionary 中的 item 进行排序输出，可能根据 key，也可能根据 value 来排。</description>
+    </item>
+    
+    <item>
+      <title>Python 正则匹配总结</title>
+      <link>https://ivc.bioinit.com/blog/2019-05-18-python-match/</link>
+      <pubDate>Sat, 18 May 2019 12:48:56 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-05-18-python-match/</guid>
+      <description>正则表达式是用于处理字符串的强大工具，拥有自己独特的语法以及一个独立的处理引擎，效率上可能不如 str 自带的方法，但功能十分强大。本文介绍了 Python 对于</description>
+    </item>
+    
+    <item>
+      <title>python3 中 os.path 模块常用用法总结</title>
+      <link>https://ivc.bioinit.com/blog/2019-05-18-python-os-path/</link>
+      <pubDate>Sat, 18 May 2019 12:44:59 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2019-05-18-python-os-path/</guid>
+      <description>os.path：常见的路径名操作模块。原文文档链接：https://docs.python.org/3.6/library/os.path.</description>
+    </item>
+    
+    <item>
+      <title>shell 命令实战合集</title>
+      <link>https://ivc.bioinit.com/blog/2018-12-29-shell-practice/</link>
+      <pubDate>Sat, 29 Dec 2018 09:21:11 +0000</pubDate>
+      
+      <guid>https://ivc.bioinit.com/blog/2018-12-29-shell-practice/</guid>
+      <description>linux 下使用命令排除当前行及下一行的内容 shell sed &#39;/关键字/,+1d&#39; file &amp;gt;file2</description>
+    </item>
+    
   </channel>
 </rss>

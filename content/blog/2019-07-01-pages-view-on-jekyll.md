@@ -1,8 +1,9 @@
 ---
 title: Jekyll 网站添加访问量统计分析
-category: 杂谈
+types: post
+tags: ["others", "杂谈"]
 date: 2019-07-01T04:00:00.000Z
-tags: others
+category: 杂谈
 published: true
 ---
 
@@ -17,7 +18,7 @@ published: true
 <script>
 if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  (i[r].q=i[r].q||).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', '{{ site.google_analytics }}', 'auto');
@@ -31,7 +32,7 @@ if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNo
 下面的代码片段增加了对预加载的支持，在现代浏览器上提供较小的性能提升，但在 IE9 和较旧的移动浏览器上可能会同步加载和执行，因为这些浏览器不识别 async 属性。如果你的网站访客主要使用现代浏览器，请仅使用以下跟踪代码段。
 ```javascript
 <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+window.ga=window.ga||function(){(ga.q=ga.q||).push(arguments)};ga.l=+new Date;
 ga('create', '{{ site.google_analytics }}', 'auto');
 ga('send', 'pageview');
 </script>
@@ -62,7 +63,7 @@ google_analytics: UA—XXXXXXXX-X
 
 ```javascript
 <script>
-(function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)}
+(function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||).push(arguments)}
 ;a=t.createElement(i);c=t.getElementsByTagName(i)[0];a.async=true;a.src=s
 ;c.parentNode.insertBefore(a,c)
 })(window,document,"galite","script","https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");

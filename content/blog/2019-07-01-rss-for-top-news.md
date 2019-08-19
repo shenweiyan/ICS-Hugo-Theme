@@ -1,8 +1,9 @@
 ---
 title: 使用 RSS 打造你的科研资讯头条
-category: 软件
+types: post
+tags: ["others", "软件"]
 date: 2019-07-01T03:50:35.000Z
-tags: others
+category: 软件
 published: true
 ---
 
@@ -57,48 +58,48 @@ Google reader 是 RSS 订阅服务的鼻祖，但该业务在 2013 年被 Google
 <a name="f80019f2"></a>
 ### 1. Inoreader 注册
 
-登陆 Inoreader 中文版官网，注册，现在可选注册有 facebook，tweeiter，或者其他邮箱。读者可自行选择在上面注册，注册成功后即可登陆网址。<br />![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854151-2fb2c18a-530a-4c1b-85d5-1c105596b9b0.png#align=left&display=inline&height=349&originHeight=630&originWidth=1347&size=0&status=done&width=746)
+登陆 Inoreader 中文版官网，注册，现在可选注册有 facebook，tweeiter，或者其他邮箱。读者可自行选择在上面注册，注册成功后即可登陆网址。<br />!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854151-2fb2c18a-530a-4c1b-85d5-1c105596b9b0.png#align=left&display=inline&height=349&originHeight=630&originWidth=1347&size=0&status=done&width=746)
 
 <a name="a210b2e8"></a>
 ### 2. Inoreader 登陆
 
-注册成功后即可登陆网址，显示首页。这里界面如下。如果是英文界面想要切换成中文：点击右上角齿轮图标 → Preferences → Interface → Language：简体中文 → 右下角点击 "Save"。<br />![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854228-6e8c8920-f4e6-4042-bc0b-ea71e8aac31e.png#align=left&display=inline&height=384&originHeight=703&originWidth=1365&size=0&status=done&width=746)
+注册成功后即可登陆网址，显示首页。这里界面如下。如果是英文界面想要切换成中文：点击右上角齿轮图标 → Preferences → Interface → Language：简体中文 → 右下角点击 "Save"。<br />!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854228-6e8c8920-f4e6-4042-bc0b-ea71e8aac31e.png#align=left&display=inline&height=384&originHeight=703&originWidth=1365&size=0&status=done&width=746)
 
 <a name="2c14cbfb"></a>
 ### 3. Inoreader 添加订阅
 
 1. 常用订阅
 
-可以通过点击 "[https://www.inoreader.com/folder/8648252](https://www.inoreader.com/folder/8648252)" 中的 "订阅" 把网友分享的 "我的必读订阅源" 添加到自己的 Inoreader（订阅后的源可以自定义增删）：<br />![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854186-7bab2659-0d1d-4f75-8706-d5b3d3f668ad.png#align=left&display=inline&height=383&originHeight=701&originWidth=1365&size=0&status=done&width=746)
+可以通过点击 "[https://www.inoreader.com/folder/8648252](https://www.inoreader.com/folder/8648252)" 中的 "订阅" 把网友分享的 "我的必读订阅源" 添加到自己的 Inoreader（订阅后的源可以自定义增删）：<br />!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854186-7bab2659-0d1d-4f75-8706-d5b3d3f668ad.png#align=left&display=inline&height=383&originHeight=701&originWidth=1365&size=0&status=done&width=746)
 
 
-比如我们输入 "PLOS ONE" 关键词就可以看到该杂志的一系列订阅源，点击即可完成订阅。<br />![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854172-248613a1-8c88-4a63-ab90-acc5ac9a6f1e.png#align=left&display=inline&height=355&originHeight=650&originWidth=1364&size=0&status=done&width=746)
+比如我们输入 "PLOS ONE" 关键词就可以看到该杂志的一系列订阅源，点击即可完成订阅。<br />!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854172-248613a1-8c88-4a63-ab90-acc5ac9a6f1e.png#align=left&display=inline&height=355&originHeight=650&originWidth=1364&size=0&status=done&width=746)
 
 
-这是一种比较详细的订阅方式，我们需要去各大数据库选择自己需要的，比如 pubmed，你打开之后，输入你想要的关键词，在搜索框下方有一个 "create RSS" 直接点击：<br />![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854111-96f37854-597d-4091-8fba-25b04fd30023.png#align=left&display=inline&height=147&originHeight=233&originWidth=1185&size=0&status=done&width=746)
+这是一种比较详细的订阅方式，我们需要去各大数据库选择自己需要的，比如 pubmed，你打开之后，输入你想要的关键词，在搜索框下方有一个 "create RSS" 直接点击：<br />!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854111-96f37854-597d-4091-8fba-25b04fd30023.png#align=left&display=inline&height=147&originHeight=233&originWidth=1185&size=0&status=done&width=746)
 
 
 
 
-Inoreader 支持知乎专栏的 URL 搜索，比如我们要把知乎的 "R语言中文社区" 专栏添加到 Inoreader，只需要把该专栏的 URL 粘贴到 Inoreader 搜索区，在找到的源中点击订阅即可。<br />![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854197-1ad14b9d-e964-4f25-85d1-0701971e5bfc.png#align=left&display=inline&height=174&originHeight=447&originWidth=1919&size=0&status=done&width=746)
+Inoreader 支持知乎专栏的 URL 搜索，比如我们要把知乎的 "R语言中文社区" 专栏添加到 Inoreader，只需要把该专栏的 URL 粘贴到 Inoreader 搜索区，在找到的源中点击订阅即可。<br />!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854197-1ad14b9d-e964-4f25-85d1-0701971e5bfc.png#align=left&display=inline&height=174&originHeight=447&originWidth=1919&size=0&status=done&width=746)
 
 
 简书默认是没有提供 RSS 输出的。因此我们想要添加简书专题、文集或者作者的订阅，需要借助简书 RSS 生成器，这里推荐一个神器：JianshuRSS（链接：http://jianshu.milkythinking.com/）。
 
-首先，我们把简书的 "生物信息" 专题链接 "[https://www.jianshu.com/c/2e21055ceb0e](https://www.jianshu.com/c/2e21055ceb0e)" 粘贴到 JianshuRSS：<br />![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854093-00a3a8e7-4699-4dfb-8be7-3bfde7b071ea.png#align=left&display=inline&height=246&originHeight=275&originWidth=835&size=0&status=done&width=746)
+首先，我们把简书的 "生物信息" 专题链接 "[https://www.jianshu.com/c/2e21055ceb0e](https://www.jianshu.com/c/2e21055ceb0e)" 粘贴到 JianshuRSS：<br />!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854093-00a3a8e7-4699-4dfb-8be7-3bfde7b071ea.png#align=left&display=inline&height=246&originHeight=275&originWidth=835&size=0&status=done&width=746)
 
 关于 Inoreader 的 RSS 源就写到这里了。对于普通大众而言，RSS 的上手门槛高确实有点高，需要自己找链接，也缺少互动，但是在知识爆炸的今天却很实用。
 
 <a name="134187d8"></a>
 ### 4. Inoreader 使用设置
 
-当我们完成订阅后，许多订阅源你可以对它进行整理，在 Inoreader 中右键即可实现。<br />![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854220-59ee69ca-836b-40c3-b69f-20becf2ef96d.png#align=left&display=inline&height=648&originHeight=818&originWidth=941&size=0&status=done&width=746)
+当我们完成订阅后，许多订阅源你可以对它进行整理，在 Inoreader 中右键即可实现。<br />!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854220-59ee69ca-836b-40c3-b69f-20becf2ef96d.png#align=left&display=inline&height=648&originHeight=818&originWidth=941&size=0&status=done&width=746)
 
-为了提高阅读效率，我们也可以选择切换视图。就是右上角那个很像眼睛的图标，选择杂志视图，即可如下。<br />![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854283-73cc65b2-dee8-4e9e-b9e0-f8badb5ed300.png#align=left&display=inline&height=368&originHeight=946&originWidth=1920&size=0&status=done&width=746)
+为了提高阅读效率，我们也可以选择切换视图。就是右上角那个很像眼睛的图标，选择杂志视图，即可如下。<br />!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854283-73cc65b2-dee8-4e9e-b9e0-f8badb5ed300.png#align=left&display=inline&height=368&originHeight=946&originWidth=1920&size=0&status=done&width=746)
 
 当然 Inoreader在左边下角提供其他的服务，如 Inoreader 下方还有统计数据，统计你一天看了多少，，快捷键大全，新手指导，联系客服，调整左栏项目等等。有兴趣的童鞋可以自行去体验一下。
 
-最后，提供几张 Inoreader 在安卓手机上使用的截图：<br />![](https://qiniu.bioinit.com/yuque/0/2019/jpeg/126032/1554873854239-d7980b78-ac47-424a-b776-75d3fc811cfb.jpeg#align=left&display=inline&height=1492&originHeight=2160&originWidth=1080&size=0&status=done&width=746)
+最后，提供几张 Inoreader 在安卓手机上使用的截图：<br />!(https://qiniu.bioinit.com/yuque/0/2019/jpeg/126032/1554873854239-d7980b78-ac47-424a-b776-75d3fc811cfb.jpeg#align=left&display=inline&height=1492&originHeight=2160&originWidth=1080&size=0&status=done&width=746)
 
 
 <a name="03e3f85f"></a>

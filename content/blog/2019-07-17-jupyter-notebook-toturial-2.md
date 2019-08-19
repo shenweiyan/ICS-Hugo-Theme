@@ -1,8 +1,9 @@
 ---
 title: 数据科学工具 Jupyter Notebook 教程(二)
-category: 开发
+types: post
+tags: ["Jupyter", "开发"]
 date: 2019-07-17T07:48:42.000Z
-tags: Jupyter
+category: 开发
 published: true
 ---
 
@@ -79,7 +80,7 @@ $ jupyter notebook --ip=0.0.0.0 --port=9000
 
 ```
 
-如果在启动过程中出现：OSError: [Errno 99] Cannot assign requested address，请参考下面的方法解决。<br />![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563351248558-4c343f89-968f-4a50-aade-c227b3f70b77.png#align=left&display=inline&height=322&originHeight=322&originWidth=937&size=0&status=done&width=937)
+如果在启动过程中出现：OSError: [Errno 99] Cannot assign requested address，请参考下面的方法解决。<br />!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563351248558-4c343f89-968f-4a50-aade-c227b3f70b77.png#align=left&display=inline&height=322&originHeight=322&originWidth=937&size=0&status=done&width=937)
 
 **解决：**运行 Jupyter 时增加 `--ip=0.0.0.0` 参数。
 ```
@@ -92,7 +93,7 @@ jupyter notebook --ip=0.0.0.0 --no-browser --allow-root
 
 配置 nginx 前需要把你已经申请的域名跟 Jupyter Notebook 的服务器 ip 进行绑定解析。打开阿里云域名管理，增加 A 记录解析：
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563334760254-00323543-edb8-4b95-8d6a-fb88595aef5a.png#align=left&display=inline&height=398&originHeight=398&originWidth=736&size=0&status=done&width=736)
+!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563334760254-00323543-edb8-4b95-8d6a-fb88595aef5a.png#align=left&display=inline&height=398&originHeight=398&originWidth=736&size=0&status=done&width=736)
 
 <a name="5f33f177"></a>
 ## 5. 配置 nginx

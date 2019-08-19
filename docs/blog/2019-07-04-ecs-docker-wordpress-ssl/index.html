@@ -181,7 +181,7 @@
 
 <hr />
 
-<p>[]()
+<p>()
 <a name="939b63ae"></a></p>
 
 <h1 id="1-购买ecs主机">1. 购买ECS主机</h1>
@@ -192,7 +192,7 @@
 
 <p>百度上有详细的购买流程，这不重复造轮子了，实在不明白可以留言。</p>
 
-<p>[]()
+<p>()
 <a name="36fde6e0"></a></p>
 
 <h1 id="2-购买域名">2. 购买域名</h1>
@@ -201,7 +201,7 @@
 
 <p>万网：<a href="https://wanwang.aliyun.com/">https://wanwang.aliyun.com/</a></p>
 
-<p>[]()
+<p>()
 <a name="e9e8c389"></a></p>
 
 <h1 id="3-申请备案">3. 申请备案</h1>
@@ -212,7 +212,7 @@
 
 <p>一提到备案，可能你会觉得备案这个事情很麻烦，各种流程啊，手续啊。其实没这么麻烦，因为阿里云已经提供了一条龙服务，通过阿里云的代备案系统，一些都会变得容易很多，不管是个人网站的备案，还是企业网站的备案，都只是时间上的问题，一般备案审核需要二十天左右。</p>
 
-<p>[]()
+<p>()
 <a name="12e164a2"></a></p>
 
 <h1 id="4-环境配置">4. 环境配置</h1>
@@ -252,12 +252,12 @@ docker run -itd --name wordpress -p 127.0.0.1:8090:80 --link mysql:mysql -v /hom
 
 <p>到这里，docker+wordpress 就安装完成了。这时候尚不能打开网页，因为是配置在 127.0.0.1 上的，只有本机可以访问。</p>
 
-<p>[]()
+<p>()
 <a name="f2fa3e8b"></a></p>
 
 <h1 id="5-域名解析">5. 域名解析</h1>
 
-<p>[]()
+<p>()
 <a name="aebd8bde"></a></p>
 
 <h2 id="5-1-安装并启动-nginx">5.1 安装并启动 nginx</h2>
@@ -266,7 +266,7 @@ docker run -itd --name wordpress -p 127.0.0.1:8090:80 --link mysql:mysql -v /hom
 systemctl start nginx
 </code></pre>
 
-<p>[]()
+<p>()
 <a name="8d1eb5ee"></a></p>
 
 <h2 id="5-2-配置-nginx-conf">5.2 配置 nginx.conf</h2>
@@ -290,7 +290,7 @@ http {
 }
 </code></pre>
 
-<p>[]()
+<p>()
 <a name="52673922"></a></p>
 
 <h2 id="5-3-配置-wordpress-conf">5.3 配置 wordpress.conf</h2>
@@ -311,38 +311,38 @@ http {
 }
 </code></pre>
 
-<p>[]()
+<p>()
 <a name="e1fee0dd"></a></p>
 
 <h2 id="5-4-添加域名解析">5.4 添加域名解析</h2>
 
-<p>登入阿里域名解析：<a href="https://netcn.console.aliyun.com/core/domain/list，点击相应域名的">https://netcn.console.aliyun.com/core/domain/list，点击相应域名的</a> &ldquo;解析&rdquo; 链接，根据提示添加域名的 A 记录，解析到你的服务器 ip 下。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255882-d5b2c908-7053-4474-bd71-4aa011f41e6b.png#align=left&amp;display=inline&amp;height=384&amp;originHeight=384&amp;originWidth=713&amp;size=0&amp;status=done&amp;width=713#align=left&amp;display=inline&amp;height=384&amp;originHeight=384&amp;originWidth=713&amp;status=done&amp;width=713" alt="" /></p>
+<p>登入阿里域名解析：<a href="https://netcn.console.aliyun.com/core/domain/list，点击相应域名的">https://netcn.console.aliyun.com/core/domain/list，点击相应域名的</a> &ldquo;解析&rdquo; 链接，根据提示添加域名的 A 记录，解析到你的服务器 ip 下。<br />!(<a href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255882-d5b2c908-7053-4474-bd71-4aa011f41e6b.png#align=left&amp;display=inline&amp;height=384&amp;originHeight=384&amp;originWidth=713&amp;size=0&amp;status=done&amp;width=713#align=left&amp;display=inline&amp;height=384&amp;originHeight=384&amp;originWidth=713&amp;status=done&amp;width=713">https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255882-d5b2c908-7053-4474-bd71-4aa011f41e6b.png#align=left&amp;display=inline&amp;height=384&amp;originHeight=384&amp;originWidth=713&amp;size=0&amp;status=done&amp;width=713#align=left&amp;display=inline&amp;height=384&amp;originHeight=384&amp;originWidth=713&amp;status=done&amp;width=713</a>)</p>
 
-<p>[]()
+<p>()
 <a name="1213502c"></a></p>
 
 <h2 id="5-5-安装-wordpress">5.5 安装 wordpress</h2>
 
 <p>添加完域名解析后，打开浏览器，输入 <a href="http://youdomain.com，然后就可以看到">http://youdomain.com，然后就可以看到</a> WordPress 了。按照提示输入用户名等信息，然后安装 WordPress。等到它提示安装完成，那么 WordPress 的安装就算大功告成了。</p>
 
-<p>[]()
+<p>()
 <a name="651ec9a7"></a></p>
 
 <h1 id="6-安装-ssl-证书开启-https-访问">6. 安装 SSL 证书开启 https 访问</h1>
 
-<p>[]()
+<p>()
 <a name="5d1f4211"></a></p>
 
 <h2 id="6-1-单域名免费证书申请">6.1 单域名免费证书申请</h2>
 
-<p>登入阿里域名解析：<a href="https://netcn.console.aliyun.com/core/domain/list，点击相应域名的">https://netcn.console.aliyun.com/core/domain/list，点击相应域名的</a> &ldquo;SSL证书&rdquo; 链接，设置单域名免费证书。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255815-7ac27782-8249-43a6-9e7d-98a053b6eee2.png#align=left&amp;display=inline&amp;height=336&amp;originHeight=336&amp;originWidth=729&amp;size=0&amp;status=done&amp;width=729#align=left&amp;display=inline&amp;height=336&amp;originHeight=336&amp;originWidth=729&amp;status=done&amp;width=729" alt="" /></p>
+<p>登入阿里域名解析：<a href="https://netcn.console.aliyun.com/core/domain/list，点击相应域名的">https://netcn.console.aliyun.com/core/domain/list，点击相应域名的</a> &ldquo;SSL证书&rdquo; 链接，设置单域名免费证书。<br />!(<a href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255815-7ac27782-8249-43a6-9e7d-98a053b6eee2.png#align=left&amp;display=inline&amp;height=336&amp;originHeight=336&amp;originWidth=729&amp;size=0&amp;status=done&amp;width=729#align=left&amp;display=inline&amp;height=336&amp;originHeight=336&amp;originWidth=729&amp;status=done&amp;width=729">https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255815-7ac27782-8249-43a6-9e7d-98a053b6eee2.png#align=left&amp;display=inline&amp;height=336&amp;originHeight=336&amp;originWidth=729&amp;size=0&amp;status=done&amp;width=729#align=left&amp;display=inline&amp;height=336&amp;originHeight=336&amp;originWidth=729&amp;status=done&amp;width=729</a>)</p>
 
-<p>[]()
+<p>()
 <a name="4cd29f34"></a></p>
 
 <h2 id="6-2-ssl-证书下载">6.2 SSL 证书下载</h2>
 
-<p>单域名免费证书提交申请后，一般十分钟就会审批下来。这时候，我们登陆 &ldquo;<a href="https://yundun.console.aliyun.com/?spm=5176.2020520163.aliyun_sidebar.24.4eb62b7auFTPPK&amp;p=cas#/cas/home">CA证书服务（数据安全）</a>&ldquo;，在 &ldquo;我的订单&rdquo; 中找到已经签发的域名证书，点击 &ldquo;下载&rdquo; 链接，通过 &ldquo;下载证书for Nginx&rdquo; 下载证书。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255775-88b7ae35-3ef8-4737-a5c4-ff1997f36fa2.png#align=left&amp;display=inline&amp;height=453&amp;originHeight=453&amp;originWidth=835&amp;size=0&amp;status=done&amp;width=835#align=left&amp;display=inline&amp;height=453&amp;originHeight=453&amp;originWidth=835&amp;status=done&amp;width=835" alt="" /><br />[]()
+<p>单域名免费证书提交申请后，一般十分钟就会审批下来。这时候，我们登陆 &ldquo;<a href="https://yundun.console.aliyun.com/?spm=5176.2020520163.aliyun_sidebar.24.4eb62b7auFTPPK&amp;p=cas#/cas/home">CA证书服务（数据安全）</a>&ldquo;，在 &ldquo;我的订单&rdquo; 中找到已经签发的域名证书，点击 &ldquo;下载&rdquo; 链接，通过 &ldquo;下载证书for Nginx&rdquo; 下载证书。<br />!(<a href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255775-88b7ae35-3ef8-4737-a5c4-ff1997f36fa2.png#align=left&amp;display=inline&amp;height=453&amp;originHeight=453&amp;originWidth=835&amp;size=0&amp;status=done&amp;width=835#align=left&amp;display=inline&amp;height=453&amp;originHeight=453&amp;originWidth=835&amp;status=done&amp;width=835">https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255775-88b7ae35-3ef8-4737-a5c4-ff1997f36fa2.png#align=left&amp;display=inline&amp;height=453&amp;originHeight=453&amp;originWidth=835&amp;size=0&amp;status=done&amp;width=835#align=left&amp;display=inline&amp;height=453&amp;originHeight=453&amp;originWidth=835&amp;status=done&amp;width=835</a>)<br />()
 <a name="015f2df9"></a></p>
 
 <h2 id="6-3-ssl-证书安装">6.3 SSL 证书安装</h2>
@@ -393,7 +393,7 @@ http {
 
 <p>请按照 6.4 方法修改，本人亲测，wordpress4.9.1-4.9.2 完美解决。</p>
 
-<p>[]()
+<p>()
 <a name="8a0f4f53"></a></p>
 
 <h2 id="6-4-全站开启-https">6.4 全站开启 https</h2>
@@ -428,16 +428,16 @@ define('FORCE_SSL_ADMIN', true);
 
 <p>登录后台安装此插件。</p>
 
-<p>或者登陆 wordpress 后台，在&rdquo;设置&rdquo;→ &ldquo;常规&rdquo; 中设置 &ldquo;WordPress地址（URL）&rdquo; 和 &ldquo;站点地址（URL）&rdquo;为 https 链接地址。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255781-a5c5bd01-df19-43a5-869d-bb1b54e0bfc3.png#align=left&amp;display=inline&amp;height=188&amp;originHeight=188&amp;originWidth=971&amp;size=0&amp;status=done&amp;width=971#align=left&amp;display=inline&amp;height=188&amp;originHeight=188&amp;originWidth=971&amp;status=done&amp;width=971" alt="" /></p>
+<p>或者登陆 wordpress 后台，在&rdquo;设置&rdquo;→ &ldquo;常规&rdquo; 中设置 &ldquo;WordPress地址（URL）&rdquo; 和 &ldquo;站点地址（URL）&rdquo;为 https 链接地址。<br />!(<a href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255781-a5c5bd01-df19-43a5-869d-bb1b54e0bfc3.png#align=left&amp;display=inline&amp;height=188&amp;originHeight=188&amp;originWidth=971&amp;size=0&amp;status=done&amp;width=971#align=left&amp;display=inline&amp;height=188&amp;originHeight=188&amp;originWidth=971&amp;status=done&amp;width=971">https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255781-a5c5bd01-df19-43a5-869d-bb1b54e0bfc3.png#align=left&amp;display=inline&amp;height=188&amp;originHeight=188&amp;originWidth=971&amp;size=0&amp;status=done&amp;width=971#align=left&amp;display=inline&amp;height=188&amp;originHeight=188&amp;originWidth=971&amp;status=done&amp;width=971</a>)</p>
 
 <p>至此，真正意义上解决 wordpress 全站开启 https 的 ssl 证书问题。</p>
 
-<p>[]()
+<p>()
 <a name="355b78f2"></a></p>
 
 <h1 id="7-填坑总结">7. 填坑总结</h1>
 
-<p>[]()
+<p>()
 <a name="e38fbc5e"></a></p>
 
 <h2 id="7-1-更换域名无法登陆后台">7.1. 更换域名无法登陆后台</h2>

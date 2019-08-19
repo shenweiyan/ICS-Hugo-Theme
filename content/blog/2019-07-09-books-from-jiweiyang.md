@@ -1,8 +1,9 @@
 ---
 title: 来自于其他网站推荐的几本书
-category: 读书
+types: post
+tags: ["others", "读书"]
 date: 2019-07-09T06:07:09.000Z
-tags: others
+category: 读书
 published: true
 ---
 

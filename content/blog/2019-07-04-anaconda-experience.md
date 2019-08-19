@@ -1,8 +1,9 @@
 ---
 title: Anaconda 使用的一些体验与困惑
-category: 软件
+types: post
+tags: ["Anaconda", "软件"]
 date: 2019-07-04T06:20:26.000Z
-tags: Anaconda
+category: 软件
 published: true
 ---
 
@@ -43,11 +44,11 @@ show_channels_urls: true
 
 更多 Anaconda channels，可以参考：[https://repo.continuum.io/pkgs/](https://repo.continuum.io/pkgs/)。
 
-[]()
+()
 <a name="6e008e24"></a>
 # 2. 软件安装使用
 
-conda 环境下的软件尽量使用 conda、pip 命令去安装。但同时也产生了一个问题，即 conda 中安装了 R，有些使用了 `install.packages()` , `install_github` , `biocLite` 等方式安装的 R 包，在环境迁移的时候，这些包如何迁移？<br />[]()<br />[]()
+conda 环境下的软件尽量使用 conda、pip 命令去安装。但同时也产生了一个问题，即 conda 中安装了 R，有些使用了 `install.packages()` , `install_github` , `biocLite` 等方式安装的 R 包，在环境迁移的时候，这些包如何迁移？<br />()<br />()
 <a name="31326bda"></a>
 # 3. 环境激活
 
@@ -132,11 +133,11 @@ conda install --yes --file requirements.txt
 while read requirement; do conda install --yes $requirement; done < requirements.txt
 ```
 
-[]()
+()
 <a name="71a62493"></a>
 # 5. R 与 R 包安装
 
-R Essentials 软件包包含 IRKernel 和 80 多种最流行的数据科学 R 软件包，包括 dplyr，shiny，ggplot2，tidyr，caret 和 nnet 等。<br />[]()
+R Essentials 软件包包含 IRKernel 和 80 多种最流行的数据科学 R 软件包，包括 dplyr，shiny，ggplot2，tidyr，caret 和 nnet 等。<br />()
 <a name="d46d2538"></a>
 ## 5.1 R 软件
 
@@ -206,7 +207,7 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 BiocManager::install()
 ```
-[]()
+()
 
 <a name="uTjG9"></a>
 ### 3. github_install
@@ -218,10 +219,10 @@ library(devtools)
 install_github("jokergoo/ComplexHeatmap")
 ```
 
-[]()
+()
 <a name="c3806f74"></a>
 # 6. 特别注意的软件
-[]()
+()
 <a name="18cd0dcd"></a>
 ## 6.1 gcc
 
@@ -230,7 +231,7 @@ install_github("jokergoo/ComplexHeatmap")
 /path/to/SoftWare/Anaconda/v2/lib/R/bin/exec/R: /path/to/SoftWare/Anaconda/v2/lib/R/bin/exec/../../lib/../../libgomp.so.1: version `GOMP_4.0' not found (required by /path/to/SoftWare/Anaconda/v2/lib/R/bin/exec/../../lib/libR.so)
 ```
 
-[]()
+()
 <a name="8b17553d"></a>
 ## 6.2 glibc
 

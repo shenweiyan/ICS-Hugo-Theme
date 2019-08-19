@@ -1,8 +1,9 @@
 ---
 title: FlexSlider 和 RaxusSlider 插件相关参数
-category: 开发
+types: post
+tags: ["others", "开发"]
 date: 2019-08-07T08:54:07.000Z
-tags: others
+category: 开发
 published: true
 ---
 

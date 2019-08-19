@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ivc.bioinit.com/blog/2019-08-19-moc049/</loc>
+    <lastmod>2019-08-19T02:57:02+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ivc.bioinit.com/</loc>
     <lastmod>2019-08-12T00:00:00+00:00</lastmod>
   </url>
@@ -620,7 +625,7 @@
   
   <url>
     <loc>https://ivc.bioinit.com/tags/centos/</loc>
-    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+    <lastmod>2019-07-25T01:29:15+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -710,7 +715,13 @@
   
   <url>
     <loc>https://ivc.bioinit.com/tags/others/</loc>
-    <lastmod>2019-08-08T03:44:11+00:00</lastmod>
+    <lastmod>2019-08-19T02:57:02+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tags/perl/</loc>
+    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -727,14 +738,8 @@
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/tags/redhat-centos/</loc>
+    <loc>https://ivc.bioinit.com/tags/redhat/</loc>
     <lastmod>2019-07-25T01:29:15+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/tags/redhat-%E8%BD%AF%E4%BB%B6/</loc>
-    <lastmod>2019-05-18T12:39:52+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -792,12 +797,36 @@
   </url>
   
   <url>
+    <loc>https://ivc.bioinit.com/tags/%E5%A8%B1%E4%B9%90/</loc>
+    <lastmod>2019-04-29T00:41:03+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tags/%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2019-08-08T09:05:21+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ivc.bioinit.com/archives/</loc>
   </url>
   
   <url>
+    <loc>https://ivc.bioinit.com/tags/%E6%88%90%E9%95%BF/</loc>
+    <lastmod>2019-07-08T01:07:48+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ivc.bioinit.com/tags/%E6%9D%82%E8%B0%88/</loc>
-    <lastmod>2019-08-08T09:05:21+00:00</lastmod>
+    <lastmod>2019-08-19T02:57:02+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ivc.bioinit.com/tags/%E7%94%9F%E4%BF%A1/</loc>
+    <lastmod>2019-08-05T06:17:11+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -814,26 +843,20 @@
   </url>
   
   <url>
+    <loc>https://ivc.bioinit.com/tags/%E8%AF%BB%E4%B9%A6/</loc>
+    <lastmod>2019-07-09T06:07:09+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6/</loc>
-    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+    <lastmod>2019-07-15T09:24:35+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6-perl/</loc>
-    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6-python/</loc>
-    <lastmod>2019-05-18T12:10:10+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/tags/%E8%BD%AF%E4%BB%B6-r/</loc>
-    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
+    <loc>https://ivc.bioinit.com/tags/%E8%BF%90%E7%BB%B4/</loc>
+    <lastmod>2019-07-25T01:29:15+00:00</lastmod>
     <priority>0</priority>
   </url>
   
