@@ -1,8 +1,8 @@
 baseurl = "https://ivc.bioinit.com"
 RelativeURLs=true
 CanonifyURLs=true
-languageCode = "zh"	# html的lang属性值
-DefaultContentLanguage = "zh" # 默认内容语言用于选择i18n语言模板
+languageCode = "zh-cmn-Hans"	# html的lang属性值
+DefaultContentLanguage = "zh-cmn-Hans" # 默认内容语言用于选择i18n语言模板
 title = "Steven Shen | 沈维燕"
 theme = "hugo-ivy"
 #googleAnalytics = "UA-112592341-1"
