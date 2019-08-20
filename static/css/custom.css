@@ -253,3 +253,9 @@ img[src$="#border"] {
     padding-left: 10px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .terms li {
+    display: list-item;
+    list-style-type: none;
+}
