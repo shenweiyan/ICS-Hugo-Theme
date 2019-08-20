@@ -71,7 +71,7 @@
       <pubDate>Thu, 25 Jul 2019 01:29:15 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/blog/2019-07-25-fedora-redhat-centos/</guid>
-      <description>这里对 Redhat/CentOS/Fedora 之间以及与其他 Linux 发行版关系做一个基本的介绍。给新手选择一个 Linux 发行版提供指导和帮助。 !(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1564018188751-ddfd3568-4d40-4ccd-9220-0d05efdaa1c6.png#align=left&amp;amp;display=inline&amp;amp;height=764&amp;amp;originHeight=764&amp;amp;originWidth=593&amp;amp;size=0&amp;amp;status=done&amp;amp;width=593) Fedora Fedora是基于Linux的集最新自由开源软</description>
+      <description>这里对 Redhat/CentOS/Fedora 之间以及与其他 Linux 发行版关系做一个基本的介绍。给新手选择一个 Linux 发行版提供指导和帮助。 Fedora Fedora是基于Linux的集最新自由开源软件</description>
     </item>
     
     <item>
@@ -323,7 +323,7 @@
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/blog/2019-07-01-latex-2018-tutorial/</guid>
-      <description>一、背景 前两天在自己的 Jupyter 服务器上想要把 notebook(.ipynb) 导出为 pdf 时发现 xelatex 没有安装： !(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1548653466526-645be58b-5a23-43d2-b82a-895bc7500d15.png#align=left&amp;amp;display=inline&amp;amp;height=685&amp;amp;originHeight=709&amp;amp;originWidth=772&amp;amp;size=0&amp;amp;width=746) 500 : Internal Server Error 如下： nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex. 另外一点</description>
+      <description>一、背景 前两天在自己的 Jupyter 服务器上想要把 notebook(.ipynb) 导出为 pdf 时发现 xelatex 没有安装： 500 : Internal Server Error 如下： nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex. 另外一点就</description>
     </item>
     
     <item>
@@ -332,7 +332,7 @@
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/blog/2019-07-01-tkinter-unicode-issues/</guid>
-      <description>(#2xvqwy)引言 使用 Anaconda 3（conda 4.5.11）的 tkinter python 包（conda install -c conda-forge tk）开发 GUI 界面程序过程中，发现 UI 界面出现的中文 Unicode 乱码一直</description>
+      <description>[](#2xvqwy)引言 使用 Anaconda 3（conda 4.5.11）的 tkinter python 包（conda install -c conda-forge tk）开发 GUI 界面程序过程中，发现 UI 界面出现的中文 Unicode 乱码</description>
     </item>
     
     <item>
@@ -467,7 +467,7 @@
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/blog/2019-07-01-cloud-services-for-jupyter-notebook/</guid>
-      <description>作者：(https://twitter.com/justmarkham)[Kevin Markham](https://twitter.com/justmarkham) 编译：Steven Shen 原文：https://www.da</description>
+      <description>作者：[](https://twitter.com/justmarkham)[Kevin Markham](https://twitter.com/justmarkham) 编译：Steven Shen 原文：https://www.</description>
     </item>
     
     <item>
@@ -841,7 +841,7 @@ $$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$  $$ \varphi = 
       <pubDate>Fri, 01 Mar 2019 12:44:04 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/blog/2019-03-01-180712/</guid>
-      <description>!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1551444282854-71ce4235-15d0-422e-91b9-701974cefbab.png#align=left&amp;amp;display=inline&amp;amp;height=746&amp;amp;originHeight=800&amp;amp;originWidth=800&amp;amp;size=0&amp;amp;status=done&amp;amp;width=746) 用了一周的时间在网易蜗牛读书上终于把蔡崇达的《皮囊》读完了。这是一本很好的书。 《皮囊》全书由 14 个章节组成： 《皮囊》 《母亲的房子》 《残疾》 《</description>
+      <description>用了一周的时间在网易蜗牛读书上终于把蔡崇达的《皮囊》读完了。这是一本很好的书。 《皮囊》全书由 14 个章节组成： 《皮囊》 《母亲的房子》 《残疾》 《重</description>
     </item>
     
     <item>
@@ -850,18 +850,7 @@ $$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$  $$ \varphi = 
       <pubDate>Fri, 01 Mar 2019 12:27:35 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/blog/2019-03-01-180810/</guid>
-      <description>!(https://qiniu.bioinit.com/yuque/0/2019/jpeg/126032/1551443277107-c2cd178d-af6d-453f-a8bc-ea1612b7bc65.jpeg#align=left&amp;amp;display=inline&amp;amp;height=525&amp;amp;originHeight=525&amp;amp;originWidth=450&amp;amp;size=0&amp;amp;status=done&amp;amp;width=450) 《必然》是 2016 年 01 月电子工业出版社出版发行的中译图书，作者是凯文·凯利（Kevin Kelly），该书全面介绍了科技这个新物种的基因特征、所思</description>
-    </item>
-    
-    <item>
-      <title>Cupper Typography</title>
-      <link>https://ivc.bioinit.com/blog/bioinfo/cupper-typography/</link>
-      <pubDate>Thu, 14 Feb 2019 15:36:09 -0600</pubDate>
-      
-      <guid>https://ivc.bioinit.com/blog/bioinfo/cupper-typography/</guid>
-      <description>Headings # Heading 1 ## Heading 2 ### Heading 3 #### Heading 4 ##### Heading 5 ###### Heading 6  Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Text *This text will be italic* _This will also be italic_ **This text will be bold** __This will also be bold__ _You **can** combine them_  This text will be italic
-This will also be italic
-This text will be bold</description>
+      <description>《必然》是 2016 年 01 月电子工业出版社出版发行的中译图书，作者是凯文·凯利（Kevin Kelly），该书全面介绍了科技这个新物种的基因特征、所思所</description>
     </item>
     
     <item>
@@ -882,51 +871,6 @@ This text will be bold</description>
       <description>The below images are from the NASA Image and Video Library &amp;ndash; indulge yourself, revel in their beauty.
   The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, with internal convective motion that generates a magnetic field via a dynamo process. It is by far the most important source of energy for life on Earth. Credits.
     The Moon is an astronomical body that orbits planet Earth and is Earth&amp;rsquo;s only permanent natural satellite.</description>
-    </item>
-    
-    <item>
-      <title>Creating a New Theme</title>
-      <link>https://ivc.bioinit.com/blog/bioinfo/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://ivc.bioinit.com/blog/bioinfo/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
-      <title>(Hu)go Template Primer</title>
-      <link>https://ivc.bioinit.com/blog/bioinfo/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://ivc.bioinit.com/blog/bioinfo/goisforlovers/</guid>
-      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
-This document is a brief primer on using Go templates.</description>
-    </item>
-    
-    <item>
-      <title>Getting Started with Hugo</title>
-      <link>https://ivc.bioinit.com/blog/bioinfo/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://ivc.bioinit.com/blog/bioinfo/hugoisforlovers/</guid>
-      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at Install Hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
-    </item>
-    
-    <item>
-      <title>Migrate to Hugo from Jekyll</title>
-      <link>https://ivc.bioinit.com/blog/bioinfo/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://ivc.bioinit.com/blog/bioinfo/migrate-from-jekyll/</guid>
-      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
     </item>
     
   </channel>

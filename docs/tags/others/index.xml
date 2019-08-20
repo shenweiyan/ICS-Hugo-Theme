@@ -197,7 +197,7 @@
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/blog/2019-07-01-latex-2018-tutorial/</guid>
-      <description>一、背景 前两天在自己的 Jupyter 服务器上想要把 notebook(.ipynb) 导出为 pdf 时发现 xelatex 没有安装： !(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1548653466526-645be58b-5a23-43d2-b82a-895bc7500d15.png#align=left&amp;amp;display=inline&amp;amp;height=685&amp;amp;originHeight=709&amp;amp;originWidth=772&amp;amp;size=0&amp;amp;width=746) 500 : Internal Server Error 如下： nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex. 另外一点</description>
+      <description>一、背景 前两天在自己的 Jupyter 服务器上想要把 notebook(.ipynb) 导出为 pdf 时发现 xelatex 没有安装： 500 : Internal Server Error 如下： nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex. 另外一点就</description>
     </item>
     
     <item>
@@ -206,7 +206,7 @@
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/blog/2019-07-01-tkinter-unicode-issues/</guid>
-      <description>(#2xvqwy)引言 使用 Anaconda 3（conda 4.5.11）的 tkinter python 包（conda install -c conda-forge tk）开发 GUI 界面程序过程中，发现 UI 界面出现的中文 Unicode 乱码一直</description>
+      <description>[](#2xvqwy)引言 使用 Anaconda 3（conda 4.5.11）的 tkinter python 包（conda install -c conda-forge tk）开发 GUI 界面程序过程中，发现 UI 界面出现的中文 Unicode 乱码</description>
     </item>
     
     <item>
@@ -485,7 +485,7 @@
       <pubDate>Fri, 01 Mar 2019 12:44:04 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/blog/2019-03-01-180712/</guid>
-      <description>!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1551444282854-71ce4235-15d0-422e-91b9-701974cefbab.png#align=left&amp;amp;display=inline&amp;amp;height=746&amp;amp;originHeight=800&amp;amp;originWidth=800&amp;amp;size=0&amp;amp;status=done&amp;amp;width=746) 用了一周的时间在网易蜗牛读书上终于把蔡崇达的《皮囊》读完了。这是一本很好的书。 《皮囊》全书由 14 个章节组成： 《皮囊》 《母亲的房子》 《残疾》 《</description>
+      <description>用了一周的时间在网易蜗牛读书上终于把蔡崇达的《皮囊》读完了。这是一本很好的书。 《皮囊》全书由 14 个章节组成： 《皮囊》 《母亲的房子》 《残疾》 《重</description>
     </item>
     
     <item>
@@ -494,15 +494,6 @@
       <pubDate>Fri, 01 Mar 2019 12:27:35 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/blog/2019-03-01-180810/</guid>
-      <description>!(https://qiniu.bioinit.com/yuque/0/2019/jpeg/126032/1551443277107-c2cd178d-af6d-453f-a8bc-ea1612b7bc65.jpeg#align=left&amp;amp;display=inline&amp;amp;height=525&amp;amp;originHeight=525&amp;amp;originWidth=450&amp;amp;size=0&amp;amp;status=done&amp;amp;width=450) 《必然》是 2016 年 01 月电子工业出版社出版发行的中译图书，作者是凯文·凯利（Kevin Kelly），该书全面介绍了科技这个新物种的基因特征、所思</description>
-    </item>
-    
-    <item>
-      <title>读书测试</title>
-      <link>https://ivc.bioinit.com/test/2019-03-01-180810/</link>
-      <pubDate>Fri, 01 Mar 2019 12:27:35 +0000</pubDate>
-      
-      <guid>https://ivc.bioinit.com/test/2019-03-01-180810/</guid>
       <description>《必然》是 2016 年 01 月电子工业出版社出版发行的中译图书，作者是凯文·凯利（Kevin Kelly），该书全面介绍了科技这个新物种的基因特征、所思所</description>
     </item>
     

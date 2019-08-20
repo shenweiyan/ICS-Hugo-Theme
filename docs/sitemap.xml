@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/zhuanlan/bioinfo/2019-07-04-anaconda-experience/</loc>
+    <loc>https://ivc.bioinit.com/topic/galaxy/2019-07-04-anaconda-experience/</loc>
     <lastmod>2019-07-04T06:20:26+00:00</lastmod>
   </url>
   
@@ -219,11 +219,6 @@
   
   <url>
     <loc>https://ivc.bioinit.com/blog/2019-07-01-irf3na/</loc>
-    <lastmod>2019-07-01T03:50:35+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/zhuanlan/bioinfo/2019-07-01-centos-firewall/</loc>
     <lastmod>2019-07-01T03:50:35+00:00</lastmod>
   </url>
   
@@ -528,16 +523,6 @@
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/test/2019-03-01-180810/</loc>
-    <lastmod>2019-03-01T12:27:35+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/blog/bioinfo/cupper-typography/</loc>
-    <lastmod>2019-02-14T15:36:09-06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ivc.bioinit.com/research/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
@@ -563,7 +548,7 @@
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/zhuanlan/</loc>
+    <loc>https://ivc.bioinit.com/topic/</loc>
     <lastmod>2017-01-31T00:00:00+00:00</lastmod>
   </url>
   
@@ -573,43 +558,23 @@
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/zhuanlan/read/</loc>
+    <loc>https://ivc.bioinit.com/topic/read/</loc>
     <lastmod>2017-01-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/zhuanlan/bioinfo/</loc>
+    <loc>https://ivc.bioinit.com/topic/galaxy/</loc>
     <lastmod>2017-01-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/zhuanlan/tools/</loc>
+    <loc>https://ivc.bioinit.com/topic/tools/</loc>
     <lastmod>2017-01-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ivc.bioinit.com/about/</loc>
     <lastmod>2016-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/blog/bioinfo/creating-a-new-theme/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/blog/bioinfo/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/blog/bioinfo/hugoisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/blog/bioinfo/migrate-from-jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -636,38 +601,8 @@
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/tags/command-line/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/tags/fun/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/tags/git/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/tags/go/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ivc.bioinit.com/tags/hugo/</loc>
     <lastmod>2019-03-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/tags/jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -690,20 +625,8 @@
   </url>
   
   <url>
-    <loc>https://ivc.bioinit.com/tags/markdown/</loc>
-    <lastmod>2019-02-14T15:36:09-06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ivc.bioinit.com/tags/math/</loc>
     <lastmod>2019-03-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/tags/migration/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -763,24 +686,6 @@
   <url>
     <loc>https://ivc.bioinit.com/tags/</loc>
     <lastmod>2019-07-04T06:20:26+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/tags/templates/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/test/</loc>
-    <lastmod>2019-03-01T12:27:35+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ivc.bioinit.com/tags/theme/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

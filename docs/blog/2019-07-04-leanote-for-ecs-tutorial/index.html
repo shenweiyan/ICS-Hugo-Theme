@@ -109,6 +109,17 @@
           
           
           
+            <a href="../../read/" >
+              
+              读书
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
             <a href="../../resume/shenweiyan" >
               
               简历
@@ -120,9 +131,31 @@
           
           
           
+            <a href="../../topic/" >
+              
+              专栏
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
             <a href="../../tags/" >
               
               标签
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../archives/" >
+              
+              归档
             </a>
           </li>
           
@@ -170,8 +203,7 @@
 
 <p>下面将基于阿里云ECS服务端搭建 Leanote 云笔记服务器的步骤分享出来，给需要使用私人云笔记的筒子们。详细安装请参考官方文档：《<a href="https://github.com/leanote/leanote/wiki/Leanote-%E6%BA%90%E7%A0%81%E7%89%88%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B----Mac-and-Linux">Leanote 源码版详细安装教程 Mac and Linux</a>》。</p>
 
-<p>()
-<a name="FozZO"></a></p>
+<p><a name="FozZO"></a></p>
 
 <h2 id="1-golang-安装">1. Golang 安装</h2>
 
@@ -184,13 +216,11 @@ $ mkdir -p /data/LeaNote/bin
 $ ln -s /usr/local/software/go-1.10.1/bin/* /data/LeaNote/bin
 </code></pre>
 
-<p>()
-<a name="tnWoA"></a></p>
+<p><a name="tnWoA"></a></p>
 
 <h2 id="2-获取-revel-和-leanote-的源码">2. 获取 Revel 和 Leanote 的源码</h2>
 
-<p>()
-<a name="8a2c7b86"></a></p>
+<p><a name="8a2c7b86"></a></p>
 
 <h2 id="2-1-方法1-推荐方法">2.1 方法1 （推荐方法）:</h2>
 
@@ -201,8 +231,7 @@ $ ln -s /usr/local/software/go-1.10.1/bin/* /data/LeaNote/bin
 <pre><code class="language-bash">$ go install github.com/revel/cmd/revel
 </code></pre>
 
-<p>()
-<a name="ISrEF"></a></p>
+<p><a name="ISrEF"></a></p>
 
 <h3 id="2-2-方法2">2.2 方法2</h3>
 
@@ -225,13 +254,11 @@ $&gt; go get github.com/leanote/leanote/app
 
 <p>下载完成后，Leanote 的源码在 /data/LeaNote/gopackage/src/github.com/leanote/leanote 下。</p>
 
-<p>()
-<a name="YIYVn"></a></p>
+<p><a name="YIYVn"></a></p>
 
 <h2 id="3-安装mongodb">3. 安装Mongodb</h2>
 
-<p>()
-<a name="56161b8d"></a></p>
+<p><a name="56161b8d"></a></p>
 
 <h2 id="3-1-安装mongodb">3.1 安装Mongodb</h2>
 
@@ -254,8 +281,7 @@ $ vi ~/.bashrc
 export PATH=&quot;/usr/local/software/mongodb-3.6.4/bin:$PATH&quot;
 </code></pre>
 
-<p>()
-<a name="FYujA"></a></p>
+<p><a name="FYujA"></a></p>
 
 <h3 id="3-2-测试mongodb安装">3.2 测试Mongodb安装</h3>
 
@@ -274,8 +300,7 @@ local  0.000GB
 
 <p>Mongodb 安装到此为止, 下面为 Mongodb 导入 Leanote 初始数据。</p>
 
-<p>()
-<a name="0EOSC"></a></p>
+<p><a name="0EOSC"></a></p>
 
 <h2 id="4-导入初始数据">4. 导入初始数据</h2>
 
@@ -314,8 +339,7 @@ note_contents
 user2 username: demo@leanote.com, password: demo@leanote.com (仅供体验使用)
 </code></pre>
 
-<p>()
-<a name="5bWo6"></a></p>
+<p><a name="5bWo6"></a></p>
 
 <h2 id="5-配置leanote">5. 配置Leanote</h2>
 
@@ -325,8 +349,7 @@ user2 username: demo@leanote.com, password: demo@leanote.com (仅供体验使用
 
 <p>其它的配置可暂时保持不变, 若需要配置数据库信息, 请参照 <a href="https://github.com/leanote/leanote/wiki/QA">Leanote 问题汇总</a>。</p>
 
-<p>()
-<a name="WqQq0"></a></p>
+<p><a name="WqQq0"></a></p>
 
 <h2 id="6-运行leanote">6. 运行Leanote</h2>
 
@@ -342,15 +365,13 @@ $ nohup revel run github.com/leanote/leanote 2&gt;&amp;1 &amp;
 
 <p>恭喜你, 打开浏览器输入: <a href="http://localhost:9000">http://localhost:9000</a> 体验Leanote吧！</p>
 
-<p>()
-<a name="peX9N"></a></p>
+<p><a name="peX9N"></a></p>
 
 <h2 id="7-leanote-其他配置">7. Leanote 其他配置</h2>
 
 <p>按照本教程启动 Mongodb 是没有权限控制的, 如果你的 Leanote 服务器暴露在外网, 任何人都可以访问你的 Mongodb 并修改, 所以这是极其危险的!!!!!!!!!!! 请务必为 Mongodb 添加用户名和密码并以 auth 启动，方法如下。</p>
 
-<p>()
-<a name="8bWjM"></a></p>
+<p><a name="8bWjM"></a></p>
 
 <h3 id="7-1-为-mongodb-数据库添加用户">7.1 为 mongodb 数据库添加用户</h3>
 
@@ -408,8 +429,7 @@ db.username=root # if not exists, please leave blank
 db.password=abc123 # if not exists, please leave blank
 </code></pre>
 
-<p>()
-<a name="aa68p"></a></p>
+<p><a name="aa68p"></a></p>
 
 <h3 id="7-2-mongodb设置后台运行">7.2 Mongodb设置后台运行</h3>
 
@@ -418,10 +438,9 @@ db.password=abc123 # if not exists, please leave blank
 <pre><code class="language-bash">$ mongod --fork --dbpath=/data/LeaNote/mongodb/data --logpath=/data/LeaNote/mongodb/logs/mongodb.log --logappend
 </code></pre>
 
-<p>!(<a href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373749331-aa4b3166-1138-41ae-864d-be9c59a43310.png#align=left&amp;display=inline&amp;height=84&amp;originHeight=84&amp;originWidth=812&amp;size=0&amp;status=done&amp;width=812#align=left&amp;display=inline&amp;height=84&amp;originHeight=84&amp;originWidth=812&amp;status=done&amp;width=812">https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373749331-aa4b3166-1138-41ae-864d-be9c59a43310.png#align=left&amp;display=inline&amp;height=84&amp;originHeight=84&amp;originWidth=812&amp;size=0&amp;status=done&amp;width=812#align=left&amp;display=inline&amp;height=84&amp;originHeight=84&amp;originWidth=812&amp;status=done&amp;width=812</a>)</p>
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373749331-aa4b3166-1138-41ae-864d-be9c59a43310.png#align=left&amp;display=inline&amp;height=84&amp;originHeight=84&amp;originWidth=812&amp;size=0&amp;status=done&amp;width=812#align=left&amp;display=inline&amp;height=84&amp;originHeight=84&amp;originWidth=812&amp;status=done&amp;width=812" alt="" /></p>
 
-<p>()
-<a name="IS5bF"></a></p>
+<p><a name="IS5bF"></a></p>
 
 <h3 id="7-3-mongodb设置开机启动">7.3 Mongodb设置开机启动</h3>
 
@@ -435,8 +454,7 @@ db.password=abc123 # if not exists, please leave blank
 
 <p>下次重启就可以直接运行 mongodb 了！</p>
 
-<p>()
-<a name="TBdOf"></a></p>
+<p><a name="TBdOf"></a></p>
 
 <h3 id="7-4-为leanote配置https">7.4 为Leanote配置https</h3>
 
@@ -510,8 +528,7 @@ server {
 
 <p>最后，执行 <code>nginx -s reload</code> 重启 nginx 服务，打开 <a href="http://blog.leanote.com/shenweiyan">https://note.shenweiyan.cn</a> 即可看到 leanote 的 index 主页。</p>
 
-<p>()
-<a name="swByx"></a></p>
+<p><a name="swByx"></a></p>
 
 <h3 id="7-5-leanote配置开机启动">7.5 Leanote配置开机启动</h3>
 
@@ -532,8 +549,7 @@ echo &quot;$sstr&quot;
 /root/gopackage/run.sh
 </code></pre>
 
-<p>()
-<a name="qFPI2"></a></p>
+<p><a name="qFPI2"></a></p>
 
 <h2 id="参考资料">参考资料：</h2>
 

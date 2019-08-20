@@ -1,6 +1,6 @@
 ---
 title: CentOS Linux 7 安全基线设置
-types: post
+type: post
 tags: ["CentOS", "运维"]
 date: 2019-07-01T03:50:35.000Z
 category: 运维

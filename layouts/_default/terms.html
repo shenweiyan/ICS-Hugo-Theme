@@ -1,0 +1,32 @@
+{{ partial "header.html" . }}
+
+<ul class="terms">
+  {{ range $key, $value := .Data.Terms }}
+  {{ if findRE "[^a-zA-Z]*" $key }}
+  <li>
+    <i class="fa fa-tags" aria-hidden="true"></i> 
+    <a href="{{ (print "/" $.Data.Plural "/" $key | urlize) | relURL }}">
+      {{ $key }}
+    </a>
+    ({{ len $value }})
+  </li>
+  {{ else }}
+  <p>
+    <a href="{{ (print "/" $.Data.Plural "/" $key | urlize) | relURL }}">
+      {{ $key }}
+    </a>
+  </p>
+  {{ end }}
+  {{ end }}
+</ul>
+
+<!--div class="post-meta meta-tags">                    
+  <ul class="clearfix terms">
+    {{ range $key, $value := .Data.Terms }}
+    <li><a href="{{ (print "/" $.Data.Plural "/" $key | urlize) | relURL }}">{{ $key }} ({{ len $value }})</a></li>
+    {{ end }}
+  </ul>  
+</div-->
+
+
+{{ partial "footer.html" . }}

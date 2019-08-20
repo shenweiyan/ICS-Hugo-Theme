@@ -1,6 +1,6 @@
 ---
 title: Hugo 博客折腾的一些记录
-types: post
+type: post
 tags: ["杂谈", "开发"]
 date: 2019-08-08T09:05:21.000Z
 category: 开发

@@ -94,6 +94,105 @@ img[src$="#border"] {
   color: steelblue;
 }
 
+/* TAGS page style start(by steven,20190820) */
+
+/* style1 */
+/*
+.clearfix:before, .clearfix:after,  {
+    content:" ";
+    display:table;
+}
+.clearfix:after, .col-group:after {
+    clear:both;
+}
+.post-meta a {    
+    text-decoration:none;
+    -webkit-transition:all .1s ease-in;
+    -moz-transition:all .1s ease-in;
+    -o-transition:all .1s ease-in;
+    transition:all .1s ease-in;
+}
+.post-meta a:hover, .post-meta a:active, {
+    border-bottom-color:transparent;
+    color:#6E7173;
+}
+.post-meta {
+    padding:0;
+    margin:9px 0 0;
+    color:#999;
+    text-align:left;
+    display: inline-block;
+}
+.meta-tags {
+    display: inline-block;
+}
+.meta-tags ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.meta-tags ul li, .meta-tags ul a {
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    position: relative;
+    padding: .3em 0;
+}
+.meta-tags ul a {
+    margin-left: 24px;
+    padding: 0 10px 0 14px;
+    background: #0089e0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 2px;
+}
+.meta-tags ul a:before {
+    content: '';
+    float: left;
+    position: absolute;
+    top: 0;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-color: transparent #0089e0 transparent transparent;
+    border-style: solid;
+    border-width: 12px 12px 12px 0;
+    transition: all .1s ease-in;
+}
+.meta-tags ul a:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    float: left;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background: #fff;
+    box-shadow: -1px -1px 2px #004977;
+}
+.meta-tags ul a:hover {
+    background: #555;
+}
+.meta-tags ul a:hover:before {
+    border-color: transparent #555 transparent transparent;
+}
+*/
+/* style1 end */
+
+/* style2 start */
+.terms li {
+    display:inline-block;
+    width:20%; 
+    margin:10px 1.9rem 0 0; 
+    list-style-type:none;
+}
+/* style2 end */
+
+/* TAGs page style END */
+
+
 @media screen and (max-width: 960px) {
   h1, h2, h3, h4, h5, h6 {
     margin: 2em auto 1.5em auto;

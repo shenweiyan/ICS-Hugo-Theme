@@ -1,6 +1,6 @@
 ---
 title: 从 Blast2GO 到 MySQL 源码编译安装
-types: post
+type: post
 tags: ["软件", "软件"]
 date: 2019-07-01T03:50:35.000Z
 category: 软件
@@ -19,7 +19,7 @@ From：[Blast2GO Command Line User Manual](https://www.blast2go.com/images/b2g_p
 作为 Blast2GO 本地化所依赖的数据库，下面我们介绍一下 MySQL 的安装配置、存储位置修改及新版中低级密码设置不允许的解决方法。
 
 <a name="6o4mym"></a>
-# (#6o4mym)一、MySQL 各个版本区别
+# [](#6o4mym)一、MySQL 各个版本区别
 
 MySQL 的官网下载地址 [https://www.mysql.com/downloads/](https://www.mysql.com/downloads/) 的界面会有几个版本的选择，这几个版本的区别如下。
 
@@ -35,24 +35,24 @@ MySQL 的官网下载地址 [https://www.mysql.com/downloads/](https://www.mysql
 MySQL Community Edition(社区免费版，[https://dev.mysql.com/downloads/](https://dev.mysql.com/downloads/)) 又分为 MySQL Community Server、MySQL Cluster、MySQL Router、MySQL Shell、MySQL Workbench、MySQL on Windows、...、MySQL SUSE Repository 等根据不同的操作系统平台细分为多个版本。其中 MySQL Community Server 是开源免费的，这也是我们通常用的 MySQL 的版本。
 
 <a name="pqaigt"></a>
-# (#pqaigt)二、MySQL 免安装版
+# [](#pqaigt)二、MySQL 免安装版
 
-MySQL 提供了 rpm、源码、免安装等多种安装方式，其中通过源码编译安装是比较耗时，过程相对复杂的一个过程。对于不想使用源码编译安装的童鞋，MySQL 提供了免安装直接解压可用的版本。<br />!(https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-archives-select.png#width=)<br />!(https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-centos-7.png#width=)
+MySQL 提供了 rpm、源码、免安装等多种安装方式，其中通过源码编译安装是比较耗时，过程相对复杂的一个过程。对于不想使用源码编译安装的童鞋，MySQL 提供了免安装直接解压可用的版本。<br />![](https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-archives-select.png#width=)<br />![](https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-centos-7.png#width=)
 
 ```bash
 wget https://cdn.mysql.com/archives/mysql-8.0/mysql-8.0.12-el7-x86_64.tar.gz
 ```
 
 <a name="p93lbm"></a>
-# (#p93lbm)三、MySQL 源码包下载
+# [](#p93lbm)三、MySQL 源码包下载
 
 我们以 CentOS/RedHat 平台为例来说明。进入 MySQL Community Server 下载页面 [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/) ，在适合 Linux 系统的 Source Code 源码中选择带有 Boost 头的压缩包（MySQL 需要 Boost C++ 库构建）进行下载。
 
 - Source Code：源代码下载
 
-- Generic Linux (Architecture Independent)：通用的 Linux（独立结构）。<br />!(https://note-db.oss-cn-shenzhen.aliyuncs.com/2018%2F09%2F18-Tue%2Fmysql-community-download.png#width=)
+- Generic Linux (Architecture Independent)：通用的 Linux（独立结构）。<br />![](https://note-db.oss-cn-shenzhen.aliyuncs.com/2018%2F09%2F18-Tue%2Fmysql-community-download.png#width=)
 
-- 点击下载，需要注册 Oracle 账号，这里不细说。<br />!(https://note-db.oss-cn-shenzhen.aliyuncs.com/2018%2F09%2F18-Tue%2Foracle-web-account.png#width=)
+- 点击下载，需要注册 Oracle 账号，这里不细说。<br />![](https://note-db.oss-cn-shenzhen.aliyuncs.com/2018%2F09%2F18-Tue%2Foracle-web-account.png#width=)
 
 
 ```bash
@@ -62,28 +62,28 @@ $ wget https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-boost-8.0.12.tar.gz
 
 - 其他下载版本
 
-如果想要下载其他版本的 MySQL，可以在 [https://downloads.mysql.com/archives/community/](https://downloads.mysql.com/archives/community/) 选择符合自己服务器的版本进行下载。<br />!(https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-download-archives.png#width=)
+如果想要下载其他版本的 MySQL，可以在 [https://downloads.mysql.com/archives/community/](https://downloads.mysql.com/archives/community/) 选择符合自己服务器的版本进行下载。<br />![](https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-download-archives.png#width=)
 
 
 <a name="y134op"></a>
-# (#y134op)四、MySQL 源码编译安装
+# [](#y134op)四、MySQL 源码编译安装
 
 <a name="t863pf"></a>
-## (#t863pf)1. 安装依赖包
+## [](#t863pf)1. 安装依赖包
 
 ```bash
 [root@ecs-steven ~]# yum -y install gcc gcc-c++ ncurses ncurses-devel cmake bison doxygen
 ```
 
 <a name="cwlvnh"></a>
-## (#cwlvnh)2. 新建 MySQL 用户和用户组
+## [](#cwlvnh)2. 新建 MySQL 用户和用户组
 
 ```bash
 [root@ecs-steven ~]# groupadd -r mysql && useradd -r -g mysql -s /sbin/nologin -M mysql
 ```
 
 <a name="wrupce"></a>
-## (#wrupce)3. 新建 MySQL 数据库数据文件目录
+## [](#wrupce)3. 新建 MySQL 数据库数据文件目录
 
 ```bash
 [root@ecs-steven ~]# mkdir /usr/local/software/mysql
@@ -95,7 +95,7 @@ $ wget https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-boost-8.0.12.tar.gz
 Tip：真实的生产环境一般来说会把数据独立放在根目录下，方便磁盘挂载上去。
 
 <a name="vgs6dc"></a>
-## (#vgs6dc)4. 执行预编译
+## [](#vgs6dc)4. 执行预编译
 
 ```bash
 [root@ecs-steven mysql-8.0.12]# cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/software/mysql \
@@ -140,7 +140,7 @@ Tip：真实的生产环境一般来说会把数据独立放在根目录下，�
 ```
 
 <a name="nycgkl"></a>
-## (#nycgkl)5. 编译安装
+## [](#nycgkl)5. 编译安装
 
 ```bash
 [root@ecs-steven mysql-8.0.12]# make -j `grep processor /proc/cpuinfo | wc -l`
@@ -149,7 +149,7 @@ Tip：真实的生产环境一般来说会把数据独立放在根目录下，�
 ```
 
 <a name="p1s5sz"></a>
-## (#p1s5sz)6. 配置 my.cnf 文件
+## [](#p1s5sz)6. 配置 my.cnf 文件
 
 MySQL 服务器有许多操作参数，我们可以使用命令行选项或配置文件（option files）在服务器启动时更改这些参数。
 
@@ -231,14 +231,14 @@ write_buffer = 4M
 ```
 
 <a name="k7uoyw"></a>
-## (#k7uoyw)7. 初始化 MySQL 数据库
+## [](#k7uoyw)7. 初始化 MySQL 数据库
 
 ```bash
 [root@ecs-steven mysql-5.7.13]# /usr/local/software/mysql/bin/mysqld  --defaults-file=/etc/my.cnf --initialize-insecure --user=mysql --basedir=/usr/local/software/mysql --datadir=/usr/local/software/mysql/data
 ```
 
 <a name="0vv5eo"></a>
-## (#0vv5eo)8. MySQL 服务启动与关闭
+## [](#0vv5eo)8. MySQL 服务启动与关闭
 
 > mysqld_safe is the recommended way to start a mysqld server on Unix. mysqld_safe adds some safety features such as restarting the server when an error occurs and logging runtime information to an error log.
 
@@ -258,19 +258,19 @@ From [4.3.2 mysqld_safe — MySQL Server Startup Script](https://dev.mysql.com/d
 ```
 
 <a name="pnazxh"></a>
-## (#pnazxh)9. 登陆数据库
+## [](#pnazxh)9. 登陆数据库
 
 ```bash
 $ /usr/local/software/mysql/bin/mysql -uroot
 ```
 
-MySQL 第一次安装完成后，是没有设置 root 密码的，直接回车 Enter 即可登陆：<br />!(https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-root-login.png#width=)
+MySQL 第一次安装完成后，是没有设置 root 密码的，直接回车 Enter 即可登陆：<br />![](https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-root-login.png#width=)
 
 <a name="9aihvv"></a>
-## (#9aihvv)10. 数据库其他配置
+## [](#9aihvv)10. 数据库其他配置
 
 <a name="45rqie"></a>
-### (#45rqie)10.1 修改 root 账号密码
+### [](#45rqie)10.1 修改 root 账号密码
 ```bash
 mysql -u root
 mysql> use mysql;
@@ -280,7 +280,7 @@ Query OK, 0 rows affected (0.01 sec)
 ```
 
 <a name="gb7ewd"></a>
-### (#gb7ewd)10.2 查看目前的用户账号
+### [](#gb7ewd)10.2 查看目前的用户账号
 ```sql
 mysql> select user,host from mysql.user;
 +------------------+-----------+
@@ -297,7 +297,7 @@ mysql>
 ```
 
 <a name="4diaeh"></a>
-### (#4diaeh)10.3 忘记 root 账号密码
+### [](#4diaeh)10.3 忘记 root 账号密码
 
 ① mysqladmin 关闭失败
 ```bash
@@ -388,7 +388,7 @@ Enter password:
 ```
 
 <a name="vtxfgx"></a>
-# (#vtxfgx)五、设置启动脚本，开机自启动
+# [](#vtxfgx)五、设置启动脚本，开机自启动
 
 注意：如果是使用免安装版本的 MySQL，需要补充 mysql.server 中的 basedir 和 datadir：
 ```bash
@@ -419,7 +419,7 @@ Executing /sbin/chkconfig mysqld on
 ```
 
 <a name="odbfin"></a>
-# (#odbfin)参考资料
+# [](#odbfin)参考资料
 
 - [Blast2GO Command Line User Manual](https://www.blast2go.com/images/b2g_pdfs/blast2go_cli_manual_1.1.pdf) - Version 1.1 October 2015
 

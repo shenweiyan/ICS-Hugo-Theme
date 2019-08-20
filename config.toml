@@ -1,17 +1,17 @@
 baseurl = "https://ivc.bioinit.com"
 RelativeURLs=true
 CanonifyURLs=true
-languageCode = "zh-cmn-Hans"	# html的lang属性值
-DefaultContentLanguage = "zh-cmn-Hans" # 默认内容语言用于选择i18n语言模板
+languageCode = "zh-cmn-Hans"	                  # html的lang属性值
+DefaultContentLanguage = "zh-cmn-Hans"   	  # 默认内容语言用于选择i18n语言模板
 title = "Steven Shen | 沈维燕"
 theme = "hugo-ivy"
 #googleAnalytics = "UA-112592341-1"
 disqusShortname = "bioinit"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
-hasCJKLanguage = true  # .WordCount works correctly for chinese
+hasCJKLanguage = true                             # .WordCount works correctly for chinese
 enableEmoji = true
 footnotereturnlinkcontents = "↩"
-MetaDataFormat = "yaml" # format of a new post
+MetaDataFormat = "yaml" 			  # format of a new post
 enableGitInfo = false
 publishDir = "docs"
 
@@ -34,6 +34,11 @@ publishDir = "docs"
 [[menu.main]]
     name = "研究"
     url = "/research/"
+    weight = 4
+
+[[menu.main]]
+    name = "读书"
+    url = "/read/"
     weight = 5
 
 [[menu.main]]
@@ -42,27 +47,28 @@ publishDir = "docs"
     weight = 6
 
 [[menu.main]]
-    name = "标签"
-    url = "/tags/"
+    name = "专栏"
+    url = "/topic/"
     weight = 7
 
+[[menu.main]]
+    name = "标签"
+    url = "/tags/"
+    weight = 8
 
-[[menu.zhuanlan]]
-    name = "首页"
+[[menu.main]]
+    name = "归档"
+    url = "/archives/"
+    weight = 9
+
+[[menu.topic]]
+    name = "Home"
     url = "/"
     weight = 1
-[[menu.zhuanlan]]
-    name = "生信"
-    url = "/zhuanlan/bioinfo/"
+[[menu.topic]]
+    name = "Galaxy"
+    url = "/topic/galaxy/"
     weight = 2
-[[menu.zhuanlan]]
-    name = "软件"
-    url = "/zhuanlan/tools/"
-    weight = 3
-[[menu.zhuanlan]]
-    name = "读书"
-    url = "/zhuanlan/read/"
-    weight = 4
 
 [params]
     siteurl = "https://ivc.bioinit.com"
@@ -79,8 +85,6 @@ publishDir = "docs"
 
 [params.footer]
     home = "<br/><br/>Powered by [Hugo](https://gohugo.io) and [Blogdown](https://bookdown.org/yihui/blogdown/) &copy; [Steven Shen](/) 2018 - 2019 <br/><br/>[<i class='far fa-envelope fa-1x'></i>](mailto:ishenweiyan@qq.com) &middot; [<i class='fab fa-github fa-1x'></i>](https://github.com/shenweiyan) &middot; [<i class='fab fa-stack-overflow fa-1x'></i>](https://stackoverflow.com/users/9701168/steven-shen)"
-
-    cn   = "[<i class='far fa-envelope fa-1x'></i>](mailto:ishenweiyan@qq.com) &middot; [<i class='fab fa-github fa-1x'></i>](https://github.com/shenweiyan) &middot; [<i class='fab fa-stack-overflow fa-1x'></i>](https://stackoverflow.com/users/9701168/steven-shen) <br> 本站由 [Hugo](https://gohugo.io) 和 [Blogdown](https://bookdown.org/yihui/blogdown/) 强力驱动 &copy; [沈维燕](/) 2018 - 2019"
 
 [params.author]
     en = "Steven Shen"

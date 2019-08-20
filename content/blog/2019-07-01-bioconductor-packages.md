@@ -1,6 +1,6 @@
 ---
 title: Bioconductor 中的 R 包安装方法总结
-types: post
+type: post
 tags: ["others", "软件"]
 date: 2019-07-01T03:50:35.000Z
 category: 软件
@@ -14,7 +14,7 @@ Bioconductor 是一个基于 R 语言的生物信息软件包，主要用于生�
 R 每年（通常是 4 月中旬）在 'x.y.z' 中发布一个 '.y' 版本，但 Bioconductor 每 6 个月（4 月中旬和 10 月中旬）发布一个 '.y' 版本。
 
 Bioconductor 与 R 各自对应的版本如下：（参考：[Bioconductor releases](https://bioconductor.org/about/release-announcements/)）<br />
-!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550202460103-7ec215b0-d738-41a2-8290-ddb85bdc94d3.png#align=left&display=inline&height=463&originHeight=463&originWidth=625&size=0&status=done&width=625)
+![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550202460103-7ec215b0-d738-41a2-8290-ddb85bdc94d3.png#align=left&display=inline&height=463&originHeight=463&originWidth=625&size=0&status=done&width=625)
 
 ---
 

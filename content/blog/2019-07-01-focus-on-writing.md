@@ -1,6 +1,6 @@
 ---
 title: 只要能坚持下来就是好博客
-types: post
+type: post
 tags: ["others", "杂谈"]
 date: 2019-07-01T03:55:23.000Z
 category: 杂谈

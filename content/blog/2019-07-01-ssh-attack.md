@@ -1,6 +1,6 @@
 ---
 title: 一次 SSH 攻击与处理记录
-types: post
+type: post
 tags: ["others", "运维"]
 date: 2019-07-01T03:50:35.000Z
 category: 运维

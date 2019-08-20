@@ -1,6 +1,6 @@
 ---
 title: RedHat 6.5 下安装 PyQt4 详细步骤
-types: post
+type: post
 tags: ["RedHat", "软件", "软件"]
 date: 2019-05-18T12:39:52.000Z
 category: 软件
@@ -102,7 +102,7 @@ make -f qtdirs.mk
 g++ -c -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_CORE_LIB -I. -I../../../Anaconda2/include/qt -I../../../Anaconda2/include/qt/QtCore -I. -I../../../Anaconda2/mkspecs/linux-g++ -o qtdirs.o qtdirs.cpp
 g++ -Wl,-O1 -Wl,-rpath,/Bio/Bioinfo/Pipeline/SoftWare/Anaconda2/lib -o qtdirs qtdirs.o   -L/Bio/Bioinfo/Pipeline/SoftWare/Anaconda2/lib -lQt5Core -lpthread 
 /Bio/Bioinfo/Pipeline/SoftWare/Anaconda2/lib/libQt5Core.so: undefined reference to `__cxa_throw_bad_array_new_length@CXXABI_1.3.8'
-/Bio/Bioinfo/Pipeline/SoftWare/Anaconda2/lib/libQt5Core.so: undefined reference to `operator delete(void*, unsigned long)@CXXABI_1.3.9'
+/Bio/Bioinfo/Pipeline/SoftWare/Anaconda2/lib/libQt5Core.so: undefined reference to `operator delete[](void*, unsigned long)@CXXABI_1.3.9'
 /Bio/Bioinfo/Pipeline/SoftWare/Anaconda2/lib/libQt5Core.so: undefined reference to `operator delete(void*, unsigned long)@CXXABI_1.3.9'
 collect2: error: ld returned 1 exit status
 make: *** [qtdirs] Error 1
@@ -113,7 +113,7 @@ the --verbose flag to see more detail about the problem.
 <a name="d4afacf7"></a>
 ### 5、安装依赖二：QT
 
-使用 conda 安装的 qt >= 5.6.2：<br />!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1558183262081-192b5c4b-7fb9-4dcd-b09d-d4ac540baaae.png#align=left&display=inline&height=330&originHeight=330&originWidth=674&size=0&status=done&width=674)
+使用 conda 安装的 qt >= 5.6.2：<br />![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1558183262081-192b5c4b-7fb9-4dcd-b09d-d4ac540baaae.png#align=left&display=inline&height=330&originHeight=330&originWidth=674&size=0&status=done&width=674)
 
 下面是通过源码安装 qt-4.8.x 的一些记录（使用 conda 应该也可以安装 qt-4.8.x，感兴趣的童鞋可以尝试一下）：
 ```
@@ -138,7 +138,7 @@ $ make install
 $ ./configure -prefix /Bio/Bioinfo/Pipeline/SoftWare/Qt-5.6.0  # 报错信息如截图所示
 ```
 
-!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1558183296812-95892055-664d-4341-acdb-4824492b96a3.png#align=left&display=inline&height=377&originHeight=377&originWidth=802&size=0&status=done&width=802)
+![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1558183296812-95892055-664d-4341-acdb-4824492b96a3.png#align=left&display=inline&height=377&originHeight=377&originWidth=802&size=0&status=done&width=802)
 
 ② 在 Qt 4.8 中实现多媒体播放图形界面主要依赖于 phonon 框架，通常情况下，**Qt 基本库已经安装好，默认 phonon 是没有被安装的**，我们需要 configure 后加好参数，然后单独进入 phonon 的文件夹进行编译。
 

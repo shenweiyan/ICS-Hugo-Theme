@@ -1,6 +1,6 @@
 ---
 title: shell 命令实战合集
-types: post
+type: post
 tags: ["Shell", "编程"]
 date: 2018-12-29T09:21:11.000Z
 category: 编程

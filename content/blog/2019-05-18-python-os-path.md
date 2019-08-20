@@ -1,6 +1,6 @@
 ---
 title: python3 中 os.path 模块常用用法总结
-types: post
+type: post
 tags: ["Python", "编程"]
 date: 2019-05-18T12:44:59.000Z
 category: 编程

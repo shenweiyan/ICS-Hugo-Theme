@@ -1,6 +1,6 @@
 ---
 title: vim 使用的一些小技巧
-types: post
+type: post
 tags: ["vim", "软件"]
 date: 2019-05-18T12:47:11.000Z
 category: 软件

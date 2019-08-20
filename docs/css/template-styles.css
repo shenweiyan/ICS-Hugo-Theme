@@ -120,21 +120,23 @@ button {
     margin-top: 0.75rem;
 }
 .patterns ul ul {
-    margin-left: 0.75rem;
+    /*margin-left: 0.75rem;*/
 }
 .pattern a {
     border: 0;
     display: block;
     flex-wrap: nowrap;
     align-items: baseline;
-    font-weight: bold;
-    padding: 0 3.6rem;
+    /*font-weight: bold;*/
+    /*padding: 0 3rem;*/
+    padding-right: 18px;
+    text-align: center;
 }
 .pattern a:focus {
     outline: none;
 }
 .pattern span {
-    margin-left: 0.125rem;
+    /*margin-left: 0.125rem;*/
 }
 
 /* After */

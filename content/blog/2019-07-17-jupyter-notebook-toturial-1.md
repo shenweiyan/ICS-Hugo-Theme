@@ -1,6 +1,6 @@
 ---
 title: 数据科学工具 Jupyter Notebook 教程(一)
-types: post
+type: post
 tags: ["Jupyter", "开发"]
 date: 2019-07-17T03:38:57.000Z
 category: 开发
@@ -21,18 +21,18 @@ iPython Notebook 是一个基于浏览器的 python 数据分析工具，使用�
 > 1. 对计算结果做进一部分的分析<br />
 > 
 > 这有点类似做应用题。而这是传统的 IDE (e.g. PyCharm) 没有办法做到的。假如全部都写脚本+输出，那么你 **每张图可能都要保存下来，然后再单独点进去看**，很麻烦。而 Notebook 做这个要更方便，结果直接产生在 Cell 下面。<br />
-!(https://qiniu.bioinit.com/yuque/0/2019/jpeg/126032/1563349363620-ffefa127-e6f7-49a3-ad26-87a50d6161df.jpeg#align=left&display=inline&height=437&originHeight=437&originWidth=656&size=0&status=done&width=656)<br />
+![](https://qiniu.bioinit.com/yuque/0/2019/jpeg/126032/1563349363620-ffefa127-e6f7-49a3-ad26-87a50d6161df.jpeg#align=left&display=inline&height=437&originHeight=437&originWidth=656&size=0&status=done&width=656)<br />
 反言之，如果你不需要这种频繁的计算-画图的话，那么 notebook 可能还真没什么大不了.
 
 **2、Hackable**
 
 
 和第一点对应，Notebook 的是计算+文档的混合体，而本身又是 web-based，因此非常好 hack, 比如我的 notebook 因为非常长，所以就加了个侧边栏目录：
-> !(https://qiniu.bioinit.com/yuque/0/2019/jpeg/126032/1563349415635-8a354789-7303-4b76-9a79-5deb0ac006b4.jpeg#align=left&display=inline&height=783&originHeight=783&originWidth=502&size=0&status=done&width=502)
+> ![](https://qiniu.bioinit.com/yuque/0/2019/jpeg/126032/1563349415635-8a354789-7303-4b76-9a79-5deb0ac006b4.jpeg#align=left&display=inline&height=783&originHeight=783&originWidth=502&size=0&status=done&width=502)
 
 
 再比如，在分析电影数据的时候，我觉得用 card 来展示更方便一点，所以可以这样显示数据：
-> !(https://qiniu.bioinit.com/yuque/0/2019/jpeg/126032/1563349446691-7c04adc4-2f8e-45d7-88ff-89f23ad37c5a.jpeg#align=left&display=inline&height=429&originHeight=429&originWidth=805&size=0&status=done&width=805)
+> ![](https://qiniu.bioinit.com/yuque/0/2019/jpeg/126032/1563349446691-7c04adc4-2f8e-45d7-88ff-89f23ad37c5a.jpeg#align=left&display=inline&height=429&originHeight=429&originWidth=805&size=0&status=done&width=805)
 
 
 
@@ -86,17 +86,17 @@ Known labextensions:
         http://localhost:8888/?token=120a457da88d214270e...22a376d3d4
 ```
 
-这时候，jupyter 会自动生成一个用于登陆 jupyter Notebook 的 token，我们在浏览器打开这个 token 链接即可进入登陆后的 Jupyter Notebook：<br />!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563350481111-cf547695-a543-48db-ae24-99be9d1e22ba.png#align=left&display=inline&height=342&originHeight=342&originWidth=807&size=0&status=done&width=807)
+这时候，jupyter 会自动生成一个用于登陆 jupyter Notebook 的 token，我们在浏览器打开这个 token 链接即可进入登陆后的 Jupyter Notebook：<br />![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563350481111-cf547695-a543-48db-ae24-99be9d1e22ba.png#align=left&display=inline&height=342&originHeight=342&originWidth=807&size=0&status=done&width=807)
 
 
 
 <a name="W6UZJ"></a>
 # 使用
 
-在 Jupyter Notebook web 页面，我们可以点击 "New" → "Python2" 创建 python2 笔记。<br />!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563350203434-e78b0a11-ea24-4634-ab10-29ccd5851a87.png#align=left&display=inline&height=342&originHeight=342&originWidth=807&size=0&status=done&width=807)
+在 Jupyter Notebook web 页面，我们可以点击 "New" → "Python2" 创建 python2 笔记。<br />![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563350203434-e78b0a11-ea24-4634-ab10-29ccd5851a87.png#align=left&display=inline&height=342&originHeight=342&originWidth=807&size=0&status=done&width=807)
 
 
-我们可以在创建好的笔记中使用 markdown 语法进行编辑，也可以交互执行 python 代码。<br />!(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563350417528-a1f23c74-5cc1-4c0d-9b01-db095db048f2.png#align=left&display=inline&height=356&originHeight=356&originWidth=806&size=0&status=done&width=806)
+我们可以在创建好的笔记中使用 markdown 语法进行编辑，也可以交互执行 python 代码。<br />![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563350417528-a1f23c74-5cc1-4c0d-9b01-db095db048f2.png#align=left&display=inline&height=356&originHeight=356&originWidth=806&size=0&status=done&width=806)
 
 想要退出笔记，点击右上角 "Logout" 可退出；通过输入上面的 token 可重新登陆。或者我们可以通过 `jupyter notebook password` 命令设置密码进行登陆（如果忘记密码也可以通过该命令进行重置）。默认 jupyter notebook passwd 保存在 ~/.jupyter/jupyter_notebook_config.json。
 ```

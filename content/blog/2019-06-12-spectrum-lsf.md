@@ -1,6 +1,6 @@
 ---
 title: Spectrum LSF：高效的集群管理系统
-types: post
+type: post
 tags: ["others", "运维"]
 date: 2019-06-12T03:29:50.000Z
 category: 运维

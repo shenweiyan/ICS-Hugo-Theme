@@ -109,6 +109,17 @@
           
           
           
+            <a href="../../read/" >
+              
+              读书
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
             <a href="../../resume/shenweiyan" >
               
               简历
@@ -120,9 +131,31 @@
           
           
           
+            <a href="../../topic/" >
+              
+              专栏
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
             <a href="../../tags/" >
               
               标签
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../archives/" >
+              
+              归档
             </a>
           </li>
           
@@ -206,12 +239,11 @@ show_channels_urls: true
 
 <p>更多 Anaconda channels，可以参考：<a href="https://repo.continuum.io/pkgs/">https://repo.continuum.io/pkgs/</a>。</p>
 
-<p>()
-<a name="6e008e24"></a></p>
+<p><a name="6e008e24"></a></p>
 
 <h1 id="2-软件安装使用">2. 软件安装使用</h1>
 
-<p>conda 环境下的软件尽量使用 conda、pip 命令去安装。但同时也产生了一个问题，即 conda 中安装了 R，有些使用了 <code>install.packages()</code> , <code>install_github</code> , <code>biocLite</code> 等方式安装的 R 包，在环境迁移的时候，这些包如何迁移？<br />()<br />()
+<p>conda 环境下的软件尽量使用 conda、pip 命令去安装。但同时也产生了一个问题，即 conda 中安装了 R，有些使用了 <code>install.packages()</code> , <code>install_github</code> , <code>biocLite</code> 等方式安装的 R 包，在环境迁移的时候，这些包如何迁移？<br /><br />
 <a name="31326bda"></a></p>
 
 <h1 id="3-环境激活">3. 环境激活</h1>
@@ -297,12 +329,11 @@ conda install --yes --file requirements.txt
 while read requirement; do conda install --yes $requirement; done &lt; requirements.txt
 </code></pre>
 
-<p>()
-<a name="71a62493"></a></p>
+<p><a name="71a62493"></a></p>
 
 <h1 id="5-r-与-r-包安装">5. R 与 R 包安装</h1>
 
-<p>R Essentials 软件包包含 IRKernel 和 80 多种最流行的数据科学 R 软件包，包括 dplyr，shiny，ggplot2，tidyr，caret 和 nnet 等。<br />()
+<p>R Essentials 软件包包含 IRKernel 和 80 多种最流行的数据科学 R 软件包，包括 dplyr，shiny，ggplot2，tidyr，caret 和 nnet 等。<br />
 <a name="d46d2538"></a></p>
 
 <h2 id="5-1-r-软件">5.1 R 软件</h2>
@@ -378,9 +409,7 @@ biocLite_Packages_Name
 <pre><code class="language-r">if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
 install.packages(&quot;BiocManager&quot;)
 BiocManager::install()
-</code></pre>
-
-<p>()</p></li>
+</code></pre></li>
 </ul>
 
 <p><a name="uTjG9"></a></p>
@@ -394,13 +423,11 @@ library(devtools)
 install_github(&quot;jokergoo/ComplexHeatmap&quot;)
 </code></pre>
 
-<p>()
-<a name="c3806f74"></a></p>
+<p><a name="c3806f74"></a></p>
 
 <h1 id="6-特别注意的软件">6. 特别注意的软件</h1>
 
-<p>()
-<a name="18cd0dcd"></a></p>
+<p><a name="18cd0dcd"></a></p>
 
 <h2 id="6-1-gcc">6.1 gcc</h2>
 
@@ -409,8 +436,7 @@ install_github(&quot;jokergoo/ComplexHeatmap&quot;)
 <pre><code class="language-r">/path/to/SoftWare/Anaconda/v2/lib/R/bin/exec/R: /path/to/SoftWare/Anaconda/v2/lib/R/bin/exec/../../lib/../../libgomp.so.1: version `GOMP_4.0' not found (required by /path/to/SoftWare/Anaconda/v2/lib/R/bin/exec/../../lib/libR.so)
 </code></pre>
 
-<p>()
-<a name="8b17553d"></a></p>
+<p><a name="8b17553d"></a></p>
 
 <h2 id="6-2-glibc">6.2 glibc</h2>
 

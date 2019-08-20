@@ -39,56 +39,11 @@
     </item>
     
     <item>
-      <title>Command Line</title>
-      <link>https://ivc.bioinit.com/tags/command-line/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://ivc.bioinit.com/tags/command-line/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Fun</title>
-      <link>https://ivc.bioinit.com/tags/fun/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://ivc.bioinit.com/tags/fun/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Git</title>
-      <link>https://ivc.bioinit.com/tags/git/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://ivc.bioinit.com/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>https://ivc.bioinit.com/tags/go/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://ivc.bioinit.com/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Hugo</title>
       <link>https://ivc.bioinit.com/tags/hugo/</link>
       <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jekyll</title>
-      <link>https://ivc.bioinit.com/tags/jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://ivc.bioinit.com/tags/jekyll/</guid>
       <description></description>
     </item>
     
@@ -120,29 +75,11 @@
     </item>
     
     <item>
-      <title>Markdown</title>
-      <link>https://ivc.bioinit.com/tags/markdown/</link>
-      <pubDate>Thu, 14 Feb 2019 15:36:09 -0600</pubDate>
-      
-      <guid>https://ivc.bioinit.com/tags/markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Math</title>
       <link>https://ivc.bioinit.com/tags/math/</link>
       <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/tags/math/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Migration</title>
-      <link>https://ivc.bioinit.com/tags/migration/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://ivc.bioinit.com/tags/migration/</guid>
       <description></description>
     </item>
     
@@ -206,24 +143,6 @@
       <pubDate>Sat, 29 Dec 2018 09:21:11 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/tags/shell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Templates</title>
-      <link>https://ivc.bioinit.com/tags/templates/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://ivc.bioinit.com/tags/templates/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Theme</title>
-      <link>https://ivc.bioinit.com/tags/theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://ivc.bioinit.com/tags/theme/</guid>
       <description></description>
     </item>
     

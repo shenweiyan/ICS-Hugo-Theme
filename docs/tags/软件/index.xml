@@ -53,7 +53,7 @@
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/blog/2019-07-01-latex-2018-tutorial/</guid>
-      <description>一、背景 前两天在自己的 Jupyter 服务器上想要把 notebook(.ipynb) 导出为 pdf 时发现 xelatex 没有安装： !(https://qiniu.bioinit.com/yuque/0/2019/png/126032/1548653466526-645be58b-5a23-43d2-b82a-895bc7500d15.png#align=left&amp;amp;display=inline&amp;amp;height=685&amp;amp;originHeight=709&amp;amp;originWidth=772&amp;amp;size=0&amp;amp;width=746) 500 : Internal Server Error 如下： nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex. 另外一点</description>
+      <description>一、背景 前两天在自己的 Jupyter 服务器上想要把 notebook(.ipynb) 导出为 pdf 时发现 xelatex 没有安装： 500 : Internal Server Error 如下： nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex. 另外一点就</description>
     </item>
     
     <item>
@@ -62,7 +62,7 @@
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
       <guid>https://ivc.bioinit.com/blog/2019-07-01-tkinter-unicode-issues/</guid>
-      <description>(#2xvqwy)引言 使用 Anaconda 3（conda 4.5.11）的 tkinter python 包（conda install -c conda-forge tk）开发 GUI 界面程序过程中，发现 UI 界面出现的中文 Unicode 乱码一直</description>
+      <description>[](#2xvqwy)引言 使用 Anaconda 3（conda 4.5.11）的 tkinter python 包（conda install -c conda-forge tk）开发 GUI 界面程序过程中，发现 UI 界面出现的中文 Unicode 乱码</description>
     </item>
     
     <item>
