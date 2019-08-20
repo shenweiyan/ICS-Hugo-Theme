@@ -257,5 +257,7 @@ img[src$="#border"] {
 @media screen and (max-width: 480px) {
   .terms li {
     display: list-item;
+    width: unset;
+    margin: 10px 1.9rem 0 30%;
     list-style-type: none;
 }
