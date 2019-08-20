@@ -1,8 +1,8 @@
 {{ partial "header.html" . }}
 
+<hr/>
 <ul class="terms">
   {{ range $key, $value := .Data.Terms }}
-  {{ if findRE "[^a-zA-Z]*" $key }}
   <li>
     <i class="fa fa-tags" aria-hidden="true"></i> 
     <a href="{{ (print "/" $.Data.Plural "/" $key | urlize) | relURL }}">
@@ -10,13 +10,6 @@
     </a>
     ({{ len $value }})
   </li>
-  {{ else }}
-  <p>
-    <a href="{{ (print "/" $.Data.Plural "/" $key | urlize) | relURL }}">
-      {{ $key }}
-    </a>
-  </p>
-  {{ end }}
   {{ end }}
 </ul>
 
