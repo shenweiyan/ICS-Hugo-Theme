@@ -72,7 +72,7 @@ publishDir = "docs"
 
 [params]
     siteurl = "https://ivc.bioinit.com"
-    description = ""
+    description = "Welcome to the blog site of Steven Shen."
     disqusURL = "https://shenweiyan.github.io/home/"
     customJS = ["js/fix-toc.js", "js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js", "js/external-link.js", "js/alt-title.js", "js/header-link.js", "js/dom-scripts.js"]
     githubContentURL = "https://github.com/shenweiyan/home/edit/master/content/"
