@@ -43,7 +43,7 @@
     <div>
       <div class="intro">
         <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
-          <img src="https://ivc.bioinit.com/img/logo.png" alt="">
+          <img src="https://shenweiyan.github.io/ivc-hugo-theme/img/logo.png" alt="">
         </a>
         <p class="library-desc">
           
@@ -444,16 +444,16 @@ node1:~ # mmchconfig trace=DEFAULT -i
 <h2 id="诊断过程">诊断过程</h2>
 
 <ol>
-<li>首先查看各节点状态 :</li>
-</ol>
+<li><p>首先查看各节点状态 :</p>
 
 <pre><code class="language-bash">node1:~ # mmgetstate -a 
 Node number  Node name        GPFS state 
 ------------------------------------------------------------------ 
-      1      node3          arbitrating 
-      2      node2          arbitrating 
-      3      node1          active
-</code></pre>
+  1      node3          arbitrating 
+  2      node2          arbitrating 
+  3      node1          active
+</code></pre></li>
+</ol>
 
 <p>结论：node2 和 node3 都处于不健康状态。</p>
 
@@ -486,8 +486,7 @@ Node  Daemon node name  IP address    Admin node name      Designation
 </code></pre>
 
 <ol>
-<li>查看 GPFS 文件系统与磁盘空间使用情况：</li>
-</ol>
+<li><p>查看 GPFS 文件系统与磁盘空间使用情况：</p>
 
 <pre><code class="language-bash">node1:/tmp/mmfs # df 
 Filesystem           1K-blocks      Used Available Use% Mounted on 
@@ -497,53 +496,54 @@ df: `/col1': Stale NFS file handle
 /dev/tiam_utility     31457280   2754816  28702464   9% /tiam_utility 
 /dev/col2            602931200  29118208 573812992   5% /col2 
 /dev/col3            619646976  33665024 585981952   6% /col3
-</code></pre>
+</code></pre></li>
+</ol>
 
 <p>结论：名为 /col1 的 GPFS 文件系统出现问题。磁盘空间使用率为 6%，使用正常。</p>
 
 <ol>
-<li>在问题节点上查看系统日志文件 /var/log/message，发现如下错误：</li>
-</ol>
+<li><p>在问题节点上查看系统日志文件 /var/log/message，发现如下错误：</p>
 
 <pre><code class="language-bash">node3:/ # vi /var/log/messages 
 Aug  9 21:13:21 node3 mmfs: Error=MMFS_FSSTRUCT, ID=0x94B1F045, 
-        Tag=6319986: Invalid disk data structure.  
-           Error code 107.  Volume col3   . Sense Data 
+    Tag=6319986: Invalid disk data structure.  
+       Error code 107.  Volume col3   . Sense Data 
 Aug  9 21:13:21 node3 mmfs: Error=MMFS_FSSTRUCT, ID=0x94B1F045, 
-                 Tag=6319986:    6B 00 10 00 00 00 01 00 
+             Tag=6319986:    6B 00 10 00 00 00 01 00 
 ... ... 
 Aug  9 21:13:21 node3 last message repeated 14 times 
 Aug  9 21:13:21 node3 mmfs: Error=MMFS_FSSTRUCT, ID=0x94B1F045, 
-               Tag=6319986:    00 00 00 00 
+           Tag=6319986:    00 00 00 00 
 Aug  9 21:13:21 node3 mmfs: Error=MMFS_FSSTRUCT, ID=0x94B1F045, Tag=6319986:   
 Aug  9 21:13:21 node3 mmfs: mmfsd: Error=MMFS_GENERIC, ID=0x30D9195E, Tag=6319987 
 Aug  9 21:13:21 node3 mmfs: Generic error in 
-         /build/ode/gpfs32/src/avs/fs/mmfs/ts/logger/Logger.C line 527  
-              retCode 0, reasonCode 0 
+     /build/ode/gpfs32/src/avs/fs/mmfs/ts/logger/Logger.C line 527  
+          retCode 0, reasonCode 0 
 Aug  9 21:13:21 node3 mmfs: Tag=6319987   !&quot;Assert on Structure Error&quot;
-</code></pre>
+</code></pre></li>
+</ol>
 
 <p>结论：在 8 月 9 日 21 点 13 分左右，节点 3 上出现断言错误。</p>
 
 <ol>
-<li>根据系统日志中出错的时间，在最新的 GPFS 日志文件中查看对应时间点的情况，发现如下错误：</li>
-</ol>
+<li><p>根据系统日志中出错的时间，在最新的 GPFS 日志文件中查看对应时间点的情况，发现如下错误：</p>
 
 <pre><code class="language-bash">node3:/var/adm/ras # vi mmfs.log.latest 
 Mon Aug  9 21:13:21.867 2010: *** Assert exp(!&quot;Assert on Structure Error&quot;) 
-               in line 527 of file /build/ode/gpfs32/src/avs/fs/mmfs/ts/logger/Logger.C 
+           in line 527 of file /build/ode/gpfs32/src/avs/fs/mmfs/ts/logger/Logger.C 
 Mon Aug  9 21:13:21.919 2010: *** Traceback: 
 Mon Aug  9 21:13:21.922 2010:         2:0x402D5D4E logAssertFailed + 0x14E 
 Mon Aug  9 21:13:21.929 2010:         21:0x2B614A0BCB3D clone + 0x6D 
 mmfsd: /build/ode/gpfs32/src/avs/fs/mmfs/ts/logger/Logger.C:527: 
-            void logAssertFailed(unsigned int, char*, unsigned int, int, int, 
-            unsigned int, char*, char*): 
-            Assertion `!&quot;Assert on Structure Error&quot;' failed. 
+        void logAssertFailed(unsigned int, char*, unsigned int, int, int, 
+        unsigned int, char*, char*): 
+        Assertion `!&quot;Assert on Structure Error&quot;' failed. 
 Mon Aug  9 21:13:21.928 2010: Signal 6 at location 0x2B614A02C5F5 
-                in process 4961, link reg 0xFFFFFFFFFFFFFFFF. 
+            in process 4961, link reg 0xFFFFFFFFFFFFFFFF. 
 Mon Aug  9 21:13:21.929 2010: rax    0x0000000000000000  
-                        rbx    0x00007FFF423FD170
-</code></pre>
+                    rbx    0x00007FFF423FD170
+</code></pre></li>
+</ol>
 
 <p>结论：在 8 月 9 日 21 点 13 分左右，由于不合法的数据结构导致遇到断言错误。</p>
 
@@ -586,7 +586,7 @@ Mon Aug  9 21:13:21.929 2010: rax    0x0000000000000000
   
 <nav class="post-nav">
   <span class="nav-prev"><a href="../../blog/2019-07-01-webterminal-for-linux/">基于 Web 的 Linux 终端 WebTerminal</a><br/>&larr;</span>
-  <span class="nav-next"><a href="../../blog/2019-07-01-install-perl-from-source/">各个平台下 Perl 源码安装教程</a><br/>&rarr;</span>
+  <span class="nav-next"><a href="../../blog/2019-07-01-r-gganatogram/">基于 ggplot2 的解剖图和组织模块可视化</a><br/>&rarr;</span>
 </nav>
 <script type="text/javascript">
 document.addEventListener('keyup', function(e) {
@@ -598,7 +598,7 @@ document.addEventListener('keyup', function(e) {
     
   } else if (e.which == 39) {  
     
-    url = '\/blog\/2019-07-01-install-perl-from-source\/';
+    url = '\/blog\/2019-07-01-r-gganatogram\/';
     
   }
   if (url) window.location = url;

@@ -1,31 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>读书笔记 on Steven Shen | 沈维燕</title>
-    <link>https://ivc.bioinit.com/read/</link>
+    <link>https://shenweiyan.github.io/ivc-hugo-theme/read/</link>
     <description>Recent content in 读书笔记 on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ivc.bioinit.com/read/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shenweiyan.github.io/ivc-hugo-theme/read/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>创作草稿：遵循标准结构</title>
-      <link>https://ivc.bioinit.com/read/sci-writing-composing-a-first-draft/</link>
+      <link>https://shenweiyan.github.io/ivc-hugo-theme/read/sci-writing-composing-a-first-draft/</link>
       <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ivc.bioinit.com/read/sci-writing-composing-a-first-draft/</guid>
+      <guid>https://shenweiyan.github.io/ivc-hugo-theme/read/sci-writing-composing-a-first-draft/</guid>
       <description>本文是《Successful scientific wrting》一书的阅读笔记之一。 大部分的学术文章都遵循相似的模式，即所谓的 IMRAD 格式——它是Introducti</description>
     </item>
     
     <item>
       <title>100系列: 适合每个人的 R 和 Bioconductor 介绍</title>
-      <link>https://ivc.bioinit.com/read/biocworkshop-100-r-and-bioconductor-intro/</link>
+      <link>https://shenweiyan.github.io/ivc-hugo-theme/read/biocworkshop-100-r-and-bioconductor-intro/</link>
       <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ivc.bioinit.com/read/biocworkshop-100-r-and-bioconductor-intro/</guid>
+      <guid>https://shenweiyan.github.io/ivc-hugo-theme/read/biocworkshop-100-r-and-bioconductor-intro/</guid>
       <description>来源：https://bioconductor.github.io/BiocWorkshops/r-and-bioconductor-for</description>
     </item>
     

@@ -43,7 +43,7 @@
     <div>
       <div class="intro">
         <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
-          <img src="https://ivc.bioinit.com/img/logo.png" alt="">
+          <img src="https://shenweiyan.github.io/ivc-hugo-theme/img/logo.png" alt="">
         </a>
         <p class="library-desc">
           
@@ -215,70 +215,47 @@
 <p>**</p>
 
 <ol>
-<li>打开 <a href="https://www.ipaddress.com/">IPAddress.com</a> 网站，查询下面 3 个网址对应的 IP 地址：</li>
-</ol>
+<li><p>打开 <a href="https://www.ipaddress.com/">IPAddress.com</a> 网站，查询下面 3 个网址对应的 IP 地址：</p>
 
 <pre><code>github.com，192.30.253.112 192.30.253.113
 assets-cdn.github.com，101.184.133
 global.ssl.fastly.net，151.101.185.194
-</code></pre>
+</code></pre></li>
 
-<ol>
-<li><p>修改本地电脑系统 hosts 文件（PS：路径一般都是 C:\Windows\System32\drivers\etc），在末尾添加三行记录并保存(需管理员权限，注意 IP 地址与域名间需留有空格)。
-```</p>
+<li><p>修改本地电脑系统 hosts 文件（PS：路径一般都是 C:\Windows\System32\drivers\etc），在末尾添加三行记录并保存(需管理员权限，注意 IP 地址与域名间需留有空格)。</p>
 
-<h1 id="copyright-c-1993-2009-microsoft-corp">Copyright &copy; 1993-2009 Microsoft Corp.</h1>
+<pre><code># Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
 
-<p>#</p>
+# localhost name resolution is handled within DNS itself.
+#	127.0.0.1       localhost
+#	::1             localhost
 
-<h1 id="this-is-a-sample-hosts-file-used-by-microsoft-tcp-ip-for-windows">This is a sample HOSTS file used by Microsoft TCP/IP for Windows.</h1>
+64.233.183.103 code.google.com
 
-<p>#</p>
-
-<h1 id="this-file-contains-the-mappings-of-ip-addresses-to-host-names-each">This file contains the mappings of IP addresses to host names. Each</h1>
-
-<h1 id="entry-should-be-kept-on-an-individual-line-the-ip-address-should">entry should be kept on an individual line. The IP address should</h1>
-
-<h1 id="be-placed-in-the-first-column-followed-by-the-corresponding-host-name">be placed in the first column followed by the corresponding host name.</h1>
-
-<h1 id="the-ip-address-and-the-host-name-should-be-separated-by-at-least-one">The IP address and the host name should be separated by at least one</h1>
-
-<h1 id="space">space.</h1>
-
-<p>#</p>
-
-<h1 id="additionally-comments-such-as-these-may-be-inserted-on-individual">Additionally, comments (such as these) may be inserted on individual</h1>
-
-<h1 id="lines-or-following-the-machine-name-denoted-by-a-symbol">lines or following the machine name denoted by a &lsquo;#&rsquo; symbol.</h1>
-
-<p>#</p>
-
-<h1 id="for-example">For example:</h1>
-
-<p>#</p>
-
-<h1 id="102-54-94-97-rhino-acme-com-source-server">102.54.94.97     rhino.acme.com          # source server</h1>
-
-<h1 id="38-25-63-10-x-acme-com-x-client-host">38.25.63.10     x.acme.com              # x client host</h1></li>
-</ol>
-
-<h1 id="localhost-name-resolution-is-handled-within-dns-itself">localhost name resolution is handled within DNS itself.</h1>
-
-<p>#	127.0.0.1       localhost
-#	::1             localhost</p>
-
-<p>64.233.183.103 code.google.com</p>
-
-<h1 id="github-加速">GitHub 加速</h1>
-
-<p>192.30.253.112 github.com
+# GitHub 加速
+192.30.253.112 github.com
 192.30.253.113 github.com
 151.101.184.133 assets-cdn.github.com
 151.101.185.194 github.global.ssl.fastly.net
-```</p>
+</code></pre></li>
 
-<ol>
-<li>用 &ldquo;WIN +R&rdquo; 快捷键打开运行窗口，输入命令：cmd 并回车进入命令行窗口，接着输入命令： <code>ipconfig /flushdns</code> 回车后执行刷新本地 DNS 缓存数据即可。</li>
+<li><p>用 &ldquo;WIN +R&rdquo; 快捷键打开运行窗口，输入命令：cmd 并回车进入命令行窗口，接着输入命令： <code>ipconfig /flushdns</code> 回车后执行刷新本地 DNS 缓存数据即可。</p></li>
 </ol>
 
 

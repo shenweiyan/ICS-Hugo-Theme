@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>个人月度任务列表 on Steven Shen | 沈维燕</title>
-    <link>https://ivc.bioinit.com/todo/</link>
+    <link>https://shenweiyan.github.io/ivc-hugo-theme/todo/</link>
     <description>Recent content in 个人月度任务列表 on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Sat, 01 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ivc.bioinit.com/todo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shenweiyan.github.io/ivc-hugo-theme/todo/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

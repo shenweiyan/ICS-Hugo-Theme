@@ -43,7 +43,7 @@
     <div>
       <div class="intro">
         <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
-          <img src="https://ivc.bioinit.com/img/logo.png" alt="">
+          <img src="https://shenweiyan.github.io/ivc-hugo-theme/img/logo.png" alt="">
         </a>
         <p class="library-desc">
           
@@ -280,19 +280,19 @@ WARN 2019/08/13 09:03:08 Page's .RSSLink is deprecated and will be removed in a 
 <ol>
 <li><p>网络部分关于将 <code>.URL</code> 相关的文件中 <code>.URL</code> 改成 <code>.Permalink</code> 以解决 <code>.URL</code> 的上述报错的做法（参考：《<a href="https://blog.hgtweb.com/2019/%E4%BF%AE%E5%A4%8Dleaveit%E4%BB%A5%E6%94%AF%E6%8C%81%E6%9C%80%E6%96%B0%E7%89%88hugo/">LeaveIt以支持最新版Hugo</a>》），经测试如果针对 Menu 级别的 html 模板会引发其他错误；而且虽然 hugo 更新到了 0.56.3，但官方文档示例还在使用 <code>.URL</code> ，参考 <a href="https://github.com/gohugoio/hugo/issues/5835">https://github.com/gohugoio/hugo/issues/5835</a>。</p></li>
 
-<li><p>修改包含 <code>.RSSLink</code> 相关的文件，如下：</p></li>
-</ol>
+<li><p>修改包含 <code>.RSSLink</code> 相关的文件，如下：</p>
 
 <pre><code class="language-go">&lt;!-- 修改前 --&gt;
 {{ if .RSSLink }}
-    &lt;link href=&quot;{{ .RSSLink | relURL }}&quot; rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;{{ .Site.Title }}&quot; /&gt;
+&lt;link href=&quot;{{ .RSSLink | relURL }}&quot; rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;{{ .Site.Title }}&quot; /&gt;
 {{ end }}
 
 &lt;!-- 修改后 --&gt;
 {{ with .OutputFormats.Get &quot;RSS&quot; }}
-    &lt;link href=&quot;{{ .RelPermalink | relURL }}&quot; rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;{{ $.Title }}&quot; /&gt;
+&lt;link href=&quot;{{ .RelPermalink | relURL }}&quot; rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;{{ $.Title }}&quot; /&gt;
 {{ end }}
-</code></pre>
+</code></pre></li>
+</ol>
 
 <p><a name="CiCYG"></a></p>
 

@@ -43,7 +43,7 @@
     <div>
       <div class="intro">
         <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
-          <img src="https://ivc.bioinit.com/img/logo.png" alt="">
+          <img src="https://shenweiyan.github.io/ivc-hugo-theme/img/logo.png" alt="">
         </a>
         <p class="library-desc">
           
@@ -265,27 +265,26 @@
 <h2 id="2-ssh-key-配置">2. SSH KEY 配置</h2>
 
 <ol>
-<li>创建本地机器的 ssh 公钥</li>
-</ol>
+<li><p>创建本地机器的 ssh 公钥</p>
 
 <pre><code class="language-powershell">ssh-keygen -t rsa -b 4096
-</code></pre>
+</code></pre></li>
+</ol>
 
 <p><br />    <img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1561531815344-46d9589f-f0e6-4e8e-a7ba-f7b9f1e4f027.png#align=left&amp;display=inline&amp;height=443&amp;name=image.png&amp;originHeight=443&amp;originWidth=632&amp;size=47027&amp;status=done&amp;width=632" alt="image.png" /></p>
 
 <ol>
-<li>把本地公钥拷贝至远程服务器，windows 下执行命令如下：
-```powershell
-SET REMOTEHOST=your-user-name-on-host@host-fqdn-or-ip-goes-here</li>
-</ol>
+<li><p>把本地公钥拷贝至远程服务器，windows 下执行命令如下：</p>
 
-<p>scp %USERPROFILE%.ssh\id_rsa.pub %REMOTEHOST%:~/tmp.pub
-ssh %REMOTEHOST% &ldquo;mkdir -p ~/.ssh &amp;&amp; chmod 700 ~/.ssh &amp;&amp; cat ~/tmp.pub &gt;&gt; ~/.ssh/authorized_keys &amp;&amp; chmod 600 ~/.ssh/authorized_keys &amp;&amp; rm -f ~/tmp.pub&rdquo;
-```</p>
+<pre><code class="language-powershell">SET REMOTEHOST=your-user-name-on-host@host-fqdn-or-ip-goes-here
 
-<ol>
-<li>配置完成后，在 DOC 中再次执行 <code>ssh IP_ADDRESS -l USERNAME -p PORT</code> 命令，如果可以免密码登陆远程的服务器，说明配置成功。</li>
-<li>更多详细的 ssh key 设置，请参考官方文档：《<a href="https://code.visualstudio.com/docs/remote/troubleshooting">Remote Development Tips and Tricks</a>》。</li>
+scp %USERPROFILE%\.ssh\id_rsa.pub %REMOTEHOST%:~/tmp.pub
+ssh %REMOTEHOST% &quot;mkdir -p ~/.ssh &amp;&amp; chmod 700 ~/.ssh &amp;&amp; cat ~/tmp.pub &gt;&gt; ~/.ssh/authorized_keys &amp;&amp; chmod 600 ~/.ssh/authorized_keys &amp;&amp; rm -f ~/tmp.pub&quot;
+</code></pre></li>
+
+<li><p>配置完成后，在 DOC 中再次执行 <code>ssh IP_ADDRESS -l USERNAME -p PORT</code> 命令，如果可以免密码登陆远程的服务器，说明配置成功。</p></li>
+
+<li><p>更多详细的 ssh key 设置，请参考官方文档：《<a href="https://code.visualstudio.com/docs/remote/troubleshooting">Remote Development Tips and Tricks</a>》。</p></li>
 </ol>
 
 <p><a name="fLDES"></a></p>

@@ -43,7 +43,7 @@
     <div>
       <div class="intro">
         <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
-          <img src="https://ivc.bioinit.com/img/logo.png" alt="">
+          <img src="https://shenweiyan.github.io/ivc-hugo-theme/img/logo.png" alt="">
         </a>
         <p class="library-desc">
           
@@ -203,19 +203,19 @@
 <pre><code class="language-bash">ps -ef | grep ^username | cut -c 10-15 | xargs kill -9
 </code></pre></li>
 
-<li><p>找出所有与 username 相关的进程，然后 grep -v 过滤掉 PID 只剩下进程信息，然后逐行 kill 掉，如下：
-```bash
-ps -u username | grep -v PID | cut -c 0-5 | xargs kill -9</p></li>
+<li><p>找出所有与 username 相关的进程，然后 grep -v 过滤掉 PID 只剩下进程信息，然后逐行 kill 掉，如下：</p>
+
+<pre><code class="language-bash">ps -u username | grep -v PID | cut -c 0-5 | xargs kill -9
+
+#或者
+ps -u username | grep -v PID | awk '{print$1}'| xargs kill -9
+</code></pre></li>
+
+<li><p><strong>上面的命令也可以在 Linux 上运行，不过在 Linux 下可以用更简单的 killall，Solaris 上没有 killall：</strong></p>
+
+<pre><code class="language-bash">killall -u username   #杀掉某个用户在本地的所有进程
+</code></pre></li>
 </ul>
-
-<p>#或者
-ps -u username | grep -v PID | awk &lsquo;{print$1}&rsquo;| xargs kill -9</p>
-
-<pre><code>
-- **上面的命令也可以在 Linux 上运行，不过在 Linux 下可以用更简单的 killall，Solaris 上没有 killall：**
-```bash
-killall -u username   #杀掉某个用户在本地的所有进程
-</code></pre>
 
 
   <footer>

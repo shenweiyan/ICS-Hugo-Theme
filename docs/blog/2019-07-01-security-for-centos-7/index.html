@@ -43,7 +43,7 @@
     <div>
       <div class="intro">
         <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
-          <img src="https://ivc.bioinit.com/img/logo.png" alt="">
+          <img src="https://shenweiyan.github.io/ivc-hugo-theme/img/logo.png" alt="">
         </a>
         <p class="library-desc">
           
@@ -197,8 +197,6 @@
       </header>
 
 
-
-
 <p>作为一个生信人，不管是日常的数据分析还是其他工具应用的开发，服务器的安全始终是一个无法避免的话题。尤其是当我们拿到一台新的服务器，我们需要怎样才能确保它是安全可靠，并最小限度降低它被攻击的可能性？</p>
 
 <p>下面我们就来分享一份关于 CentOS Linux 7 安全的基线设置指南，希望对服务器管理的童鞋有所帮助。</p>
@@ -237,40 +235,32 @@ Protocol 2
 MaxAuthTries 4
 </code></pre></li>
 
-<li><p>设置密码修改最小间隔时间，限制密码更改过于频繁。
-```bash</p>
+<li><p>设置密码修改最小间隔时间，限制密码更改过于频繁。</p>
 
-<h1 id="在-etc-login-defs-中将-pass-min-days-参数设置为7-14之间-建议为7">在 /etc/login.defs 中将 PASS_MIN_DAYS 参数设置为7-14之间,建议为7：</h1>
+<pre><code class="language-bash"># 在 /etc/login.defs 中将 PASS_MIN_DAYS 参数设置为7-14之间,建议为7： 
+PASS_MIN_DAYS 7 
 
-<p>PASS_MIN_DAYS 7</p></li>
-</ol>
+# 需同时执行命令为 root 用户设置： 
+chage --mindays 7 root
+</code></pre></li>
 
-<h1 id="需同时执行命令为-root-用户设置">需同时执行命令为 root 用户设置：</h1>
+<li><p>设置密码失效时间，强制定期修改密码，减少密码被泄漏和猜测风险，使用非密码登陆方式(如密钥对)请忽略此项。</p>
 
-<p>chage &ndash;mindays 7 root</p>
+<pre><code># 使用非密码登陆方式如密钥对，请忽略此项。
 
-<pre><code>
-7. 设置密码失效时间，强制定期修改密码，减少密码被泄漏和猜测风险，使用非密码登陆方式(如密钥对)请忽略此项。
-</code></pre>
+# 在 /etc/login.defs 中将 PASS_MAX_DAYS 参数设置为 60-180之间，如:
+PASS_MAX_DAYS 90
 
-<h1 id="使用非密码登陆方式如密钥对-请忽略此项">使用非密码登陆方式如密钥对，请忽略此项。</h1>
+# 需同时执行命令设置 root 密码失效时间： 
+chage --maxdays 90 root
+</code></pre></li>
 
-<h1 id="在-etc-login-defs-中将-pass-max-days-参数设置为-60-180之间-如">在 /etc/login.defs 中将 PASS_MAX_DAYS 参数设置为 60-180之间，如:</h1>
+<li><p>禁止 SSH 空密码用户登录。</p>
 
-<p>PASS_MAX_DAYS 90</p>
-
-<h1 id="需同时执行命令设置-root-密码失效时间">需同时执行命令设置 root 密码失效时间：</h1>
-
-<p>chage &ndash;maxdays 90 root</p>
-
-<pre><code>
-8. 禁止 SSH 空密码用户登录。
-```bash
-# 编辑文件 /etc/ssh/sshd_config ，将 PermitEmptyPasswords 配置为 no: 
+<pre><code class="language-bash"># 编辑文件 /etc/ssh/sshd_config ，将 PermitEmptyPasswords 配置为 no: 
 PermitEmptyPasswords no 
-</code></pre>
+</code></pre></li>
 
-<ol>
 <li><p>密码复杂度检查，检查密码长度和密码是否使用多种字符类型。</p>
 
 <pre><code class="language-bash"># 编辑 /etc/security/pwquality.conf，把 minlen（密码最小长度）设置为 9-32 位。
@@ -278,49 +268,42 @@ PermitEmptyPasswords no
 minlen=10 minclass=3
 </code></pre></li>
 
-<li><p>确保密码到期警告天数为 7 或更多。
-```bash</p>
+<li><p>确保密码到期警告天数为 7 或更多。</p>
 
-<h1 id="在-etc-login-defs-中将-pass-warn-age-参数设置为7-14之间-建议为7">在 /etc/login.defs 中将 PASS_WARN_AGE 参数设置为7-14之间，建议为7：</h1>
+<pre><code class="language-bash"># 在 /etc/login.defs 中将 PASS_WARN_AGE 参数设置为7-14之间，建议为7： 
+PASS_WARN_AGE 7 
 
-<p>PASS_WARN_AGE 7</p></li>
-</ol>
+# 同时执行命令使 root 用户设置生效： 
+chage --warndays 7 root
+</code></pre></li>
 
-<h1 id="同时执行命令使-root-用户设置生效">同时执行命令使 root 用户设置生效：</h1>
+<li><p>确保 root 是唯一的 UID 为 0 的帐户，除 root 以外其他 UID 为 0 的用户都应该删除，或者为其分配新的 UID。</p>
 
-<p>chage &ndash;warndays 7 root</p>
-
-<pre><code>
-11. 确保 root 是唯一的 UID 为 0 的帐户，除 root 以外其他 UID 为 0 的用户都应该删除，或者为其分配新的 UID。
-```bash
-# 除 root 以外其他 UID 为 0 的用户(查看命令如下)都应该删除，或者为其分配新的 UID。
+<pre><code class="language-bash"># 除 root 以外其他 UID 为 0 的用户(查看命令如下)都应该删除，或者为其分配新的 UID。
 cat /etc/passwd | awk -F: '($3 == 0) { print $1 }'|grep -v '^root$' 
-</code></pre>
+</code></pre></li>
 
-<ol>
 <li><p>开启地址空间布局随机化，它将进程的内存空间地址随机化来增大入侵者预测目的地址难度，从而降低进程被成功入侵的风险。</p>
 
 <pre><code class="language-bash"># 执行命令：
 sysctl -w kernel.randomize_va_space=2
 </code></pre></li>
 
-<li><p>检查系统空密码账户。
-```</p>
+<li><p>检查系统空密码账户。</p>
 
-<h1 id="为用户设置一个非空密码">为用户设置一个非空密码</h1></li>
-</ol>
+<pre><code># 为用户设置一个非空密码
 
-<pre><code>
-14. 访问控制配置文件的权限设置。
-```bash
-# 运行以下4条命令： 
+</code></pre></li>
+
+<li><p>访问控制配置文件的权限设置。</p>
+
+<pre><code class="language-bash"># 运行以下4条命令： 
 $ chown root:root /etc/hosts.allow 
 $ chown root:root /etc/hosts.deny 
 $ chmod 644 /etc/hosts.deny 
 $ chmod 644 /etc/hosts.allow
-</code></pre>
+</code></pre></li>
 
-<ol>
 <li><p>确保 rsyslog 服务已启用，记录日志用于审计。</p>
 
 <pre><code class="language-bash"># 运行以下命令启用rsyslog服务:

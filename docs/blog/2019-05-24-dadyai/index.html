@@ -43,7 +43,7 @@
     <div>
       <div class="intro">
         <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
-          <img src="https://ivc.bioinit.com/img/logo.png" alt="">
+          <img src="https://shenweiyan.github.io/ivc-hugo-theme/img/logo.png" alt="">
         </a>
         <p class="library-desc">
           
@@ -253,12 +253,14 @@ CXX11STD = -std=c++11</p>
 
 
 我个人的解决方法是，直接修改 /Bioinfo/Pipeline/SoftWare/R/R-3.6.0/lib64/R/etc/Makeconf 文件，替换下面的内容：
-```yaml
+</code></pre>
+
+<p>yaml
 CXX11 = g++
 CXX11FLAGS = -O2 -g $(LTO)
 CXX11PICFLAGS = -fPIC
-CXX11STD = 
-</code></pre>
+CXX11STD =
+```</p>
 
 <ul>
 <li>CXX11STD 值必须为空，否则在 R 中** install.packages()** 会出现另外的错误：<strong>cc1plus: error: unrecognized command line option &ldquo;-std=c++11&rdquo;。</strong></li>

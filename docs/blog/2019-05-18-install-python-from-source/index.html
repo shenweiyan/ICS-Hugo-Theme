@@ -43,7 +43,7 @@
     <div>
       <div class="intro">
         <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
-          <img src="https://ivc.bioinit.com/img/logo.png" alt="">
+          <img src="https://shenweiyan.github.io/ivc-hugo-theme/img/logo.png" alt="">
         </a>
         <p class="library-desc">
           
@@ -406,39 +406,44 @@ PKG_CONFIG_PATH=&quot;/Bioinfo/Pipeline/SoftWare/LibDependence/libffi-3.2.1/lib/
 <li><code>--enable-optimizations</code> 是优化选项（LTO,PGO 等）加上这个 flag 编译后，性能有 10% 左右的优化，但是这会明显的增加编译时间。建议使用这个参数；</li>
 <li><code>--prefix</code>  声明安装路径；</li>
 <li>安装多个 python 的版本，如果不开启 <code>--enable-shared</code>，指定不同路径即可。当开启 <code>--enable-shared</code> 时，默认只有一个版本的 python。</li>
-<li>python 3 编译可以使用 <code>--with-openssl=DIR</code> 指定 OpenSSL 安装路径进行编译的方式解决 OpenSSL 依赖，否则 <code>make</code> 过程可能出错。 
-```shell
-$ make
-&hellip;&hellip;
+
+<li><p>python 3 编译可以使用 <code>--with-openssl=DIR</code> 指定 OpenSSL 安装路径进行编译的方式解决 OpenSSL 依赖，否则 <code>make</code> 过程可能出错。 </p>
+
+<pre><code class="language-shell">$ make 
+......
 The following modules found by detect_modules() in setup.py, have been
 built by the Makefile instead, as configured by the Setup files:
 _abc                  atexit                pwd
-time</li>
+time
+
+
+Failed to build these modules:
+_ctypes               _hashlib              _ssl
+
+
+Could not build the ssl module!
+Python requires an OpenSSL 1.0.2 or 1.1 compatible libssl with X509_VERIFY_PARAM_set1_host().
+LibreSSL 2.6.4 and earlier do not provide the necessary APIs, https://github.com/libressl-portable/portable/issues/381
+
+......
+</code></pre></li>
+
+<li><p><code>make</code> 过程如果出现 <code>ModuleNotFoundError: No module named '_ctypes'</code> 或者 <code>INFO: Could not locate ffi libs and/or headers</code> 参考：<a href="https://groups.google.com/forum/#!topic/comp.lang.python/npv-wzmytzo">https://groups.google.com/forum/#!topic/comp.lang.python/npv-wzmytzo</a></p></li>
 </ul>
 
-<p>Failed to build these modules:
-_ctypes               _hashlib              _ssl</p>
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562923411627-eb429b96-2ec8-408e-abbb-05f4e8a320f8.png#align=left&amp;display=inline&amp;height=316&amp;name=image.png&amp;originHeight=316&amp;originWidth=581&amp;size=34010&amp;status=done&amp;width=581" alt="image.png" /></p>
 
-<p>Could not build the ssl module!
-Python requires an OpenSSL 1.0.2 or 1.1 compatible libssl with X509_VERIFY_PARAM_set1_host().
-LibreSSL 2.6.4 and earlier do not provide the necessary APIs, <a href="https://github.com/libressl-portable/portable/issues/381">https://github.com/libressl-portable/portable/issues/381</a></p>
+<ul>
+<li><p>如果指定 <code>--with-openssl=DIR</code> 依然无法解决 ssl 模块的问题，可以参考修改 Modules/Setup.dist 文件（默认这块是注释的，放开注释即可。这块功能是开启 SSL 模块，不然会出现安装完毕后，提示找不到 ssl 模块的错误）再执行 configure，修改内容如下：</p>
 
-<p>&hellip;&hellip;</p>
-
-<pre><code>
-- `make` 过程如果出现 `ModuleNotFoundError: No module named '_ctypes'` 或者 `INFO: Could not locate ffi libs and/or headers` 参考：[https://groups.google.com/forum/#!topic/comp.lang.python/npv-wzmytzo](https://groups.google.com/forum/#!topic/comp.lang.python/npv-wzmytzo)
-
-![image.png](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562923411627-eb429b96-2ec8-408e-abbb-05f4e8a320f8.png#align=left&amp;display=inline&amp;height=316&amp;name=image.png&amp;originHeight=316&amp;originWidth=581&amp;size=34010&amp;status=done&amp;width=581)
-
-- 如果指定 `--with-openssl=DIR` 依然无法解决 ssl 模块的问题，可以参考修改 Modules/Setup.dist 文件（默认这块是注释的，放开注释即可。这块功能是开启 SSL 模块，不然会出现安装完毕后，提示找不到 ssl 模块的错误）再执行 configure，修改内容如下：
-```bash
-# Socket module helper for SSL support; you must comment out the other
+<pre><code class="language-bash"># Socket module helper for SSL support; you must comment out the other
 # socket line above, and possibly edit the SSL variable:
 SSL=/usr/local/ssl
 _ssl _ssl.c \
-    -DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \
-    -L$(SSL)/lib -lssl -lcrypto
-</code></pre>
+-DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \
+-L$(SSL)/lib -lssl -lcrypto
+</code></pre></li>
+</ul>
 
 <p>第三，Makefile 生后依次在当前路径执行编译和安装命令。</p>
 

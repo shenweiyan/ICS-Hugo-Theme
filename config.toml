@@ -1,4 +1,4 @@
-baseurl = "https://ivc.bioinit.com"
+baseurl = "https://shenweiyan.github.io/ivc-hugo-theme/"
 RelativeURLs=true
 CanonifyURLs=true
 languageCode = "zh-cmn-Hans"	                  # html的lang属性值

@@ -43,7 +43,7 @@
     <div>
       <div class="intro">
         <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
-          <img src="https://ivc.bioinit.com/img/logo.png" alt="">
+          <img src="https://shenweiyan.github.io/ivc-hugo-theme/img/logo.png" alt="">
         </a>
         <p class="library-desc">
           
@@ -215,20 +215,20 @@
 
 <ul>
 <li>yarn 安装前需要安装 node.js，并且 node 可以在 <code>$PATH</code> 中找到。</li>
-<li>如果存在<code>~/.yarn</code>，需要先执行<code>rm -rf ~/.yarn</code>，再安装。</li>
-</ul>
+
+<li><p>如果存在<code>~/.yarn</code>，需要先执行<code>rm -rf ~/.yarn</code>，再安装。</p>
 
 <pre><code>shenweiyan@ecs-steven 13:38:05 /home/shenweiyan
 $ curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.12.3
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                             Dload  Upload   Total   Spent    Left  Speed
 100  7041    0  7041    0     0   4115      0 --:--:--  0:00:01 --:--:--  4115
 Installing Yarn!
 &gt; Downloading tarball...
 
 [1/2]: https://yarnpkg.com/downloads/1.12.3/yarn-v1.12.3.tar.gz --&gt; /tmp/yarn.tar.gz.tQbHw7wPEA
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                             Dload  Upload   Total   Spent    Left  Speed
 100    93  100    93    0     0     23      0  0:00:04  0:00:04 --:--:--    23
 100   609    0   609    0     0    132      0 --:--:--  0:00:04 --:--:--  1750
 100 1139k  100 1139k    0     0  16471      0  0:01:10  0:01:10 --:--:-- 80506
@@ -243,7 +243,7 @@ gpg: Good signature from &quot;Yarn Packaging &lt;yarn@dan.cx&gt;&quot;
 gpg: WARNING: This key is not certified with a trusted signature!
 gpg:          There is no indication that the signature belongs to the owner.
 Primary key fingerprint: 72EC F46A 56B4 AD39 C907  BBB7 1646 B01B 86E5 0310
-     Subkey fingerprint: E219 30C4 D0A4 AA46 1858  1F7A E074 D16E B6FF 4DE3
+ Subkey fingerprint: E219 30C4 D0A4 AA46 1858  1F7A E074 D16E B6FF 4DE3
 &gt; GPG signature looks good
 &gt; Extracting to ~/.yarn...
 &gt; Adding to $PATH...
@@ -253,7 +253,8 @@ Primary key fingerprint: 72EC F46A 56B4 AD39 C907  BBB7 1646 B01B 86E5 0310
 export PATH=&quot;$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH&quot;
 
 &gt; Successfully installed Yarn 1.12.3! Please open another terminal where the `yarn` command will now be available.
-</code></pre>
+</code></pre></li>
+</ul>
 
 <p>手动转移 yarn 至指定目录：</p>
 

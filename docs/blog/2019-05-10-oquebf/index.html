@@ -43,7 +43,7 @@
     <div>
       <div class="intro">
         <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
-          <img src="https://ivc.bioinit.com/img/logo.png" alt="">
+          <img src="https://shenweiyan.github.io/ivc-hugo-theme/img/logo.png" alt="">
         </a>
         <p class="library-desc">
           
@@ -198,34 +198,31 @@
 
 
 <ol>
-<li>本地创建分支 v-1.2
-```shell
-$ git branch v-1.2
-$ git branch</li>
+<li><p>本地创建分支 v-1.2</p>
 
-<li><p>master
+<pre><code class="language-shell">$ git branch v-1.2
+$ git branch
+* master
 v-1.2
-```</p></li>
+</code></pre></li>
 
-<li><p>切换本地分支
-```shell
-$ git branch</p></li>
+<li><p>切换本地分支</p>
 
-<li><p>master
-v-1.2</p></li>
-</ol>
+<pre><code class="language-shell">$ git branch
+* master
+v-1.2
 
-<p>$ git checkout v-1.2
-Switched to branch &lsquo;v-1.2&rsquo;</p>
+$ git checkout v-1.2
+Switched to branch 'v-1.2'
 
-<p>$ git branch
-  master
-* v-1.2</p>
+$ git branch
+master
+* v-1.2
+</code></pre></li>
 
-<pre><code>
-3. 把本地分支提交到远程分支仓库
-```shell
-$ git add --all
+<li><p>把本地分支提交到远程分支仓库</p>
+
+<pre><code class="language-shell">$ git add --all
 
 $ git commit -m &quot;ASO design for Galaxy version 1.2&quot;
 
@@ -238,19 +235,18 @@ Compressing objects: 100% (17/17), done.
 Writing objects: 100% (18/18), 29.87 KiB | 0 bytes/s, done.
 Total 18 (delta 3), reused 0 (delta 0)
 To https://git.dev.tencent.com/shenweiyan/aso_design.git
- * [new branch]      v-1.2 -&gt; v-1.2
-</code></pre>
+* [new branch]      v-1.2 -&gt; v-1.2
+</code></pre></li>
 
-<ol>
-<li>查看一下远程仓库有几个分支
-```shell
-$ git branch -a
-master</li>
-<li>v-1.2
+<li><p>查看一下远程仓库有几个分支</p>
+
+<pre><code class="language-shell">$ git branch -a
+master
+* v-1.2
 remotes/origin/HEAD -&gt; origin/master
 remotes/origin/master
 remotes/origin/v-1.2
-```</li>
+</code></pre></li>
 </ol>
 
 

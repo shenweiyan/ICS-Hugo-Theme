@@ -43,7 +43,7 @@
     <div>
       <div class="intro">
         <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
-          <img src="https://ivc.bioinit.com/img/logo.png" alt="">
+          <img src="https://shenweiyan.github.io/ivc-hugo-theme/img/logo.png" alt="">
         </a>
         <p class="library-desc">
           
@@ -387,39 +387,31 @@ downloaded 3801 bytes
 <p>在你花费更多时间使用 R 之后，你每周甚至每天都会使用<code>install.packages()</code> 几次是正常的，考虑到 R 软件包的开发速度，你可能需要更新或者更换你心爱的 R 包。 在本节中，您将找到一些可以帮助您管理集合的功能。</p>
 
 <ul>
-<li>要检查计算机上已经安装的 R 软件包，您可以使用：</li>
-</ul>
+<li><p>要检查计算机上已经安装的 R 软件包，您可以使用：</p>
 
 <pre><code>installed.packages()
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li>使用 <code>remove.packages()</code> 函数卸载软件包非常简单：</li>
-</ul>
+<li><p>使用 <code>remove.packages()</code> 函数卸载软件包非常简单：</p>
 
 <pre><code>remove.packages(&quot;vioplot&quot;)
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li>您可以通过调用函数来检查需要更新的软件包：</li>
-</ul>
+<li><p>您可以通过调用函数来检查需要更新的软件包：</p>
 
 <pre><code>old.packages()
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li>您可以使用以下命令更新所有包：</li>
-</ul>
+<li><p>您可以使用以下命令更新所有包：</p>
 
 <pre><code>update.packages()
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li>对于特定的包，只需再次使用 <code>install.packages()</code> 即可升级：</li>
-</ul>
+<li><p>对于特定的包，只需再次使用 <code>install.packages()</code> 即可升级：</p>
 
 <pre><code>install.packages(&quot;vioplot&quot;)
-</code></pre>
+</code></pre></li>
+</ul>
 
 <p><a name="etazlx"></a></p>
 
@@ -640,31 +632,29 @@ extending-ggplot2       Extending ggplot2 (source, html)
 <p>直接在 R 或 RStudio 面板上使用 RDocumentation 比网站使用提供了一些优势：</p>
 
 <ul>
-<li>检查已安装的软件包版本。 程序包的帮助窗格将为您提供与网页相同的信息（下载，说明，功能列表，详细信息），以及有关已安装的程序包版本的信息。例如，检查先前安装的 vioplot 软件包：</li>
-</ul>
+<li><p>检查已安装的软件包版本。 程序包的帮助窗格将为您提供与网页相同的信息（下载，说明，功能列表，详细信息），以及有关已安装的程序包版本的信息。例如，检查先前安装的 vioplot 软件包：</p>
 
 <pre><code>install.packages(&quot;RDocumentation&quot;)
 library(RDocumentation)
 help(package = &quot;vioplot&quot;)
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li>能够直接从帮助面板安装或更新软件包。 我知道现在你是安装软件包的专家，但是你可以通过点击 RDocumentation 提供的帮助面板上的一个按钮来实现它。</li>
-</ul>
+<li><p>能够直接从帮助面板安装或更新软件包。 我知道现在你是安装软件包的专家，但是你可以通过点击 RDocumentation 提供的帮助面板上的一个按钮来实现它。</p>
 
 <pre><code>remove.packages(&quot;vioplot&quot;)
 help(package = &quot;vioplot&quot;)
-</code></pre>
+</code></pre></li>
+</ul>
 
 <p><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/rdocumentation_help_install.png/bioinit#width=" alt="" /></p>
 
 <ul>
-<li>运行并提出示例。 包中函数的帮助窗格将为您提供仅通过单击按钮就可以再次运行示例的选项。 您还可以提出可以合并到帮助页面并由其他 R 用户测试的示例。</li>
-</ul>
+<li><p>运行并提出示例。 包中函数的帮助窗格将为您提供仅通过单击按钮就可以再次运行示例的选项。 您还可以提出可以合并到帮助页面并由其他 R 用户测试的示例。</p>
 
 <pre><code>install.packages(&quot;vioplot&quot;)
 help(vioplot)
-</code></pre>
+</code></pre></li>
+</ul>
 
 <p><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/topics_vioplot.png/bioinit#width=" alt="" /></p>
 

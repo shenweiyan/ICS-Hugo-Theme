@@ -43,7 +43,7 @@
     <div>
       <div class="intro">
         <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
-          <img src="https://ivc.bioinit.com/img/logo.png" alt="">
+          <img src="https://shenweiyan.github.io/ivc-hugo-theme/img/logo.png" alt="">
         </a>
         <p class="library-desc">
           
@@ -229,11 +229,12 @@
 
 <ul>
 <li>步骤一：使用命令 lastb -20 查看，如果有大量的未知 IP, 加上时间分析。极短时间内出现多次，则可以确定受到 SSH 攻击。</li>
-<li>步骤二：查看登陆失败的用户 IP，读取 /var/log/secure，查找关键字 Failed，如果是 SSH 攻击，会有很多的 IP被列出来。</li>
-</ul>
+
+<li><p>步骤二：查看登陆失败的用户 IP，读取 /var/log/secure，查找关键字 Failed，如果是 SSH 攻击，会有很多的 IP被列出来。</p>
 
 <pre><code class="language-bash">cat /var/log/secure | grep 'Failed password'
-</code></pre>
+</code></pre></li>
+</ul>
 
 <p><strong>其次，对目标 IP 进行黑白名单处理。</strong></p>
 
@@ -246,50 +247,46 @@
 
 <ol>
 <li>创建存放实施攻击的 ip 的文本，命名为：denyhosts.txt（/root/denyhosts/denyhosts.txt）。</li>
-<li>创建定时脚本文件，命名为：denyhosts.sh（/root/denyhosts/denyhosts.sh）。
-```bash
-#!/bin/bash</li>
-</ol>
 
-<p>cat /var/log/secure|awk &lsquo;/Failed/{print $(NF-3)}&rsquo;|sort|uniq -c|awk &lsquo;{print $2&rdquo;=&rdquo; $1;}&rsquo; &gt;/root/denyhosts/denyhosts.txt</p>
+<li><p>创建定时脚本文件，命名为：denyhosts.sh（/root/denyhosts/denyhosts.sh）。</p>
 
-<p>DEFINE=&ldquo;5&rdquo;</p>
+<pre><code class="language-bash">#!/bin/bash
 
-<p>for i in <code>cat /root/denyhosts/denyhosts.txt</code>
+cat /var/log/secure|awk '/Failed/{print $(NF-3)}'|sort|uniq -c|awk '{print $2&quot;=&quot; $1;}' &gt;/root/denyhosts/denyhosts.txt
+
+DEFINE=&quot;5&quot;
+
+for i in `cat /root/denyhosts/denyhosts.txt`
 do
-	  IP=<code>echo $i|awk -F '=' '{print $1}'</code>
-    NUM=<code>echo $i|awk -F '=' '{print $2}'</code>
-    if [ $NUM -gt $DEFINE ];then
-				ipExists=<code>grep $IP /etc/hosts.deny |grep -v grep |wc -l</code>
-        if [ $ipExists -lt 1 ];then
-            echo &ldquo;sshd:$IP&rdquo; &gt;&gt; /etc/hosts.deny
-        fi
+	  IP=`echo $i|awk -F '=' '{print $1}'`
+NUM=`echo $i|awk -F '=' '{print $2}'`
+if [ $NUM -gt $DEFINE ];then
+				ipExists=`grep $IP /etc/hosts.deny |grep -v grep |wc -l`
+    if [ $ipExists -lt 1 ];then
+        echo &quot;sshd:$IP&quot; &gt;&gt; /etc/hosts.deny
     fi
-done</p>
+fi
+done
+</code></pre></li>
 
-<pre><code>
-3. 脚本创建好之后，将脚本的权限更改为可执行权限： `chmod a+x denyhosts.sh` 。
-3. SSH 攻击是每时每刻都在发动攻击的，所以我们需要将脚本添加到定时任务中，定时的执行：
-```bash
-cat /etc/crontab # 这个文本是存放定时脚本的文本
-</code></pre>
+<li><p>脚本创建好之后，将脚本的权限更改为可执行权限： <code>chmod a+x denyhosts.sh</code> 。</p></li>
 
-<ol>
-<li>将脚本添加到定时任务：
-```bash
-crontab -e</li>
-</ol>
+<li><p>SSH 攻击是每时每刻都在发动攻击的，所以我们需要将脚本添加到定时任务中，定时的执行：</p>
 
-<h1 id="每分钟执行一次-执行用户是-root-执行的脚本是-root-denyhosts-denyhosts-sh">每分钟执行一次，执行用户是 root 执行的脚本是 /root/denyhosts/denyhosts.sh</h1>
+<pre><code class="language-bash">cat /etc/crontab # 这个文本是存放定时脚本的文本
+</code></pre></li>
 
-<ul>
-<li>* * * * root /root/denyhosts/denyhosts.sh
-```</li>
-</ul>
+<li><p>将脚本添加到定时任务：</p>
 
-<ol>
-<li>查看是否将脚本添加到定时任务：<strong>crontab -l</strong>，如果出现我们的定时执行任务，则添加成功；后期如果需要删除此定时任务的话，通过：<strong>crontab -r</strong> 取消。</li>
-<li>使用命令  <strong>lastb -20</strong> (查看尝试登录我们服务器，但是登陆失败的 IP)，成功的看到，那些之前一秒钟发动几十次攻击的 IP 不存在了。</li>
+<pre><code class="language-bash">crontab -e
+
+# 每分钟执行一次，执行用户是 root 执行的脚本是 /root/denyhosts/denyhosts.sh
+* * * * * root /root/denyhosts/denyhosts.sh
+</code></pre></li>
+
+<li><p>查看是否将脚本添加到定时任务：<strong>crontab -l</strong>，如果出现我们的定时执行任务，则添加成功；后期如果需要删除此定时任务的话，通过：<strong>crontab -r</strong> 取消。</p></li>
+
+<li><p>使用命令  <strong>lastb -20</strong> (查看尝试登录我们服务器，但是登陆失败的 IP)，成功的看到，那些之前一秒钟发动几十次攻击的 IP 不存在了。</p></li>
 </ol>
 
 <ul>
