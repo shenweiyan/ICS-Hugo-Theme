@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Steven Shen | 沈维燕</title>
-    <link>https://shenweiyan.github.io/ivs-hugo-theme/tags/linux/</link>
+    <link>https://shenweiyan.github.io/ics-hugo-theme/tags/linux/</link>
     <description>Recent content in Linux on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Fri, 19 Jul 2019 06:06:53 +0000</lastBuildDate>
     
-	<atom:link href="https://shenweiyan.github.io/ivs-hugo-theme/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shenweiyan.github.io/ics-hugo-theme/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Linux 磁盘管理：LVM 逻辑卷管理器</title>
-      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-19-linux-lvm/</link>
+      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-19-linux-lvm/</link>
       <pubDate>Fri, 19 Jul 2019 06:06:53 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-19-linux-lvm/</guid>
+      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-19-linux-lvm/</guid>
       <description>LVM （ Logical V olume Manager, 逻辑卷管理器） 是 Linux 环境下对硬盘分区进行管理的一种机制，开创这项技术的初衷是为了解决传统硬盘分区创建后不易更改其大小的弱点。对于传</description>
     </item>
     
     <item>
       <title>基于 Web 的 Linux 终端 WebTerminal</title>
-      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-webterminal-for-linux/</link>
+      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-01-webterminal-for-linux/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-webterminal-for-linux/</guid>
+      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-01-webterminal-for-linux/</guid>
       <description>有时候用公共电脑，或者在没有安装 putty、xshell 之类的终端的电脑上访问或展示服务器上的一些资料数据，甚至是在运维平台开发中想要嵌入 WebTerminal</description>
     </item>
     

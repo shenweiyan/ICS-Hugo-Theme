@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>生信 on Steven Shen | 沈维燕</title>
-    <link>https://shenweiyan.github.io/ivs-hugo-theme/tags/%E7%94%9F%E4%BF%A1/</link>
+    <link>https://shenweiyan.github.io/ics-hugo-theme/tags/%E7%94%9F%E4%BF%A1/</link>
     <description>Recent content in 生信 on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Mon, 05 Aug 2019 06:17:11 +0000</lastBuildDate>
     
-	<atom:link href="https://shenweiyan.github.io/ivs-hugo-theme/tags/%E7%94%9F%E4%BF%A1/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shenweiyan.github.io/ics-hugo-theme/tags/%E7%94%9F%E4%BF%A1/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bioconductor org.Xx.eg.db 系列包</title>
-      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-05-nd8gh3/</link>
+      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-08-05-nd8gh3/</link>
       <pubDate>Mon, 05 Aug 2019 06:17:11 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-05-nd8gh3/</guid>
+      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-08-05-nd8gh3/</guid>
       <description>在 bioconductor 的官网里面可以查找到 &amp;ldquo;OrgDb&amp;rdquo; 的包大约有 19 个，基本上跨越了我们生物信息分析中最常用的物种啦！ 完整链接：http://bioconductor.o</description>
     </item>
     
     <item>
       <title>一款能使压缩 fq 再缩小 30% 并加速后续分析的软件</title>
-      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-04-clumpify/</link>
+      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-04-clumpify/</link>
       <pubDate>Thu, 04 Jul 2019 06:11:47 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-04-clumpify/</guid>
+      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-04-clumpify/</guid>
       <description>Clumpify 是 BBMap 工具包中的一个组件，它与其他工具略有不同的是 Clumpify 不会实际更改你的数据，只是重新排序以最大化 gzip 压缩。因此，输出文件仍然是完全兼容的 gzipped fastq 文件</description>
     </item>
     
     <item>
       <title>使用 Python 中的 mygene 模块进行 ID 匹配</title>
-      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-python-mygene/</link>
+      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-01-python-mygene/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-python-mygene/</guid>
+      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-01-python-mygene/</guid>
       <description>一、背景 对于每个生物信息分析的人来说，ID 匹配（映射）是一项非常常见，但又很繁琐的任务。假设，我们有一个来自上游分析的 gene symbol 或报告的 ID 列表，然</description>
     </item>
     
     <item>
       <title>基于 ggplot2 的解剖图和组织模块可视化</title>
-      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-r-gganatogram/</link>
+      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-01-r-gganatogram/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-r-gganatogram/</guid>
+      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-01-r-gganatogram/</guid>
       <description>摘要 将数据显示到解剖结构上，是一种可以快速观察组织相关信息的便捷技术。然而，绘制组织是一项复杂的任务（a complex task），需要解剖学和艺术方面的</description>
     </item>
     
     <item>
       <title>生物信息学博客与论坛</title>
-      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-29-bio-blogs-forums/</link>
+      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-05-29-bio-blogs-forums/</link>
       <pubDate>Wed, 29 May 2019 06:12:49 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-29-bio-blogs-forums/</guid>
+      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-05-29-bio-blogs-forums/</guid>
       <description>关于生物信息学的博客与论坛。 国内篇： 谢益辉个人主页：http://yihui.name/ R 语言大神个人主页，基于 Hugo。 leoatchina(leo 陶）的博客：ht</description>
     </item>
     

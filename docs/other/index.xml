@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>生活不止眼前的苟且，还有诗和远方 on Steven Shen | 沈维燕</title>
-    <link>https://shenweiyan.github.io/ivs-hugo-theme/other/</link>
+    <link>https://shenweiyan.github.io/ics-hugo-theme/other/</link>
     <description>Recent content in 生活不止眼前的苟且，还有诗和远方 on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Sat, 10 Aug 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://shenweiyan.github.io/ivs-hugo-theme/other/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shenweiyan.github.io/ics-hugo-theme/other/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

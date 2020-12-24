@@ -2,75 +2,75 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Steven Shen | 沈维燕</title>
-    <link>https://shenweiyan.github.io/ivs-hugo-theme/tags/python/</link>
+    <link>https://shenweiyan.github.io/ics-hugo-theme/tags/python/</link>
     <description>Recent content in Python on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Mon, 01 Jul 2019 03:50:35 +0000</lastBuildDate>
     
-	<atom:link href="https://shenweiyan.github.io/ivs-hugo-theme/tags/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shenweiyan.github.io/ics-hugo-theme/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Python 文件与目录操作方法总结</title>
-      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-python-file-directory-toturial/</link>
+      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-01-python-file-directory-toturial/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-python-file-directory-toturial/</guid>
+      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-01-python-file-directory-toturial/</guid>
       <description>Python 有很多内置的模块和函数可用于文件的操作处理，这些函数都分布在几个模块上：如 os，os.path，shutil 和pathlib 等等。本文收集</description>
     </item>
     
     <item>
       <title>使用 Python 中的 mygene 模块进行 ID 匹配</title>
-      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-python-mygene/</link>
+      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-01-python-mygene/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-python-mygene/</guid>
+      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-01-python-mygene/</guid>
       <description>一、背景 对于每个生物信息分析的人来说，ID 匹配（映射）是一项非常常见，但又很繁琐的任务。假设，我们有一个来自上游分析的 gene symbol 或报告的 ID 列表，然</description>
     </item>
     
     <item>
       <title>利用 python 的 sorted 函数对字典按 key 排序和按 value 排序</title>
-      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-18-python-sorted/</link>
+      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-05-18-python-sorted/</link>
       <pubDate>Sat, 18 May 2019 12:50:51 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-18-python-sorted/</guid>
+      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-05-18-python-sorted/</guid>
       <description>我们知道 Python 的内置 dictionary 数据类型是无序的，通过 key 来获取对应的 value。可是有时我们需要对 dictionary 中的 item 进行排序输出，可能根据 key，也可能根据 value 来排。</description>
     </item>
     
     <item>
       <title>Python 正则匹配总结</title>
-      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-18-python-match/</link>
+      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-05-18-python-match/</link>
       <pubDate>Sat, 18 May 2019 12:48:56 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-18-python-match/</guid>
+      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-05-18-python-match/</guid>
       <description>正则表达式是用于处理字符串的强大工具，拥有自己独特的语法以及一个独立的处理引擎，效率上可能不如 str 自带的方法，但功能十分强大。本文介绍了 Python 对于</description>
     </item>
     
     <item>
       <title>python3 中 os.path 模块常用用法总结</title>
-      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-18-python-os-path/</link>
+      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-05-18-python-os-path/</link>
       <pubDate>Sat, 18 May 2019 12:44:59 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-18-python-os-path/</guid>
+      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-05-18-python-os-path/</guid>
       <description>os.path：常见的路径名操作模块。原文文档链接：https://docs.python.org/3.6/library/os.path.</description>
     </item>
     
     <item>
       <title>聊一聊 Python 安装中的 --enable-shared</title>
-      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-18-python-enable-shared/</link>
+      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-05-18-python-enable-shared/</link>
       <pubDate>Sat, 18 May 2019 12:17:49 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-18-python-enable-shared/</guid>
+      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-05-18-python-enable-shared/</guid>
       <description>今天在 CentOS 7.4 使用源码编译安装 Python-2.7.15 的时候，发现了一个非常奇怪的问题： $ ./configure --prefix=/home/steven/python-2.7 --enable-shared $ make $ make install 安装完成，进入 /home/steven/python-2.7/bin/python 命令行，发现 Python 变成了 2.7.5。安装过程中既</description>
     </item>
     
     <item>
       <title>Linux 下 Python 源码编译安装</title>
-      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-18-install-python-from-source/</link>
+      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-05-18-install-python-from-source/</link>
       <pubDate>Sat, 18 May 2019 12:10:10 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-18-install-python-from-source/</guid>
+      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-05-18-install-python-from-source/</guid>
       <description>基于 CentOS Linux release 6.5 源码编译安装 python-2.7.xx(Python-3.x.xx) 的一些步骤，以下为安装记录。 1. 安装环境 os : CentOS Linux release 6.5 (x86_64) gcc: 4.8.5 20150623 2. 安装步骤 如果您拥有 root 权限，请执以下依赖安装： yum install zlib yum install</description>
     </item>
     
