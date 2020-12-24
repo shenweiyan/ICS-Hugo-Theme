@@ -62,11 +62,11 @@ publishDir = "docs"
     weight = 9
 
 [[menu.topic]]
-    name = "Home"
+    name = "首页"
     url = "/"
     weight = 1
 [[menu.topic]]
-    name = "Galaxy"
+    name = "生信"
     url = "/topic/galaxy/"
     weight = 2
 
