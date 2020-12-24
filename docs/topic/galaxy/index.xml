@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>生物信息学专栏文章 on Steven Shen | 沈维燕</title>
-    <link>https://shenweiyan.github.io/ivc-hugo-theme/topic/galaxy/</link>
+    <link>https://shenweiyan.github.io/ivs-hugo-theme/topic/galaxy/</link>
     <description>Recent content in 生物信息学专栏文章 on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Tue, 31 Jan 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://shenweiyan.github.io/ivc-hugo-theme/topic/galaxy/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shenweiyan.github.io/ivs-hugo-theme/topic/galaxy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[生信专栏]Anaconda 使用的一些体验与困惑</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/topic/galaxy/2019-07-04-anaconda-experience/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/topic/galaxy/2019-07-04-anaconda-experience/</link>
       <pubDate>Thu, 04 Jul 2019 06:20:26 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/topic/galaxy/2019-07-04-anaconda-experience/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/topic/galaxy/2019-07-04-anaconda-experience/</guid>
       <description>1. channels 使用 需要注意的是做生信分析的童鞋使用 conda 环境时一定要特别注意 conda channels 的设置，滥用 channels 很有可能会导致你的软件升降级（甚至环境）错乱。推荐设置如下（</description>
     </item>
     

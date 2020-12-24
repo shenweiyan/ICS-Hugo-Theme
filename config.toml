@@ -1,4 +1,4 @@
-baseurl = "https://shenweiyan.github.io/ivc-hugo-theme/"
+baseurl = "https://shenweiyan.github.io/ivs-hugo-theme/"
 RelativeURLs=true
 CanonifyURLs=true
 languageCode = "zh-cmn-Hans"	                  # html的lang属性值
@@ -71,11 +71,11 @@ publishDir = "docs"
     weight = 2
 
 [params]
-    siteurl = "https://shenweiyan.github.io/ivc-hugo-theme/"
+    siteurl = "https://shenweiyan.github.io/ivs-hugo-theme/"
     description = "Welcome to the blog site of Steven Shen."
     disqusURL = "https://shenweiyan.github.io/home/"
     customJS = ["js/fix-toc.js", "js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js", "js/external-link.js", "js/alt-title.js", "js/header-link.js", "js/dom-scripts.js"]
-    githubContentURL = "https://github.com/shenweiyan/home/edit/master/content/"
+    githubContentURL = "https://github.com/shenweiyan/ivs-hugo-theme/edit/master/content/"
     # options for highlight.js (version, additional languages, and theme)
     highlightjsVersion = "9.12.0"
     highlightjsLang = ["r", "yaml", "tex"]

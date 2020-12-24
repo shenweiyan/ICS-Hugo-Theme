@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chrome on Steven Shen | 沈维燕</title>
-    <link>https://shenweiyan.github.io/ivc-hugo-theme/tags/chrome/</link>
+    <link>https://shenweiyan.github.io/ivs-hugo-theme/tags/chrome/</link>
     <description>Recent content in Chrome on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Sat, 18 May 2019 12:29:57 +0000</lastBuildDate>
     
-	<atom:link href="https://shenweiyan.github.io/ivc-hugo-theme/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shenweiyan.github.io/ivs-hugo-theme/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>chrome 超详细使用教程</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-18-chrome-tutorial/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-18-chrome-tutorial/</link>
       <pubDate>Sat, 18 May 2019 12:29:57 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-18-chrome-tutorial/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-18-chrome-tutorial/</guid>
       <description>调查统计机构 NetMarketShare 发布最新的 7 月份报告，在全球浏览器市场，谷歌浏览器以 61.64% 的市场占有率继续成为世界上排名第一的桌面浏览器，IE 以 12.06% 紧随其后，Fir</description>
     </item>
     

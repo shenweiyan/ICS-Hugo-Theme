@@ -2,498 +2,498 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>others on Steven Shen | 沈维燕</title>
-    <link>https://shenweiyan.github.io/ivc-hugo-theme/tags/others/</link>
+    <link>https://shenweiyan.github.io/ivs-hugo-theme/tags/others/</link>
     <description>Recent content in others on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Mon, 19 Aug 2019 02:57:02 +0000</lastBuildDate>
     
-	<atom:link href="https://shenweiyan.github.io/ivc-hugo-theme/tags/others/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shenweiyan.github.io/ivs-hugo-theme/tags/others/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>沉默的大多数</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-19-moc049/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-19-moc049/</link>
       <pubDate>Mon, 19 Aug 2019 02:57:02 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-19-moc049/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-19-moc049/</guid>
       <description>表达一个人要有自己独立的思想，任何想将个人的思想凌驾于大众或迫使大众去遵从的都是不对的。 拿破仑说：一头狮子带领的一群羊可以打败一只羊带领的一</description>
     </item>
     
     <item>
       <title>语雀图片与七牛云之间的迁移同步</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-08-sync-from-yuque-to-qiniu/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-08-sync-from-yuque-to-qiniu/</link>
       <pubDate>Thu, 08 Aug 2019 03:44:11 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-08-sync-from-yuque-to-qiniu/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-08-sync-from-yuque-to-qiniu/</guid>
       <description>昨天登录 Github Jekyll 博客时候，忽然发现很多文章的图片都出现了 404！后来检查才知道，原来从 2019.08.07 起，语雀上的一些静态图片开启了防外链设置，因此之前通过 api</description>
     </item>
     
     <item>
       <title>FlexSlider 和 RaxusSlider 插件相关参数</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-07-flex-slider-and-raxus-slider/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-07-flex-slider-and-raxus-slider/</link>
       <pubDate>Wed, 07 Aug 2019 08:54:07 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-07-flex-slider-and-raxus-slider/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-07-flex-slider-and-raxus-slider/</guid>
       <description>FlexSlider 链接：http://flexslider.woothemes.com/ FlexSlider 是一个非常出色的 jQuery 滑动切换插件，它支持所有主流浏览器，并有淡入淡出</description>
     </item>
     
     <item>
       <title>一些好玩又有趣的开源项目</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-05-rgvbqq/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-05-rgvbqq/</link>
       <pubDate>Mon, 05 Aug 2019 07:12:52 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-05-rgvbqq/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-05-rgvbqq/</guid>
       <description>https://github.com/1c7/chinese-independent-developer，中国独立开发者项目列表，分享大家都</description>
     </item>
     
     <item>
       <title>Bioconductor org.Xx.eg.db 系列包</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-05-nd8gh3/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-05-nd8gh3/</link>
       <pubDate>Mon, 05 Aug 2019 06:17:11 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-05-nd8gh3/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-05-nd8gh3/</guid>
       <description>在 bioconductor 的官网里面可以查找到 &amp;ldquo;OrgDb&amp;rdquo; 的包大约有 19 个，基本上跨越了我们生物信息分析中最常用的物种啦！ 完整链接：http://bioconductor.o</description>
     </item>
     
     <item>
       <title>Linux 下的动态库、静态库与环境变量</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-19-cvmlfu/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-19-cvmlfu/</link>
       <pubDate>Fri, 19 Jul 2019 02:22:00 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-19-cvmlfu/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-19-cvmlfu/</guid>
       <description>最近这几天在处理集群软件的过程中，遇到各种各样的库和环境变量的问题，被虐的不清！趁此机会，整理了一下 Linux 下静态库、动态库（共享库）和环境变量的</description>
     </item>
     
     <item>
       <title>Linux 下的进程管理</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-19-ucig1a/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-19-ucig1a/</link>
       <pubDate>Fri, 19 Jul 2019 01:01:22 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-19-ucig1a/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-19-ucig1a/</guid>
       <description>找出 username 用户所有进程包括子进程并全部kill掉： ps -ef | grep ^username | cut -c 10-15 | xargs kill -9 找出所有与 username 相关的进程，然后 grep -v 过滤掉 PID 只剩下进程信息，然后逐行 kill 掉</description>
     </item>
     
     <item>
       <title>发现了阿里云 APP 的一个小 BUG</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-17-bugs-of-aliyun-app/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-17-bugs-of-aliyun-app/</link>
       <pubDate>Wed, 17 Jul 2019 06:26:57 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-17-bugs-of-aliyun-app/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-17-bugs-of-aliyun-app/</guid>
       <description>前几天在华为手机上使用阿里云 APP，从 oss bucket 中下载了一张图片，想要通过微信把它发给一个朋友时，发现在打开微信选择照片时却无法找到新下载的图片。</description>
     </item>
     
     <item>
       <title>一次&#34;胆战心惊&#34;的真实集群运维经历</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-12-hpc-experience-glibc/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-12-hpc-experience-glibc/</link>
       <pubDate>Fri, 12 Jul 2019 23:02:05 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-12-hpc-experience-glibc/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-12-hpc-experience-glibc/</guid>
       <description>周五在安装一个用于 CNV 检测的软件 CNVnator 的时候，不小心修改了 /lib64/libc.so.6 文件，结果导致了整个系统所有命令基本都不可用： [root@log01 lib64]# ls ls: error while loading shared libraries: libc.so.6: cannot open shared object file: No such file or directory</description>
     </item>
     
     <item>
       <title>来自于其他网站推荐的几本书</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-09-books-from-jiweiyang/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-09-books-from-jiweiyang/</link>
       <pubDate>Tue, 09 Jul 2019 06:07:09 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-09-books-from-jiweiyang/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-09-books-from-jiweiyang/</guid>
       <description>《傅雷家书》 这本书包含什么：青年人的自律和子女的教育。 本书为我带了了什么 自律，这本书我比别人读的晚很多，但在这本书中，我学到了傅聪的自律精神</description>
     </item>
     
     <item>
       <title>一两句话摘录</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-09-the-words/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-09-the-words/</link>
       <pubDate>Tue, 09 Jul 2019 05:56:34 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-09-the-words/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-09-the-words/</guid>
       <description>人在看不见你更期望的路标时总是会变得消极。</description>
     </item>
     
     <item>
       <title>中国联通家庭宽带</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-08-unicom_broadband/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-08-unicom_broadband/</link>
       <pubDate>Mon, 08 Jul 2019 01:51:47 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-08-unicom_broadband/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-08-unicom_broadband/</guid>
       <description>从星期四起，家里用了两年的联通宽带网络到期，断了。 没有任何提前的信息提示，也不能在线充值续费； 去营业厅办理续费必须要身份证，居住证、驾驶证、</description>
     </item>
     
     <item>
       <title>周末小折腾，愿你安好</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-08-to-be-good/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-08-to-be-good/</link>
       <pubDate>Mon, 08 Jul 2019 01:07:48 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-08-to-be-good/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-08-to-be-good/</guid>
       <description>昨天，7月7日，挺顺口的一个日子。公司体检和家里小孩子咳嗽感冒撞到了一起。 关于体检 从早 7 点开始，从公司集合到体检地点，从领号、报到取表、开始</description>
     </item>
     
     <item>
       <title>阿里云 ECS&#43;Docker&#43;WordPress 搭建个人博客</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-04-ecs-docker-wordpress-ssl/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-04-ecs-docker-wordpress-ssl/</link>
       <pubDate>Thu, 04 Jul 2019 06:16:29 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-04-ecs-docker-wordpress-ssl/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-04-ecs-docker-wordpress-ssl/</guid>
       <description>虽然已经入手 leanote，开启了以笔记+博客的方式记录学习生活琐事，但当手上有个续费了三年的 ECS，总想折腾点事情。于是想着在阿里云 ECS 上，</description>
     </item>
     
     <item>
       <title>一款能使压缩 fq 再缩小 30% 并加速后续分析的软件</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-04-clumpify/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-04-clumpify/</link>
       <pubDate>Thu, 04 Jul 2019 06:11:47 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-04-clumpify/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-04-clumpify/</guid>
       <description>Clumpify 是 BBMap 工具包中的一个组件，它与其他工具略有不同的是 Clumpify 不会实际更改你的数据，只是重新排序以最大化 gzip 压缩。因此，输出文件仍然是完全兼容的 gzipped fastq 文件</description>
     </item>
     
     <item>
       <title>使用阿里云 ECS 搭建自己的 Leanote 云笔记服务</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-04-leanote-for-ecs-tutorial/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-04-leanote-for-ecs-tutorial/</link>
       <pubDate>Thu, 04 Jul 2019 06:03:23 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-04-leanote-for-ecs-tutorial/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-04-leanote-for-ecs-tutorial/</guid>
       <description>Leanote（中文名 &amp;ldquo;蚂蚁笔记&amp;rdquo;），横跨 Windows、MacOS、Android、iOS、Linux 多平台，支持</description>
     </item>
     
     <item>
       <title>给自己定个读书小目标</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-04-reading-flags/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-04-reading-flags/</link>
       <pubDate>Thu, 04 Jul 2019 06:00:53 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-04-reading-flags/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-04-reading-flags/</guid>
       <description>书籍是人类进步的阶梯。 有一段时间已经没有认认真真去看完一本书了，自己看完上一本书《狐狸男孩》还是在 18 年下半年的事情，一晃半年过去，又到了 19 年</description>
     </item>
     
     <item>
       <title>Jekyll 网站添加访问量统计分析</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-pages-view-on-jekyll/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-pages-view-on-jekyll/</link>
       <pubDate>Mon, 01 Jul 2019 04:00:00 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-pages-view-on-jekyll/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-pages-view-on-jekyll/</guid>
       <description>Google Analysis 谷歌分析是谷歌提供的免费网络分析服务，用于跟踪和报告网站流量。将谷歌分析添加到Jekyll网站十分简单。登录 谷歌分析 并新建一个媒体资源，</description>
     </item>
     
     <item>
       <title>只要能坚持下来就是好博客</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-focus-on-writing/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-focus-on-writing/</link>
       <pubDate>Mon, 01 Jul 2019 03:55:23 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-focus-on-writing/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-focus-on-writing/</guid>
       <description>写博客、记录文字是一个好的习惯，相信很多人的初心都是很美好的。但是能真正坚持下来的，或许没有多少。 记得最早接触博客和云笔记，还是在大学刚毕业</description>
     </item>
     
     <item>
       <title>Bioconductor 中的 R 包安装方法总结</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-bioconductor-packages/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-bioconductor-packages/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-bioconductor-packages/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-bioconductor-packages/</guid>
       <description>Bioconductor 是一个基于 R 语言的生物信息软件包，主要用于生物数据的注释、分析、统计、以及可视化 （http://www.bioconductor.org ）</description>
     </item>
     
     <item>
       <title>LaTeX 2018 安装与使用教程</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-latex-2018-tutorial/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-latex-2018-tutorial/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-latex-2018-tutorial/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-latex-2018-tutorial/</guid>
       <description>一、背景 前两天在自己的 Jupyter 服务器上想要把 notebook(.ipynb) 导出为 pdf 时发现 xelatex 没有安装： 500 : Internal Server Error 如下： nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex. 另外一点就</description>
     </item>
     
     <item>
       <title>Python 中 tkinter 中文乱码</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-tkinter-unicode-issues/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-tkinter-unicode-issues/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-tkinter-unicode-issues/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-tkinter-unicode-issues/</guid>
       <description>[](#2xvqwy)引言 使用 Anaconda 3（conda 4.5.11）的 tkinter python 包（conda install -c conda-forge tk）开发 GUI 界面程序过程中，发现 UI 界面出现的中文 Unicode 乱码</description>
     </item>
     
     <item>
       <title>VSCode 中利用 Remote SSH 连接远程服务器</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-vscode-remote-ssh/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-vscode-remote-ssh/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-vscode-remote-ssh/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-vscode-remote-ssh/</guid>
       <description>引言 北京时间 2019 年 5 月 3 日，在 PyCon 2019 大会上，微软发布了 VS Code Remote。这是一个用来实现远程开发的功能插件，对于许多使用 Windows 进行开发，但是需要将程</description>
     </item>
     
     <item>
       <title>Windows server 2008 开启端口</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-windows-ports/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-windows-ports/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-windows-ports/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-windows-ports/</guid>
       <description>1. 问题 将项目部署到 Windows server 2008 服务器上，开启了 http/https 之后，在用服务器本身的浏览器访问：[http://domain.com]() ([https://domain.com](https://domain.com)) 就可以访问，可是在外</description>
     </item>
     
     <item>
       <title>Windows 全能终端神器 MobaXterm</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-irf3na/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-irf3na/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-irf3na/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-irf3na/</guid>
       <description>MobaXterm 又名 MobaXVT，是一款增强型终端、X 服务器和 Unix 命令集（GNU/ Cygwin）工具箱。MobaXterm 可以开启多个终端视窗，以最新的 X</description>
     </item>
     
     <item>
       <title>一次 SSH 攻击与处理记录</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-ssh-attack/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-ssh-attack/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-ssh-attack/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-ssh-attack/</guid>
       <description>这是我在简书看到的一个作者经历，结合小编自己的一些实践，抛砖引玉，给大家分享一下。 有段时间发现集群异常卡顿。担心的事情终于发生了，使用命令 lastb</description>
     </item>
     
     <item>
       <title>使用 RSS 打造你的科研资讯头条</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-rss-for-top-news/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-rss-for-top-news/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-rss-for-top-news/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-rss-for-top-news/</guid>
       <description>一、什么是 RSS RSS 是站点用来和其他站点之间共享内容的一种简易方式（也叫聚合内容 Really Simple Syndication）。通常在时效性比较强的内容上使用 RSS 订阅</description>
     </item>
     
     <item>
       <title>兆碱基中关于Kb、KB、Bps、bps的区别</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-different-on-bytes/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-different-on-bytes/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-different-on-bytes/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-different-on-bytes/</guid>
       <description>生物信息很多文章都提到 DNA 序列的 100 万个碱基数据（兆碱基）大致相当于计算机 1 兆的存储空间。借着这个问题，我们今天来聊一聊计算机存储和数据传输中 K</description>
     </item>
     
     <item>
       <title>基于 Linux 集群环境上 GPFS 的问题诊断</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-lsf-gpfs/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-lsf-gpfs/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-lsf-gpfs/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-lsf-gpfs/</guid>
       <description>作者：谷珊，帅炜，陈志阳 来源：IBM Developer GPFS 的概述 GPFS 是 IBM 公司提供的一个共享文件系统，它允许所有的集群节点可以并行访问整个文件系统。GPFS 允许客</description>
     </item>
     
     <item>
       <title>让你的 conda &#34;回滚&#34; 到以前版本的环境</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-conda-env-roll-back/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-conda-env-roll-back/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-conda-env-roll-back/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-conda-env-roll-back/</guid>
       <description>我现在使用 Anaconda 作为我的主要 Python 发行版，同样，我们公司也将它用于所有开发人员机器以及他们的服务器。然而，前几天我在浏览一些论坛技术文章时遇到了一个</description>
     </item>
     
     <item>
       <title>非 root 用户手动编译安装 GCC</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-lqc7hd/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-lqc7hd/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-lqc7hd/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-lqc7hd/</guid>
       <description>我们知道，关于 GCC 在 CentOS 下通过 yum 安装默认版本号，CentOS 5 是 4.1.2；CentOS 6 是 4.4.7；CentOS 7 是 4.8.3。很多时候在编</description>
     </item>
     
     <item>
       <title>推荐一个由 AI 生成 LOGO 的网站</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-ai-logo-desig/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-ai-logo-desig/</link>
       <pubDate>Mon, 01 Jul 2019 03:47:48 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-ai-logo-desig/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-ai-logo-desig/</guid>
       <description>在创建项目时，有时需要根据一些文案，设计 LOGO，既要美观大方，又要突出主题。当然，朋友较多的人，去找做 UI 设计的朋友来帮忙，像我这样的&amp;rd</description>
     </item>
     
     <item>
       <title>Firefox Quantum 向左，Google Chrome 向右</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-28-firefox-quantum/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-28-firefox-quantum/</link>
       <pubDate>Fri, 28 Jun 2019 08:23:08 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-28-firefox-quantum/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-28-firefox-quantum/</guid>
       <description>今天，又重新安装了一下 Firefox Quantum-68.0 (64 位)，不同的是这一次安装的是国际中文版，而不是北京谋智火狐的版本。 总的来说，有几点体验： 在 https://www.mozilla.org/zh-CN/firefox/ 下载国际版本的火狐（</description>
     </item>
     
     <item>
       <title>windows 常用软件合集</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-26-phmze3/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-26-phmze3/</link>
       <pubDate>Wed, 26 Jun 2019 07:34:03 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-26-phmze3/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-26-phmze3/</guid>
       <description>Snipaste 截图工具（https://zh.snipaste.com/） Snipaste 是一个简单但强大的截图工具，也可以让你将截图贴回到屏幕上！Snipaste 是</description>
     </item>
     
     <item>
       <title>VS Code 常见配置与使用技巧总结</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-21-ksczr1/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-21-ksczr1/</link>
       <pubDate>Fri, 21 Jun 2019 03:58:08 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-21-ksczr1/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-21-ksczr1/</guid>
       <description>版本: 1.35.1 (user setup) 1. 通过配置文件设置 VS Code 的配置文件默认为：settings.json，我们可以通过下面的方式打开该文件进行自定义配置： { &amp;quot;editor.minimap.enabled&amp;quot;: false, &amp;quot;editor.fontSize&amp;quot;: 12, &amp;quot;workbench.statusBar.feedback.visible&amp;quot;:</description>
     </item>
     
     <item>
       <title>Html 垂直多级菜单栏模板</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-17-qrtsf1/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-17-qrtsf1/</link>
       <pubDate>Mon, 17 Jun 2019 09:12:54 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-17-qrtsf1/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-17-qrtsf1/</guid>
       <description>http://www.dmaku.com/jquery-330.html http://www.dmaku.com/jquery-1374.html</description>
     </item>
     
     <item>
       <title>基于 Linux 集群环境上 GPFS 的问题诊断</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-12-onzp1v/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-12-onzp1v/</link>
       <pubDate>Wed, 12 Jun 2019 03:49:10 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-12-onzp1v/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-12-onzp1v/</guid>
       <description>原文：https://www.ibm.com/developerworks/cn/analytics/library/tensorflow-</description>
     </item>
     
     <item>
       <title>Spectrum LSF：高效的集群管理系统</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-12-spectrum-lsf/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-12-spectrum-lsf/</link>
       <pubDate>Wed, 12 Jun 2019 03:29:50 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-12-spectrum-lsf/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-12-spectrum-lsf/</guid>
       <description>文章：https://www.ibm.com/developerworks/cn/linux/l-lo-efficient-cluster-</description>
     </item>
     
     <item>
       <title>Python 读取大文件</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-11-iddn10/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-11-iddn10/</link>
       <pubDate>Tue, 11 Jun 2019 09:24:24 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-11-iddn10/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-11-iddn10/</guid>
       <description>https://www.jianshu.com/p/560ff3adfee3 Python 读取文件一般可以使用 read()，readlines()，但这两种方法在读取大文件时都会存储内存缺陷。 1. read() 接口的问题 f = open(filename, &#39;rb&#39;) f.read() 我们来读取</description>
     </item>
     
     <item>
       <title>Jekyll 网站添加访问量统计分析</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-03-jekyll-add-page-view/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-03-jekyll-add-page-view/</link>
       <pubDate>Mon, 03 Jun 2019 05:57:41 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-03-jekyll-add-page-view/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-03-jekyll-add-page-view/</guid>
       <description>Google Analysis 谷歌分析是谷歌提供的免费网络分析服务，用于跟踪和报告网站流量。将谷歌分析添加到Jekyll网站十分简单。登录 谷歌分析 并新建一个媒体资源，</description>
     </item>
     
     <item>
       <title>基于 pypiserver 的 PyPI 私有仓库搭建实践</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-01-pypiserver-trial/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-01-pypiserver-trial/</link>
       <pubDate>Sat, 01 Jun 2019 07:06:47 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-01-pypiserver-trial/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-01-pypiserver-trial/</guid>
       <description>背景 前几天，在不同的 CentOS 7 服务器上尝试部署同一个发行版本的 Galaxy 生物信息分析平台（Galaxy Project：云计算背景下诞生的一个生物信息学可视</description>
     </item>
     
     <item>
       <title>使用 conda 和 Jupyter 在 R 中实现数据科学分析</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-27-kgrnx4/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-27-kgrnx4/</link>
       <pubDate>Mon, 27 May 2019 00:40:09 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-27-kgrnx4/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-27-kgrnx4/</guid>
       <description>一、引言 Jupyter（以前叫 iPython）已经被数据科学家，研究人员和分析师广泛采用。Jupyter 的笔记本用户界面可以将可执行代码与叙</description>
     </item>
     
     <item>
       <title>R 软件如何升级</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-25-qznkyp/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-25-qznkyp/</link>
       <pubDate>Sat, 25 May 2019 09:26:05 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-25-qznkyp/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-25-qznkyp/</guid>
       <description>https://www.r-bloggers.com/updating-r/</description>
     </item>
     
     <item>
       <title>R 软件的 &#34;CXX11 is not defined&#34; 解决</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-24-dadyai/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-24-dadyai/</link>
       <pubDate>Fri, 24 May 2019 09:16:56 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-24-dadyai/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-24-dadyai/</guid>
       <description>在 CentOS-6.5 下使用源码安装的 R-3.6.0 在安装包的时候出现 &amp;ldquo;C++11 standard requested but CXX11 is not defined&amp;rdquo; 错误。下面是参考的解决方法。 &amp;gt; install.packages(&amp;quot;pillar&amp;quot;) also installing the dependencies ‘digest’, ‘vctrs’ trying URL &#39;http://mirror.lzu.edu.cn/CRAN/src/contrib/digest_0.6.19.tar.gz&#39; Content type &#39;application/octet-stream&#39;</description>
     </item>
     
     <item>
       <title>R 软件 openssl 包与 libssl.so.1.0.0 的一个坑</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-24-nt820f/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-24-nt820f/</link>
       <pubDate>Fri, 24 May 2019 07:47:26 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-24-nt820f/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-24-nt820f/</guid>
       <description>在使用 enrichplot 包解决 openssl 包依赖的时候，发现提示 libssl.so.1.0.0 动态库找不到： &amp;gt; install.packages(&amp;quot;openssl&amp;quot;) --- Please select a CRAN mirror for use in this session --- trying URL &#39;http://mirrors.tuna.tsinghua.edu.cn/CRAN/src/contrib/openssl_1.3.tar.gz&#39; Content type &#39;application/x-gzip&#39; length 1218896 bytes (1.2 MB) ================================================== downloaded 1.2 MB * installing *source* package ‘openssl’ ...</description>
     </item>
     
     <item>
       <title>Python 执行 shell 命令</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-21-kzicg7/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-21-kzicg7/</link>
       <pubDate>Tue, 21 May 2019 03:48:13 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-21-kzicg7/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-21-kzicg7/</guid>
       <description>subprocess import subprocess transid = str(subprocess.check_output([&#39;grep&#39; , &#39;-w&#39;, geneid, trans2gene])).strip()</description>
     </item>
     
     <item>
       <title>推荐一个由 AI 生成 LOGO 的网站</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-18-ai-logo-design/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-18-ai-logo-design/</link>
       <pubDate>Sat, 18 May 2019 12:28:29 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-18-ai-logo-design/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-18-ai-logo-design/</guid>
       <description>在创建项目时，有时需要根据一些文案，设计 LOGO，既要美观大方，又要突出主题。当然，朋友较多的人，去找做 UI 设计的朋友来帮忙，像我这样的&amp;rd</description>
     </item>
     
     <item>
       <title>Clumpify：能使 Fastq 压缩文件再缩小 30% 并加速后续分析流程</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-18-clumpify-1714585/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-18-clumpify-1714585/</link>
       <pubDate>Sat, 18 May 2019 12:26:17 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-18-clumpify-1714585/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-18-clumpify-1714585/</guid>
       <description>Clumpify 是 BBMap 工具包中的一个组件，它与其他工具略有不同的是 Clumpify 不会实际更改你的数据，只是重新排序以最大化 gzip 压缩。因此，输出文件仍然是完全兼容的 gzipped fastq 文件</description>
     </item>
     
     <item>
       <title>扫描版与非扫描版 PDF 文字复制</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-15-pdf-copy/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-15-pdf-copy/</link>
       <pubDate>Wed, 15 May 2019 06:13:41 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-15-pdf-copy/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-15-pdf-copy/</guid>
       <description>许多影印版的 PDF 书籍资料，在阅读的时候都有一个让人很烦恼的问题：无法复制书中的文字内容！尤其这几天在阅读学习《Python 数据可视化》（科斯·</description>
     </item>
     
     <item>
       <title>Git 的一些常用用法笔记</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-10-oquebf/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-10-oquebf/</link>
       <pubDate>Fri, 10 May 2019 03:54:24 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-10-oquebf/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-10-oquebf/</guid>
       <description>本地创建分支 v-1.2 $ git branch v-1.2 $ git branch * master v-1.2 切换本地分支 $ git branch * master v-1.2 $ git checkout v-1.2 Switched to branch &#39;v-1.2&#39; $ git branch master * v-1.2 把本地分支提交到远程分支仓库 $ git add --all $ git commit -m &amp;quot;ASO design for Galaxy version</description>
     </item>
     
     <item>
       <title>国内 GitHub 访问加速</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-09-xpurpl/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-09-xpurpl/</link>
       <pubDate>Thu, 09 May 2019 00:53:25 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-09-xpurpl/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-09-xpurpl/</guid>
       <description>GitHub 自从私有库免费后，涌入大批量的开发爱好者，小 S 也将自己的部分代码转为了私库，但是在中国访问 GitHub 的速度不忍直视，那就叫一个慢！下面小 C 就用下面</description>
     </item>
     
     <item>
       <title>命名风格</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-04-29-xdlz2f/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-04-29-xdlz2f/</link>
       <pubDate>Mon, 29 Apr 2019 00:41:03 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-04-29-xdlz2f/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-04-29-xdlz2f/</guid>
       <description>关于码云 gitee 后缀 ee 附于动词后，表示动作的受动者。与之相应，动作的施动者则由后缀 er/or 表示。gitee 的意思就是“使用git 的群体”，你懂了吗？ 反正</description>
     </item>
     
     <item>
       <title>《皮囊》：一把人生冰冷的手术刀</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-03-01-180712/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-03-01-180712/</link>
       <pubDate>Fri, 01 Mar 2019 12:44:04 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-03-01-180712/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-03-01-180712/</guid>
       <description>用了一周的时间在网易蜗牛读书上终于把蔡崇达的《皮囊》读完了。这是一本很好的书。 《皮囊》全书由 14 个章节组成： 《皮囊》 《母亲的房子》 《残疾》 《重</description>
     </item>
     
     <item>
       <title>《必然》，凯文·凯利</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-03-01-180810/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-03-01-180810/</link>
       <pubDate>Fri, 01 Mar 2019 12:27:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-03-01-180810/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-03-01-180810/</guid>
       <description>《必然》是 2016 年 01 月电子工业出版社出版发行的中译图书，作者是凯文·凯利（Kevin Kelly），该书全面介绍了科技这个新物种的基因特征、所思所</description>
     </item>
     

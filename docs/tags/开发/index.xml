@@ -2,147 +2,147 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>开发 on Steven Shen | 沈维燕</title>
-    <link>https://shenweiyan.github.io/ivc-hugo-theme/tags/%E5%BC%80%E5%8F%91/</link>
+    <link>https://shenweiyan.github.io/ivs-hugo-theme/tags/%E5%BC%80%E5%8F%91/</link>
     <description>Recent content in 开发 on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Thu, 08 Aug 2019 09:05:21 +0000</lastBuildDate>
     
-	<atom:link href="https://shenweiyan.github.io/ivc-hugo-theme/tags/%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shenweiyan.github.io/ivs-hugo-theme/tags/%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo 博客折腾的一些记录</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-08-build-hugo-blogs/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-08-build-hugo-blogs/</link>
       <pubDate>Thu, 08 Aug 2019 09:05:21 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-08-build-hugo-blogs/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-08-build-hugo-blogs/</guid>
       <description>模仿 R 语言大神谢益辉，搭建了一个 Hugo+rblogdown 的博客：https://blog.bioinit.com 主要记录： .Site.BaseURL 不起作用， relURL 、 absURL 也不起作用时，可参考使</description>
     </item>
     
     <item>
       <title>语雀图片与七牛云之间的迁移同步</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-08-sync-from-yuque-to-qiniu/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-08-sync-from-yuque-to-qiniu/</link>
       <pubDate>Thu, 08 Aug 2019 03:44:11 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-08-sync-from-yuque-to-qiniu/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-08-sync-from-yuque-to-qiniu/</guid>
       <description>昨天登录 Github Jekyll 博客时候，忽然发现很多文章的图片都出现了 404！后来检查才知道，原来从 2019.08.07 起，语雀上的一些静态图片开启了防外链设置，因此之前通过 api</description>
     </item>
     
     <item>
       <title>FlexSlider 和 RaxusSlider 插件相关参数</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-07-flex-slider-and-raxus-slider/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-07-flex-slider-and-raxus-slider/</link>
       <pubDate>Wed, 07 Aug 2019 08:54:07 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-07-flex-slider-and-raxus-slider/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-07-flex-slider-and-raxus-slider/</guid>
       <description>FlexSlider 链接：http://flexslider.woothemes.com/ FlexSlider 是一个非常出色的 jQuery 滑动切换插件，它支持所有主流浏览器，并有淡入淡出</description>
     </item>
     
     <item>
       <title>数据科学工具 Jupyter Notebook 教程(三)</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-17-jupyter-notebook-toturial-3/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-17-jupyter-notebook-toturial-3/</link>
       <pubDate>Wed, 17 Jul 2019 08:25:34 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-17-jupyter-notebook-toturial-3/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-17-jupyter-notebook-toturial-3/</guid>
       <description>前言 Jupyter Notebook 作为一个把代码、图像、注释、公式和作图集于一处，从而实现可读性分析的交互式笔记本工具，借助所谓的内核（Kernel）的概念，Jupy</description>
     </item>
     
     <item>
       <title>数据科学工具 Jupyter Notebook 教程(二)</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-17-jupyter-notebook-toturial-2/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-17-jupyter-notebook-toturial-2/</link>
       <pubDate>Wed, 17 Jul 2019 07:48:42 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-17-jupyter-notebook-toturial-2/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-17-jupyter-notebook-toturial-2/</guid>
       <description>上一篇文章中，我们介绍了 Jupyter Notebook 在本地的一些安装和使用，今天我们介绍一下 Python3+Nginx+SSL 下的 Jupyter Notebook 服务部署，也就是 Jupyter 服务器的搭建与配置。 网上搜了一下 jupyter 服务器的搭</description>
     </item>
     
     <item>
       <title>Google Code Prettify 代码高亮使用教程</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-17-google-code-prettify/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-17-google-code-prettify/</link>
       <pubDate>Wed, 17 Jul 2019 05:43:07 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-17-google-code-prettify/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-17-google-code-prettify/</guid>
       <description>Google Code Prettify 是 Google 的一款代码高亮插件，它由 js 代码和 css 代码构成，用来高亮显示 HTML 页面中的源代码。 Google Code Prettify 支持的语言数量比较多、比较全，支持自动识别代码语言</description>
     </item>
     
     <item>
       <title>数据科学工具 Jupyter Notebook 教程(一)</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-17-jupyter-notebook-toturial-1/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-17-jupyter-notebook-toturial-1/</link>
       <pubDate>Wed, 17 Jul 2019 03:38:57 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-17-jupyter-notebook-toturial-1/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-17-jupyter-notebook-toturial-1/</guid>
       <description>iPython Notebook 是一个基于浏览器的 python 数据分析工具，使用起来非常方便，具有极强的交互方式和富文本的展示效果。Jupyter 是它的升级版，它的安装也非常方便</description>
     </item>
     
     <item>
       <title>阿里云 ECS&#43;Docker&#43;WordPress 搭建个人博客</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-04-ecs-docker-wordpress-ssl/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-04-ecs-docker-wordpress-ssl/</link>
       <pubDate>Thu, 04 Jul 2019 06:16:29 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-04-ecs-docker-wordpress-ssl/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-04-ecs-docker-wordpress-ssl/</guid>
       <description>虽然已经入手 leanote，开启了以笔记+博客的方式记录学习生活琐事，但当手上有个续费了三年的 ECS，总想折腾点事情。于是想着在阿里云 ECS 上，</description>
     </item>
     
     <item>
       <title>使用阿里云 ECS 搭建自己的 Leanote 云笔记服务</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-04-leanote-for-ecs-tutorial/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-04-leanote-for-ecs-tutorial/</link>
       <pubDate>Thu, 04 Jul 2019 06:03:23 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-04-leanote-for-ecs-tutorial/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-04-leanote-for-ecs-tutorial/</guid>
       <description>Leanote（中文名 &amp;ldquo;蚂蚁笔记&amp;rdquo;），横跨 Windows、MacOS、Android、iOS、Linux 多平台，支持</description>
     </item>
     
     <item>
       <title>VSCode 中利用 Remote SSH 连接远程服务器</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-vscode-remote-ssh/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-vscode-remote-ssh/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-vscode-remote-ssh/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-vscode-remote-ssh/</guid>
       <description>引言 北京时间 2019 年 5 月 3 日，在 PyCon 2019 大会上，微软发布了 VS Code Remote。这是一个用来实现远程开发的功能插件，对于许多使用 Windows 进行开发，但是需要将程</description>
     </item>
     
     <item>
       <title>基于云的六大 Jupyter Notebook 平台测评</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-cloud-services-for-jupyter-notebook/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-cloud-services-for-jupyter-notebook/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-cloud-services-for-jupyter-notebook/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-cloud-services-for-jupyter-notebook/</guid>
       <description>作者：[](https://twitter.com/justmarkham)[Kevin Markham](https://twitter.com/justmarkham) 编译：Steven Shen 原文：https://www.</description>
     </item>
     
     <item>
       <title>Html 垂直多级菜单栏模板</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-17-qrtsf1/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-17-qrtsf1/</link>
       <pubDate>Mon, 17 Jun 2019 09:12:54 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-17-qrtsf1/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-17-qrtsf1/</guid>
       <description>http://www.dmaku.com/jquery-330.html http://www.dmaku.com/jquery-1374.html</description>
     </item>
     
     <item>
       <title>基于 pypiserver 的 PyPI 私有仓库搭建实践</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-01-pypiserver-trial/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-01-pypiserver-trial/</link>
       <pubDate>Sat, 01 Jun 2019 07:06:47 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-01-pypiserver-trial/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-01-pypiserver-trial/</guid>
       <description>背景 前几天，在不同的 CentOS 7 服务器上尝试部署同一个发行版本的 Galaxy 生物信息分析平台（Galaxy Project：云计算背景下诞生的一个生物信息学可视</description>
     </item>
     
     <item>
       <title>使用 conda 和 Jupyter 在 R 中实现数据科学分析</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-27-kgrnx4/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-27-kgrnx4/</link>
       <pubDate>Mon, 27 May 2019 00:40:09 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-27-kgrnx4/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-27-kgrnx4/</guid>
       <description>一、引言 Jupyter（以前叫 iPython）已经被数据科学家，研究人员和分析师广泛采用。Jupyter 的笔记本用户界面可以将可执行代码与叙</description>
     </item>
     
     <item>
       <title>国内 GitHub 访问加速</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-09-xpurpl/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-09-xpurpl/</link>
       <pubDate>Thu, 09 May 2019 00:53:25 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-09-xpurpl/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-09-xpurpl/</guid>
       <description>GitHub 自从私有库免费后，涌入大批量的开发爱好者，小 S 也将自己的部分代码转为了私库，但是在中国访问 GitHub 的速度不忍直视，那就叫一个慢！下面小 C 就用下面</description>
     </item>
     

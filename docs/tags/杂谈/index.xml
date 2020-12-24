@@ -2,156 +2,156 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>杂谈 on Steven Shen | 沈维燕</title>
-    <link>https://shenweiyan.github.io/ivc-hugo-theme/tags/%E6%9D%82%E8%B0%88/</link>
+    <link>https://shenweiyan.github.io/ivs-hugo-theme/tags/%E6%9D%82%E8%B0%88/</link>
     <description>Recent content in 杂谈 on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Mon, 19 Aug 2019 02:57:02 +0000</lastBuildDate>
     
-	<atom:link href="https://shenweiyan.github.io/ivc-hugo-theme/tags/%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shenweiyan.github.io/ivs-hugo-theme/tags/%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>沉默的大多数</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-19-moc049/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-19-moc049/</link>
       <pubDate>Mon, 19 Aug 2019 02:57:02 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-19-moc049/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-19-moc049/</guid>
       <description>表达一个人要有自己独立的思想，任何想将个人的思想凌驾于大众或迫使大众去遵从的都是不对的。 拿破仑说：一头狮子带领的一群羊可以打败一只羊带领的一</description>
     </item>
     
     <item>
       <title>Hugo 博客折腾的一些记录</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-08-build-hugo-blogs/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-08-build-hugo-blogs/</link>
       <pubDate>Thu, 08 Aug 2019 09:05:21 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-08-build-hugo-blogs/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-08-build-hugo-blogs/</guid>
       <description>模仿 R 语言大神谢益辉，搭建了一个 Hugo+rblogdown 的博客：https://blog.bioinit.com 主要记录： .Site.BaseURL 不起作用， relURL 、 absURL 也不起作用时，可参考使</description>
     </item>
     
     <item>
       <title>一些好玩又有趣的开源项目</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-05-rgvbqq/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-05-rgvbqq/</link>
       <pubDate>Mon, 05 Aug 2019 07:12:52 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-08-05-rgvbqq/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-08-05-rgvbqq/</guid>
       <description>https://github.com/1c7/chinese-independent-developer，中国独立开发者项目列表，分享大家都</description>
     </item>
     
     <item>
       <title>不提供账号注销等于耍流氓</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-23-coding-cancel-account/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-23-coding-cancel-account/</link>
       <pubDate>Tue, 23 Jul 2019 03:19:17 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-23-coding-cancel-account/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-23-coding-cancel-account/</guid>
       <description>作为一个生信工程师，不知道大家平时是怎么管理和备份自己的一些流程和脚本？而我个人则比较喜欢用 git。 说到 git 代码托管，国外的 GitHub、Gi</description>
     </item>
     
     <item>
       <title>发现了阿里云 APP 的一个小 BUG</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-17-bugs-of-aliyun-app/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-17-bugs-of-aliyun-app/</link>
       <pubDate>Wed, 17 Jul 2019 06:26:57 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-17-bugs-of-aliyun-app/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-17-bugs-of-aliyun-app/</guid>
       <description>前几天在华为手机上使用阿里云 APP，从 oss bucket 中下载了一张图片，想要通过微信把它发给一个朋友时，发现在打开微信选择照片时却无法找到新下载的图片。</description>
     </item>
     
     <item>
       <title>中国联通家庭宽带</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-08-unicom_broadband/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-08-unicom_broadband/</link>
       <pubDate>Mon, 08 Jul 2019 01:51:47 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-08-unicom_broadband/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-08-unicom_broadband/</guid>
       <description>从星期四起，家里用了两年的联通宽带网络到期，断了。 没有任何提前的信息提示，也不能在线充值续费； 去营业厅办理续费必须要身份证，居住证、驾驶证、</description>
     </item>
     
     <item>
       <title>Jekyll 网站添加访问量统计分析</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-pages-view-on-jekyll/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-pages-view-on-jekyll/</link>
       <pubDate>Mon, 01 Jul 2019 04:00:00 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-pages-view-on-jekyll/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-pages-view-on-jekyll/</guid>
       <description>Google Analysis 谷歌分析是谷歌提供的免费网络分析服务，用于跟踪和报告网站流量。将谷歌分析添加到Jekyll网站十分简单。登录 谷歌分析 并新建一个媒体资源，</description>
     </item>
     
     <item>
       <title>只要能坚持下来就是好博客</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-focus-on-writing/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-focus-on-writing/</link>
       <pubDate>Mon, 01 Jul 2019 03:55:23 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-focus-on-writing/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-focus-on-writing/</guid>
       <description>写博客、记录文字是一个好的习惯，相信很多人的初心都是很美好的。但是能真正坚持下来的，或许没有多少。 记得最早接触博客和云笔记，还是在大学刚毕业</description>
     </item>
     
     <item>
       <title>兆碱基中关于Kb、KB、Bps、bps的区别</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-different-on-bytes/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-different-on-bytes/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-different-on-bytes/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-different-on-bytes/</guid>
       <description>生物信息很多文章都提到 DNA 序列的 100 万个碱基数据（兆碱基）大致相当于计算机 1 兆的存储空间。借着这个问题，我们今天来聊一聊计算机存储和数据传输中 K</description>
     </item>
     
     <item>
       <title>推荐一个由 AI 生成 LOGO 的网站</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-ai-logo-desig/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-ai-logo-desig/</link>
       <pubDate>Mon, 01 Jul 2019 03:47:48 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-07-01-ai-logo-desig/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-07-01-ai-logo-desig/</guid>
       <description>在创建项目时，有时需要根据一些文案，设计 LOGO，既要美观大方，又要突出主题。当然，朋友较多的人，去找做 UI 设计的朋友来帮忙，像我这样的&amp;rd</description>
     </item>
     
     <item>
       <title>Firefox Quantum 向左，Google Chrome 向右</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-28-firefox-quantum/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-28-firefox-quantum/</link>
       <pubDate>Fri, 28 Jun 2019 08:23:08 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-28-firefox-quantum/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-28-firefox-quantum/</guid>
       <description>今天，又重新安装了一下 Firefox Quantum-68.0 (64 位)，不同的是这一次安装的是国际中文版，而不是北京谋智火狐的版本。 总的来说，有几点体验： 在 https://www.mozilla.org/zh-CN/firefox/ 下载国际版本的火狐（</description>
     </item>
     
     <item>
       <title>Jekyll 网站添加访问量统计分析</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-03-jekyll-add-page-view/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-03-jekyll-add-page-view/</link>
       <pubDate>Mon, 03 Jun 2019 05:57:41 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-06-03-jekyll-add-page-view/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-06-03-jekyll-add-page-view/</guid>
       <description>Google Analysis 谷歌分析是谷歌提供的免费网络分析服务，用于跟踪和报告网站流量。将谷歌分析添加到Jekyll网站十分简单。登录 谷歌分析 并新建一个媒体资源，</description>
     </item>
     
     <item>
       <title>生物信息学博客与论坛</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-29-bio-blogs-forums/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-29-bio-blogs-forums/</link>
       <pubDate>Wed, 29 May 2019 06:12:49 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-29-bio-blogs-forums/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-29-bio-blogs-forums/</guid>
       <description>关于生物信息学的博客与论坛。 国内篇： 谢益辉个人主页：http://yihui.name/ R 语言大神个人主页，基于 Hugo。 leoatchina(leo 陶）的博客：ht</description>
     </item>
     
     <item>
       <title>一些博客与站点搜集</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-29-blogs-and-sites-collected/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-29-blogs-and-sites-collected/</link>
       <pubDate>Wed, 29 May 2019 06:05:40 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-29-blogs-and-sites-collected/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-29-blogs-and-sites-collected/</guid>
       <description>搜集的一些简洁、大气优秀的博客客户端、模板，以及相关服务。 客户端 ** Gridea：https://github.com/getgridea 一个</description>
     </item>
     
     <item>
       <title>一些博客与站点搜集</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-29-blogs-and-sites-collected/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-29-blogs-and-sites-collected/</link>
       <pubDate>Wed, 29 May 2019 06:05:40 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-29-blogs-and-sites-collected/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-29-blogs-and-sites-collected/</guid>
       <description>搜集的一些简洁、大气优秀的博客客户端、模板，以及相关服务。 客户端 ** Gridea：https://github.com/getgridea 一个</description>
     </item>
     
     <item>
       <title>扫描版与非扫描版 PDF 文字复制</title>
-      <link>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-15-pdf-copy/</link>
+      <link>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-15-pdf-copy/</link>
       <pubDate>Wed, 15 May 2019 06:13:41 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ivc-hugo-theme/blog/2019-05-15-pdf-copy/</guid>
+      <guid>https://shenweiyan.github.io/ivs-hugo-theme/blog/2019-05-15-pdf-copy/</guid>
       <description>许多影印版的 PDF 书籍资料，在阅读的时候都有一个让人很烦恼的问题：无法复制书中的文字内容！尤其这几天在阅读学习《Python 数据可视化》（科斯·</description>
     </item>
     
