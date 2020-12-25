@@ -1,5 +1,6 @@
 ---
 title: "Katex Math Typesetting"
+type: post
 date: 2019-03-28
 tags: [katex, math, typesetting, hugo]
 ---

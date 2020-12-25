@@ -15,8 +15,8 @@
     
     
     
-    <title>katex - Steven Shen | 沈维燕</title> 
-    <meta property="og:title" content="katex - Steven Shen | 沈维燕">
+    <title>Katex Math Typesetting - Steven Shen | 沈维燕</title> 
+    <meta property="og:title" content="Katex Math Typesetting - Steven Shen | 沈维燕">
     
 
     
@@ -25,8 +25,6 @@
 
     
 
-    
-    <link href="../../tags/katex/index.xml" rel="alternate" type="application/rss+xml" title="katex" />
     
   
     <link rel="stylesheet" href="https://shenweiyan.github.io/ics-hugo-theme//css/style.css"/>
@@ -39,7 +37,7 @@
   </head>
 
   
-  <body class="tags">
+  <body class="blog">
     
     
     <header class="intro-and-nav" role="banner">
@@ -186,6 +184,18 @@
           
           
 
+<li class="pattern">&nbsp;&nbsp;</li>
+
+
+
+<li class="pattern"><a href="https://github.com/shenweiyan/ivs-hugo-theme/edit/master/content/blog/2019-03-28-katex-math-typesetting.md" target="_blank">编辑</a></li>
+
+
+<li class="pattern"><a href="../../blog/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li class="pattern"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
+
+
         </ul>
       </nav>
     </div>
@@ -195,7 +205,12 @@
       <header class="title">
         
 
-<h1>katex</h1>
+<h1>Katex Math Typesetting</h1>
+
+
+
+<h3>
+2019-03-28</h3> 
 
 
    
@@ -205,35 +220,42 @@
       </header>
 
 
-
-
-
-
-
-
-<div class="archive">
-  
-  <h2 class="archive-title">2019</h2>
-  
-  
-  <ul>
-    <li>
-      <span>2019/03/28</span>
-      <a href="../../blog/2019-03-28-katex-math-typesetting/">Katex Math Typesetting</a>
-    </li>
-  </ul>
   
   
   
-</div>
 
+  
+  
+  
+
+  <p>Enable Katex in the config file by setting the <code>katex</code> param to <code>true</code>. This will import the necessary Katex CSS/JS.</p>
+
+<p><strong>Note:</strong> Use the online reference of <a href="https://katex.org/docs/supported.html">supported TeX functions</a>.</p>
+
+<p>Some math:</p>
+
+<pre><code>$$ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $$
+</code></pre>
+
+<p>$$ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $$</p>
+
+<p>More math:</p>
+
+<pre><code>$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
+$$
+</code></pre>
+
+<p>$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+$$</p>
 
 
   <footer>
   
 <nav class="post-nav">
-  <span class="nav-prev"></span>
-  <span class="nav-next"></span>
+  <span class="nav-prev"><a href="../../blog/2019-03-01-180712/">《皮囊》：一把人生冰冷的手术刀</a><br/>&larr;</span>
+  <span class="nav-next"><a href="../../blog/2019-04-29-xdlz2f/">命名风格</a><br/>&rarr;</span>
 </nav>
 <script type="text/javascript">
 document.addEventListener('keyup', function(e) {
@@ -241,7 +263,11 @@ document.addEventListener('keyup', function(e) {
   var url = false;
   if (e.which == 37) {  
     
+    url = '\/blog\/2019-03-01-180712\/';
+    
   } else if (e.which == 39) {  
+    
+    url = '\/blog\/2019-04-29-xdlz2f\/';
     
   }
   if (url) window.location = url;
@@ -249,6 +275,16 @@ document.addEventListener('keyup', function(e) {
 </script>
 
 
+
+<section class="comments">
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>
 
 
 
