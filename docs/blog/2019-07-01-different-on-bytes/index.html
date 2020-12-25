@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -131,9 +132,31 @@
           
           
           
-            <a href="../../topic/" >
+            <a href="../../tweets/" >
               
-              专栏
+              乱弹
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../other/" >
+              
+              其他
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../feedback/" >
+              
+              留言
             </a>
           </li>
           
@@ -197,7 +220,15 @@
       </header>
 
 
+  
+  
+  
 
+  
+  
+  
+
+  
 
 <p>生物信息很多文章都提到 DNA 序列的 100 万个碱基数据（兆碱基）大致相当于计算机 1 兆的存储空间。借着这个问题，我们今天来聊一聊计算机存储和数据传输中 Kb、KB、Bps、bps 的一些区别，分析一下所谓的兆碱基到底是使用哪一种标准（单位）怎么计算出来的。</p>
 
@@ -237,8 +268,8 @@
 
 <p>目前 IEC 的工作领域已由单纯研究电气设备、电机的名词术语和功率等问题扩展到电子、电力、微电子及其应用、通讯、视听、机器人、信息技术、新型医疗器械和核仪表等电工技术的各个方面。IEC标准的权威性是世界公认的，截止到2008年12月底，IEC 已制定了 5425 个国际标准。</p>
 
-<p>不同标准下储存单位的次方单位( <img src="https://qiniu.bioinit.com/yuque/__latex/d97d16fbb399fa909887f8349724a08a.svg#align=left&amp;card=math&amp;code=2%5E%7B10%7D%20%3D%201024&amp;height=24&amp;width=76" alt="" />)：<br />
-<img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/10/16-Tue/byte.png#width=" alt="" /></p>
+<p>不同标准下储存单位的次方单位( <a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/__latex/d97d16fbb399fa909887f8349724a08a.svg#align=left&amp;card=math&amp;code=2%5E%7B10%7D%20%3D%201024&amp;height=24&amp;width=76"><img src="http://qiniu.bioitee.com/yuque/__latex/d97d16fbb399fa909887f8349724a08a.svg#align=left&amp;card=math&amp;code=2%5E%7B10%7D%20%3D%201024&amp;height=24&amp;width=76" alt=""></a>)：<br />
+<a data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/10/16-Tue/byte.png#width="><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/10/16-Tue/byte.png#width=" alt=""></a></p>
 
 <hr />
 
@@ -284,9 +315,9 @@
 
 <p>我们通常说的 1M 带宽即指 1Mbps，因此 1M 的带宽下载的速度一般不会超过 125KB 每秒。2M、3M 带宽的下载速度分别不会超过 250KB、375KB 每秒。</p>
 
-<p><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/10/16-Tue/ossbrowser_upload.png/bioinit#width=" alt="" /></p>
+<p><a data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/10/16-Tue/ossbrowser_upload.png/bioinit#width="><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/10/16-Tue/ossbrowser_upload.png/bioinit#width=" alt=""></a></p>
 
-<p><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/10/16-Tue/chrome_download_1.png/bioinit#width=" alt="" /></p>
+<p><a data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/10/16-Tue/chrome_download_1.png/bioinit#width="><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/10/16-Tue/chrome_download_1.png/bioinit#width=" alt=""></a></p>
 
 <hr />
 
@@ -361,49 +392,13 @@ document.addEventListener('keyup', function(e) {
 
 
 <section class="comments">
-  <div id="disqus_thread"></div>
-  <script>
-  var disqus_config = function () {
-  
-    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
-  
-  };
-  (function() {
-    var inIFrame = function() {
-      var iframe = true;
-      try { iframe = window.self !== window.top; } catch (e) {}
-      return iframe;
-    };
-    if (inIFrame()) return;
-    var disqus_js = '//bioinit.disqus.com/embed.js';
-    var d = document, s = d.createElement('script');
-    s.src = disqus_js; s.async = true;
-    s.setAttribute('data-timestamp', +new Date());
-    var b = false, l = function() {
-      if (b) return;
-      (d.head || d.body).appendChild(s); b = true;
-    }
-    var t = d.getElementById('disqus_thread');
-    s.onerror = function(e) {
-      if (sessionStorage.getItem('failure-note')) return;
-      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
-      t.style.border = '1px dashed';
-      t.style.padding = '.5em';
-      t.style.background = 'lightyellow';
-      sessionStorage.setItem('failure-note', true);
-    };
-    
-    if (location.hash.match(/^#comment/)) return l();
-    var c = function() {
-      if (b) return;
-      var rect = t.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
-    };
-    window.addEventListener('load', c);
-    d.addEventListener('scroll', c);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 </section>
 
 
@@ -443,6 +438,8 @@ document.addEventListener('keyup', function(e) {
   </footer>
   </article>
   
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>
 

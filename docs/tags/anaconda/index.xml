@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>[生信专栏]Anaconda 使用的一些体验与困惑</title>
-      <link>https://shenweiyan.github.io/ics-hugo-theme/topic/galaxy/2019-07-04-anaconda-experience/</link>
-      <pubDate>Thu, 04 Jul 2019 06:20:26 +0000</pubDate>
-      
-      <guid>https://shenweiyan.github.io/ics-hugo-theme/topic/galaxy/2019-07-04-anaconda-experience/</guid>
-      <description>1. channels 使用 需要注意的是做生信分析的童鞋使用 conda 环境时一定要特别注意 conda channels 的设置，滥用 channels 很有可能会导致你的软件升降级（甚至环境）错乱。推荐设置如下（</description>
-    </item>
-    
-    <item>
       <title>Anaconda 使用的一些体验与困惑</title>
       <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-04-anaconda-experience/</link>
       <pubDate>Thu, 04 Jul 2019 06:20:26 +0000</pubDate>

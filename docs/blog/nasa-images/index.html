@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -131,9 +132,31 @@
           
           
           
-            <a href="../../topic/" >
+            <a href="../../tweets/" >
               
-              专栏
+              乱弹
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../other/" >
+              
+              其他
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../feedback/" >
+              
+              留言
             </a>
           </li>
           
@@ -197,7 +220,15 @@
       </header>
 
 
-<p>The below images are from the <a href="https://images.nasa.gov/">NASA Image and Video Library</a> &ndash; indulge yourself, revel in their beauty.</p>
+  
+  
+  
+
+  
+  
+  
+
+  <p>The below images are from the <a href="https://images.nasa.gov/">NASA Image and Video Library</a> &ndash; indulge yourself, revel in their beauty.</p>
 
 <p><img src="sun.jpg" caption="The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, with internal convective motion that generates a magnetic field via a dynamo process. It is by far the most important source of energy for life on Earth. [Credits](https://images.nasa.gov/details-GSFC_20171208_Archive_e000393.html)."/></p>
 
@@ -222,7 +253,7 @@
   
 <nav class="post-nav">
   <span class="nav-prev"></span>
-  <span class="nav-next"><a href="../../blog/2018-12-29-shell-practice/">shell 命令实战合集</a><br/>&rarr;</span>
+  <span class="nav-next"><a href="../../blog/2019-03-01-180810/">《必然》，凯文·凯利</a><br/>&rarr;</span>
 </nav>
 <script type="text/javascript">
 document.addEventListener('keyup', function(e) {
@@ -232,7 +263,7 @@ document.addEventListener('keyup', function(e) {
     
   } else if (e.which == 39) {  
     
-    url = '\/blog\/2018-12-29-shell-practice\/';
+    url = '\/blog\/2019-03-01-180810\/';
     
   }
   if (url) window.location = url;
@@ -242,49 +273,13 @@ document.addEventListener('keyup', function(e) {
 
 
 <section class="comments">
-  <div id="disqus_thread"></div>
-  <script>
-  var disqus_config = function () {
-  
-    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
-  
-  };
-  (function() {
-    var inIFrame = function() {
-      var iframe = true;
-      try { iframe = window.self !== window.top; } catch (e) {}
-      return iframe;
-    };
-    if (inIFrame()) return;
-    var disqus_js = '//bioinit.disqus.com/embed.js';
-    var d = document, s = d.createElement('script');
-    s.src = disqus_js; s.async = true;
-    s.setAttribute('data-timestamp', +new Date());
-    var b = false, l = function() {
-      if (b) return;
-      (d.head || d.body).appendChild(s); b = true;
-    }
-    var t = d.getElementById('disqus_thread');
-    s.onerror = function(e) {
-      if (sessionStorage.getItem('failure-note')) return;
-      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
-      t.style.border = '1px dashed';
-      t.style.padding = '.5em';
-      t.style.background = 'lightyellow';
-      sessionStorage.setItem('failure-note', true);
-    };
-    
-    if (location.hash.match(/^#comment/)) return l();
-    var c = function() {
-      if (b) return;
-      var rect = t.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
-    };
-    window.addEventListener('load', c);
-    d.addEventListener('scroll', c);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 </section>
 
 
@@ -324,6 +319,8 @@ document.addEventListener('keyup', function(e) {
   </footer>
   </article>
   
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>
 

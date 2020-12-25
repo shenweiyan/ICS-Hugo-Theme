@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -131,9 +132,31 @@
           
           
           
-            <a href="../../topic/" >
+            <a href="../../tweets/" >
               
-              专栏
+              乱弹
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../other/" >
+              
+              其他
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../feedback/" >
+              
+              留言
             </a>
           </li>
           
@@ -197,7 +220,15 @@
       </header>
 
 
+  
+  
+  
 
+  
+  
+  
+
+  
 
 <p>基于 11 个最常见的用户问题介绍 R 软件包。</p>
 
@@ -417,9 +448,9 @@ downloaded 3801 bytes
 
 <h1 id="etazlx-5-是否有用于安装包的用户界面">[](#etazlx)5. 是否有用于安装包的用户界面</h1>
 
-<p>如果您更喜欢图形用户界面来安装包，则 RStudio 和 RGui 都包含它们。 在 RStudio 中，您可以在&rdquo;工具&rdquo; -&gt; &ldquo;安装包&rdquo;中找到它，然后您将在弹出窗口中键入要安装的包：<br /><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/content_rstudio1.png/bioinit#width=" alt="" /></p>
+<p>如果您更喜欢图形用户界面来安装包，则 RStudio 和 RGui 都包含它们。 在 RStudio 中，您可以在&rdquo;工具&rdquo; -&gt; &ldquo;安装包&rdquo;中找到它，然后您将在弹出窗口中键入要安装的包：<br /><a data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/content_rstudio1.png/bioinit#width="><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/content_rstudio1.png/bioinit#width=" alt=""></a></p>
 
-<p>在 RGui 中，您将在&rdquo;包（Packages）&rdquo;菜单下找到实用程序。<br /><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/content_rgui1.png/bioinit#width=" alt="" /></p>
+<p>在 RGui 中，您将在&rdquo;包（Packages）&rdquo;菜单下找到实用程序。<br /><a data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/content_rgui1.png/bioinit#width="><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/content_rgui1.png/bioinit#width=" alt=""></a></p>
 
 <p><a name="pcgfgn"></a></p>
 
@@ -587,17 +618,17 @@ extending-ggplot2       Extending ggplot2 (source, html)
 
 <p>由于 CRAN 具有任务视图，一种替代方案可以是浏览 CRAN 包的类别。 那就对了！ CRAN 官方存储库，还为您提供浏览包的选项。 任务视图基本上是基于其功能对包进行分组的主题或类别。</p>
 
-<p>如您所见，所有与遗传有关的包都将在 &ldquo;遗传学（Genetics）&rdquo; 任务视图中进行分类：<br /><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/cran_task_views.png/bioinit#width=" alt="" /></p>
+<p>如您所见，所有与遗传有关的包都将在 &ldquo;遗传学（Genetics）&rdquo; 任务视图中进行分类：<br /><a data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/cran_task_views.png/bioinit#width="><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/cran_task_views.png/bioinit#width=" alt=""></a></p>
 
 <p>以韩语文本为例，您可以通过导航到自然语言处理任务视图轻松找到所需的包。 在那里，您可以阅读文本以查找可以处理文本的包，或者您可以执行简单的 <code>CTRL + F</code> 并键入您要查找的关键字。保证，您可以立即获得正确的包！</p>
 
 <p>查找软件包的另一种方法可以是 RDocumentation，它是来自 CRAN，BioConductor 和 GitHub 的 R 软件包的帮助文档聚合器，它直接在主页面上为我们提供了搜索框。</p>
 
-<p>你可能还不知道这第二种选择，所以让我们深入挖掘一下！让我们从韩语文本开始，RDocumentation 的一个有趣特性是快速搜索，所以当你输入一点点关键字时会就出现第一与之匹配的结果：<br /><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/rdocumentation.png/bioinit#width=" alt="" /></p>
+<p>你可能还不知道这第二种选择，所以让我们深入挖掘一下！让我们从韩语文本开始，RDocumentation 的一个有趣特性是快速搜索，所以当你输入一点点关键字时会就出现第一与之匹配的结果：<br /><a data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/rdocumentation.png/bioinit#width="><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/rdocumentation.png/bioinit#width=" alt=""></a></p>
 
 <p>但是，如果您输入关键词 &ldquo;korean&rdquo; 并单击&rdquo;搜索&rdquo;，我们将进行完整搜索，您将获得两列结果：左侧的包，右侧的功能。</p>
 
-<p>关注 packages 列，我们可以在每个结果中获取到包的名称，包含更详细信息的链接，作者姓名，也可链接以查看来自同一作者的其他包，以及带有搜索关键字高亮显示的包的一些描述，以及有关包的流行度的信息。<br /><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/rdocumentation_korean.png/bioinit#width=" alt="" /></p>
+<p>关注 packages 列，我们可以在每个结果中获取到包的名称，包含更详细信息的链接，作者姓名，也可链接以查看来自同一作者的其他包，以及带有搜索关键字高亮显示的包的一些描述，以及有关包的流行度的信息。<br /><a data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/rdocumentation_korean.png/bioinit#width="><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/rdocumentation_korean.png/bioinit#width=" alt=""></a></p>
 
 <p>谈到流行度，这是紧密相关的，因为搜索将首先对下载次数最多的包进行排名，以提高结果的准确性。 如果您想了解有关 RDocumentatio n的搜索实现的更多详细信息，在 <a href="https://www.datacamp.com/community/blog/rdocumentation-ranking-scoring">此处</a> 提供了非常详细的帖子。</p>
 
@@ -622,7 +653,7 @@ extending-ggplot2       Extending ggplot2 (source, html)
 <ul>
 <li><p>就像 CRAN 任务视图一样，RDocumentation 也提供了 <a href="https://www.rdocumentation.org/taskviews#Bayesian">任务视图</a>：正如你上面读到的那样，它是按主题探索 R 包的另一种方式。 例如，您可以获得与 Graphics，Finance 或 Time Series 相关的包列表。</p></li>
 
-<li><p><a href="https://www.rdocumentation.org/trends">排行榜（Leaderboard）</a>。此模式提供关于以下内容的一个概览：最受欢迎的软件包和开发人员，最新的软件包和更新，以及关于下载分布（Downloads distribution）、最常用关键词（Most used keywords）、Top packages dependency graph 相关的 3 个图形，您可以在其中查看最受欢迎的软件包相互之间的关联性，你也可以找到不同分组的包（用不同的颜色标识）。<br /><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/rdocumentation_trends.png/bioinit#width=" alt="" /></p></li>
+<li><p><a href="https://www.rdocumentation.org/trends">排行榜（Leaderboard）</a>。此模式提供关于以下内容的一个概览：最受欢迎的软件包和开发人员，最新的软件包和更新，以及关于下载分布（Downloads distribution）、最常用关键词（Most used keywords）、Top packages dependency graph 相关的 3 个图形，您可以在其中查看最受欢迎的软件包相互之间的关联性，你也可以找到不同分组的包（用不同的颜色标识）。<br /><a data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/rdocumentation_trends.png/bioinit#width="><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/rdocumentation_trends.png/bioinit#width=" alt=""></a></p></li>
 
 <li><p><a href="https://github.com/datacamp/Rdocumentation">RDocumentation package</a>。 <code>RDocumentation</code> 不仅是一个网站，也是一个 R 包。 它会覆盖帮助功能，因此您可以将 <code>RDocumentation</code> 的功能整合到您的工作流程中。 加载此包后，<code>help()</code> 函数将打开一个浏览器窗口或带有 <code>RDocumentation</code> 访问权限的 RStudio 帮助面板。</p></li>
 </ul>
@@ -646,7 +677,7 @@ help(package = &quot;vioplot&quot;)
 </code></pre></li>
 </ul>
 
-<p><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/rdocumentation_help_install.png/bioinit#width=" alt="" /></p>
+<p><a data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/rdocumentation_help_install.png/bioinit#width="><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/rdocumentation_help_install.png/bioinit#width=" alt=""></a></p>
 
 <ul>
 <li><p>运行并提出示例。 包中函数的帮助窗格将为您提供仅通过单击按钮就可以再次运行示例的选项。 您还可以提出可以合并到帮助页面并由其他 R 用户测试的示例。</p>
@@ -656,7 +687,7 @@ help(vioplot)
 </code></pre></li>
 </ul>
 
-<p><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/topics_vioplot.png/bioinit#width=" alt="" /></p>
+<p><a data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/topics_vioplot.png/bioinit#width="><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/topics_vioplot.png/bioinit#width=" alt=""></a></p>
 
 <ul>
 <li><a href="https://www.rdocumentation.org/docs/">RDocumentation API</a>。最后，RDocumentation 不仅是一个网站和一个 R包，还是一个 API。 对于需要更多灵活性的更高级用户，<a href="http://RDocumentation.org">RDocumentation.org</a> 提供了具有其网页功能的 JSON API。</li>
@@ -705,49 +736,13 @@ document.addEventListener('keyup', function(e) {
 
 
 <section class="comments">
-  <div id="disqus_thread"></div>
-  <script>
-  var disqus_config = function () {
-  
-    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
-  
-  };
-  (function() {
-    var inIFrame = function() {
-      var iframe = true;
-      try { iframe = window.self !== window.top; } catch (e) {}
-      return iframe;
-    };
-    if (inIFrame()) return;
-    var disqus_js = '//bioinit.disqus.com/embed.js';
-    var d = document, s = d.createElement('script');
-    s.src = disqus_js; s.async = true;
-    s.setAttribute('data-timestamp', +new Date());
-    var b = false, l = function() {
-      if (b) return;
-      (d.head || d.body).appendChild(s); b = true;
-    }
-    var t = d.getElementById('disqus_thread');
-    s.onerror = function(e) {
-      if (sessionStorage.getItem('failure-note')) return;
-      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
-      t.style.border = '1px dashed';
-      t.style.padding = '.5em';
-      t.style.background = 'lightyellow';
-      sessionStorage.setItem('failure-note', true);
-    };
-    
-    if (location.hash.match(/^#comment/)) return l();
-    var c = function() {
-      if (b) return;
-      var rect = t.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
-    };
-    window.addEventListener('load', c);
-    d.addEventListener('scroll', c);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 </section>
 
 
@@ -787,6 +782,8 @@ document.addEventListener('keyup', function(e) {
   </footer>
   </article>
   
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>
 

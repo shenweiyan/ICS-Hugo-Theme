@@ -9,7 +9,7 @@ published: true
 
 模仿 R 语言大神谢益辉，搭建了一个 Hugo+rblogdown 的博客：[https://blog.bioinit.com](https://blog.bioinit.com/)
 
-![hugo.png](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1565574651727-e9dc560f-fc43-4758-a227-9b8c343424d0.png#align=left&display=inline&height=660&name=hugo.png&originHeight=660&originWidth=1049&size=121639&status=done&width=1049)
+![hugo.png](http://qiniu.bioitee.com/yuque/0/2019/png/126032/1565574651727-e9dc560f-fc43-4758-a227-9b8c343424d0.png#align=left&display=inline&height=660&name=hugo.png&originHeight=660&originWidth=1049&size=121639&status=done&width=1049)
 
 主要记录：
 

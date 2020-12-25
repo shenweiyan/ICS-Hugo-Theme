@@ -106,6 +106,10 @@ a {
   border-bottom: 1px solid;
 }
 
+a.fancya {
+  border-bottom: none;
+}
+
 a:hover {
 }
 

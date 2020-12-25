@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../img/logo.png"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -133,9 +134,31 @@
           
           
           
-            <a href="../topic/" >
+            <a href="../tweets/" >
               
-              专栏
+              乱弹
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../other/" >
+              
+              其他
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../feedback/" >
+              
+              留言
             </a>
           </li>
           
@@ -163,18 +186,6 @@
           
           
 
-<li class="pattern">&nbsp;&nbsp;</li>
-
-
-
-<li class="pattern"><a href="https://github.com/shenweiyan/ivs-hugo-theme/edit/master/content/read/_index.md" target="_blank">编辑</a></li>
-
-
-<li class="pattern"><a href="../read/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
-
-<li class="pattern"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
-
-
         </ul>
       </nav>
     </div>
@@ -200,41 +211,33 @@
 
 
 
-<h1 id="生物信息学">生物信息学</h1>
-
-<h2 id="the-bioconductor-2018-workshop">The Bioconductor 2018 Workshop</h2>
-
-<h3 id="项目链接">项目链接</h3>
-
-<p>项目主页：<a href="https://github.com/Bioconductor/BiocWorkshops">https://github.com/Bioconductor/BiocWorkshops</a></p>
-
-<p>Gitbook：<a href="https://bioconductor.github.io/BiocWorkshops/">https://bioconductor.github.io/BiocWorkshops/</a></p>
-
-<p>学习之前需要安装好依赖包：</p>
-
-<pre><code class="language-r">if (!require(&quot;BiocManager&quot;))
-    install.packages(&quot;BiocManager&quot;)
-BiocManager::install(&quot;Bioconductor/BiocWorkshops&quot;)
-</code></pre>
-
-<blockquote>
-<p>安装可能不太容易，根据自己学习的内容情况安装对应的包更加容易和恰当。</p>
-</blockquote>
-
-<h3 id="目录">目录</h3>
-
-<ul>
-<li><a href="../read/biocworkshop-100-r-and-bioconductor-intro">100系列: 适合每个人的 R 和 Bioconductor 介绍</a></li>
-</ul>
-
-<h1 id="学术写作">学术写作</h1>
-
-<h2 id="successful-scientific-wrting">Successful scientific wrting</h2>
-
-<ul>
-<li><a href="../read/sci-writing-composing-a-first-draft">创作草稿：遵循标准结构</a></li>
-</ul>
-
+<div class="archive">
+  
+  <h2 class="archive-title">2020</h2>
+  
+  
+  <ul>
+    <li>
+      <span>2020/01/10</span>
+      <a href="../read/biocworkshop-100-r-and-bioconductor-intro/">适合每个人的 R 和 Bioconductor 介绍</a>
+    </li>
+  </ul>
+  
+  
+  
+  <h2 class="archive-title">2019</h2>
+  
+  
+  <ul>
+    <li>
+      <span>2019/06/20</span>
+      <a href="../read/sci-writing-composing-a-first-draft/">创作草稿：遵循标准结构</a>
+    </li>
+  </ul>
+  
+  
+  
+</div>
 
 
 
@@ -296,6 +299,8 @@ document.addEventListener('keyup', function(e) {
   </footer>
   </article>
   
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>
 

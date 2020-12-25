@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -131,9 +132,31 @@
           
           
           
-            <a href="../../topic/" >
+            <a href="../../tweets/" >
               
-              专栏
+              乱弹
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../other/" >
+              
+              其他
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../feedback/" >
+              
+              留言
             </a>
           </li>
           
@@ -197,7 +220,15 @@
       </header>
 
 
+  
+  
+  
 
+  
+  
+  
+
+  
 
 <p>PyClone 是一种用于推断癌症中克隆种群结构的统计模型。 它是一种贝叶斯聚类方法，用于将深度测序的体细胞突变集分组到假定的克隆簇中，同时估计其细胞流行率（prevalences）并解释由于分段拷贝数变化（segmental copy-number changes）和正常细胞污染（normal-cell contamination）引起的等位基因失衡。 单细胞测序验证证明了 PyClone 的准确性。</p>
 
@@ -332,7 +363,7 @@ Finished processing dependencies for PyClone==0.13.1
 
 <p>到这里，PyClone 就安装完成了，关于该软件具体的使用说明，请参考 <code>PyClone -h</code> 或者 <a href="https://bitbucket.org/aroth85/pyclone/wiki/Usage">PyClone wiki: Usage</a>。</p>
 
-<p><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/11/01-Thu/pyclone-help.png#width=" alt="" /></p>
+<p><a data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/11/01-Thu/pyclone-help.png#width="><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/11/01-Thu/pyclone-help.png#width=" alt=""></a></p>
 
 <p>参考资料：</p>
 
@@ -375,49 +406,13 @@ document.addEventListener('keyup', function(e) {
 
 
 <section class="comments">
-  <div id="disqus_thread"></div>
-  <script>
-  var disqus_config = function () {
-  
-    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
-  
-  };
-  (function() {
-    var inIFrame = function() {
-      var iframe = true;
-      try { iframe = window.self !== window.top; } catch (e) {}
-      return iframe;
-    };
-    if (inIFrame()) return;
-    var disqus_js = '//bioinit.disqus.com/embed.js';
-    var d = document, s = d.createElement('script');
-    s.src = disqus_js; s.async = true;
-    s.setAttribute('data-timestamp', +new Date());
-    var b = false, l = function() {
-      if (b) return;
-      (d.head || d.body).appendChild(s); b = true;
-    }
-    var t = d.getElementById('disqus_thread');
-    s.onerror = function(e) {
-      if (sessionStorage.getItem('failure-note')) return;
-      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
-      t.style.border = '1px dashed';
-      t.style.padding = '.5em';
-      t.style.background = 'lightyellow';
-      sessionStorage.setItem('failure-note', true);
-    };
-    
-    if (location.hash.match(/^#comment/)) return l();
-    var c = function() {
-      if (b) return;
-      var rect = t.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
-    };
-    window.addEventListener('load', c);
-    d.addEventListener('scroll', c);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 </section>
 
 
@@ -457,6 +452,8 @@ document.addEventListener('keyup', function(e) {
   </footer>
   </article>
   
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>
 

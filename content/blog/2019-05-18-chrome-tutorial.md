@@ -7,7 +7,7 @@ category: 软件
 published: true
 ---
 
-调查统计机构 NetMarketShare 发布最新的 7 月份报告，在全球浏览器市场，谷歌浏览器以 61.64% 的市场占有率继续成为世界上排名第一的桌面浏览器，IE 以 12.06% 紧随其后，Firefox 则以 11.15% 排在第三位。<br />![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1558182611078-9f867c81-07f5-4371-aa58-71fa4a55b533.png#align=left&display=inline&height=782&originHeight=782&originWidth=776&size=0&status=done&width=776)
+调查统计机构 NetMarketShare 发布最新的 7 月份报告，在全球浏览器市场，谷歌浏览器以 61.64% 的市场占有率继续成为世界上排名第一的桌面浏览器，IE 以 12.06% 紧随其后，Firefox 则以 11.15% 排在第三位。<br />![](http://qiniu.bioitee.com/yuque/0/2019/png/126032/1558182611078-9f867c81-07f5-4371-aa58-71fa4a55b533.png#align=left&display=inline&height=782&originHeight=782&originWidth=776&size=0&status=done&width=776)
 
 作为一个有追求的生信人，秉着对科研执着严谨的态度，一款专业而强大的浏览器我们怎么能错过呢！今天我们把从卡饭论坛 Chrome 浏览器专区搜集的一些 Google Chrome 使用教程分享给大家，希望能对喜欢 Chrome 的童鞋有帮助。
 

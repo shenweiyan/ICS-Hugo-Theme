@@ -6,28 +6,10 @@
     <description>Recent content in Python on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Mon, 01 Jul 2019 03:50:35 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 May 2019 12:50:51 +0000</lastBuildDate>
     
 	<atom:link href="https://shenweiyan.github.io/ics-hugo-theme/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Python 文件与目录操作方法总结</title>
-      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-01-python-file-directory-toturial/</link>
-      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
-      
-      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-01-python-file-directory-toturial/</guid>
-      <description>Python 有很多内置的模块和函数可用于文件的操作处理，这些函数都分布在几个模块上：如 os，os.path，shutil 和pathlib 等等。本文收集</description>
-    </item>
-    
-    <item>
-      <title>使用 Python 中的 mygene 模块进行 ID 匹配</title>
-      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-01-python-mygene/</link>
-      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
-      
-      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-01-python-mygene/</guid>
-      <description>一、背景 对于每个生物信息分析的人来说，ID 匹配（映射）是一项非常常见，但又很繁琐的任务。假设，我们有一个来自上游分析的 gene symbol 或报告的 ID 列表，然</description>
-    </item>
     
     <item>
       <title>利用 python 的 sorted 函数对字典按 key 排序和按 value 排序</title>
@@ -39,21 +21,12 @@
     </item>
     
     <item>
-      <title>Python 正则匹配总结</title>
-      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-05-18-python-match/</link>
-      <pubDate>Sat, 18 May 2019 12:48:56 +0000</pubDate>
-      
-      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-05-18-python-match/</guid>
-      <description>正则表达式是用于处理字符串的强大工具，拥有自己独特的语法以及一个独立的处理引擎，效率上可能不如 str 自带的方法，但功能十分强大。本文介绍了 Python 对于</description>
-    </item>
-    
-    <item>
       <title>python3 中 os.path 模块常用用法总结</title>
       <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-05-18-python-os-path/</link>
       <pubDate>Sat, 18 May 2019 12:44:59 +0000</pubDate>
       
       <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-05-18-python-os-path/</guid>
-      <description>os.path：常见的路径名操作模块。原文文档链接：https://docs.python.org/3.6/library/os.path.</description>
+      <description>os.path：常见的路径名操作模块。 原文文档链接：https://docs.python.org/3.6/library/os.path.</description>
     </item>
     
     <item>

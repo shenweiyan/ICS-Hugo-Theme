@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -131,9 +132,31 @@
           
           
           
-            <a href="../../topic/" >
+            <a href="../../tweets/" >
               
-              专栏
+              乱弹
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../other/" >
+              
+              其他
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../feedback/" >
+              
+              留言
             </a>
           </li>
           
@@ -197,11 +220,19 @@
       </header>
 
 
+  
+  
+  
 
+  
+  
+  
+
+  
 
 <p><strong>作者：</strong>[](<a href="https://twitter.com/justmarkham)[Kevin">https://twitter.com/justmarkham)[Kevin</a> Markham](<a href="https://twitter.com/justmarkham">https://twitter.com/justmarkham</a>)<br /><strong>编译：</strong>Steven Shen<br /><strong>原文：</strong><a href="https://www.dataschool.io/cloud-services-for-jupyter-notebook/">https://www.dataschool.io/cloud-services-for-jupyter-notebook/</a></p>
 
-<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1561014512583-882c390f-13af-4823-821e-1f8f991ab433.png#align=left&amp;display=inline&amp;height=615&amp;name=1_oj36TMqOkHmi6u3kCSsr7Q.png&amp;originHeight=615&amp;originWidth=999&amp;size=64145&amp;status=done&amp;width=999" alt="1_oj36TMqOkHmi6u3kCSsr7Q.png" /></p>
+<p><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1561014512583-882c390f-13af-4823-821e-1f8f991ab433.png#align=left&amp;display=inline&amp;height=615&amp;name=1_oj36TMqOkHmi6u3kCSsr7Q.png&amp;originHeight=615&amp;originWidth=999&amp;size=64145&amp;status=done&amp;width=999"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1561014512583-882c390f-13af-4823-821e-1f8f991ab433.png#align=left&amp;display=inline&amp;height=615&amp;name=1_oj36TMqOkHmi6u3kCSsr7Q.png&amp;originHeight=615&amp;originWidth=999&amp;size=64145&amp;status=done&amp;width=999" alt="1_oj36TMqOkHmi6u3kCSsr7Q.png"></a></p>
 
 <p>有许多方法可以与其他人共享静态 Jupyter 笔记本，例如把它发布在 GitHub 上或通过 nbviewer 链接进行分享。 但是，如果接收人已经安装了 Jupyter Notebook 环境，那么他们只能通过笔记本文件进行交互。</p>
 
@@ -245,7 +276,7 @@
 
 <h2 id="1-binder">1. Binder</h2>
 
-<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092377-90245040-4088-45c2-9dff-1bcfb01c6d1a.png#align=left&amp;display=inline&amp;height=586&amp;originHeight=586&amp;originWidth=746&amp;size=0&amp;status=done&amp;width=746" alt="" /></p>
+<p><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1562212092377-90245040-4088-45c2-9dff-1bcfb01c6d1a.png#align=left&amp;display=inline&amp;height=586&amp;originHeight=586&amp;originWidth=746&amp;size=0&amp;status=done&amp;width=746"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1562212092377-90245040-4088-45c2-9dff-1bcfb01c6d1a.png#align=left&amp;display=inline&amp;height=586&amp;originHeight=586&amp;originWidth=746&amp;size=0&amp;status=done&amp;width=746" alt=""></a></p>
 
 <p><a href="https://mybinder.org/">Binde</a>r 是 Binder 项目提供的服务，它是 Project Jupyter 开源生态系统的一员。它允许您输入任何公共 Git 存储库的 URL，它将在本机的 Jupyter Notebook 界面中打开该存储库。您可以在存储库中运行任何笔记本，但您所做的任何更改都不会保存回存储库。您不必使用 Binder 创建帐户，也不需要是存储库的所有者，但你所使用的存储库必须包含指定其软件包要求的配置文件。</p>
 
@@ -283,7 +314,7 @@
 
 <h2 id="2-kaggle-kernels">2. Kaggle Kernels</h2>
 
-<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092440-e46cb2ef-d051-46aa-811b-a57c91035a31.png#align=left&amp;display=inline&amp;height=586&amp;originHeight=586&amp;originWidth=746&amp;size=0&amp;status=done&amp;width=746" alt="" /></p>
+<p><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1562212092440-e46cb2ef-d051-46aa-811b-a57c91035a31.png#align=left&amp;display=inline&amp;height=586&amp;originHeight=586&amp;originWidth=746&amp;size=0&amp;status=done&amp;width=746"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1562212092440-e46cb2ef-d051-46aa-811b-a57c91035a31.png#align=left&amp;display=inline&amp;height=586&amp;originHeight=586&amp;originWidth=746&amp;size=0&amp;status=done&amp;width=746" alt=""></a></p>
 
 <p><a href="https://www.kaggle.com/">Kaggle</a> 是最着名的数据科学竞赛平台。但是，他们还提供可以独立于竞争对手使用，名为 <a href="https://www.kaggle.com/kernels">Kernels</a> 的免费服务。创建 Kaggle 帐户（或使用 Google 或 Facebook 登录）后，您可以创建一个使用笔记本或脚本界面的内核，但我更专注于下面提到的的笔记本界面信息。</p>
 
@@ -331,7 +362,7 @@
 
 <h2 id="3-google-colaboratory-colab">3. Google Colaboratory (Colab)</h2>
 
-<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092472-b9efd4a2-5e77-4631-b257-f3caf130a36d.png#align=left&amp;display=inline&amp;height=583&amp;originHeight=583&amp;originWidth=746&amp;size=0&amp;status=done&amp;width=746" alt="" /></p>
+<p><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1562212092472-b9efd4a2-5e77-4631-b257-f3caf130a36d.png#align=left&amp;display=inline&amp;height=583&amp;originHeight=583&amp;originWidth=746&amp;size=0&amp;status=done&amp;width=746"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1562212092472-b9efd4a2-5e77-4631-b257-f3caf130a36d.png#align=left&amp;display=inline&amp;height=583&amp;originHeight=583&amp;originWidth=746&amp;size=0&amp;status=done&amp;width=746" alt=""></a></p>
 
 <p><a href="https://colab.research.google.com/">Google Colaboratory</a>，通常称为&rdquo;Google Colab&rdquo;，适用于拥有 Google 帐户的任何人。只要您已登录 Google，就可以快速开始创建空笔记本，上传现有笔记本或从任何公共 GitHub 存储库导入笔记本。您的 Colab 笔记本会自动保存 在Google 云端硬盘中的特殊文件夹中，您甚至可以直接从云端硬盘创建新笔记本。</p>
 
@@ -387,7 +418,7 @@
 
 <h2 id="4-microsoft-azure-notebooks">4. Microsoft Azure Notebooks</h2>
 
-<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092289-14f579c6-072e-45ab-be67-7dd87bb76b59.png#align=left&amp;display=inline&amp;height=588&amp;originHeight=588&amp;originWidth=746&amp;size=0&amp;status=done&amp;width=746" alt="" /></p>
+<p><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1562212092289-14f579c6-072e-45ab-be67-7dd87bb76b59.png#align=left&amp;display=inline&amp;height=588&amp;originHeight=588&amp;originWidth=746&amp;size=0&amp;status=done&amp;width=746"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1562212092289-14f579c6-072e-45ab-be67-7dd87bb76b59.png#align=left&amp;display=inline&amp;height=588&amp;originHeight=588&amp;originWidth=746&amp;size=0&amp;status=done&amp;width=746" alt=""></a></p>
 
 <p>要开始使用 <a href="https://notebooks.azure.com/">Azure 笔记本</a>，请先使用 Microsoft 或 Outlook 帐户登录（或创建一个帐户）。然后是创建一个 &ldquo;项目&rdquo;，其结构与 GitHub 存储库相同：它可以包含一个或多个笔记本、Markdown 文件、数据集以及您要创建或上传的任何其他文件，所有这些都可以组织到文件夹中。与 GitHub 一样，您可以使用 README 文件初始化项目，该文件将自动显示在项目页面上。如果您的工作已存储在 GitHub 上，则可以将整个存储库直接导入到项目中。</p>
 
@@ -430,7 +461,7 @@
 
 <h2 id="5-cocalc">5. CoCalc</h2>
 
-<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092694-f4d33ad5-1ca8-4c4e-8a5b-94ce251a8144.png#align=left&amp;display=inline&amp;height=588&amp;originHeight=588&amp;originWidth=746&amp;size=0&amp;status=done&amp;width=746" alt="" /></p>
+<p><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1562212092694-f4d33ad5-1ca8-4c4e-8a5b-94ce251a8144.png#align=left&amp;display=inline&amp;height=588&amp;originHeight=588&amp;originWidth=746&amp;size=0&amp;status=done&amp;width=746"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1562212092694-f4d33ad5-1ca8-4c4e-8a5b-94ce251a8144.png#align=left&amp;display=inline&amp;height=588&amp;originHeight=588&amp;originWidth=746&amp;size=0&amp;status=done&amp;width=746" alt=""></a></p>
 
 <p><a href="https://cocalc.com/">CoCalc</a>，是 &ldquo;collaborative calculation&rdquo; 的缩写，是用于 Python，R，Julia 和许多其他语言计算的在线工作空间。 它允许您创建和编辑 Jupyter 笔记本，Sage 工作表和 LaTeX 文档。创建 CoCalc 帐户后，第一步是创建一个 &ldquo;项目&rdquo;，其中可以包含一个或多个笔记本、Markdown 文件、数据集以及您要创建或上传的任何其他文件，并且所有这些文件都可以组织到文件夹中。项目界面起初有点让人应接不暇，但是一旦你创建或打开笔记本，它看起来就会更加熟悉。</p>
 
@@ -474,7 +505,7 @@
 
 <h2 id="6-datalore">6. Datalore</h2>
 
-<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092356-94a5aab3-a5c7-46a9-b2a8-db8d26c5b4c8.png#align=left&amp;display=inline&amp;height=587&amp;originHeight=587&amp;originWidth=746&amp;size=0&amp;status=done&amp;width=746" alt="" /></p>
+<p><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1562212092356-94a5aab3-a5c7-46a9-b2a8-db8d26c5b4c8.png#align=left&amp;display=inline&amp;height=587&amp;originHeight=587&amp;originWidth=746&amp;size=0&amp;status=done&amp;width=746"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1562212092356-94a5aab3-a5c7-46a9-b2a8-db8d26c5b4c8.png#align=left&amp;display=inline&amp;height=587&amp;originHeight=587&amp;originWidth=746&amp;size=0&amp;status=done&amp;width=746" alt=""></a></p>
 
 <p><a href="https://datalore.io/">Datalore</a> 是由 JetBrains，一个制作 PyCharm（一种流行的 Python IDE）的公司创建的。它的入门就像创建帐户或使用 Google 或 JetBrains 帐户登录一样简单。您可以创建新的 Datalore &ldquo;工作簿(workbook)&rdquo; 或上传现有的 Jupyter Notebook。 Datalore 工作簿以专有格式存储，但它支持导入和导出标准 <code>.ipynb</code> 文件格式。</p>
 
@@ -593,7 +624,7 @@
 
 <p>话虽如此，这些服务也在不断变化，而且未来可能会有一些信息过时。如果您认为本文中的内容不再正确，请在下面留言，我很乐意考虑更新该文章。</p>
 
-<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092205-466d65de-bb0e-4444-a0b0-31d753aabaaf.png#align=left&amp;display=inline&amp;height=500&amp;originHeight=500&amp;originWidth=900&amp;size=0&amp;status=done&amp;width=900" alt="" /></p>
+<p><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1562212092205-466d65de-bb0e-4444-a0b0-31d753aabaaf.png#align=left&amp;display=inline&amp;height=500&amp;originHeight=500&amp;originWidth=900&amp;size=0&amp;status=done&amp;width=900"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1562212092205-466d65de-bb0e-4444-a0b0-31d753aabaaf.png#align=left&amp;display=inline&amp;height=500&amp;originHeight=500&amp;originWidth=900&amp;size=0&amp;status=done&amp;width=900" alt=""></a></p>
 
 
   <footer>
@@ -622,49 +653,13 @@ document.addEventListener('keyup', function(e) {
 
 
 <section class="comments">
-  <div id="disqus_thread"></div>
-  <script>
-  var disqus_config = function () {
-  
-    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
-  
-  };
-  (function() {
-    var inIFrame = function() {
-      var iframe = true;
-      try { iframe = window.self !== window.top; } catch (e) {}
-      return iframe;
-    };
-    if (inIFrame()) return;
-    var disqus_js = '//bioinit.disqus.com/embed.js';
-    var d = document, s = d.createElement('script');
-    s.src = disqus_js; s.async = true;
-    s.setAttribute('data-timestamp', +new Date());
-    var b = false, l = function() {
-      if (b) return;
-      (d.head || d.body).appendChild(s); b = true;
-    }
-    var t = d.getElementById('disqus_thread');
-    s.onerror = function(e) {
-      if (sessionStorage.getItem('failure-note')) return;
-      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
-      t.style.border = '1px dashed';
-      t.style.padding = '.5em';
-      t.style.background = 'lightyellow';
-      sessionStorage.setItem('failure-note', true);
-    };
-    
-    if (location.hash.match(/^#comment/)) return l();
-    var c = function() {
-      if (b) return;
-      var rect = t.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
-    };
-    window.addEventListener('load', c);
-    d.addEventListener('scroll', c);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 </section>
 
 
@@ -704,6 +699,8 @@ document.addEventListener('keyup', function(e) {
   </footer>
   </article>
   
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>
 

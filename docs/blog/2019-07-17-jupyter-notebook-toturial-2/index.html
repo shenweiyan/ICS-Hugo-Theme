@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -131,9 +132,31 @@
           
           
           
-            <a href="../../topic/" >
+            <a href="../../tweets/" >
               
-              专栏
+              乱弹
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../other/" >
+              
+              其他
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../feedback/" >
+              
+              留言
             </a>
           </li>
           
@@ -197,7 +220,15 @@
       </header>
 
 
+  
+  
+  
 
+  
+  
+  
+
+  
 
 <p>上一篇文章中，我们介绍了 Jupyter Notebook 在本地的一些安装和使用，今天我们介绍一下 Python3+Nginx+SSL 下的 Jupyter Notebook 服务部署，也就是 Jupyter 服务器的搭建与配置。</p>
 
@@ -272,7 +303,7 @@ c.NotebookApp.port = 8888
 
 </code></pre>
 
-<p>如果在启动过程中出现：OSError: [Errno 99] Cannot assign requested address，请参考下面的方法解决。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563351248558-4c343f89-968f-4a50-aade-c227b3f70b77.png#align=left&amp;display=inline&amp;height=322&amp;originHeight=322&amp;originWidth=937&amp;size=0&amp;status=done&amp;width=937" alt="" /></p>
+<p>如果在启动过程中出现：OSError: [Errno 99] Cannot assign requested address，请参考下面的方法解决。<br /><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563351248558-4c343f89-968f-4a50-aade-c227b3f70b77.png#align=left&amp;display=inline&amp;height=322&amp;originHeight=322&amp;originWidth=937&amp;size=0&amp;status=done&amp;width=937"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563351248558-4c343f89-968f-4a50-aade-c227b3f70b77.png#align=left&amp;display=inline&amp;height=322&amp;originHeight=322&amp;originWidth=937&amp;size=0&amp;status=done&amp;width=937" alt=""></a></p>
 
 <p><strong>解决：</strong>运行 Jupyter 时增加 <code>--ip=0.0.0.0</code> 参数。</p>
 
@@ -285,7 +316,7 @@ c.NotebookApp.port = 8888
 
 <p>配置 nginx 前需要把你已经申请的域名跟 Jupyter Notebook 的服务器 ip 进行绑定解析。打开阿里云域名管理，增加 A 记录解析：</p>
 
-<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563334760254-00323543-edb8-4b95-8d6a-fb88595aef5a.png#align=left&amp;display=inline&amp;height=398&amp;originHeight=398&amp;originWidth=736&amp;size=0&amp;status=done&amp;width=736" alt="" /></p>
+<p><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563334760254-00323543-edb8-4b95-8d6a-fb88595aef5a.png#align=left&amp;display=inline&amp;height=398&amp;originHeight=398&amp;originWidth=736&amp;size=0&amp;status=done&amp;width=736"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563334760254-00323543-edb8-4b95-8d6a-fb88595aef5a.png#align=left&amp;display=inline&amp;height=398&amp;originHeight=398&amp;originWidth=736&amp;size=0&amp;status=done&amp;width=736" alt=""></a></p>
 
 <p><a name="5f33f177"></a></p>
 
@@ -344,7 +375,7 @@ server{
 
 <p>至此，大功告成，打开你的网址 <strong>xxx.xxx.com</strong> 是不是可以看到熟悉的 jupyter 了呢？如有疑问，欢迎留言讨论。</p>
 
-<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563341527122-326cddb2-b2b2-4ccf-8b01-f2c03cca27e2.png#align=left&amp;display=inline&amp;height=577&amp;name=jupyter_server.png&amp;originHeight=577&amp;originWidth=829&amp;size=27393&amp;status=done&amp;width=829" alt="jupyter_server.png" /></p>
+<p><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563341527122-326cddb2-b2b2-4ccf-8b01-f2c03cca27e2.png#align=left&amp;display=inline&amp;height=577&amp;name=jupyter_server.png&amp;originHeight=577&amp;originWidth=829&amp;size=27393&amp;status=done&amp;width=829"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563341527122-326cddb2-b2b2-4ccf-8b01-f2c03cca27e2.png#align=left&amp;display=inline&amp;height=577&amp;name=jupyter_server.png&amp;originHeight=577&amp;originWidth=829&amp;size=27393&amp;status=done&amp;width=829" alt="jupyter_server.png"></a></p>
 
 <p>以上就是远程 Jupter Notebook 服务安装与配置的全部内容，下一篇我们介绍一下如何在  Jupyter Notebook  中使用不同内核（Kernel）实现支持包括 python2、python3、R 在的多种不同编程环境。</p>
 
@@ -375,49 +406,13 @@ document.addEventListener('keyup', function(e) {
 
 
 <section class="comments">
-  <div id="disqus_thread"></div>
-  <script>
-  var disqus_config = function () {
-  
-    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
-  
-  };
-  (function() {
-    var inIFrame = function() {
-      var iframe = true;
-      try { iframe = window.self !== window.top; } catch (e) {}
-      return iframe;
-    };
-    if (inIFrame()) return;
-    var disqus_js = '//bioinit.disqus.com/embed.js';
-    var d = document, s = d.createElement('script');
-    s.src = disqus_js; s.async = true;
-    s.setAttribute('data-timestamp', +new Date());
-    var b = false, l = function() {
-      if (b) return;
-      (d.head || d.body).appendChild(s); b = true;
-    }
-    var t = d.getElementById('disqus_thread');
-    s.onerror = function(e) {
-      if (sessionStorage.getItem('failure-note')) return;
-      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
-      t.style.border = '1px dashed';
-      t.style.padding = '.5em';
-      t.style.background = 'lightyellow';
-      sessionStorage.setItem('failure-note', true);
-    };
-    
-    if (location.hash.match(/^#comment/)) return l();
-    var c = function() {
-      if (b) return;
-      var rect = t.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
-    };
-    window.addEventListener('load', c);
-    d.addEventListener('scroll', c);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 </section>
 
 
@@ -457,6 +452,8 @@ document.addEventListener('keyup', function(e) {
   </footer>
   </article>
   
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>
 

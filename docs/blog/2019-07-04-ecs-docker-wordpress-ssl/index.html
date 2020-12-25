@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -131,9 +132,31 @@
           
           
           
-            <a href="../../topic/" >
+            <a href="../../tweets/" >
               
-              专栏
+              乱弹
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../other/" >
+              
+              其他
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../feedback/" >
+              
+              留言
             </a>
           </li>
           
@@ -197,7 +220,15 @@
       </header>
 
 
+  
+  
+  
 
+  
+  
+  
+
+  
 
 <p>虽然已经入手 leanote，开启了以笔记+博客的方式记录学习生活琐事，但当手上有个续费了三年的 ECS，总想折腾点事情。于是想着在阿里云 ECS 上，使用 docker+wordpress 搭建个人博客，并基于 nginx 实现 ssl 证书的 https 访问。<br /></p>
 
@@ -340,7 +371,7 @@ http {
 
 <h2 id="5-4-添加域名解析">5.4 添加域名解析</h2>
 
-<p>登入阿里域名解析：<a href="https://netcn.console.aliyun.com/core/domain/list，点击相应域名的">https://netcn.console.aliyun.com/core/domain/list，点击相应域名的</a> &ldquo;解析&rdquo; 链接，根据提示添加域名的 A 记录，解析到你的服务器 ip 下。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255882-d5b2c908-7053-4474-bd71-4aa011f41e6b.png#align=left&amp;display=inline&amp;height=384&amp;originHeight=384&amp;originWidth=713&amp;size=0&amp;status=done&amp;width=713#align=left&amp;display=inline&amp;height=384&amp;originHeight=384&amp;originWidth=713&amp;status=done&amp;width=713" alt="" /></p>
+<p>登入阿里域名解析：<a href="https://netcn.console.aliyun.com/core/domain/list，点击相应域名的">https://netcn.console.aliyun.com/core/domain/list，点击相应域名的</a> &ldquo;解析&rdquo; 链接，根据提示添加域名的 A 记录，解析到你的服务器 ip 下。<br /><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1559373255882-d5b2c908-7053-4474-bd71-4aa011f41e6b.png#align=left&amp;display=inline&amp;height=384&amp;originHeight=384&amp;originWidth=713&amp;size=0&amp;status=done&amp;width=713#align=left&amp;display=inline&amp;height=384&amp;originHeight=384&amp;originWidth=713&amp;status=done&amp;width=713"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1559373255882-d5b2c908-7053-4474-bd71-4aa011f41e6b.png#align=left&amp;display=inline&amp;height=384&amp;originHeight=384&amp;originWidth=713&amp;size=0&amp;status=done&amp;width=713#align=left&amp;display=inline&amp;height=384&amp;originHeight=384&amp;originWidth=713&amp;status=done&amp;width=713" alt=""></a></p>
 
 <p><a name="1213502c"></a></p>
 
@@ -356,13 +387,13 @@ http {
 
 <h2 id="6-1-单域名免费证书申请">6.1 单域名免费证书申请</h2>
 
-<p>登入阿里域名解析：<a href="https://netcn.console.aliyun.com/core/domain/list，点击相应域名的">https://netcn.console.aliyun.com/core/domain/list，点击相应域名的</a> &ldquo;SSL证书&rdquo; 链接，设置单域名免费证书。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255815-7ac27782-8249-43a6-9e7d-98a053b6eee2.png#align=left&amp;display=inline&amp;height=336&amp;originHeight=336&amp;originWidth=729&amp;size=0&amp;status=done&amp;width=729#align=left&amp;display=inline&amp;height=336&amp;originHeight=336&amp;originWidth=729&amp;status=done&amp;width=729" alt="" /></p>
+<p>登入阿里域名解析：<a href="https://netcn.console.aliyun.com/core/domain/list，点击相应域名的">https://netcn.console.aliyun.com/core/domain/list，点击相应域名的</a> &ldquo;SSL证书&rdquo; 链接，设置单域名免费证书。<br /><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1559373255815-7ac27782-8249-43a6-9e7d-98a053b6eee2.png#align=left&amp;display=inline&amp;height=336&amp;originHeight=336&amp;originWidth=729&amp;size=0&amp;status=done&amp;width=729#align=left&amp;display=inline&amp;height=336&amp;originHeight=336&amp;originWidth=729&amp;status=done&amp;width=729"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1559373255815-7ac27782-8249-43a6-9e7d-98a053b6eee2.png#align=left&amp;display=inline&amp;height=336&amp;originHeight=336&amp;originWidth=729&amp;size=0&amp;status=done&amp;width=729#align=left&amp;display=inline&amp;height=336&amp;originHeight=336&amp;originWidth=729&amp;status=done&amp;width=729" alt=""></a></p>
 
 <p><a name="4cd29f34"></a></p>
 
 <h2 id="6-2-ssl-证书下载">6.2 SSL 证书下载</h2>
 
-<p>单域名免费证书提交申请后，一般十分钟就会审批下来。这时候，我们登陆 &ldquo;<a href="https://yundun.console.aliyun.com/?spm=5176.2020520163.aliyun_sidebar.24.4eb62b7auFTPPK&amp;p=cas#/cas/home">CA证书服务（数据安全）</a>&ldquo;，在 &ldquo;我的订单&rdquo; 中找到已经签发的域名证书，点击 &ldquo;下载&rdquo; 链接，通过 &ldquo;下载证书for Nginx&rdquo; 下载证书。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255775-88b7ae35-3ef8-4737-a5c4-ff1997f36fa2.png#align=left&amp;display=inline&amp;height=453&amp;originHeight=453&amp;originWidth=835&amp;size=0&amp;status=done&amp;width=835#align=left&amp;display=inline&amp;height=453&amp;originHeight=453&amp;originWidth=835&amp;status=done&amp;width=835" alt="" /><br />
+<p>单域名免费证书提交申请后，一般十分钟就会审批下来。这时候，我们登陆 &ldquo;<a href="https://yundun.console.aliyun.com/?spm=5176.2020520163.aliyun_sidebar.24.4eb62b7auFTPPK&amp;p=cas#/cas/home">CA证书服务（数据安全）</a>&ldquo;，在 &ldquo;我的订单&rdquo; 中找到已经签发的域名证书，点击 &ldquo;下载&rdquo; 链接，通过 &ldquo;下载证书for Nginx&rdquo; 下载证书。<br /><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1559373255775-88b7ae35-3ef8-4737-a5c4-ff1997f36fa2.png#align=left&amp;display=inline&amp;height=453&amp;originHeight=453&amp;originWidth=835&amp;size=0&amp;status=done&amp;width=835#align=left&amp;display=inline&amp;height=453&amp;originHeight=453&amp;originWidth=835&amp;status=done&amp;width=835"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1559373255775-88b7ae35-3ef8-4737-a5c4-ff1997f36fa2.png#align=left&amp;display=inline&amp;height=453&amp;originHeight=453&amp;originWidth=835&amp;size=0&amp;status=done&amp;width=835#align=left&amp;display=inline&amp;height=453&amp;originHeight=453&amp;originWidth=835&amp;status=done&amp;width=835" alt=""></a><br />
 <a name="015f2df9"></a></p>
 
 <h2 id="6-3-ssl-证书安装">6.3 SSL 证书安装</h2>
@@ -447,7 +478,7 @@ define('FORCE_SSL_ADMIN', true);
 
 <p>登录后台安装此插件。</p>
 
-<p>或者登陆 wordpress 后台，在&rdquo;设置&rdquo;→ &ldquo;常规&rdquo; 中设置 &ldquo;WordPress地址（URL）&rdquo; 和 &ldquo;站点地址（URL）&rdquo;为 https 链接地址。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255781-a5c5bd01-df19-43a5-869d-bb1b54e0bfc3.png#align=left&amp;display=inline&amp;height=188&amp;originHeight=188&amp;originWidth=971&amp;size=0&amp;status=done&amp;width=971#align=left&amp;display=inline&amp;height=188&amp;originHeight=188&amp;originWidth=971&amp;status=done&amp;width=971" alt="" /></p>
+<p>或者登陆 wordpress 后台，在&rdquo;设置&rdquo;→ &ldquo;常规&rdquo; 中设置 &ldquo;WordPress地址（URL）&rdquo; 和 &ldquo;站点地址（URL）&rdquo;为 https 链接地址。<br /><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1559373255781-a5c5bd01-df19-43a5-869d-bb1b54e0bfc3.png#align=left&amp;display=inline&amp;height=188&amp;originHeight=188&amp;originWidth=971&amp;size=0&amp;status=done&amp;width=971#align=left&amp;display=inline&amp;height=188&amp;originHeight=188&amp;originWidth=971&amp;status=done&amp;width=971"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1559373255781-a5c5bd01-df19-43a5-869d-bb1b54e0bfc3.png#align=left&amp;display=inline&amp;height=188&amp;originHeight=188&amp;originWidth=971&amp;size=0&amp;status=done&amp;width=971#align=left&amp;display=inline&amp;height=188&amp;originHeight=188&amp;originWidth=971&amp;status=done&amp;width=971" alt=""></a></p>
 
 <p>至此，真正意义上解决 wordpress 全站开启 https 的 ssl 证书问题。</p>
 
@@ -504,49 +535,13 @@ document.addEventListener('keyup', function(e) {
 
 
 <section class="comments">
-  <div id="disqus_thread"></div>
-  <script>
-  var disqus_config = function () {
-  
-    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
-  
-  };
-  (function() {
-    var inIFrame = function() {
-      var iframe = true;
-      try { iframe = window.self !== window.top; } catch (e) {}
-      return iframe;
-    };
-    if (inIFrame()) return;
-    var disqus_js = '//bioinit.disqus.com/embed.js';
-    var d = document, s = d.createElement('script');
-    s.src = disqus_js; s.async = true;
-    s.setAttribute('data-timestamp', +new Date());
-    var b = false, l = function() {
-      if (b) return;
-      (d.head || d.body).appendChild(s); b = true;
-    }
-    var t = d.getElementById('disqus_thread');
-    s.onerror = function(e) {
-      if (sessionStorage.getItem('failure-note')) return;
-      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
-      t.style.border = '1px dashed';
-      t.style.padding = '.5em';
-      t.style.background = 'lightyellow';
-      sessionStorage.setItem('failure-note', true);
-    };
-    
-    if (location.hash.match(/^#comment/)) return l();
-    var c = function() {
-      if (b) return;
-      var rect = t.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
-    };
-    window.addEventListener('load', c);
-    d.addEventListener('scroll', c);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 </section>
 
 
@@ -586,6 +581,8 @@ document.addEventListener('keyup', function(e) {
   </footer>
   </article>
   
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>
 

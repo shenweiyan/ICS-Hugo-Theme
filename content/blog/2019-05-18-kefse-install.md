@@ -42,7 +42,7 @@ AttributeError: Unknown property axis_bgcolor
 
 出现报错主要原因是 matplotlib==2.2.0 起把部分功能函数移除了，我们需要回退 matplotlib 版本。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1558183433754-bec73a13-aa41-4753-a0e0-18c61d0e1a5a.png#align=left&display=inline&height=351&originHeight=351&originWidth=656&size=0&status=done&width=656)
+![](http://qiniu.bioitee.com/yuque/0/2019/png/126032/1558183433754-bec73a13-aa41-4753-a0e0-18c61d0e1a5a.png#align=left&display=inline&height=351&originHeight=351&originWidth=656&size=0&status=done&width=656)
 
 ```
 $ python
@@ -75,6 +75,6 @@ $ run_lefse.py hmp_aerobiosis_small.in hmp_aerobiosis_small.res
 $ plot_res.py hmp_aerobiosis_small.res hmp_aerobiosis_small.png
 ```
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1558183433779-08b46b37-6fa0-4cd7-9319-74d7c73bbfe0.png#align=left&display=inline&height=824&originHeight=824&originWidth=504&size=0&status=done&width=504)
+![](http://qiniu.bioitee.com/yuque/0/2019/png/126032/1558183433779-08b46b37-6fa0-4cd7-9319-74d7c73bbfe0.png#align=left&display=inline&height=824&originHeight=824&originWidth=504&size=0&status=done&width=504)
 
 问题解决！

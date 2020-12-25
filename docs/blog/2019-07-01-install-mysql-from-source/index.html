@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -131,9 +132,31 @@
           
           
           
-            <a href="../../topic/" >
+            <a href="../../tweets/" >
               
-              专栏
+              乱弹
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../other/" >
+              
+              其他
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../feedback/" >
+              
+              留言
             </a>
           </li>
           
@@ -197,7 +220,15 @@
       </header>
 
 
+  
+  
+  
 
+  
+  
+  
+
+  
 
 <p>Blast2GO 是一个基于序列相似性搜索的 GO 注释和功能分析工具，它可以直接统计分析基因功能信息，并可视化 GO 有向非循环图（DAG）上的相关功能特征，分析 BLAST、GO-mapping、GO 注释分析和富集分析结果。</p>
 
@@ -233,7 +264,7 @@
 
 <h1 id="pqaigt-二-mysql-免安装版">[](#pqaigt)二、MySQL 免安装版</h1>
 
-<p>MySQL 提供了 rpm、源码、免安装等多种安装方式，其中通过源码编译安装是比较耗时，过程相对复杂的一个过程。对于不想使用源码编译安装的童鞋，MySQL 提供了免安装直接解压可用的版本。<br /><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-archives-select.png#width=" alt="" /><br /><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-centos-7.png#width=" alt="" /></p>
+<p>MySQL 提供了 rpm、源码、免安装等多种安装方式，其中通过源码编译安装是比较耗时，过程相对复杂的一个过程。对于不想使用源码编译安装的童鞋，MySQL 提供了免安装直接解压可用的版本。<br /><a data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-archives-select.png#width="><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-archives-select.png#width=" alt=""></a><br /><a data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-centos-7.png#width="><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-centos-7.png#width=" alt=""></a></p>
 
 <pre><code class="language-bash">wget https://cdn.mysql.com/archives/mysql-8.0/mysql-8.0.12-el7-x86_64.tar.gz
 </code></pre>
@@ -247,9 +278,9 @@
 <ul>
 <li><p>Source Code：源代码下载</p></li>
 
-<li><p>Generic Linux (Architecture Independent)：通用的 Linux（独立结构）。<br /><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018%2F09%2F18-Tue%2Fmysql-community-download.png#width=" alt="" /></p></li>
+<li><p>Generic Linux (Architecture Independent)：通用的 Linux（独立结构）。<br /><a data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018%2F09%2F18-Tue%2Fmysql-community-download.png#width="><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018%2F09%2F18-Tue%2Fmysql-community-download.png#width=" alt=""></a></p></li>
 
-<li><p>点击下载，需要注册 Oracle 账号，这里不细说。<br /><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018%2F09%2F18-Tue%2Foracle-web-account.png#width=" alt="" /></p>
+<li><p>点击下载，需要注册 Oracle 账号，这里不细说。<br /><a data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018%2F09%2F18-Tue%2Foracle-web-account.png#width="><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018%2F09%2F18-Tue%2Foracle-web-account.png#width=" alt=""></a></p>
 
 <pre><code class="language-bash">$ wget https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-boost-8.0.12.tar.gz
 </code></pre></li>
@@ -257,7 +288,7 @@
 <li><p>其他下载版本</p></li>
 </ul>
 
-<p>如果想要下载其他版本的 MySQL，可以在 <a href="https://downloads.mysql.com/archives/community/">https://downloads.mysql.com/archives/community/</a> 选择符合自己服务器的版本进行下载。<br /><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-download-archives.png#width=" alt="" /></p>
+<p>如果想要下载其他版本的 MySQL，可以在 <a href="https://downloads.mysql.com/archives/community/">https://downloads.mysql.com/archives/community/</a> 选择符合自己服务器的版本进行下载。<br /><a data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-download-archives.png#width="><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-download-archives.png#width=" alt=""></a></p>
 
 <p><a name="y134op"></a></p>
 
@@ -460,7 +491,7 @@ write_buffer = 4M
 <pre><code class="language-bash">$ /usr/local/software/mysql/bin/mysql -uroot
 </code></pre>
 
-<p>MySQL 第一次安装完成后，是没有设置 root 密码的，直接回车 Enter 即可登陆：<br /><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-root-login.png#width=" alt="" /></p>
+<p>MySQL 第一次安装完成后，是没有设置 root 密码的，直接回车 Enter 即可登陆：<br /><a data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-root-login.png#width="><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-root-login.png#width=" alt=""></a></p>
 
 <p><a name="9aihvv"></a></p>
 
@@ -668,49 +699,13 @@ document.addEventListener('keyup', function(e) {
 
 
 <section class="comments">
-  <div id="disqus_thread"></div>
-  <script>
-  var disqus_config = function () {
-  
-    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
-  
-  };
-  (function() {
-    var inIFrame = function() {
-      var iframe = true;
-      try { iframe = window.self !== window.top; } catch (e) {}
-      return iframe;
-    };
-    if (inIFrame()) return;
-    var disqus_js = '//bioinit.disqus.com/embed.js';
-    var d = document, s = d.createElement('script');
-    s.src = disqus_js; s.async = true;
-    s.setAttribute('data-timestamp', +new Date());
-    var b = false, l = function() {
-      if (b) return;
-      (d.head || d.body).appendChild(s); b = true;
-    }
-    var t = d.getElementById('disqus_thread');
-    s.onerror = function(e) {
-      if (sessionStorage.getItem('failure-note')) return;
-      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
-      t.style.border = '1px dashed';
-      t.style.padding = '.5em';
-      t.style.background = 'lightyellow';
-      sessionStorage.setItem('failure-note', true);
-    };
-    
-    if (location.hash.match(/^#comment/)) return l();
-    var c = function() {
-      if (b) return;
-      var rect = t.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
-    };
-    window.addEventListener('load', c);
-    d.addEventListener('scroll', c);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 </section>
 
 
@@ -750,6 +745,8 @@ document.addEventListener('keyup', function(e) {
   </footer>
   </article>
   
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>
 

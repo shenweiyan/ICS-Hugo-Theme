@@ -1,9 +1,8 @@
 ---
 title: "创作草稿：遵循标准结构"
+type: post
 author: "王诗翔"
 date: "2019-06-20"
-lastmod: "2019-06-20"
-slug: ""
 ---
 
 > 本文是[《Successful scientific wrting》](/cn/read/#successful-scientific-wrting)一书的阅读笔记之一。

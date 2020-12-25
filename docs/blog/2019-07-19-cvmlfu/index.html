@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -131,9 +132,31 @@
           
           
           
-            <a href="../../topic/" >
+            <a href="../../tweets/" >
               
-              专栏
+              乱弹
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../other/" >
+              
+              其他
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../feedback/" >
+              
+              留言
             </a>
           </li>
           
@@ -197,7 +220,15 @@
       </header>
 
 
+  
+  
+  
 
+  
+  
+  
+
+  
 
 <p>最近这几天在处理集群软件的过程中，遇到各种各样的库和环境变量的问题，被虐的不清！趁此机会，整理了一下 Linux 下静态库、动态库（共享库）和环境变量的一些知识，与大家共享一下。</p>
 
@@ -251,7 +282,7 @@
 
 <h1 id="环境变量文件加载顺序">环境变量文件加载顺序</h1>
 
-<p>正常登录配置文件顺序加载过程，所谓正常登录指用户通过输入用户名和密码登录的状态。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563504946771-94de9db3-ea3f-4db5-9468-bc863fd09be4.png#align=left&amp;display=inline&amp;height=330&amp;name=image.png&amp;originHeight=330&amp;originWidth=960&amp;size=39306&amp;status=done&amp;width=960" alt="image.png" /><br />在 CentOS 7，我们测试一下：</p>
+<p>正常登录配置文件顺序加载过程，所谓正常登录指用户通过输入用户名和密码登录的状态。<br /><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563504946771-94de9db3-ea3f-4db5-9468-bc863fd09be4.png#align=left&amp;display=inline&amp;height=330&amp;name=image.png&amp;originHeight=330&amp;originWidth=960&amp;size=39306&amp;status=done&amp;width=960"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563504946771-94de9db3-ea3f-4db5-9468-bc863fd09be4.png#align=left&amp;display=inline&amp;height=330&amp;name=image.png&amp;originHeight=330&amp;originWidth=960&amp;size=39306&amp;status=done&amp;width=960" alt="image.png"></a><br />在 CentOS 7，我们测试一下：</p>
 
 <pre><code class="language-bash">$ sudo sed -i '1 iecho &quot;/etc/profile goes start&quot;\n' /etc/profile;head -n 3 /etc/profile
 echo &quot;/etc/profile goes start&quot;
@@ -301,9 +332,9 @@ echo '/etc/profile.d/test.sh goes'
 
 </code></pre>
 
-<p>重新登录终端，可以看到各个环境变量文件的启动顺序：<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563507266576-43dcd960-e475-4305-80d6-1c81b023ab4d.png#align=left&amp;display=inline&amp;height=327&amp;name=image.png&amp;originHeight=327&amp;originWidth=772&amp;size=42121&amp;status=done&amp;width=772" alt="image.png" /></p>
+<p>重新登录终端，可以看到各个环境变量文件的启动顺序：<br /><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563507266576-43dcd960-e475-4305-80d6-1c81b023ab4d.png#align=left&amp;display=inline&amp;height=327&amp;name=image.png&amp;originHeight=327&amp;originWidth=772&amp;size=42121&amp;status=done&amp;width=772"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563507266576-43dcd960-e475-4305-80d6-1c81b023ab4d.png#align=left&amp;display=inline&amp;height=327&amp;name=image.png&amp;originHeight=327&amp;originWidth=772&amp;size=42121&amp;status=done&amp;width=772" alt="image.png"></a></p>
 
-<p>当我们不正常启动（su 命令切换用户），环境变量文件加载顺序如下：<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563513885037-271bd3eb-80e8-4d48-b871-387cf23ea70e.png#align=left&amp;display=inline&amp;height=291&amp;name=image.png&amp;originHeight=291&amp;originWidth=723&amp;size=20899&amp;status=done&amp;width=723" alt="image.png" /><br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563514034328-0b7fdc31-638d-4c3a-8681-bce631eac7d4.png#align=left&amp;display=inline&amp;height=456&amp;name=image.png&amp;originHeight=456&amp;originWidth=840&amp;size=51052&amp;status=done&amp;width=840" alt="image.png" /></p>
+<p>当我们不正常启动（su 命令切换用户），环境变量文件加载顺序如下：<br /><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563513885037-271bd3eb-80e8-4d48-b871-387cf23ea70e.png#align=left&amp;display=inline&amp;height=291&amp;name=image.png&amp;originHeight=291&amp;originWidth=723&amp;size=20899&amp;status=done&amp;width=723"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563513885037-271bd3eb-80e8-4d48-b871-387cf23ea70e.png#align=left&amp;display=inline&amp;height=291&amp;name=image.png&amp;originHeight=291&amp;originWidth=723&amp;size=20899&amp;status=done&amp;width=723" alt="image.png"></a><br /><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563514034328-0b7fdc31-638d-4c3a-8681-bce631eac7d4.png#align=left&amp;display=inline&amp;height=456&amp;name=image.png&amp;originHeight=456&amp;originWidth=840&amp;size=51052&amp;status=done&amp;width=840"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563514034328-0b7fdc31-638d-4c3a-8681-bce631eac7d4.png#align=left&amp;display=inline&amp;height=456&amp;name=image.png&amp;originHeight=456&amp;originWidth=840&amp;size=51052&amp;status=done&amp;width=840" alt="image.png"></a></p>
 
 <p><a name="HidmI"></a></p>
 
@@ -431,49 +462,13 @@ document.addEventListener('keyup', function(e) {
 
 
 <section class="comments">
-  <div id="disqus_thread"></div>
-  <script>
-  var disqus_config = function () {
-  
-    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
-  
-  };
-  (function() {
-    var inIFrame = function() {
-      var iframe = true;
-      try { iframe = window.self !== window.top; } catch (e) {}
-      return iframe;
-    };
-    if (inIFrame()) return;
-    var disqus_js = '//bioinit.disqus.com/embed.js';
-    var d = document, s = d.createElement('script');
-    s.src = disqus_js; s.async = true;
-    s.setAttribute('data-timestamp', +new Date());
-    var b = false, l = function() {
-      if (b) return;
-      (d.head || d.body).appendChild(s); b = true;
-    }
-    var t = d.getElementById('disqus_thread');
-    s.onerror = function(e) {
-      if (sessionStorage.getItem('failure-note')) return;
-      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
-      t.style.border = '1px dashed';
-      t.style.padding = '.5em';
-      t.style.background = 'lightyellow';
-      sessionStorage.setItem('failure-note', true);
-    };
-    
-    if (location.hash.match(/^#comment/)) return l();
-    var c = function() {
-      if (b) return;
-      var rect = t.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
-    };
-    window.addEventListener('load', c);
-    d.addEventListener('scroll', c);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 </section>
 
 
@@ -513,6 +508,8 @@ document.addEventListener('keyup', function(e) {
   </footer>
   </article>
   
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>
 

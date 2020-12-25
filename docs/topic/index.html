@@ -14,8 +14,8 @@
     
     
     
-    <title>专栏文章 - Steven Shen | 沈维燕</title> 
-    <meta property="og:title" content="专栏文章 - Steven Shen | 沈维燕">
+    <title>乱弹笔记 - Steven Shen | 沈维燕</title> 
+    <meta property="og:title" content="乱弹笔记 - Steven Shen | 沈维燕">
     
 
     
@@ -25,7 +25,7 @@
     
 
     
-    <link href="../topic/index.xml" rel="alternate" type="application/rss+xml" title="专栏文章" />
+    <link href="../topic/index.xml" rel="alternate" type="application/rss+xml" title="乱弹笔记" />
     
   
     <link rel="stylesheet" href="https://shenweiyan.github.io/ics-hugo-theme//css/style.css"/>
@@ -86,18 +86,6 @@
           
           
 
-<li class="pattern">&nbsp;&nbsp;</li>
-
-
-
-<li class="pattern"><a href="https://github.com/shenweiyan/ivs-hugo-theme/edit/master/content/topic/_index.md" target="_blank">编辑</a></li>
-
-
-<li class="pattern"><a href="../topic/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
-
-<li class="pattern"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
-
-
         </ul>
       </nav>
     </div>
@@ -107,7 +95,7 @@
       <header class="title">
         
 
-<h1>专栏文章</h1>
+<h1>乱弹笔记</h1>
 
 
    
@@ -121,8 +109,23 @@
 
 
 
-<p>这是 Galaxy Project 相关的专题类文章，更多生物信息学、互联网 IT 技术文章请移步 <a href="https://ivc.bioinit.com/tags/">TAGs</a> 页面进行阅读 。</p>
 
+
+<div class="archive">
+  
+  <h2 class="archive-title">2019</h2>
+  
+  
+  <ul>
+    <li>
+      <span>2019/05/30</span>
+      <a href="../topic/debug/">测试</a>
+    </li>
+  </ul>
+  
+  
+  
+</div>
 
 
 
@@ -146,52 +149,6 @@ document.addEventListener('keyup', function(e) {
 </script>
 
 
-
-<section class="comments">
-  <div id="disqus_thread"></div>
-  <script>
-  var disqus_config = function () {
-  
-    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
-  
-  };
-  (function() {
-    var inIFrame = function() {
-      var iframe = true;
-      try { iframe = window.self !== window.top; } catch (e) {}
-      return iframe;
-    };
-    if (inIFrame()) return;
-    var disqus_js = '//bioinit.disqus.com/embed.js';
-    var d = document, s = d.createElement('script');
-    s.src = disqus_js; s.async = true;
-    s.setAttribute('data-timestamp', +new Date());
-    var b = false, l = function() {
-      if (b) return;
-      (d.head || d.body).appendChild(s); b = true;
-    }
-    var t = d.getElementById('disqus_thread');
-    s.onerror = function(e) {
-      if (sessionStorage.getItem('failure-note')) return;
-      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
-      t.style.border = '1px dashed';
-      t.style.padding = '.5em';
-      t.style.background = 'lightyellow';
-      sessionStorage.setItem('failure-note', true);
-    };
-    
-    if (location.hash.match(/^#comment/)) return l();
-    var c = function() {
-      if (b) return;
-      var rect = t.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
-    };
-    window.addEventListener('load', c);
-    d.addEventListener('scroll', c);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
 
 
 

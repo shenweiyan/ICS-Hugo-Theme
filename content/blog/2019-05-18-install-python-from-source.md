@@ -235,7 +235,7 @@ LibreSSL 2.6.4 and earlier do not provide the necessary APIs, https://github.com
 
 - `make` 过程如果出现 `ModuleNotFoundError: No module named '_ctypes'` 或者 `INFO: Could not locate ffi libs and/or headers` 参考：[https://groups.google.com/forum/#!topic/comp.lang.python/npv-wzmytzo](https://groups.google.com/forum/#!topic/comp.lang.python/npv-wzmytzo)
 
-![image.png](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562923411627-eb429b96-2ec8-408e-abbb-05f4e8a320f8.png#align=left&display=inline&height=316&name=image.png&originHeight=316&originWidth=581&size=34010&status=done&width=581)
+![image.png](http://qiniu.bioitee.com/yuque/0/2019/png/126032/1562923411627-eb429b96-2ec8-408e-abbb-05f4e8a320f8.png#align=left&display=inline&height=316&name=image.png&originHeight=316&originWidth=581&size=34010&status=done&width=581)
 
 - 如果指定 `--with-openssl=DIR` 依然无法解决 ssl 模块的问题，可以参考修改 Modules/Setup.dist 文件（默认这块是注释的，放开注释即可。这块功能是开启 SSL 模块，不然会出现安装完毕后，提示找不到 ssl 模块的错误）再执行 configure，修改内容如下：
 ```bash

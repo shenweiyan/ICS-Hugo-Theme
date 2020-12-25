@@ -6,19 +6,10 @@
     <description>Recent content in vim on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Mon, 01 Jul 2019 03:57:31 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 May 2019 12:47:11 +0000</lastBuildDate>
     
 	<atom:link href="https://shenweiyan.github.io/ics-hugo-theme/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>vim 使用的一些小技巧</title>
-      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-01-vim-skills/</link>
-      <pubDate>Mon, 01 Jul 2019 03:57:31 +0000</pubDate>
-      
-      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-01-vim-skills/</guid>
-      <description>tab 分隔文件列对齐 :%!column -t vim 字体颜色看不清 # Ubuntu 中设置 vi /etc/vim/vimrc ··· set background=dark ... # CentOS 在 /etc/vimrc 最后一行加入 hi Comment ctermfg = blue //更改vi中注释内容字体颜色，可修改为：whi</description>
-    </item>
     
     <item>
       <title>vim 使用的一些小技巧</title>

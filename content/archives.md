@@ -1,9 +1,9 @@
 ---
 title: "归档"
 disable_comments: true
-type: archives
+type: arch
 ---
 
----
+本站点所有文章归档列表，主要包括 content 目录下所有类型为 post 的全部文章列表。
 
-本页面为本站点所有文章，包括博客类(post)、专题(栏)类(topic) 的归档合集。
+------ 

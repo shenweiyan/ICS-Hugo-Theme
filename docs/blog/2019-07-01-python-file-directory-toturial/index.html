@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -131,9 +132,31 @@
           
           
           
-            <a href="../../topic/" >
+            <a href="../../tweets/" >
               
-              专栏
+              乱弹
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../other/" >
+              
+              其他
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../feedback/" >
+              
+              留言
             </a>
           </li>
           
@@ -197,7 +220,15 @@
       </header>
 
 
+  
+  
+  
 
+  
+  
+  
+
+  
 
 <p>Python 有很多内置的模块和函数可用于文件的操作处理，这些函数都分布在几个模块上：如 <code>os</code>，<code>os.path</code>，<code>shutil</code> 和<code>pathlib</code> 等等。本文收集了许多您需要知道的函数，以便在 Python 中对文件执行最常见的操作。</p>
 
@@ -363,7 +394,7 @@ sub_dir
 <p>使用<code>pathlib.Path()</code>或<code>os.scandir()</code>而不是<code>os.listdir()</code>是获取目录列表的首选方法，尤其是在处理需要文件类型和文件属性信息的代码时。 <code>pathlib.Path()</code>提供了<code>os</code>和<code>shutil</code>中的大部分文件和路径处理功能，它的方法比这些模块中的方法更有效。 接下来我们将讨论如何快速获取文件属性。</p>
 
 <p>以下是目录列表功能：<br />
-<img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550397843454-63fde9bf-a1b5-485f-8460-6ba588c98ee2.png#align=left&amp;display=inline&amp;height=154&amp;originHeight=154&amp;originWidth=647&amp;size=0&amp;width=647" alt="" /></p>
+<a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1550397843454-63fde9bf-a1b5-485f-8460-6ba588c98ee2.png#align=left&amp;display=inline&amp;height=154&amp;originHeight=154&amp;originWidth=647&amp;size=0&amp;width=647"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1550397843454-63fde9bf-a1b5-485f-8460-6ba588c98ee2.png#align=left&amp;display=inline&amp;height=154&amp;originHeight=154&amp;originWidth=647&amp;size=0&amp;width=647" alt=""></a></p>
 
 <p>这些函数返回了一个包含了目录中所有内容的列表，包括子目录。这些操作可能并不总是您想要的。下一节我们将介绍如何从目录列表中进行结果过滤。</p>
 
@@ -587,7 +618,7 @@ file2.txt       Last modified:  17 Sep 2018
 <h1 id="创建目录">创建目录</h1>
 
 <p>我们编写的程序需要创建目录以便在其中存储数据时，可以参考<code>os</code>和<code>pathlib</code>中包含用于创建目录的函数。<br />
-<img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550397843470-77c25738-ab61-4cba-869f-ad50bf258665.png#align=left&amp;display=inline&amp;height=160&amp;originHeight=160&amp;originWidth=606&amp;size=0&amp;width=606" alt="" /></p>
+<a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1550397843470-77c25738-ab61-4cba-869f-ad50bf258665.png#align=left&amp;display=inline&amp;height=160&amp;originHeight=160&amp;originWidth=606&amp;size=0&amp;width=606"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1550397843470-77c25738-ab61-4cba-869f-ad50bf258665.png#align=left&amp;display=inline&amp;height=160&amp;originHeight=160&amp;originWidth=606&amp;size=0&amp;width=606" alt=""></a></p>
 
 <p><a name="a55bfdf9"></a></p>
 
@@ -877,7 +908,7 @@ docs.pdf
 <p><code>Path.glob()</code>类似于上面讨论的<code>os.glob()</code>。 正如我们所看到的，<code>pathlib</code>将<code>os</code>，<code>os.path</code>和<code>glob</code>模块的许多最佳功能组合到一个模块中，这使得使用起来非常愉快。</p>
 
 <p>回顾一下，这是我们在本节中介绍的功能表：<br />
-<img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550397843462-b90098df-da27-41a2-b1b3-f5e7ce9d796e.png#align=left&amp;display=inline&amp;height=448&amp;originHeight=539&amp;originWidth=897&amp;size=0&amp;width=746" alt="" /></p>
+<a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1550397843462-b90098df-da27-41a2-b1b3-f5e7ce9d796e.png#align=left&amp;display=inline&amp;height=448&amp;originHeight=539&amp;originWidth=897&amp;size=0&amp;width=746"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1550397843462-b90098df-da27-41a2-b1b3-f5e7ce9d796e.png#align=left&amp;display=inline&amp;height=448&amp;originHeight=539&amp;originWidth=897&amp;size=0&amp;width=746" alt=""></a></p>
 
 <p><a name="faf15835"></a></p>
 
@@ -1174,7 +1205,7 @@ for dirpath, dirnames, files in os.walk('.', topdown=False):
 <p>这将遍历目录树并尝试删除它找到的每个目录。如果目录不为空，则引发<code>OSError</code>并跳过该目录。</p>
 
 <p>下表列出了本节中涉及的功能：<br />
-<img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550397843476-f90912e9-33a2-4041-b686-30cbfb2c4b56.png#align=left&amp;display=inline&amp;height=427&amp;originHeight=502&amp;originWidth=878&amp;size=0&amp;width=746" alt="" /></p>
+<a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1550397843476-f90912e9-33a2-4041-b686-30cbfb2c4b56.png#align=left&amp;display=inline&amp;height=427&amp;originHeight=502&amp;originWidth=878&amp;size=0&amp;width=746"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1550397843476-f90912e9-33a2-4041-b686-30cbfb2c4b56.png#align=left&amp;display=inline&amp;height=427&amp;originHeight=502&amp;originWidth=878&amp;size=0&amp;width=746" alt=""></a></p>
 
 <p><a name="5b0a6c8a"></a></p>
 
@@ -1431,7 +1462,7 @@ with tarfile.open('example.tar', 'r') as tar_file:
 <p><code>tarfile</code>对象的打开方式跟大多数类似文件对象的打开方式一样。它们有一个<code>open()</code>函数，并采用一种模式来确定文件的打开方式。</p>
 
 <p>使用 &ldquo;r&rdquo;，&rdquo;w&rdquo; 或 &ldquo;a&rdquo; 模式分别打开未压缩的 TAR 文件以进行读取，写入和追加。要打开压缩的 TAR 文件，需要将模式参数传递给<code>tarfile.open()</code>，其格式为<code>filemode [:compression]</code>。下表列出了可以打开 TAR 文件的可能模式：<br />
-<img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550397843495-6df8d21a-b14c-4afd-baf1-5257f3aa2afa.png#align=left&amp;display=inline&amp;height=483&amp;originHeight=566&amp;originWidth=875&amp;size=0&amp;width=746" alt="" /></p>
+<a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1550397843495-6df8d21a-b14c-4afd-baf1-5257f3aa2afa.png#align=left&amp;display=inline&amp;height=483&amp;originHeight=566&amp;originWidth=875&amp;size=0&amp;width=746"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1550397843495-6df8d21a-b14c-4afd-baf1-5257f3aa2afa.png#align=left&amp;display=inline&amp;height=483&amp;originHeight=566&amp;originWidth=875&amp;size=0&amp;width=746" alt=""></a></p>
 
 <p><code>.open()</code> 默认以 &lsquo;r&rsquo; 模式打开文件。要读取未压缩的 TAR 文件并检索其中的文件名，可以使用<code>.getnames()</code>：</p>
 
@@ -1716,49 +1747,13 @@ document.addEventListener('keyup', function(e) {
 
 
 <section class="comments">
-  <div id="disqus_thread"></div>
-  <script>
-  var disqus_config = function () {
-  
-    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
-  
-  };
-  (function() {
-    var inIFrame = function() {
-      var iframe = true;
-      try { iframe = window.self !== window.top; } catch (e) {}
-      return iframe;
-    };
-    if (inIFrame()) return;
-    var disqus_js = '//bioinit.disqus.com/embed.js';
-    var d = document, s = d.createElement('script');
-    s.src = disqus_js; s.async = true;
-    s.setAttribute('data-timestamp', +new Date());
-    var b = false, l = function() {
-      if (b) return;
-      (d.head || d.body).appendChild(s); b = true;
-    }
-    var t = d.getElementById('disqus_thread');
-    s.onerror = function(e) {
-      if (sessionStorage.getItem('failure-note')) return;
-      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
-      t.style.border = '1px dashed';
-      t.style.padding = '.5em';
-      t.style.background = 'lightyellow';
-      sessionStorage.setItem('failure-note', true);
-    };
-    
-    if (location.hash.match(/^#comment/)) return l();
-    var c = function() {
-      if (b) return;
-      var rect = t.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
-    };
-    window.addEventListener('load', c);
-    d.addEventListener('scroll', c);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 </section>
 
 
@@ -1798,6 +1793,8 @@ document.addEventListener('keyup', function(e) {
   </footer>
   </article>
   
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>
 

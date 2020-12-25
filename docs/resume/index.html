@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../img/logo.png"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -14,8 +15,8 @@
     
     
     
-    <title>简历 - Steven Shen | 沈维燕</title> 
-    <meta property="og:title" content="简历 - Steven Shen | 沈维燕">
+    <title>Resumes - Steven Shen | 沈维燕</title> 
+    <meta property="og:title" content="Resumes - Steven Shen | 沈维燕">
     
 
     
@@ -24,6 +25,8 @@
 
     
 
+    
+    <link href="../resume/index.xml" rel="alternate" type="application/rss+xml" title="Resumes" />
     
   
     <link rel="stylesheet" href="https://shenweiyan.github.io/ics-hugo-theme//css/style.css"/>
@@ -120,7 +123,7 @@
           
           
           
-            <a href="../resume/shenweiyan" aria-current="page">
+            <a href="../resume/shenweiyan" >
               
               简历
             </a>
@@ -131,9 +134,31 @@
           
           
           
-            <a href="../topic/" >
+            <a href="../tweets/" >
               
-              专栏
+              乱弹
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../other/" >
+              
+              其他
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../feedback/" >
+              
+              留言
             </a>
           </li>
           
@@ -161,16 +186,6 @@
           
           
 
-<li class="pattern">&nbsp;&nbsp;</li>
-
-
-
-<li class="pattern"><a href="https://github.com/shenweiyan/ivs-hugo-theme/edit/master/content/resume.md" target="_blank">编辑</a></li>
-
-
-<li class="pattern"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
-
-
         </ul>
       </nav>
     </div>
@@ -178,86 +193,62 @@
 
     <article class="main">
       <header class="title">
-      
+        
+
+<h1>Resumes</h1>
+
+
+   
+  
+
 
       </header>
 
 
-<div style="text-align: center; width: 150px; float:right;">
-<a href = "../xxx.pdf" class = "fa fa-file-pdf-o" title = "PDF version "> PDF </a>
+
+
+
+
+
+
+<div class="archive">
+  
+  <h2 class="archive-title">2019</h2>
+  
+  
+  <ul>
+    <li>
+      <span>2019/05/30</span>
+      <a href="../resume/shenweiyan/">简历</a>
+    </li>
+  </ul>
+  
+  
+  
 </div>
 
 
 
-<h1 id="沈维燕">沈维燕</h1>
-
-<hr />
-
-<h2 id="联系方式">联系方式</h2>
-
-<ul>
-<li>地址：广州市黄埔区科学城科学大道182号创新大厦</li>
-<li>邮箱：<a href="mailto:ishenwieyan@qq.com">ishenwieyan@qq.com</a></li>
-<li>网站：<a href="https://blog.bioinit.com">https://blog.bioinit.com</a></li>
-</ul>
-
-<h2 id="专业技能">专业技能</h2>
-
-<ul>
-<li>Python、R、Linux、Html、Perl .etc.</li>
-<li>写作技能。我喜欢用 Markdown 和 R Markdown 等现代书写工具写作。</li>
-</ul>
-
-
   <footer>
   
-
-
-<section class="comments">
-  <div id="disqus_thread"></div>
-  <script>
-  var disqus_config = function () {
-  
-    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
-  
-  };
-  (function() {
-    var inIFrame = function() {
-      var iframe = true;
-      try { iframe = window.self !== window.top; } catch (e) {}
-      return iframe;
-    };
-    if (inIFrame()) return;
-    var disqus_js = '//bioinit.disqus.com/embed.js';
-    var d = document, s = d.createElement('script');
-    s.src = disqus_js; s.async = true;
-    s.setAttribute('data-timestamp', +new Date());
-    var b = false, l = function() {
-      if (b) return;
-      (d.head || d.body).appendChild(s); b = true;
-    }
-    var t = d.getElementById('disqus_thread');
-    s.onerror = function(e) {
-      if (sessionStorage.getItem('failure-note')) return;
-      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
-      t.style.border = '1px dashed';
-      t.style.padding = '.5em';
-      t.style.background = 'lightyellow';
-      sessionStorage.setItem('failure-note', true);
-    };
+<nav class="post-nav">
+  <span class="nav-prev"></span>
+  <span class="nav-next"></span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
     
-    if (location.hash.match(/^#comment/)) return l();
-    var c = function() {
-      if (b) return;
-      var rect = t.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
-    };
-    window.addEventListener('load', c);
-    d.addEventListener('scroll', c);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
+  } else if (e.which == 39) {  
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
 
 
 
@@ -296,6 +287,8 @@
   </footer>
   </article>
   
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>
 

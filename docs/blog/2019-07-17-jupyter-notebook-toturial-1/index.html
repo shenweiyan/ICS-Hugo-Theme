@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -131,9 +132,31 @@
           
           
           
-            <a href="../../topic/" >
+            <a href="../../tweets/" >
               
-              专栏
+              乱弹
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../other/" >
+              
+              其他
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../feedback/" >
+              
+              留言
             </a>
           </li>
           
@@ -197,7 +220,15 @@
       </header>
 
 
+  
+  
+  
 
+  
+  
+  
+
+  
 
 <p>iPython Notebook 是一个基于浏览器的 python 数据分析工具，使用起来非常方便，具有极强的交互方式和富文本的展示效果。Jupyter 是它的升级版，它的安装也非常方便，一般 Anaconda 安装包中会自带。安装好以后直接输入 jupyter notebook 便可以在浏览器中使用。<br />
 <br />关于为什么使用 jupyter 进行分析，而不是用 python 脚本或仅仅利用 excel，这里列举知乎中的两点回答：<br /></p>
@@ -215,17 +246,17 @@
 </ol>
 
 <p>这有点类似做应用题。而这是传统的 IDE (e.g. PyCharm) 没有办法做到的。假如全部都写脚本+输出，那么你 <strong>每张图可能都要保存下来，然后再单独点进去看</strong>，很麻烦。而 Notebook 做这个要更方便，结果直接产生在 Cell 下面。<br />
-<img src="https://qiniu.bioinit.com/yuque/0/2019/jpeg/126032/1563349363620-ffefa127-e6f7-49a3-ad26-87a50d6161df.jpeg#align=left&amp;display=inline&amp;height=437&amp;originHeight=437&amp;originWidth=656&amp;size=0&amp;status=done&amp;width=656" alt="" /><br />
+<a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/jpeg/126032/1563349363620-ffefa127-e6f7-49a3-ad26-87a50d6161df.jpeg#align=left&amp;display=inline&amp;height=437&amp;originHeight=437&amp;originWidth=656&amp;size=0&amp;status=done&amp;width=656"><img src="http://qiniu.bioitee.com/yuque/0/2019/jpeg/126032/1563349363620-ffefa127-e6f7-49a3-ad26-87a50d6161df.jpeg#align=left&amp;display=inline&amp;height=437&amp;originHeight=437&amp;originWidth=656&amp;size=0&amp;status=done&amp;width=656" alt=""></a><br />
 反言之，如果你不需要这种频繁的计算-画图的话，那么 notebook 可能还真没什么大不了.</p>
 </blockquote>
 
 <p><strong>2、Hackable</strong></p>
 
 <p>和第一点对应，Notebook 的是计算+文档的混合体，而本身又是 web-based，因此非常好 hack, 比如我的 notebook 因为非常长，所以就加了个侧边栏目录：
-&gt; <img src="https://qiniu.bioinit.com/yuque/0/2019/jpeg/126032/1563349415635-8a354789-7303-4b76-9a79-5deb0ac006b4.jpeg#align=left&amp;display=inline&amp;height=783&amp;originHeight=783&amp;originWidth=502&amp;size=0&amp;status=done&amp;width=502" alt="" /></p>
+&gt; <a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/jpeg/126032/1563349415635-8a354789-7303-4b76-9a79-5deb0ac006b4.jpeg#align=left&amp;display=inline&amp;height=783&amp;originHeight=783&amp;originWidth=502&amp;size=0&amp;status=done&amp;width=502"><img src="http://qiniu.bioitee.com/yuque/0/2019/jpeg/126032/1563349415635-8a354789-7303-4b76-9a79-5deb0ac006b4.jpeg#align=left&amp;display=inline&amp;height=783&amp;originHeight=783&amp;originWidth=502&amp;size=0&amp;status=done&amp;width=502" alt=""></a></p>
 
 <p>再比如，在分析电影数据的时候，我觉得用 card 来展示更方便一点，所以可以这样显示数据：
-&gt; <img src="https://qiniu.bioinit.com/yuque/0/2019/jpeg/126032/1563349446691-7c04adc4-2f8e-45d7-88ff-89f23ad37c5a.jpeg#align=left&amp;display=inline&amp;height=429&amp;originHeight=429&amp;originWidth=805&amp;size=0&amp;status=done&amp;width=805" alt="" /></p>
+&gt; <a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/jpeg/126032/1563349446691-7c04adc4-2f8e-45d7-88ff-89f23ad37c5a.jpeg#align=left&amp;display=inline&amp;height=429&amp;originHeight=429&amp;originWidth=805&amp;size=0&amp;status=done&amp;width=805"><img src="http://qiniu.bioitee.com/yuque/0/2019/jpeg/126032/1563349446691-7c04adc4-2f8e-45d7-88ff-89f23ad37c5a.jpeg#align=left&amp;display=inline&amp;height=429&amp;originHeight=429&amp;originWidth=805&amp;size=0&amp;status=done&amp;width=805" alt=""></a></p>
 
 <p><a name="I7DKO"></a></p>
 
@@ -280,15 +311,15 @@ to login with a token:
 </code></pre></li>
 </ul>
 
-<p>这时候，jupyter 会自动生成一个用于登陆 jupyter Notebook 的 token，我们在浏览器打开这个 token 链接即可进入登陆后的 Jupyter Notebook：<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563350481111-cf547695-a543-48db-ae24-99be9d1e22ba.png#align=left&amp;display=inline&amp;height=342&amp;originHeight=342&amp;originWidth=807&amp;size=0&amp;status=done&amp;width=807" alt="" /></p>
+<p>这时候，jupyter 会自动生成一个用于登陆 jupyter Notebook 的 token，我们在浏览器打开这个 token 链接即可进入登陆后的 Jupyter Notebook：<br /><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563350481111-cf547695-a543-48db-ae24-99be9d1e22ba.png#align=left&amp;display=inline&amp;height=342&amp;originHeight=342&amp;originWidth=807&amp;size=0&amp;status=done&amp;width=807"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563350481111-cf547695-a543-48db-ae24-99be9d1e22ba.png#align=left&amp;display=inline&amp;height=342&amp;originHeight=342&amp;originWidth=807&amp;size=0&amp;status=done&amp;width=807" alt=""></a></p>
 
 <p><a name="W6UZJ"></a></p>
 
 <h1 id="使用">使用</h1>
 
-<p>在 Jupyter Notebook web 页面，我们可以点击 &ldquo;New&rdquo; → &ldquo;Python2&rdquo; 创建 python2 笔记。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563350203434-e78b0a11-ea24-4634-ab10-29ccd5851a87.png#align=left&amp;display=inline&amp;height=342&amp;originHeight=342&amp;originWidth=807&amp;size=0&amp;status=done&amp;width=807" alt="" /></p>
+<p>在 Jupyter Notebook web 页面，我们可以点击 &ldquo;New&rdquo; → &ldquo;Python2&rdquo; 创建 python2 笔记。<br /><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563350203434-e78b0a11-ea24-4634-ab10-29ccd5851a87.png#align=left&amp;display=inline&amp;height=342&amp;originHeight=342&amp;originWidth=807&amp;size=0&amp;status=done&amp;width=807"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563350203434-e78b0a11-ea24-4634-ab10-29ccd5851a87.png#align=left&amp;display=inline&amp;height=342&amp;originHeight=342&amp;originWidth=807&amp;size=0&amp;status=done&amp;width=807" alt=""></a></p>
 
-<p>我们可以在创建好的笔记中使用 markdown 语法进行编辑，也可以交互执行 python 代码。<br /><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563350417528-a1f23c74-5cc1-4c0d-9b01-db095db048f2.png#align=left&amp;display=inline&amp;height=356&amp;originHeight=356&amp;originWidth=806&amp;size=0&amp;status=done&amp;width=806" alt="" /></p>
+<p>我们可以在创建好的笔记中使用 markdown 语法进行编辑，也可以交互执行 python 代码。<br /><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563350417528-a1f23c74-5cc1-4c0d-9b01-db095db048f2.png#align=left&amp;display=inline&amp;height=356&amp;originHeight=356&amp;originWidth=806&amp;size=0&amp;status=done&amp;width=806"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1563350417528-a1f23c74-5cc1-4c0d-9b01-db095db048f2.png#align=left&amp;display=inline&amp;height=356&amp;originHeight=356&amp;originWidth=806&amp;size=0&amp;status=done&amp;width=806" alt=""></a></p>
 
 <p>想要退出笔记，点击右上角 &ldquo;Logout&rdquo; 可退出；通过输入上面的 token 可重新登陆。或者我们可以通过 <code>jupyter notebook password</code> 命令设置密码进行登陆（如果忘记密码也可以通过该命令进行重置）。默认 jupyter notebook passwd 保存在 ~/.jupyter/jupyter_notebook_config.json。</p>
 
@@ -331,49 +362,13 @@ document.addEventListener('keyup', function(e) {
 
 
 <section class="comments">
-  <div id="disqus_thread"></div>
-  <script>
-  var disqus_config = function () {
-  
-    this.page.url = "https:\/\/shenweiyan.github.io\/home\/" + location.pathname;
-  
-  };
-  (function() {
-    var inIFrame = function() {
-      var iframe = true;
-      try { iframe = window.self !== window.top; } catch (e) {}
-      return iframe;
-    };
-    if (inIFrame()) return;
-    var disqus_js = '//bioinit.disqus.com/embed.js';
-    var d = document, s = d.createElement('script');
-    s.src = disqus_js; s.async = true;
-    s.setAttribute('data-timestamp', +new Date());
-    var b = false, l = function() {
-      if (b) return;
-      (d.head || d.body).appendChild(s); b = true;
-    }
-    var t = d.getElementById('disqus_thread');
-    s.onerror = function(e) {
-      if (sessionStorage.getItem('failure-note')) return;
-      t.innerText = '非常抱歉, 中国大陆地区读者需要翻墙才能发表评论。';
-      t.style.border = '1px dashed';
-      t.style.padding = '.5em';
-      t.style.background = 'lightyellow';
-      sessionStorage.setItem('failure-note', true);
-    };
-    
-    if (location.hash.match(/^#comment/)) return l();
-    var c = function() {
-      if (b) return;
-      var rect = t.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
-    };
-    window.addEventListener('load', c);
-    d.addEventListener('scroll', c);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 </section>
 
 
@@ -413,6 +408,8 @@ document.addEventListener('keyup', function(e) {
   </footer>
   </article>
   
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>
 
