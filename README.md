@@ -2,7 +2,7 @@
 
 [English](README.en.md) | [简体中文](README.md)
 
-一个简洁轻量化的响应式[Hugo](https://gohugo.io/博客主题。
+一个简洁轻量化的响应式 [Hugo](https://gohugo.io/) 博客主题。
 
 - [点击预览](https://shenweiyan.github.io/ics-hugo-theme/)
 
