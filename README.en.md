@@ -8,4 +8,7 @@ If you want to use this site as a template for your own website, please download
 
 - [View Live Preview](https://shenweiyan.github.io/ics-hugo-theme/)
 
-[![ics-hugo-theme template preview](https://shenweiyan.github.io/ics-hugo-theme/img/ics-hugo-theme.png "ics-hugo-theme template preview")](https://shenweiyan.github.io/ics-hugo-theme/)
+[![ics-hugo-theme home preview](https://shenweiyan.github.io/ics-hugo-theme/img/ics-hugo-theme-home.png "ics-hugo-theme template preview")](https://shenweiyan.github.io/ics-hugo-theme/)
+
+[![ics-hugo-theme about preview](https://shenweiyan.github.io/ics-hugo-theme/img/ics-hugo-theme-about.png "ics-hugo-theme template preview")](https://shenweiyan.github.io/ics-hugo-theme/)
+

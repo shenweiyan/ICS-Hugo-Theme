@@ -8,4 +8,6 @@
 
 - [点击预览](https://shenweiyan.github.io/ics-hugo-theme/)
 
-[![ics-hugo-theme template preview](https://shenweiyan.github.io/ics-hugo-theme/img/ics-hugo-theme.png "ics-hugo-theme template preview")](https://shenweiyan.github.io/ics-hugo-theme/)
+[![ics-hugo-theme home preview](https://shenweiyan.github.io/ics-hugo-theme/img/ics-hugo-theme-home.png "ics-hugo-theme template preview")](https://shenweiyan.github.io/ics-hugo-theme/)
+
+[![ics-hugo-theme about preview](https://shenweiyan.github.io/ics-hugo-theme/img/ics-hugo-theme-about.png "ics-hugo-theme template preview")](https://shenweiyan.github.io/ics-hugo-theme/)
