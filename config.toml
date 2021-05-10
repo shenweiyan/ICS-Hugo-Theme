@@ -1,4 +1,4 @@
-baseurl = "https://shenweiyan.github.io/ics-hugo-theme/"
+baseurl = "https://shenweiyan.github.io/ICS-Hugo-Theme/"
 RelativeURLs=true
 CanonifyURLs=true
 languageCode = "zh-cmn-Hans"	                  # html的lang属性值
@@ -72,7 +72,7 @@ publishDir = "docs"
 
 
 [params]
-    siteurl = "https://shenweiyan.github.io/ics-hugo-theme/"
+    siteurl = "https://shenweiyan.github.io/ICS-Hugo-Theme/"
     description = "Welcome to the blog site of Steven Shen."
     disqusURL = "https://shenweiyan.github.io/home/"
     customJS = ["js/fix-toc.js", "js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js", "js/external-link.js", "js/alt-title.js", "js/header-link.js", "js/dom-scripts.js"]

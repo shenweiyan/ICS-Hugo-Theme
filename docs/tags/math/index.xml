@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>math on Steven Shen | 沈维燕</title>
-    <link>https://shenweiyan.github.io/ics-hugo-theme/tags/math/</link>
+    <link>https://shenweiyan.github.io/ICS-Hugo-Theme/tags/math/</link>
     <description>Recent content in math on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Thu, 28 Mar 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://shenweiyan.github.io/ics-hugo-theme/tags/math/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shenweiyan.github.io/ICS-Hugo-Theme/tags/math/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Katex Math Typesetting</title>
-      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-03-28-katex-math-typesetting/</link>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-03-28-katex-math-typesetting/</link>
       <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-03-28-katex-math-typesetting/</guid>
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-03-28-katex-math-typesetting/</guid>
       <description>Enable Katex in the config file by setting the katex param to true. This will import the necessary Katex CSS/JS.
 Note: Use the online reference of supported TeX functions.
 Some math:

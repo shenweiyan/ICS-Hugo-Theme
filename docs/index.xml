@@ -1,19 +1,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>简介 on Steven Shen | 沈维燕</title>
-    <link>https://shenweiyan.github.io/ics-hugo-theme/</link>
+    <link>https://shenweiyan.github.io/ICS-Hugo-Theme/</link>
     <description>Recent content in 简介 on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Mon, 12 Aug 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://shenweiyan.github.io/ics-hugo-theme/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shenweiyan.github.io/ICS-Hugo-Theme/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>留言</title>
-      <link>https://shenweiyan.github.io/ics-hugo-theme/feedback/</link>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/feedback/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ics-hugo-theme/feedback/</guid>
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/feedback/</guid>
       <description>
         &lt;p&gt;本站所有文章已经开启 utterances 评论模块，如果你有任何建议，欢迎留言。相关文章的更多详细信息，请移步本博客的 &amp;ldquo;&lt;a href=&#34;https://www.yuque.com/shenweiyan&#34;&gt;语雀专栏&lt;/a&gt;&amp;rdquo; 进行查看，感谢你的一路支持！&lt;/p&gt;
 
@@ -25,10 +25,10 @@
     
     <item>
       <title>生活不止眼前的苟且，还有诗和远方</title>
-      <link>https://shenweiyan.github.io/ics-hugo-theme/other/</link>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/other/</link>
       <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
       <author>沈维燕</author>
-      <guid>https://shenweiyan.github.io/ics-hugo-theme/other/</guid>
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/other/</guid>
       <description>
         &lt;hr /&gt;
 
@@ -38,10 +38,10 @@
     
     <item>
       <title>Resumes</title>
-      <link>https://shenweiyan.github.io/ics-hugo-theme/resume/</link>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/resume/</link>
       <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ics-hugo-theme/resume/</guid>
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/resume/</guid>
       <description>
         
         
@@ -50,10 +50,10 @@
     
     <item>
       <title>研究项目</title>
-      <link>https://shenweiyan.github.io/ics-hugo-theme/research/</link>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/research/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       <author>沈维燕</author>
-      <guid>https://shenweiyan.github.io/ics-hugo-theme/research/</guid>
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/research/</guid>
       <description>
         
 
@@ -69,10 +69,10 @@
     
     <item>
       <title>中文博客</title>
-      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/</link>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/</link>
       <pubDate>Tue, 31 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/</guid>
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/</guid>
       <description>
         
         
@@ -81,10 +81,10 @@
     
     <item>
       <title>乱弹笔记</title>
-      <link>https://shenweiyan.github.io/ics-hugo-theme/tweets/</link>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/tweets/</link>
       <pubDate>Tue, 31 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ics-hugo-theme/tweets/</guid>
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/tweets/</guid>
       <description>
         
         
@@ -93,10 +93,10 @@
     
     <item>
       <title>读书笔记</title>
-      <link>https://shenweiyan.github.io/ics-hugo-theme/read/</link>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/read/</link>
       <pubDate>Tue, 31 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ics-hugo-theme/read/</guid>
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/read/</guid>
       <description>
         
         
@@ -105,10 +105,10 @@
     
     <item>
       <title>简介</title>
-      <link>https://shenweiyan.github.io/ics-hugo-theme/about/</link>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/about/</link>
       <pubDate>Thu, 05 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ics-hugo-theme/about/</guid>
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/about/</guid>
       <description>
         
 
@@ -184,10 +184,10 @@
     
     <item>
       <title>归档</title>
-      <link>https://shenweiyan.github.io/ics-hugo-theme/archives/</link>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/archives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://shenweiyan.github.io/ics-hugo-theme/archives/</guid>
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/archives/</guid>
       <description>
         &lt;p&gt;本站点所有文章归档列表，主要包括 content 目录下所有类型为 post 的全部文章列表。&lt;/p&gt;
 
