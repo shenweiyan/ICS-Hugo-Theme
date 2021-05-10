@@ -51,12 +51,12 @@ tags:
 
 
 七牛云注册，实名认证，这里不细说，很简单。新建对象存储的存储空间也很简单：
-![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565242056691-50655e8f-e816-441a-8247-758f47f90256.png#align=left&display=inline&height=496&margin=%5Bobject%20Object%5D&name=image.png&originHeight=496&originWidth=1016&size=52609&status=done&style=none&width=1016)
+![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565242056691-50655e8f-e816-441a-8247-758f47f90256.png)
 ### 1.2 增加镜像存储的镜像源
 
 
 在创建好的对象存储空间（note-db）中，选择 "镜像存储"，添加语雀镜像源地址：
-![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565242263407-a2d8c1cd-ae81-476f-bc31-310e1087b1c5.png#align=left&display=inline&height=428&margin=%5Bobject%20Object%5D&name=image.png&originHeight=428&originWidth=1037&size=40000&status=done&style=none&width=1037)
+![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565242263407-a2d8c1cd-ae81-476f-bc31-310e1087b1c5.png)
 
 
 
@@ -67,50 +67,50 @@ tags:
 七牛云绑定域名，并且设置 CNAME 的一个重要前提是：域名必须备案成功了才可以使用的！
 
 简单说一下绑定了域名的作用：我们在七牛云上存储了图片文件什么的，访问地址都需要加上一个域名的。起初我们开通对象存储的时候，七牛云会给我们一个测试域名。但是测试域名会被收回，公告如下：
-![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565242719591-d4555868-0b16-4e55-98c2-39ce30758439.png#align=left&display=inline&height=198&margin=%5Bobject%20Object%5D&name=image.png&originHeight=198&originWidth=596&size=26242&status=done&style=none&width=596)
+![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565242719591-d4555868-0b16-4e55-98c2-39ce30758439.png)
 
 所以我们需要用我们自己的二级域名来绑定七牛云进行访问（最好不用 www 开头的二级域名来绑定，因为 www 开头的域名，我们都是作为主域名的），具体绑定步骤如下。
 
 #### 1.3.1 绑定域名
 
 
-![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565243055488-63b61899-032c-4eeb-84d4-a61eb45f0d0a.png#align=left&display=inline&height=371&margin=%5Bobject%20Object%5D&name=image.png&originHeight=371&originWidth=1026&size=56497&status=done&style=none&width=1026)
-![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565243411951-6cccd7e7-2b8a-4c3c-81b8-1f8617bff7bc.png#align=left&display=inline&height=519&margin=%5Bobject%20Object%5D&name=image.png&originHeight=519&originWidth=1046&size=66813&status=done&style=none&width=1046)
+![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565243055488-63b61899-032c-4eeb-84d4-a61eb45f0d0a.png)
+![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565243411951-6cccd7e7-2b8a-4c3c-81b8-1f8617bff7bc.png)
 
 #### 1.3.2 配置 CNAME
 
 
 **首先**，上面 3.1 步骤，点击 "确认" 完成后，即可看到新增加域名的 CNAME 信息：
-![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565243547685-99f99f9c-3775-4c63-ad7d-cc04048bb9ef.png#align=left&display=inline&height=333&margin=%5Bobject%20Object%5D&name=image.png&originHeight=333&originWidth=847&size=39662&status=done&style=none&width=847)
+![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565243547685-99f99f9c-3775-4c63-ad7d-cc04048bb9ef.png)
 
 
 **第二步**，到你买域名的地方去配置。我是在阿里云上面买的，下面以阿里云为例：
 **
-**![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565244440370-93369291-54fb-4a27-b379-f6bd6743c121.png#align=left&display=inline&height=467&margin=%5Bobject%20Object%5D&name=image.png&originHeight=467&originWidth=921&size=52928&status=done&style=none&width=921)**
+**![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565244440370-93369291-54fb-4a27-b379-f6bd6743c121.png)**
 **做到这一步就算已经完成了。成功之后，回到七牛云对象存储，在存储空间的概览也可以看到 CNAME 状态显示为"成功"：
-![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565244743676-bf39be2a-a794-49bc-9b40-f045082eb811.png#align=left&display=inline&height=254&margin=%5Bobject%20Object%5D&name=image.png&originHeight=254&originWidth=1044&size=31709&status=done&style=none&width=1044)
+![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565244743676-bf39be2a-a794-49bc-9b40-f045082eb811.png)
 
 **第三**，在博客中把博客所有 [https://note-db.oss-cn-shenzhen.aliyuncs.com](https://note-db.oss-cn-shenzhen.aliyuncs.com/) 的域名都替换成 [http://qiniu.bioinit.com](http://qiniu.bioinit.com/) 即可。
 
 
 **第四**，如果想要换成 [https://qiniu.bioinit.com](http://qiniu.bioinit.com/)，需要在存储空间的 **"域名管理"** 中修改 https 配置。
-![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565245069990-880b4f8c-9530-4a20-a2c2-ff91dd68e6d7.png#align=left&display=inline&height=318&margin=%5Bobject%20Object%5D&name=image.png&originHeight=318&originWidth=1191&size=46538&status=done&style=none&width=1191)
+![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565245069990-880b4f8c-9530-4a20-a2c2-ff91dd68e6d7.png)
 
 
 HTTPS 配置中的 SSL 证书可以选择申请七牛与的免费证书；也可以申请阿里云的** "免费型 DV SSL" **证书，然后选择本地上传 **"证书内容"** 和 **"证书私钥"**，我这里选择的是阿里云的** "免费型 DV SSL" **证书。
-![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565245903884-c498b8b9-7305-4413-afa6-c605853ed817.png#align=left&display=inline&height=344&margin=%5Bobject%20Object%5D&name=image.png&originHeight=344&originWidth=1168&size=74764&status=done&style=none&width=1168)
+![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565245903884-c498b8b9-7305-4413-afa6-c605853ed817.png)
 
 
 
 
-![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565246118194-c1d76ebf-f8ae-4917-b37d-de0c159c8587.png#align=left&display=inline&height=283&margin=%5Bobject%20Object%5D&name=image.png&originHeight=283&originWidth=636&size=29947&status=done&style=none&width=636)
+![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565246118194-c1d76ebf-f8ae-4917-b37d-de0c159c8587.png)
 
 
-![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565245579390-7de4e039-e6e3-4f7a-bb9c-e4a015fb4472.png#align=left&display=inline&height=505&margin=%5Bobject%20Object%5D&name=image.png&originHeight=505&originWidth=674&size=68177&status=done&style=none&width=674)
+![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565245579390-7de4e039-e6e3-4f7a-bb9c-e4a015fb4472.png)
 
 
 **"确认"** 提交后，等待大约 10 分钟，可以在七牛云对象存储空间的 **"域名管理"** → **"HPPTS 配置"** 看到 HTTPS 已经开启。
-![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565246484060-358cc366-38c8-4e0e-95a4-81a937b623f0.png#align=left&display=inline&height=327&margin=%5Bobject%20Object%5D&name=image.png&originHeight=327&originWidth=1208&size=48069&status=done&style=none&width=1208)
+![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565246484060-358cc366-38c8-4e0e-95a4-81a937b623f0.png)
 
 
 **最后**，在博客中把博客所有 [https://note-db.oss-cn-shenzhen.aliyuncs.com](https://note-db.oss-cn-shenzhen.aliyuncs.com/) 的域名都替换成 [https://qiniu.bioinit.com](http://qiniu.bioinit.com/)，并检查图片是否正常显示。
@@ -128,14 +128,14 @@ HTTPS 配置中的 SSL 证书可以选择申请七牛与的免费证书；也可
 
 
 我们可以在 oss 的 bucket 中选择 "**基础设置**" 页面的  "**镜像回源**" 设置。
-![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1574992536009-e86ccc81-941c-472b-b165-a97b2a4bd711.png#align=left&display=inline&height=300&margin=%5Bobject%20Object%5D&name=image.png&originHeight=300&originWidth=751&size=35056&status=done&style=none&width=751)
+![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1574992536009-e86ccc81-941c-472b-b165-a97b2a4bd711.png)
 
 
 #### 2.2 添加镜像回源规则
 
 
 在 "**镜像回源**" 设置中 "**添加规则**"，添加规则时，会问你是否需要镜像，如果不镜像，就不会自动备份迁移一个到 OSS中，下次访问的时候，虽然还会回源，但不一定正常显示图片，因此这里选择"**镜像**"。
-![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1574995624678-0aa5a989-aa67-466e-9c5b-f15359bba5bb.png#align=left&display=inline&height=603&margin=%5Bobject%20Object%5D&name=image.png&originHeight=603&originWidth=759&size=45718&status=done&style=none&width=759)
+![image.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1574995624678-0aa5a989-aa67-466e-9c5b-f15359bba5bb.png)
 
 
 这里有两个前缀的选项，比较好玩：
@@ -158,7 +158,7 @@ HTTPS 配置中的 SSL 证书可以选择申请七牛与的免费证书；也可
 
 
 最后，附上与语雀文章同步更新，基于 Hugo 的个人博客。
-![shen-bioitee.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2020/png/126032/1594345730535-6e254d6d-7096-4d74-a767-9f88ef97f173.png#align=left&display=inline&height=690&margin=%5Bobject%20Object%5D&name=shen-bioitee.png&originHeight=690&originWidth=892&size=96562&status=done&style=none&width=892)
+![shen-bioitee.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2020/png/126032/1594345730535-6e254d6d-7096-4d74-a767-9f88ef97f173.png)
 
 
 
