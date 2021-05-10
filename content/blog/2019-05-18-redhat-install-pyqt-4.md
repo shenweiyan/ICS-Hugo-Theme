@@ -113,7 +113,7 @@ the --verbose flag to see more detail about the problem.
 <a name="d4afacf7"></a>
 ### 5、安装依赖二：QT
 
-使用 conda 安装的 qt >= 5.6.2：<br />![](http://qiniu.bioitee.com/yuque/0/2019/png/126032/1558183262081-192b5c4b-7fb9-4dcd-b09d-d4ac540baaae.png#align=left&display=inline&height=330&originHeight=330&originWidth=674&size=0&status=done&width=674)
+使用 conda 安装的 qt >= 5.6.2：<br />![](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1558183262081-192b5c4b-7fb9-4dcd-b09d-d4ac540baaae.png#align=left&display=inline&height=330&originHeight=330&originWidth=674&size=0&status=done&width=674)
 
 下面是通过源码安装 qt-4.8.x 的一些记录（使用 conda 应该也可以安装 qt-4.8.x，感兴趣的童鞋可以尝试一下）：
 ```
@@ -138,7 +138,7 @@ $ make install
 $ ./configure -prefix /Bio/Bioinfo/Pipeline/SoftWare/Qt-5.6.0  # 报错信息如截图所示
 ```
 
-![](http://qiniu.bioitee.com/yuque/0/2019/png/126032/1558183296812-95892055-664d-4341-acdb-4824492b96a3.png#align=left&display=inline&height=377&originHeight=377&originWidth=802&size=0&status=done&width=802)
+![](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1558183296812-95892055-664d-4341-acdb-4824492b96a3.png#align=left&display=inline&height=377&originHeight=377&originWidth=802&size=0&status=done&width=802)
 
 ② 在 Qt 4.8 中实现多媒体播放图形界面主要依赖于 phonon 框架，通常情况下，**Qt 基本库已经安装好，默认 phonon 是没有被安装的**，我们需要 configure 后加好参数，然后单独进入 phonon 的文件夹进行编译。
 

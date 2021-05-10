@@ -259,7 +259,7 @@ $ make install
 <p>From Python Issue27685, <a href="https://bugs.python.org/issue27685">https://bugs.python.org/issue27685</a></p>
 </blockquote>
 
-<p>即是说，在大多数 Unix 系统上（除了 Mac OS X 之外），共享库的路径不是绝对路径。 因此，如果我们在非标准位置安装 Python，为了不和相同版本的系统 Python 产生干扰，我们需要配置非标准位置安装的 Python共享库的路径，或者通过设置运行时的环境变量，如 LD_LIBRARY_PATH。 为了避免这个问题，我们最好避免使用 <code>--enable-shared</code>。<br /><a class="fancya" data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1558181883079-842115cd-e314-49fa-b6ed-441dde412ce1.png#align=left&amp;display=inline&amp;height=482&amp;originHeight=482&amp;originWidth=730&amp;size=0&amp;status=done&amp;width=730"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1558181883079-842115cd-e314-49fa-b6ed-441dde412ce1.png#align=left&amp;display=inline&amp;height=482&amp;originHeight=482&amp;originWidth=730&amp;size=0&amp;status=done&amp;width=730" alt=""></a></p>
+<p>即是说，在大多数 Unix 系统上（除了 Mac OS X 之外），共享库的路径不是绝对路径。 因此，如果我们在非标准位置安装 Python，为了不和相同版本的系统 Python 产生干扰，我们需要配置非标准位置安装的 Python共享库的路径，或者通过设置运行时的环境变量，如 LD_LIBRARY_PATH。 为了避免这个问题，我们最好避免使用 <code>--enable-shared</code>。<br /><a class="fancya" data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1558181883079-842115cd-e314-49fa-b6ed-441dde412ce1.png#align=left&amp;display=inline&amp;height=482&amp;originHeight=482&amp;originWidth=730&amp;size=0&amp;status=done&amp;width=730"><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1558181883079-842115cd-e314-49fa-b6ed-441dde412ce1.png#align=left&amp;display=inline&amp;height=482&amp;originHeight=482&amp;originWidth=730&amp;size=0&amp;status=done&amp;width=730" alt=""></a></p>
 
 <p>或者我们也可以使用以下预编译命令，以避免开启 <code>--enable-shared</code> 时，默认只有一个版本的 python：</p>
 

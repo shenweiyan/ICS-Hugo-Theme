@@ -61,7 +61,7 @@ trusted-host= mirrors.aliyun.com
 EOF
 ```
 
-这里需要提到的是，有些是公司内部的项目，不方便放到外网上去，这个时候我们就要搭建自己的内网 PyPI 源服务器，需要安全并且拥有同样的舒适体验。关于 PyPI 私有源的实现，Python 官方的 [PyPiImplementations](http://wiki.python.org/moin/PyPiImplementations) 说明中列出了几个比较成熟的实现方案：<br />![](http://qiniu.bioitee.com/yuque/0/2019/png/126032/1559372822643-02a74b05-1151-4f09-846d-7244b79a8a23.png#align=left&display=inline&height=423&originHeight=423&originWidth=525&size=0&status=done&width=525)##
+这里需要提到的是，有些是公司内部的项目，不方便放到外网上去，这个时候我们就要搭建自己的内网 PyPI 源服务器，需要安全并且拥有同样的舒适体验。关于 PyPI 私有源的实现，Python 官方的 [PyPiImplementations](http://wiki.python.org/moin/PyPiImplementations) 说明中列出了几个比较成熟的实现方案：<br />![](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1559372822643-02a74b05-1151-4f09-846d-7244b79a8a23.png#align=left&display=inline&height=423&originHeight=423&originWidth=525&size=0&status=done&width=525)##
 
 这里选择 pypiserver，除了 Galaxy 的原因外，最重要的是因为它最小而且使用简单。
 
@@ -124,7 +124,7 @@ Mako (1.0.7)  - 1.0.7
 pip install -i http://localhost:8080/simple/ mako
 ```
 
-![](http://qiniu.bioitee.com/yuque/0/2019/png/126032/1559372822661-d4f7ce10-e7f9-4423-a2db-4a03b1aa0bb9.png#align=left&display=inline&height=361&originHeight=361&originWidth=938&size=0&status=done&width=938)
+![](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1559372822661-d4f7ce10-e7f9-4423-a2db-4a03b1aa0bb9.png#align=left&display=inline&height=361&originHeight=361&originWidth=938&size=0&status=done&width=938)
 
 pypiserver 客户端推荐的个人配置：
 
