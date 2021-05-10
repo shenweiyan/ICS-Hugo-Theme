@@ -11,5 +11,14 @@
 	<atom:link href="https://shenweiyan.github.io/ICS-Hugo-Theme/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>语雀图片的同步迁移解决方案</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/sync-from-yuque-to-qiniu/</link>
+      <pubDate>Thu, 08 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/sync-from-yuque-to-qiniu/</guid>
+      <description>昨天登录 Github Jekyll 博客时候，忽然发现很多文章的图片都出现了 404！后来检查才知道，原来从 2019 年 8 月起，语雀上的一些静态图片开启了防外链设置，因此之前</description>
+    </item>
+    
   </channel>
 </rss>
