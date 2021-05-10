@@ -40,11 +40,16 @@ disable_comments: true
 
 ***
 
-本个人网站是参考 [ivy-hugo-theme](https://github.com/shenweiyan/ivy-hugo-theme) 和 [cupper-hugo-theme](https://github.com/shenweiyan/cupper-hugo-theme) 构建的，如果读者想搭建一样主题的网站，请移步[GitHub](https://github.com/shenweiyan/ivc-hugo-theme)下载并参考 Hugo 与 Blogdown 的使用方法，然后删改关于我的信息。
+本个人网站是参考 [ivy-hugo-theme](https://github.com/shenweiyan/ivy-hugo-theme) 和 [cupper-hugo-theme](https://github.com/shenweiyan/cupper-hugo-theme) 构建的，如果读者想搭建一样主题的网站，请移步[GitHub](https://github.com/shenweiyan/ICS-Hugo-Theme)下载并参考 Hugo 与 Blogdown 的使用方法，然后删改关于我的信息。
 
 <br/>
 
 **本博客更新历史：**
+
+- **2021.03.29：**
+
+    1. 更新 footer 样式，Copyright 自动获取当前年份。
+    2. 页脚的 footer 可直接通过 config.toml 进行更新。
 
 - **2020.03.13：**
     1. 把所有博文更换成了蚂蚁金服旗下 [语雀平台](https://www.yuque.com/shenweiyan) 的链接，点击博文链接即可跳转至语雀原文进行阅读。

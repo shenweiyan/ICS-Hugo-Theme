@@ -76,7 +76,7 @@ publishDir = "docs"
     description = "Welcome to the blog site of Steven Shen."
     disqusURL = "https://shenweiyan.github.io/home/"
     customJS = ["js/fix-toc.js", "js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js", "js/external-link.js", "js/alt-title.js", "js/header-link.js", "js/dom-scripts.js"]
-    githubContentURL = "https://github.com/shenweiyan/ivs-hugo-theme/edit/master/content/"
+    githubContentURL = "https://github.com/shenweiyan/ICS-Hugo-Theme/edit/master/content/"
     # options for highlight.js (version, additional languages, and theme)
     highlightjsVersion = "9.12.0"
     highlightjsLang = ["r", "yaml", "tex"]
@@ -85,7 +85,8 @@ publishDir = "docs"
     dateFormat = "2019-01-01" # "2019-01-01, Mon, "
 
 [params.footer]
-    home = "<br/><br/>Powered by [Hugo](https://gohugo.io) and [Blogdown](https://bookdown.org/yihui/blogdown/) &copy; [Steven Shen](/) 2018 - 2019 <br/><br/>[<i class='far fa-envelope fa-1x'></i>](mailto:ishenweiyan@qq.com) &middot; [<i class='fab fa-github fa-1x'></i>](https://github.com/shenweiyan) &middot; [<i class='fab fa-stack-overflow fa-1x'></i>](https://stackoverflow.com/users/9701168/steven-shen)"
+    copyright = "<br/><br/>&copy; Powered by [ICS-Hugo-Theme](https://github.com/shenweiyan/ICS-Hugo-Theme) and [Hugo](https://gohugo.io) | [Bio IT 爱好者](https://www.bioitee.com/) 2018 - {year} | [粤ICP备16023717号](http://beian.miit.gov.cn/)<br/>"
+    moreinfo = "<br/><br/>[![yuque](https://img.shields.io/badge/沈维燕-语雀知识库-blueviolet)](https://www.yuque.com/shenweiyan) [![wechat](https://img.shields.io/badge/沈维燕-微信公众号-important)](https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioitee/bioitee.png) [![zhihu](https://img.shields.io/badge/沈维燕-知乎-blue)](https://www.zhihu.com/people/shenweiyan) [![bioitee](https://img.shields.io/badge/沈维燕-BioIT爱好者-green)](https://www.bioitee.com/)"
 
 [params.author]
     en = "Steven Shen"

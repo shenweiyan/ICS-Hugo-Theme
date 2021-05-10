@@ -1,5 +1,5 @@
 html {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.5;
     color: #111;
     background-color: #fefefe;
@@ -17,6 +17,9 @@ body {
   }
   .menu li:not([class]) a, a:hover, .copyright a {
     border-bottom: none;
+  }
+  .copyright a { 
+    text-decoration: underline;
   }
   .menu-extra {
     list-style: circle;

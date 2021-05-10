@@ -149,13 +149,20 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;本个人网站是参考 &lt;a href=&#34;https://github.com/shenweiyan/ivy-hugo-theme&#34;&gt;ivy-hugo-theme&lt;/a&gt; 和 &lt;a href=&#34;https://github.com/shenweiyan/cupper-hugo-theme&#34;&gt;cupper-hugo-theme&lt;/a&gt; 构建的，如果读者想搭建一样主题的网站，请移步&lt;a href=&#34;https://github.com/shenweiyan/ivc-hugo-theme&#34;&gt;GitHub&lt;/a&gt;下载并参考 Hugo 与 Blogdown 的使用方法，然后删改关于我的信息。&lt;/p&gt;
+&lt;p&gt;本个人网站是参考 &lt;a href=&#34;https://github.com/shenweiyan/ivy-hugo-theme&#34;&gt;ivy-hugo-theme&lt;/a&gt; 和 &lt;a href=&#34;https://github.com/shenweiyan/cupper-hugo-theme&#34;&gt;cupper-hugo-theme&lt;/a&gt; 构建的，如果读者想搭建一样主题的网站，请移步&lt;a href=&#34;https://github.com/shenweiyan/ICS-Hugo-Theme&#34;&gt;GitHub&lt;/a&gt;下载并参考 Hugo 与 Blogdown 的使用方法，然后删改关于我的信息。&lt;/p&gt;
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;本博客更新历史：&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;2021.03.29：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;更新 footer 样式，Copyright 自动获取当前年份。&lt;/li&gt;
+&lt;li&gt;页脚的 footer 可直接通过 config.toml 进行更新。&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;2020.03.13：&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ol&gt;
