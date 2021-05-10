@@ -5,11 +5,15 @@ title: 语雀图片的同步迁移解决方案
 slug: sync-from-yuque-to-qiniu
 date: 2019-08-08
 type: post
-category: 
 published: true
+author: 沈维燕
+category: 
 tags: 
 ---
 
+
+
+> 欢迎关注 "BioIT爱好者" 公众号(ID：bioitee)，或者点击 [这里](https://www.yuque.com/shenweiyan/cookbook/sync-from-yuque-to-qiniu) 阅读原文。
 
 昨天登录 Github Jekyll 博客时候，忽然发现很多文章的图片都出现了 404！后来检查才知道，原来从 2019 年 8 月起，语雀上的一些静态图片开启了防外链设置，因此之前通过 api 同步语雀文章的内容到第三方的平台，会导致包括图片在内的静态资源都无法访问。
 
@@ -167,6 +171,3 @@ HTTPS 配置中的 SSL 证书可以选择申请七牛与的免费证书；也可
 
 
 
-
-
-> 后记：欢迎关注 "生信科技爱好者" 公众号，或者点击 [这里](https://www.yuque.com/shenweiyan/cookbook/sync-from-yuque-to-qiniu) 阅读原文。

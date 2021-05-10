@@ -3,13 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/xo4ieg/</loc>
+    <lastmod>2020-07-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/bio-server-basic/</loc>
+    <lastmod>2020-06-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://shenweiyan.github.io/ICS-Hugo-Theme/feedback/</loc>
     <lastmod>2020-03-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/linux-install-fonts/</loc>
+    <lastmod>2020-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://shenweiyan.github.io/ICS-Hugo-Theme/read/biocworkshop-100-r-and-bioconductor-intro/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/tp85x1/</loc>
+    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
