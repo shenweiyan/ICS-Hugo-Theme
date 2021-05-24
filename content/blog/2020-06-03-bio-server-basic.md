@@ -19,7 +19,7 @@ tags:
 
 
 作为体验性服务器，这里简单介绍一下拿到服务器后的一些基本设置。
-![cr-rstudio.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2020/png/126032/1591149588746-11d188e0-4a56-4f83-859f-f843082ae1af.png)
+![cr-rstudio.png](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1591149588746-11d188e0-4a56-4f83-859f-f843082ae1af.png)
 
 
 ## 1. 查看配置信息
@@ -70,7 +70,7 @@ cat /proc/cpuinfo| grep "processor"| wc -l
 # 查看内存、CPU
 [root@r0sasd1bQi ~]# htop
 ```
-![htop.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2020/png/126032/1591151929532-a7597c5a-c0c4-441a-82df-44a4f5dbd5b9.png)
+![htop.png](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1591151929532-a7597c5a-c0c4-441a-82df-44a4f5dbd5b9.png)
 
 
 ## 2. 账号与用户名管理
@@ -163,7 +163,7 @@ passwd: all authentication tokens updated successfully.
 
 
 
-![hostname.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2020/png/126032/1591152960720-21c0d6e2-76f5-4bdc-ba03-da345f526b4c.png)
+![hostname.png](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1591152960720-21c0d6e2-76f5-4bdc-ba03-da345f526b4c.png)
 
 
 
@@ -179,7 +179,7 @@ bash 中命令行提示符的格式是由 PS1 来控制的。 `/etc/bashrc` 中
 PS1='\033[35;1m\u@\h \[\e[m\]\t \[\033[36;1m\]$(pwd) \n$ \[\e[m\]'
 cd /data; clear;
 ```
-![bashrc.png](https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2020/png/126032/1591153610113-cf5464ec-45c3-4b36-9a81-ab3359f771a5.png)
+![bashrc.png](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1591153610113-cf5464ec-45c3-4b36-9a81-ab3359f771a5.png)
 
 
 有关于 PS1 的格式介绍如下：
