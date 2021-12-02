@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cmn-Hans">
+<html lang="zh-cn">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
@@ -188,7 +188,7 @@
 
 
 
-<li class="pattern"><a href="https://github.com/shenweiyan/ICS-Hugo-Theme/edit/master/content/blog/2019-10-12-tp85x1.md" target="_blank">编辑</a></li>
+<li class="pattern"><a href="https://github.com/shenweiyan/ICS-Hugo-Theme/edit/main/content/blog/2019-10-12-tp85x1.md" target="_blank">编辑</a></li>
 
 
 <li class="pattern"><a href="../../blog/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
@@ -228,124 +228,76 @@
   
   
 
-  
-
-<blockquote>
+  <blockquote>
 <p>欢迎关注 &ldquo;BioIT爱好者&rdquo; 公众号(ID：bioitee)，或者点击 <a href="https://www.yuque.com/shenweiyan/cookbook/tp85x1">这里</a> 阅读原文。</p>
 </blockquote>
-
-<p><a class="fancya" data-fancybox="gallery" href="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1570847929839-ad885a4c-c01d-4091-af3e-0f29d8b35b0c.png"><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1570847929839-ad885a4c-c01d-4091-af3e-0f29d8b35b0c.png" alt="bio-dash.png"></a>
+<p><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1570847929839-ad885a4c-c01d-4091-af3e-0f29d8b35b0c.png" alt="bio-dash.png">
 <a href="https://plot.ly/dash/">Dash</a> 是用于搭建响应式 Web 应用的 Python 开源库。Dash Bio 是面向生物信息学，且与 Dash 兼容的组件，它可以将生物信息学领域中常见的数据整合到 Dash 应用程序，以实现响应式的生物信息学数据可视化。</p>
-
 <h2 id="安装">安装</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pip install dash dash<span style="color:#f92672">-</span>bio
+</code></pre></div><p>截止 2019.09.25，dash-bio 在 PyPI 的最新版本为 0.1.3，dash 的最新版本为 1.3.1。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> dash<span style="color:#f92672">,</span>dash_bio
+<span style="color:#f92672">&gt;&gt;&gt;</span> print(dash<span style="color:#f92672">.</span>__version__)
+<span style="color:#ae81ff">1.3.1</span>
 
-<pre><code class="language-python">pip install dash dash-bio
-</code></pre>
-
-<p>截止 2019.09.25，dash-bio 在 PyPI 的最新版本为 0.1.3，dash 的最新版本为 1.3.1。</p>
-
-<pre><code class="language-python">&gt;&gt;&gt; import dash,dash_bio
-&gt;&gt;&gt; print(dash.__version__)
-1.3.1
-
-&gt;&gt;&gt; print(dash_bio.__version__)
-0.1.4
-</code></pre>
-
-<h2 id="dash">dash</h2>
-
-<p>Plotly 的 <code>dash</code> 库提供了一个声明性的 Python 接口，用于开发全栈式 Web 应用程序（“Dash apps&rdquo;）。除了主要的 <code>dash</code> 库之外，<code>dash-html-components</code> 和 <code>dash-core-components</code> 包还构成了 Dash 应用程序的 building blocks。<code>dash-html-components</code> 提供了一个用于构建 Dash 应用程序布局的界面，该界面模仿了构建网站布局的过程； <code>dash-core-components</code> 是用于与 Dash 应用程序进行交互的一组常用工具（例如，下拉菜单，文本输入和滑块），并包括 <code>dcc.Graph</code> 组件，用于使用 plotly.py 制作交互式图形。</p>
-
+<span style="color:#f92672">&gt;&gt;&gt;</span> print(dash_bio<span style="color:#f92672">.</span>__version__)
+<span style="color:#ae81ff">0.1.4</span>
+</code></pre></div><h2 id="dash">dash</h2>
+<p>Plotly 的 <code>dash</code> 库提供了一个声明性的 Python 接口，用于开发全栈式 Web 应用程序（“Dash apps&quot;）。除了主要的 <code>dash</code> 库之外，<code>dash-html-components</code> 和 <code>dash-core-components</code> 包还构成了 Dash 应用程序的 building blocks。<code>dash-html-components</code> 提供了一个用于构建 Dash 应用程序布局的界面，该界面模仿了构建网站布局的过程； <code>dash-core-components</code> 是用于与 Dash 应用程序进行交互的一组常用工具（例如，下拉菜单，文本输入和滑块），并包括 <code>dcc.Graph</code> 组件，用于使用 plotly.py 制作交互式图形。</p>
 <p>一个只包含了一个字符串页面的最小 Dash 应用可以使用以下代码生成。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> dash
+<span style="color:#f92672">import</span> dash_html_components <span style="color:#66d9ef">as</span> html
 
-<pre><code class="language-python">import dash
-import dash_html_components as html
+app <span style="color:#f92672">=</span> dash<span style="color:#f92672">.</span>Dash()
+app<span style="color:#f92672">.</span>layout <span style="color:#f92672">=</span> html<span style="color:#f92672">.</span>Div(<span style="color:#e6db74">&#39;Hello, world!&#39;</span>)
 
-app = dash.Dash()
-app.layout = html.Div('Hello, world!')
+<span style="color:#75715e"># 只能 localhost 内部访问</span>
+app<span style="color:#f92672">.</span>run_server()				
 
-# 只能 localhost 内部访问
-app.run_server()				
-
-# 开启外网访问
-#app.run_server(host=&quot;0.0.0.0&quot;)	
-</code></pre>
-
-<p><a class="fancya" data-fancybox="gallery" href="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569400318751-94eb4631-6619-41c8-a745-ed93518802a1.png"><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569400318751-94eb4631-6619-41c8-a745-ed93518802a1.png" alt="092513352363001.Png"></a>
+<span style="color:#75715e"># 开启外网访问</span>
+<span style="color:#75715e">#app.run_server(host=&#34;0.0.0.0&#34;)	</span>
+</code></pre></div><p><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569400318751-94eb4631-6619-41c8-a745-ed93518802a1.png" alt="092513352363001.Png">
 <strong>Fig. 1</strong>: A simple Dash application.</p>
-
 <p>运行上述代码后，将指定一个本地主机地址在控制台中。在浏览器中访问该地址会产生一个简单的结果包含文本 &ldquo;Hello，world！&rdquo; 的网页 （见图1）。</p>
-
 <h2 id="dash-bio">dash-bio</h2>
-
-<p>Dash Bio 是一个用于在 Python 中构建生物信息学和药物开发应用程序的开源工具包。许多 Dash Bio 组件都建立在 JavaScript 库之上，这些库在全栈生物信息学应用程序开发人员中已经很流行。Plotly<strong> </strong>团队对这些 JavaScript 小部件经过进行了重新设计，以便 Python 开发人员现在可以访问它们。换句话说，科学计算的 Python 开发人员现在可以将这些小部件投入使用而无需了解 JavaScript。您只需要了解 Python 和 Dash。</p>
-
+<p>Dash Bio 是一个用于在 Python 中构建生物信息学和药物开发应用程序的开源工具包。许多 Dash Bio 组件都建立在 JavaScript 库之上，这些库在全栈生物信息学应用程序开发人员中已经很流行。Plotly** **团队对这些 JavaScript 小部件经过进行了重新设计，以便 Python 开发人员现在可以访问它们。换句话说，科学计算的 Python 开发人员现在可以将这些小部件投入使用而无需了解 JavaScript。您只需要了解 Python 和 Dash。</p>
 <p>下面是以下是从 dash-bio 选取的 10个 Dash 可视化应用程序示例，这些应用程序显示了这种基于 Web 的敏捷和交互式的生物信息学和药物开发分析方法。</p>
-
 <h3 id="clustergram">Clustergram</h3>
-
 <p>聚类图是热图-树状图的组合，通常在基因表达数据中使用。由树状图表示的分层聚类可用于识别具有相关表达水平的基因组。Dash Bio Clustergram 组件是基于 Python 的组件，它使用 plotly.py 生成图形。它以二维 numpy 浮点值数组作为输入。缺失数据的插入和层次聚类的计算都发生在组件本身内。达到或超过用户定义相似性阈值的聚类在相应的树状图中包含单个迹线，并且可以用注释突出显示。
-<a class="fancya" data-fancybox="gallery" href="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569394214632-88d9d9b4-1f36-4020-9467-df1197b23e96.png?x-oss-process=image/resize,w_746"><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569394214632-88d9d9b4-1f36-4020-9467-df1197b23e96.png?x-oss-process=image/resize,w_746" alt=""></a></p>
-
+<img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569394214632-88d9d9b4-1f36-4020-9467-df1197b23e96.png?x-oss-process=image/resize,w_746" alt=""></p>
 <h3 id="ideogram">Ideogram</h3>
-
 <p>ideogram 是基因组数据的示意图。染色体以链表示，特定基因的位置由染色体上的条带表示。Dash Bio Ideogram 组件建立在 ideogram.js 库之上，并包括注释，直方图和同源性等功能。可以对每个染色体的不同片段进行注释，并以条带的形式显示，并且可以通过使用同源性功能将一条染色体上的一个区域连接到另一条染色体上的一个区域来突出显示不同染色体之间的关系。
-<a class="fancya" data-fancybox="gallery" href="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569402491631-6843e566-9aae-40a1-9861-a8a6464ee939.png"><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569402491631-6843e566-9aae-40a1-9861-a8a6464ee939.png" alt=""></a></p>
-
+<img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569402491631-6843e566-9aae-40a1-9861-a8a6464ee939.png" alt=""></p>
 <h3 id="manhattan-plot">Manhattan Plot</h3>
-
 <p>曼哈顿图是全基因组关联研究中常用的图。它可以突出显示特定的核苷酸，当将其更改为其他核苷酸时，这些核苷酸与某些遗传条件有关。Dash Bio ManhattanPlot 组件是使用 plotly.js 构建的。输入数据采用 pandas 数据框的形式。图上的两条线（见下图）分别代表阈值水平和建议线。这些线的 y 值可由用户控制。
-<a class="fancya" data-fancybox="gallery" href="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569402745312-e8b94fe1-8439-4483-8b40-7c7e224106a1.png"><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569402745312-e8b94fe1-8439-4483-8b40-7c7e224106a1.png" alt=""></a></p>
-
+<img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569402745312-e8b94fe1-8439-4483-8b40-7c7e224106a1.png" alt=""></p>
 <h3 id="needle-plot">Needle Plot</h3>
-
 <p>针迹图是条形图，其中每个条形图的顶部都已替换为标记，并且从 x 轴到上述标记的线也被替换。它的主要用例是密集数据集的可视化，当用条形图表示时，看起来过于拥挤而无法有效地解释。在生物信息学中，针刺图可用于注释基因组上发生基因突变的位置（见下图）。Dash Bio NeedlePlot 组件是使用 plotly.js 构建的。它接收字典作为输入数据。可以使用不同的颜色和标记样式来区分不同类型的突变，并且可以在图上标出特定基因的域。
-<a class="fancya" data-fancybox="gallery" href="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569403071090-35507283-c6c3-4535-ac58-3b8f6637a47a.png"><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569403071090-35507283-c6c3-4535-ac58-3b8f6637a47a.png" alt=""></a></p>
-
+<img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569403071090-35507283-c6c3-4535-ac58-3b8f6637a47a.png" alt=""></p>
 <h3 id="volcano-plot">Volcano Plot</h3>
-
 <p>火山图是用于同时显示数据集的统计显着性和定义“效果大小”（例如倍数变化）的图。当可视化代表重复数据的大量数据点时，这种类型的绘图非常有用。它有助于识别同时具有统计意义和巨大影响的数据。Dash Bio VolcanoPlot 件是使用 plotly.py 构建的。它以 pandas 数据框作为输入数据。用户可以定义代表效果大小阈值（正值和负值）和统计意义的阈值的线（见下图）。
-<a class="fancya" data-fancybox="gallery" href="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1570775727977-61a7ec6a-8f42-4343-b7db-69866f65a1df.png"><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1570775727977-61a7ec6a-8f42-4343-b7db-69866f65a1df.png" alt="092513395069008.png"></a></p>
-
+<img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1570775727977-61a7ec6a-8f42-4343-b7db-69866f65a1df.png" alt="092513395069008.png"></p>
 <h3 id="molecule-3d-viewer">Molecule 3D Viewer</h3>
-
 <p>Dash Bio Molecule3dViewer 组件建立在 <code>molecule-3d-for-react</code> 库之上。其目的是显示分子结构。这些类型的可视化可以显示蛋白质的形状，并深入了解它们与其他分子结合的方式。在交流生物分子过程的机理时，这会非常有用。Molecule3dViewer 接收字典作为输入数据，该字典指定分子中每个原子的布局和样式。它可以呈现各种样式的分子，例如带状图，并允许单击鼠标选择特定的原子或残基（见下图），这些特定的原子或残基可以在 Dash 程序中进行读取或写入。
-<a class="fancya" data-fancybox="gallery" href="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569403677437-4c675da5-ffad-47c3-bceb-69781075781b.png?x-oss-process=image/resize,w_289"><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569403677437-4c675da5-ffad-47c3-bceb-69781075781b.png?x-oss-process=image/resize,w_289" alt=""></a></p>
-
+<img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569403677437-4c675da5-ffad-47c3-bceb-69781075781b.png?x-oss-process=image/resize,w_289" alt=""></p>
 <h3 id="speck">Speck</h3>
-
 <p>这是一个使用 WebGL 和环境遮挡来提供更好的深度感知的 3d 分子环境遮挡查看器。Dash Bio Speck 组件是基于 WebGL 的 3D 渲染器，它基于 <code>Speck</code> 构建。它使用环境光遮挡和轮廓线等技术来提供分子结构的丰富视图（见下图）。Dash Bio Speck 组件以字典的形式接收输入数据，该字典包含每个原子的原子符号和空间位置（以 x，y 和 z 坐标表示）。与分子渲染有关的参数（例如原子大小，环境光吸收水平和轮廓）可以选择在另一个作为参数提供的字典中指定。</p>
-
-<p><a class="fancya" data-fancybox="gallery" href="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569545766632-70036b8a-f949-43f7-98d5-4f2aceb26001.png?x-oss-process=image/resize,w_384"><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569545766632-70036b8a-f949-43f7-98d5-4f2aceb26001.png?x-oss-process=image/resize,w_384" alt=""></a></p>
-
+<p><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569545766632-70036b8a-f949-43f7-98d5-4f2aceb26001.png?x-oss-process=image/resize,w_384" alt=""></p>
 <h3 id="alignment-chart">Alignment Chart</h3>
-
 <p>比对可视化图是用于查看多个序列比对的工具。图表中显示了核苷酸或氨基酸的多个相关序列（例如，来自不同生物的似乎具有相同的功能的氨基酸蛋白序列），以显示它们的相似性。Dash Bio AlignmentChart 组件构建在 <code>react-alignment-viewer</code> 之上。它以 FASTA 文件作为输入并进行比对计算。它可以可选地显示一个条形图，该条形图表示输入文件中定义的每个序列中特定氨基酸或核苷酸的保守性水平（见下图）。
-<a class="fancya" data-fancybox="gallery" href="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569546214743-e5c2e8e0-8b3a-42f1-b6ef-577188162571.png?x-oss-process=image/resize,w_746"><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569546214743-e5c2e8e0-8b3a-42f1-b6ef-577188162571.png?x-oss-process=image/resize,w_746" alt=""></a></p>
-
+<img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569546214743-e5c2e8e0-8b3a-42f1-b6ef-577188162571.png?x-oss-process=image/resize,w_746" alt=""></p>
 <h3 id="oncoprint">OncoPrint</h3>
-
 <p>OncoPrint 图是一种热图，可帮助可视化多个基因组改变事件。Dash Bio OncoPrint 组件构建在 <code>react-oncoprint</code> 之上。组件的输入数据采用字典列表的形式，每个字典都定义一个样本，基因，改变和突变类型。
-<a class="fancya" data-fancybox="gallery" href="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569546534452-9ec5b810-4d4b-4a78-a853-0047d947fb9f.png"><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569546534452-9ec5b810-4d4b-4a78-a853-0047d947fb9f.png" alt=""></a></p>
-
+<img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569546534452-9ec5b810-4d4b-4a78-a853-0047d947fb9f.png" alt=""></p>
 <h3 id="sequence-viewer">Sequence Viewer</h3>
-
 <p>Dash Bio SequenceViewer 组件是一个可用于基因组或蛋白质组序列注释的简单工具。它基于 <code>react-sequence-viewer</code> 库。该可视化图包括一个搜索功能，允许用户使用正则表达式搜索序列。另外，可以使用由起始位置、终止位置和颜色定义的选项，或可以编码一旦单击子序列即可显示的其他信息的覆盖范围来注释序列。选择和覆盖范围可在 Dash 应用程序中进行读取和写入，还可以通过鼠标悬停来选择和搜索结果。</p>
-
-<p><a class="fancya" data-fancybox="gallery" href="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569547009348-d6456085-0e6d-4599-8927-092f9f66689b.png"><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569547009348-d6456085-0e6d-4599-8927-092f9f66689b.png" alt=""></a></p>
-
+<p><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2019/png/126032/1569547009348-d6456085-0e6d-4599-8927-092f9f66689b.png" alt=""></p>
 <h2 id="总结">总结</h2>
-
 <p>Dash Bio 组件有助于对生物信息学领域中收集和分析中常见的数据集类型进行可视化展示。它与 Plotly Dash 的声明性质保持一致，并允许用户创建可与其他 Dash 组件集成的交互响应式 Web 应用程序。</p>
-
 <p>除此之外，在 Dash Bio 中还有一个与 <code>dash-bio</code> 一起开发的 <code>dash-bio-utils</code> 包。它包含了生物信息学分析中常用文件类型的解析器。通过这个包的解析器可以将一些常用生物信息学文件中编码的数据转换为与 Dash Bio 组件兼容的输入，如将文件从一些最著名的生物信息学数据库（GEO 表达数据，PDB 蛋白质分子结构数据等）转换为熟悉的 Python 数据类型，例如字典。当与 <code>dash-bio</code> 软件包结合使用时，这使生物信息学家可以快速，简洁地相互之间以及与其他科学界人士交流信息。</p>
-
 <p>喜欢 R 语言的同学，也可以了解一下 <code>dashR</code> 这个包，它是 Dash 生态系统的 R 接口，可用于编写响应式的 Web 可视化应用程序。</p>
-
 <p>本文章只简单介绍了 <code>dash-bio</code> 的一些常用案例，没有涉及 <code>dash-bio-utils</code> 和 <code>dashR</code> 包，有兴趣的童鞋可以去研究学习一下，也欢迎留言交流。</p>
-
 <h2 id="参考资料">参考资料</h2>
-
 <ol>
 <li>Plotly，<a href="https://medium.com/plotly/announcing-dash-bio-ed8835d5da0c">Announcing Dash Bio</a>，Medium</li>
 <li>Dash by Plotly，《<a href="https://dashr.plot.ly/?source=post_page">Dash for R User Guide</a>》，dashr.plot.ly</li>
@@ -422,12 +374,12 @@ document.addEventListener('keyup', function(e) {
       <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
 
   
-      <br/><br/><a href="https://www.yuque.com/shenweiyan"><img src="https://img.shields.io/badge/沈维燕-语雀知识库-blueviolet" alt="yuque" /></a> <a href="https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioitee/bioitee.png"><img src="https://img.shields.io/badge/沈维燕-微信公众号-important" alt="wechat" /></a> <a href="https://www.zhihu.com/people/shenweiyan"><img src="https://img.shields.io/badge/沈维燕-知乎-blue" alt="zhihu" /></a> <a href="https://www.bioitee.com/"><img src="https://img.shields.io/badge/沈维燕-BioIT爱好者-green" alt="bioitee" /></a>
+      <!-- raw HTML omitted --><!-- raw HTML omitted --><a href="https://www.yuque.com/shenweiyan"><img src="https://img.shields.io/badge/%E6%B2%88%E7%BB%B4%E7%87%95-%E8%AF%AD%E9%9B%80%E7%9F%A5%E8%AF%86%E5%BA%93-blueviolet" alt="yuque"></a> <a href="https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioitee/bioitee.png"><img src="https://img.shields.io/badge/%E6%B2%88%E7%BB%B4%E7%87%95-%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-important" alt="wechat"></a> <a href="https://www.zhihu.com/people/shenweiyan"><img src="https://img.shields.io/badge/%E6%B2%88%E7%BB%B4%E7%87%95-%E7%9F%A5%E4%B9%8E-blue" alt="zhihu"></a> <a href="https://www.bioitee.com/"><img src="https://img.shields.io/badge/%E6%B2%88%E7%BB%B4%E7%87%95-BioIT%E7%88%B1%E5%A5%BD%E8%80%85-green" alt="bioitee"></a>
   
 
   
        
-      <br/><br/>&copy; Powered by <a href="https://github.com/shenweiyan/ICS-Hugo-Theme">ICS-Hugo-Theme</a> and <a href="https://gohugo.io">Hugo</a> | <a href="https://www.bioitee.com/">Bio IT 爱好者</a> 2018 - 2021 | <a href="http://beian.miit.gov.cn/">粤ICP备16023717号</a><br/>
+      <!-- raw HTML omitted --><!-- raw HTML omitted -->© Powered by <a href="https://github.com/shenweiyan/ICS-Hugo-Theme">ICS-Hugo-Theme</a> and <a href="https://gohugo.io">Hugo</a> | <a href="https://www.bioitee.com/">Bio IT 爱好者</a> 2018 - 2021 | <a href="http://beian.miit.gov.cn/">粤ICP备16023717号</a><!-- raw HTML omitted -->
   
 
   </div>

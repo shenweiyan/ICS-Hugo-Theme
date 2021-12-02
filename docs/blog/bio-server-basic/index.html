@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cmn-Hans">
+<html lang="zh-cn">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
@@ -188,7 +188,7 @@
 
 
 
-<li class="pattern"><a href="https://github.com/shenweiyan/ICS-Hugo-Theme/edit/master/content/blog/2020-06-03-bio-server-basic.md" target="_blank">编辑</a></li>
+<li class="pattern"><a href="https://github.com/shenweiyan/ICS-Hugo-Theme/edit/main/content/blog/2020-06-03-bio-server-basic.md" target="_blank">编辑</a></li>
 
 
 <li class="pattern"><a href="../../blog/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
@@ -228,208 +228,171 @@
   
   
 
-  
-
-<blockquote>
+  <blockquote>
 <p>欢迎关注 &ldquo;BioIT爱好者&rdquo; 公众号(ID：bioitee)，或者点击 <a href="https://www.yuque.com/shenweiyan/cookbook/bio-server-basic">这里</a> 阅读原文。</p>
 </blockquote>
-
 <p>前两天拿到了云筏科技提供的一台 4 核 16G 内存，1TB 硬盘，300M 带宽的服务器（看了一下 IP，应该是位于加拿大的服务器）！虽然是国外的服务器，但从国内 ssh 上去后的各种操作还是非常流畅的，而且前期白菜般的体验价格和飞一般的带宽的确也很有吸引力，像我用来做 Galaxy 和一些 web 开发测试完全是没问题。另外该服务器还自带了一个开箱即用的 RStudio-Server，对生信入门者来说也算是比较友好了，最起码节省了不少部署设置的功夫。</p>
-
 <p>作为体验性服务器，这里简单介绍一下拿到服务器后的一些基本设置。
-<a class="fancya" data-fancybox="gallery" href="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1591149588746-11d188e0-4a56-4f83-859f-f843082ae1af.png"><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1591149588746-11d188e0-4a56-4f83-859f-f843082ae1af.png" alt="cr-rstudio.png"></a></p>
-
+<img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1591149588746-11d188e0-4a56-4f83-859f-f843082ae1af.png" alt="cr-rstudio.png"></p>
 <h2 id="1-查看配置信息">1. 查看配置信息</h2>
-
 <ul>
-<li><p>查看内核版本</p>
+<li>查看内核版本</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>root@r0sasd1bQi ~<span style="color:#f92672">]</span><span style="color:#75715e"># cat /proc/version  # 可以看到该服务器为 Redhat/CentOS 发行版本</span>
+Linux version 3.10.0-957.el7.x86_64 <span style="color:#f92672">(</span>mockbuild@kbuilder.bsys.centos.org<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>gcc version 4.8.5 <span style="color:#ae81ff">20150623</span> <span style="color:#f92672">(</span>Red Hat 4.8.5-36<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>GCC<span style="color:#f92672">)</span> <span style="color:#f92672">)</span> <span style="color:#75715e">#1 SMP Thu Nov 8 23:39:32 UTC 2018</span>
+</code></pre></div><ul>
+<li>查看详细版本信息</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 如果 lsb_release command not found，通过下面的方式安装</span>
+<span style="color:#f92672">[</span>root@r0sasd1bQi ~<span style="color:#f92672">]</span><span style="color:#75715e"># yum install redhat-lsb -y</span>
 
-<pre><code class="language-bash">[root@r0sasd1bQi ~]# cat /proc/version  # 可以看到该服务器为 Redhat/CentOS 发行版本
-Linux version 3.10.0-957.el7.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-36) (GCC) ) #1 SMP Thu Nov 8 23:39:32 UTC 2018
-</code></pre></li>
-
-<li><p>查看详细版本信息</p>
-
-<pre><code class="language-bash"># 如果 lsb_release command not found，通过下面的方式安装
-[root@r0sasd1bQi ~]# yum install redhat-lsb -y
-
-[root@r0sasd1bQi ~]# lsb_release -a		# 列出所有版本信息
+<span style="color:#f92672">[</span>root@r0sasd1bQi ~<span style="color:#f92672">]</span><span style="color:#75715e"># lsb_release -a		# 列出所有版本信息</span>
 LSB Version:    :core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
 Distributor ID: CentOS
-Description:    CentOS Linux release 7.6.1810 (Core)
+Description:    CentOS Linux release 7.6.1810 <span style="color:#f92672">(</span>Core<span style="color:#f92672">)</span>
 Release:        7.6.1810
 Codename:       Core
-</code></pre></li>
-
-<li><p>查看 cpu 数</p>
-
-<pre><code class="language-bash"># 总核数 = 物理CPU个数 X 每颗物理CPU的核数 
-# 总逻辑CPU数 = 物理CPU个数 X 每颗物理CPU的核数 X 超线程数
-
-# 查看物理CPU个数
-cat /proc/cpuinfo| grep &quot;physical id&quot;| sort| uniq| wc -l
-
-# 查看每个物理CPU中core的个数(即核数)
-cat /proc/cpuinfo| grep &quot;cpu cores&quot;| uniq
-
-# 查看逻辑CPU的个数
-cat /proc/cpuinfo| grep &quot;processor&quot;| wc -l
-</code></pre></li>
-
-<li><p>查看内存（可用 <code>top</code> 命令直接查看，或者安装 <code>htop</code> 查看）</p>
-
-<pre><code class="language-bash"># 在 CentOS 7 上启用 epel 版本
-[root@r0sasd1bQi ~]# yum -y install epel-release
-
-# 安装 htop
-[root@r0sasd1bQi ~]# yum -y install htop
-
-# 查看内存、CPU
-[root@r0sasd1bQi ~]# htop
-</code></pre></li>
+</code></pre></div><ul>
+<li>查看 cpu 数</li>
 </ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 总核数 = 物理CPU个数 X 每颗物理CPU的核数 </span>
+<span style="color:#75715e"># 总逻辑CPU数 = 物理CPU个数 X 每颗物理CPU的核数 X 超线程数</span>
 
-<p><a class="fancya" data-fancybox="gallery" href="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1591151929532-a7597c5a-c0c4-441a-82df-44a4f5dbd5b9.png"><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1591151929532-a7597c5a-c0c4-441a-82df-44a4f5dbd5b9.png" alt="htop.png"></a></p>
+<span style="color:#75715e"># 查看物理CPU个数</span>
+cat /proc/cpuinfo| grep <span style="color:#e6db74">&#34;physical id&#34;</span>| sort| uniq| wc -l
 
+<span style="color:#75715e"># 查看每个物理CPU中core的个数(即核数)</span>
+cat /proc/cpuinfo| grep <span style="color:#e6db74">&#34;cpu cores&#34;</span>| uniq
+
+<span style="color:#75715e"># 查看逻辑CPU的个数</span>
+cat /proc/cpuinfo| grep <span style="color:#e6db74">&#34;processor&#34;</span>| wc -l
+</code></pre></div><ul>
+<li>查看内存（可用 <code>top</code> 命令直接查看，或者安装 <code>htop</code> 查看）</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 在 CentOS 7 上启用 epel 版本</span>
+<span style="color:#f92672">[</span>root@r0sasd1bQi ~<span style="color:#f92672">]</span><span style="color:#75715e"># yum -y install epel-release</span>
+
+<span style="color:#75715e"># 安装 htop</span>
+<span style="color:#f92672">[</span>root@r0sasd1bQi ~<span style="color:#f92672">]</span><span style="color:#75715e"># yum -y install htop</span>
+
+<span style="color:#75715e"># 查看内存、CPU</span>
+<span style="color:#f92672">[</span>root@r0sasd1bQi ~<span style="color:#f92672">]</span><span style="color:#75715e"># htop</span>
+</code></pre></div><p><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1591151929532-a7597c5a-c0c4-441a-82df-44a4f5dbd5b9.png" alt="htop.png"></p>
 <h2 id="2-账号与用户名管理">2. 账号与用户名管理</h2>
-
 <p>拿到服务器第一件事就是修改用户名密码，以及创建新账号，毕竟 root 权限太大！</p>
-
 <ul>
-<li><p>修改 root 密码</p>
-
-<pre><code class="language-bash">[root@r0sasd1bQi ~]# passwd
-Changing password for user root.
-New password: &lt;输入新的密码&gt;
-Retype new password: &lt;再次输入新的密码&gt;
-passwd: all authentication tokens updated successfully.
-</code></pre></li>
-
-<li><p>创建用户与工作组</p>
-
-<pre><code class="language-bash"># 创建工作组
-[root@r0sasd1bQi ~]# groupadd bioinfo 	//新建 bioinfo 工作组
-
-# 新建用户并指定工作组(-g 所属组；-d 家目录；-s 所用的 SHELL)
-[root@r0sasd1bQi ~]# useradd shenweiyan -g bioinfo   //新建 shenweiyan 用户并增加到 bioinfo 工作组
-
-# 查看用户信息
-[root@r0sasd1bQi ~]# id shenweiyan
-uid=1001(shenweiyan) gid=1001(bioinfo) groups=1001(bioinfo)
-
-# 修改用户密码
-[root@r0sasd1bQi ~]# passwd shenweiyan
-Changing password for user shenweiyan.
-New password: &lt;输入新的密码&gt;
-Retype new password: &lt;再次输入新的密码&gt;
-passwd: all authentication tokens updated successfully.
-</code></pre></li>
+<li>修改 root 密码</li>
 </ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>root@r0sasd1bQi ~<span style="color:#f92672">]</span><span style="color:#75715e"># passwd</span>
+Changing password <span style="color:#66d9ef">for</span> user root.
+New password: &lt;输入新的密码&gt;
+Retype new password: &lt;再次输入新的密码&gt;
+passwd: all authentication tokens updated successfully.
+</code></pre></div><ul>
+<li>创建用户与工作组</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 创建工作组</span>
+<span style="color:#f92672">[</span>root@r0sasd1bQi ~<span style="color:#f92672">]</span><span style="color:#75715e"># groupadd bioinfo 	//新建 bioinfo 工作组</span>
 
-<h2 id="3-个性化设置">3. 个性化设置</h2>
+<span style="color:#75715e"># 新建用户并指定工作组(-g 所属组；-d 家目录；-s 所用的 SHELL)</span>
+<span style="color:#f92672">[</span>root@r0sasd1bQi ~<span style="color:#f92672">]</span><span style="color:#75715e"># useradd shenweiyan -g bioinfo   //新建 shenweiyan 用户并增加到 bioinfo 工作组</span>
 
+<span style="color:#75715e"># 查看用户信息</span>
+<span style="color:#f92672">[</span>root@r0sasd1bQi ~<span style="color:#f92672">]</span><span style="color:#75715e"># id shenweiyan</span>
+uid<span style="color:#f92672">=</span>1001<span style="color:#f92672">(</span>shenweiyan<span style="color:#f92672">)</span> gid<span style="color:#f92672">=</span>1001<span style="color:#f92672">(</span>bioinfo<span style="color:#f92672">)</span> groups<span style="color:#f92672">=</span>1001<span style="color:#f92672">(</span>bioinfo<span style="color:#f92672">)</span>
+
+<span style="color:#75715e"># 修改用户密码</span>
+<span style="color:#f92672">[</span>root@r0sasd1bQi ~<span style="color:#f92672">]</span><span style="color:#75715e"># passwd shenweiyan</span>
+Changing password <span style="color:#66d9ef">for</span> user shenweiyan.
+New password: &lt;输入新的密码&gt;
+Retype new password: &lt;再次输入新的密码&gt;
+passwd: all authentication tokens updated successfully.
+</code></pre></div><h2 id="3-个性化设置">3. 个性化设置</h2>
 <h3 id="变更-hostname">变更 hostname</h3>
-
-<p>新的服务器一般自带的 hostname 都是一串无规律的字符串，很难记也不好看（例如我们这个服务器的 r0sasd1bQi ），对于有强迫症的童鞋可以参考下面的方法去修改。
-&gt; 在 CentOS 7 中，有三种定义的主机名：静态的（static）、瞬态的（transient）、灵活的（pretty）。“静态”主机名也称为内核主机名，是系统在启动时从 /etc/hostname 自动初始化的主机名。“瞬态”主机名是在系统运行时临时分配的主机名，例如，通过 DHCP 或 mDNS 服务器分配。静态主机名和瞬态主机名都遵从作为互联网域名同样的字符限制规则。而另一方面，“灵活”主机名则允许使用自由形式（包括特殊/空白字符）的主机名，以展示给终端用户。
-&gt;</p>
-
+<p>新的服务器一般自带的 hostname 都是一串无规律的字符串，很难记也不好看（例如我们这个服务器的 r0sasd1bQi ），对于有强迫症的童鞋可以参考下面的方法去修改。</p>
+<blockquote>
+<p>在 CentOS 7 中，有三种定义的主机名：静态的（static）、瞬态的（transient）、灵活的（pretty）。“静态”主机名也称为内核主机名，是系统在启动时从 /etc/hostname 自动初始化的主机名。“瞬态”主机名是在系统运行时临时分配的主机名，例如，通过 DHCP 或 mDNS 服务器分配。静态主机名和瞬态主机名都遵从作为互联网域名同样的字符限制规则。而另一方面，“灵活”主机名则允许使用自由形式（包括特殊/空白字符）的主机名，以展示给终端用户。</p>
+</blockquote>
 <blockquote>
 <ul>
 <li>方法一，通过 <code>hostnamectl</code> 来修改主机名。修改后需要重启服务器。</li>
 </ul>
 </blockquote>
-
-<pre><code class="language-bash">[root@r0sasd1bQi ~]# hostnamectl   #查看一下当前主机名的情况
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>root@r0sasd1bQi ~<span style="color:#f92672">]</span><span style="color:#75715e"># hostnamectl   #查看一下当前主机名的情况</span>
    Static hostname: r0sasd1bQi
          Icon name: computer-vm
            Chassis: vm
         Machine ID: b6302a1a586547a09aae75efbfa34901
            Boot ID: f75d72657c524500b47edc250c13c6f2
     Virtualization: kvm
-  Operating System: CentOS Linux 7 (Core)
+  Operating System: CentOS Linux <span style="color:#ae81ff">7</span> <span style="color:#f92672">(</span>Core<span style="color:#f92672">)</span>
        CPE OS Name: cpe:/o:centos:centos:7
             Kernel: Linux 3.10.0-957.el7.x86_64
       Architecture: x86-64
 
-[root@r0sasd1bQi ~]# hostnamectl set-hostname bioitee-server --static
-[root@r0sasd1bQi ~]# hostnamectl status
+<span style="color:#f92672">[</span>root@r0sasd1bQi ~<span style="color:#f92672">]</span><span style="color:#75715e"># hostnamectl set-hostname bioitee-server --static</span>
+<span style="color:#f92672">[</span>root@r0sasd1bQi ~<span style="color:#f92672">]</span><span style="color:#75715e"># hostnamectl status</span>
    Static hostname: bioitee-server
          Icon name: computer-vm
            Chassis: vm
         Machine ID: b6302a1a586547a09aae75efbfa34901
            Boot ID: f75d72657c524500b47edc250c13c6f2
     Virtualization: kvm
-  Operating System: CentOS Linux 7 (Core)
+  Operating System: CentOS Linux <span style="color:#ae81ff">7</span> <span style="color:#f92672">(</span>Core<span style="color:#f92672">)</span>
        CPE OS Name: cpe:/o:centos:centos:7
             Kernel: Linux 3.10.0-957.el7.x86_64
       Architecture: x86-64
 
-[root@r0sasd1bQi ~]# reboot now    # 重启服务器
-</code></pre>
-
+<span style="color:#f92672">[</span>root@r0sasd1bQi ~<span style="color:#f92672">]</span><span style="color:#75715e"># reboot now    # 重启服务器</span>
+</code></pre></div><blockquote>
+</blockquote>
 <blockquote>
 <ul>
 <li>方法二，通过修改文件 <code>/etc/hostname</code> 来实现主机名的修改。把该文件内容替换成自己想要的主机名重启即可。</li>
 </ul>
 </blockquote>
-
-<pre><code class="language-bash">[root@r0sasd1bQi ~]# vim /etc/hostname		# 修改 hostname
-[root@r0sasd1bQi ~]# reboot now    				# 重启服务器
-</code></pre>
-
-<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>root@r0sasd1bQi ~<span style="color:#f92672">]</span><span style="color:#75715e"># vim /etc/hostname		# 修改 hostname</span>
+<span style="color:#f92672">[</span>root@r0sasd1bQi ~<span style="color:#f92672">]</span><span style="color:#75715e"># reboot now    				# 重启服务器</span>
+</code></pre></div><blockquote>
 <p>————————————————
 版权声明：本文为CSDN博主「点亮梦想那束光」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
 原文链接：<a href="https://blog.csdn.net/solaraceboy/java/article/details/78563537">https://blog.csdn.net/solaraceboy/java/article/details/78563537</a></p>
 </blockquote>
-
-<p><a class="fancya" data-fancybox="gallery" href="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1591152960720-21c0d6e2-76f5-4bdc-ba03-da345f526b4c.png"><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1591152960720-21c0d6e2-76f5-4bdc-ba03-da345f526b4c.png" alt="hostname.png"></a></p>
-
+<p><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1591152960720-21c0d6e2-76f5-4bdc-ba03-da345f526b4c.png" alt="hostname.png"></p>
 <h3 id="个性化命令行提示符">个性化命令行提示符</h3>
-
 <p>bash 中命令行提示符的格式是由 PS1 来控制的。 <code>/etc/bashrc</code> 中 PS1 的格式定义用于控制全局用户的命令行提示符样式；而针对个人用户的 PS1 设置，位于 <code>~/.bashrc</code> 中。</p>
-
 <p>我自己的 PS1 定义：</p>
-
-<pre><code class="language-bash">PS1='\033[35;1m\u@\h \[\e[m\]\t \[\033[36;1m\]$(pwd) \n$ \[\e[m\]'
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;\033[35;1m\u@\h \[\e[m\]\t \[\033[36;1m\]$(pwd) \n$ \[\e[m\]&#39;</span>
 cd /data; clear;
-</code></pre>
-
-<p><a class="fancya" data-fancybox="gallery" href="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1591153610113-cf5464ec-45c3-4b36-9a81-ab3359f771a5.png"><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1591153610113-cf5464ec-45c3-4b36-9a81-ab3359f771a5.png" alt="bashrc.png"></a></p>
-
+</code></pre></div><p><img src="https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1591153610113-cf5464ec-45c3-4b36-9a81-ab3359f771a5.png" alt="bashrc.png"></p>
 <p>有关于 PS1 的格式介绍如下：</p>
-
-<pre><code class="language-bash">序列					说明
-\a			ASCII 响铃字符（也可以键入 \007）
-\d			&quot;Wed Sep 06&quot; 格式的日期
-\e			ASCII 转义字符（也可以键入 \033）
-\h			主机名的第一部分（如 &quot;mybox&quot;）
-\H			主机的全称（如 &quot;mybox.mydomain.com&quot;）
-\j			在此 shell 中通过按 ^Z 挂起的进程数
-\l			此 shell 的终端设备名（如 &quot;ttyp4&quot;）
-\n			换行符
-\r			回车符
-\s			shell 的名称（如 &quot;bash&quot;）
-\t			24 小时制时间（如 &quot;23:01:01&quot;）
-\T			12 小时制时间（如 &quot;11:01:01&quot;）
-\@			带有 am/pm 的 12 小时制时间
-\u			用户名
-\v			bash 的版本（如 2.04）
-\V			Bash 版本（包括补丁级别）
-\w			当前工作目录（如 &quot;/home/shenweiyan&quot;）
-\W			当前工作目录的 &quot;basename&quot;（如 &quot;shenweiyan&quot;）
-\!			当前命令在历史缓冲区中的位置
-\#			命令编号（只要您键入内容，它就会在每次提示时累加）
-\$			如果您不是超级用户 (root)，则插入一个 &quot;$&quot;；如果您是超级用户，则显示一个 &quot;#&quot;
-\xxx		插入一个用三位数 xxx（用零代替未使用的数字，如 &quot;\007&quot;）表示的 ASCII 字符
-\\			反斜杠
-\[			这个序列应该出现在不移动光标的字符序列（如颜色转义序列）之前。它使 bash 能够正确计算自动换行。
-\]			这个序列应该出现在非打印字符序列之后。
-</code></pre>
-
-<p>以上就是今天关于服务器入门的一些基本设置。在个性化设置上我们还可以进行 Alias、History、PATH 环境变量等的配置；在更高水平上的一些服务器安全策略，欢迎参考相关链接。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">序列					说明
+<span style="color:#ae81ff">\a</span>			ASCII 响铃字符（也可以键入 <span style="color:#ae81ff">\0</span>07）
+<span style="color:#ae81ff">\d</span>			<span style="color:#e6db74">&#34;Wed Sep 06&#34;</span> 格式的日期
+<span style="color:#ae81ff">\e</span>			ASCII 转义字符（也可以键入 <span style="color:#ae81ff">\0</span>33）
+<span style="color:#ae81ff">\h</span>			主机名的第一部分（如 <span style="color:#e6db74">&#34;mybox&#34;</span>）
+<span style="color:#ae81ff">\H</span>			主机的全称（如 <span style="color:#e6db74">&#34;mybox.mydomain.com&#34;</span>）
+<span style="color:#ae81ff">\j</span>			在此 shell 中通过按 ^Z 挂起的进程数
+<span style="color:#ae81ff">\l</span>			此 shell 的终端设备名（如 <span style="color:#e6db74">&#34;ttyp4&#34;</span>）
+<span style="color:#ae81ff">\n</span>			换行符
+<span style="color:#ae81ff">\r</span>			回车符
+<span style="color:#ae81ff">\s</span>			shell 的名称（如 <span style="color:#e6db74">&#34;bash&#34;</span>）
+<span style="color:#ae81ff">\t</span>			<span style="color:#ae81ff">24</span> 小时制时间（如 <span style="color:#e6db74">&#34;23:01:01&#34;</span>）
+<span style="color:#ae81ff">\T</span>			<span style="color:#ae81ff">12</span> 小时制时间（如 <span style="color:#e6db74">&#34;11:01:01&#34;</span>）
+<span style="color:#ae81ff">\@</span>			带有 am/pm 的 <span style="color:#ae81ff">12</span> 小时制时间
+<span style="color:#ae81ff">\u</span>			用户名
+<span style="color:#ae81ff">\v</span>			bash 的版本（如 2.04）
+<span style="color:#ae81ff">\V</span>			Bash 版本（包括补丁级别）
+<span style="color:#ae81ff">\w</span>			当前工作目录（如 <span style="color:#e6db74">&#34;/home/shenweiyan&#34;</span>）
+<span style="color:#ae81ff">\W</span>			当前工作目录的 <span style="color:#e6db74">&#34;basename&#34;</span>（如 <span style="color:#e6db74">&#34;shenweiyan&#34;</span>）
+<span style="color:#ae81ff">\!</span>			当前命令在历史缓冲区中的位置
+<span style="color:#ae81ff">\#</span>			命令编号（只要您键入内容，它就会在每次提示时累加）
+<span style="color:#ae81ff">\$</span>			如果您不是超级用户 <span style="color:#f92672">(</span>root<span style="color:#f92672">)</span>，则插入一个 <span style="color:#e6db74">&#34;</span>$<span style="color:#e6db74">&#34;</span>；如果您是超级用户，则显示一个 <span style="color:#e6db74">&#34;#&#34;</span>
+<span style="color:#ae81ff">\x</span>xx		插入一个用三位数 xxx（用零代替未使用的数字，如 <span style="color:#e6db74">&#34;\007&#34;</span>）表示的 ASCII 字符
+<span style="color:#ae81ff">\\</span>			反斜杠
+<span style="color:#ae81ff">\[</span>			这个序列应该出现在不移动光标的字符序列（如颜色转义序列）之前。它使 bash 能够正确计算自动换行。
+<span style="color:#ae81ff">\]</span>			这个序列应该出现在非打印字符序列之后。
+</code></pre></div><p>以上就是今天关于服务器入门的一些基本设置。在个性化设置上我们还可以进行 Alias、History、PATH 环境变量等的配置；在更高水平上的一些服务器安全策略，欢迎参考相关链接。</p>
 <p>随着使用的不断深入，如果你发现了其他一些更强大更好玩的服务器使用或者设置小技巧，不妨在留言区写下你的分享！</p>
 
 
@@ -502,12 +465,12 @@ document.addEventListener('keyup', function(e) {
       <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
 
   
-      <br/><br/><a href="https://www.yuque.com/shenweiyan"><img src="https://img.shields.io/badge/沈维燕-语雀知识库-blueviolet" alt="yuque" /></a> <a href="https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioitee/bioitee.png"><img src="https://img.shields.io/badge/沈维燕-微信公众号-important" alt="wechat" /></a> <a href="https://www.zhihu.com/people/shenweiyan"><img src="https://img.shields.io/badge/沈维燕-知乎-blue" alt="zhihu" /></a> <a href="https://www.bioitee.com/"><img src="https://img.shields.io/badge/沈维燕-BioIT爱好者-green" alt="bioitee" /></a>
+      <!-- raw HTML omitted --><!-- raw HTML omitted --><a href="https://www.yuque.com/shenweiyan"><img src="https://img.shields.io/badge/%E6%B2%88%E7%BB%B4%E7%87%95-%E8%AF%AD%E9%9B%80%E7%9F%A5%E8%AF%86%E5%BA%93-blueviolet" alt="yuque"></a> <a href="https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioitee/bioitee.png"><img src="https://img.shields.io/badge/%E6%B2%88%E7%BB%B4%E7%87%95-%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-important" alt="wechat"></a> <a href="https://www.zhihu.com/people/shenweiyan"><img src="https://img.shields.io/badge/%E6%B2%88%E7%BB%B4%E7%87%95-%E7%9F%A5%E4%B9%8E-blue" alt="zhihu"></a> <a href="https://www.bioitee.com/"><img src="https://img.shields.io/badge/%E6%B2%88%E7%BB%B4%E7%87%95-BioIT%E7%88%B1%E5%A5%BD%E8%80%85-green" alt="bioitee"></a>
   
 
   
        
-      <br/><br/>&copy; Powered by <a href="https://github.com/shenweiyan/ICS-Hugo-Theme">ICS-Hugo-Theme</a> and <a href="https://gohugo.io">Hugo</a> | <a href="https://www.bioitee.com/">Bio IT 爱好者</a> 2018 - 2021 | <a href="http://beian.miit.gov.cn/">粤ICP备16023717号</a><br/>
+      <!-- raw HTML omitted --><!-- raw HTML omitted -->© Powered by <a href="https://github.com/shenweiyan/ICS-Hugo-Theme">ICS-Hugo-Theme</a> and <a href="https://gohugo.io">Hugo</a> | <a href="https://www.bioitee.com/">Bio IT 爱好者</a> 2018 - 2021 | <a href="http://beian.miit.gov.cn/">粤ICP备16023717号</a><!-- raw HTML omitted -->
   
 
   </div>
