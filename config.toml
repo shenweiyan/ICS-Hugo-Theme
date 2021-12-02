@@ -117,3 +117,6 @@ publishDir = "docs"
     tag = "tags"
     series = "series"
     category = "categories"
+
+[markup.goldmark.renderer]
+    unsafe= true
