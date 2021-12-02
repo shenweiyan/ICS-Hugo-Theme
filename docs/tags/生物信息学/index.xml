@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>生物信息学 on Steven Shen | 沈维燕</title>
+    <link>https://shenweiyan.github.io/ICS-Hugo-Theme/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/</link>
+    <description>Recent content in 生物信息学 on Steven Shen | 沈维燕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cmn-Hans</language>
+    <lastBuildDate>Wed, 29 May 2019 06:12:49 +0000</lastBuildDate>
+    
+	<atom:link href="https://shenweiyan.github.io/ICS-Hugo-Theme/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>生物信息学博客与论坛</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-29-bio-blogs-forums/</link>
+      <pubDate>Wed, 29 May 2019 06:12:49 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-29-bio-blogs-forums/</guid>
+      <description>关于生物信息学的博客与论坛。 国内篇： 谢益辉个人主页：http://yihui.name/ R 语言大神个人主页，基于 Hugo。 leoatchina(leo 陶）的博客：ht</description>
+    </item>
+    
+  </channel>
+</rss>

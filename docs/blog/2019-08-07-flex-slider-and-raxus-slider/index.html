@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    
+    
+    
+    <title>FlexSlider 和 RaxusSlider 插件相关参数 - Steven Shen | 沈维燕</title> 
+    <meta property="og:title" content="FlexSlider 和 RaxusSlider 插件相关参数 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://shenweiyan.github.io/ics-hugo-theme//css/style.css"/>
+    <link rel="stylesheet" href="https://shenweiyan.github.io/ics-hugo-theme//css/fonts.css"/>
+    <script async src="https://shenweiyan.github.io/ics-hugo-theme//js/load-typekit.js"></script>
+
+<link rel="stylesheet" href="https://shenweiyan.github.io/ics-hugo-theme//css/template-styles.css" />
+<link rel="stylesheet" href="https://shenweiyan.github.io/ics-hugo-theme//css/custom.css" />
+
+  </head>
+
+  
+  <body class="blog">
+    
+    
+    <header class="intro-and-nav" role="banner">
+    <div>
+      <div class="intro">
+        <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
+          <img src="https://shenweiyan.github.io/ics-hugo-theme/img/logo.png" alt="">
+        </a>
+        <p class="library-desc">
+          
+            Welcome to the blog site of Steven Shen.
+          
+        </p>
+      </div>
+      <nav id="patterns-nav" class="patterns" role="navigation">
+        <h2 class="vh">Main navigation</h2>
+        <button id="menu-button" aria-expanded="false">
+          
+          Menu
+        </button>
+        
+        <ul id="patterns-list">
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../" >
+              
+              首页
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../about/" >
+              
+              关于
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../blog/" >
+              
+              博客
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../research/" >
+              
+              研究
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../read/" >
+              
+              读书
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../resume/shenweiyan" >
+              
+              简历
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../tweets/" >
+              
+              乱弹
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../other/" >
+              
+              其他
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../feedback/" >
+              
+              留言
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../tags/" >
+              
+              标签
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../archives/" >
+              
+              归档
+            </a>
+          </li>
+          
+          
+
+<li class="pattern">&nbsp;&nbsp;</li>
+
+
+
+<li class="pattern"><a href="https://github.com/shenweiyan/ivs-hugo-theme/edit/master/content/blog/2019-08-07-flex-slider-and-raxus-slider.md" target="_blank">编辑</a></li>
+
+
+<li class="pattern"><a href="../../blog/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li class="pattern"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
+
+
+        </ul>
+      </nav>
+    </div>
+    </header>
+
+    <article class="main">
+      <header class="title">
+        
+
+<h1>FlexSlider 和 RaxusSlider 插件相关参数</h1>
+
+
+
+<h3>
+2019-08-07</h3> 
+
+
+   
+  
+
+
+      </header>
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+
+<p><a name="p9gDE"></a></p>
+
+<h2 id="flexslider">FlexSlider</h2>
+
+<p>链接：<a href="http://flexslider.woothemes.com/">http://flexslider.woothemes.com/</a></p>
+
+<p><strong>FlexSlider </strong>是一个非常出色的 jQuery 滑动切换插件，它支持所有主流浏览器，并有淡入淡出效果。适合所有初级和高级网页设计师使用。关键的一点是该工具还是开源的。</p>
+
+<pre><code class="language-javascript">$(window).load(function() {
+ $('.flexslider').flexslider({
+  animation: &quot;fade&quot;,              //String: Select your animation type, &quot;fade&quot; or &quot;slide&quot;图片变换方式：淡入淡出或者滑动
+  slideDirection: &quot;horizontal&quot;,   //String: Select the sliding direction, &quot;horizontal&quot; or &quot;vertical&quot;图片设置为滑动式时的滑动方向：左右或者上下
+  slideshow: true,                //Boolean: Animate slider automatically 载入页面时，是否自动播放
+  slideshowSpeed: 7000,           //Integer: Set the speed of the slideshow cycling, in milliseconds 自动播放速度毫秒
+  animationDuration: 600,         //Integer: Set the speed of animations, in milliseconds动画淡入淡出效果延时
+  directionNav: true,             //Boolean: Create navigation for previous/next navigation? (true/false)是否显示左右控制按钮
+  controlNav: true,               //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage是否显示控制菜单
+  keyboardNav: true,              //Boolean: Allow slider navigating via keyboard left/right keys键盘左右方向键控制图片滑动
+  mousewheel: false,              //Boolean: Allow slider navigating via mousewheel鼠标滚轮控制制图片滑动
+  prevText: &quot;Previous&quot;,           //String: Set the text for the &quot;previous&quot; directionNav item
+  nextText: &quot;Next&quot;,               //String: Set the text for the &quot;next&quot; directionNav item
+  pausePlay: false,               //Boolean: Create pause/play dynamic element
+  pauseText: 'Pause',             //String: Set the text for the &quot;pause&quot; pausePlay item
+  playText: 'Play',               //String: Set the text for the &quot;play&quot; pausePlay item
+  randomize: false,               //Boolean: Randomize slide order 是否随机幻灯片
+  slideToStart: 0,                //Integer: The slide that the slider should start on. Array notation (0 = first slide)初始化第一次显示图片位置
+  animationLoop: true,            //Boolean: Should the animation loop? If false, directionNav will received &quot;disable&quot; classes at either end 是否循环滚动
+  pauseOnAction: true,            //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
+  pauseOnHover: false,            //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
+  controlsContainer: &quot;&quot;,          //Selector: Declare which container the navigation elements should be appended too. Default container is the flexSlider element. Example use would be &quot;.flexslider-container&quot;, &quot;#container&quot;, etc. If the given element is not found, the default action will be taken.
+  manualControls: &quot;&quot;,             //Selector: Declare custom control navigation. Example would be &quot;.flex-control-nav li&quot; or &quot;#tabs-nav li img&quot;, etc. The number of elements in your controlNav should match the number of slides/tabs.自定义控制导航
+  manualControlEvent:&quot;&quot;,          //String:自定义导航控制触发事件:默认是click,可以设定hover
+  start: function(){},            //Callback: function(slider) - Fires when the slider loads the first slide
+  before: function(){},           //Callback: function(slider) - Fires asynchronously with each slider animation
+  after: function(){},            //Callback: function(slider) - Fires after each slider animation completes
+  end: function(){}               //Callback: function(slider) - Fires when the slider reaches the last slide (asynchronous)
+   
+ });
+});
+</code></pre>
+
+<p><strong>FAQ01</strong>：<a href="http://cn.voidcc.com/question/p-pumryoaf-hm.html">如何使用flexslider设置多个滑块？</a></p>
+
+<p><a name="zWSq9"></a></p>
+
+<h2 id="raxus-slider">Raxus Slider</h2>
+
+<p>链接：<a href="https://codecanyon.net/item/raxus-slider-easytouse-advanced-html5-slider/7008343">https://codecanyon.net/item/raxus-slider-easytouse-advanced-html5-slider/7008343</a></p>
+
+<p>相比 FlexSlider，也有人会选择使用 Raxus Slider，从代码简洁性上而言，后者能用更少的代码实现同样的效果；不同的是，FlexSlider 是开源免费的，而 Raxus Slider是付费的。</p>
+
+<p><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1565168362478-c1dbae85-6549-4266-85af-8af5c136afba.png#align=left&amp;display=inline&amp;height=468&amp;name=image.png&amp;originHeight=468&amp;originWidth=1024&amp;size=190757&amp;status=done&amp;width=1024"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1565168362478-c1dbae85-6549-4266-85af-8af5c136afba.png#align=left&amp;display=inline&amp;height=468&amp;name=image.png&amp;originHeight=468&amp;originWidth=1024&amp;size=190757&amp;status=done&amp;width=1024" alt="image.png"></a></p>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev"><a href="../../blog/2019-08-05-rgvbqq/">一些好玩又有趣的开源项目</a><br/>&larr;</span>
+  <span class="nav-next"><a href="../../blog/2019-08-08-sync-from-yuque-to-qiniu/">语雀图片与七牛云之间的迁移同步</a><br/>&rarr;</span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/blog\/2019-08-05-rgvbqq\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/blog\/2019-08-08-sync-from-yuque-to-qiniu\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>
+
+
+
+
+<script async src="../../js/fix-toc.js"></script>
+
+<script async src="../../js/center-img.js"></script>
+
+<script async src="../../js/right-quote.js"></script>
+
+<script async src="../../js/no-highlight.js"></script>
+
+<script async src="../../js/fix-footnote.js"></script>
+
+<script async src="../../js/math-code.js"></script>
+
+<script async src="../../js/external-link.js"></script>
+
+<script async src="../../js/alt-title.js"></script>
+
+<script async src="../../js/header-link.js"></script>
+
+<script async src="../../js/dom-scripts.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  </body>
+</html>
+

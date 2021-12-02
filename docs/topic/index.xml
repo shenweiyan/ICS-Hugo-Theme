@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>乱弹笔记 on Steven Shen | 沈维燕</title>
+    <link>https://shenweiyan.github.io/ics-hugo-theme/topic/</link>
+    <description>Recent content in 乱弹笔记 on Steven Shen | 沈维燕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cmn-Hans</language>
+    <lastBuildDate>Tue, 31 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://shenweiyan.github.io/ics-hugo-theme/topic/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>测试</title>
+      <link>https://shenweiyan.github.io/ics-hugo-theme/topic/debug/</link>
+      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ics-hugo-theme/topic/debug/</guid>
+      <description>沈维燕 测试问题记录 如果 config.toml 中 url 的名称与 content/*/index.md、content/*.md 中的 title 名称不一致，则会触发 menu 中的 item 在 active 时候</description>
+    </item>
+    
+  </channel>
+</rss>

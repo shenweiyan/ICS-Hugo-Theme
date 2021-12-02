@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    
+    
+    
+    <title>Python 正则匹配总结 - Steven Shen | 沈维燕</title> 
+    <meta property="og:title" content="Python 正则匹配总结 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://shenweiyan.github.io/ics-hugo-theme//css/style.css"/>
+    <link rel="stylesheet" href="https://shenweiyan.github.io/ics-hugo-theme//css/fonts.css"/>
+    <script async src="https://shenweiyan.github.io/ics-hugo-theme//js/load-typekit.js"></script>
+
+<link rel="stylesheet" href="https://shenweiyan.github.io/ics-hugo-theme//css/template-styles.css" />
+<link rel="stylesheet" href="https://shenweiyan.github.io/ics-hugo-theme//css/custom.css" />
+
+  </head>
+
+  
+  <body class="blog">
+    
+    
+    <header class="intro-and-nav" role="banner">
+    <div>
+      <div class="intro">
+        <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
+          <img src="https://shenweiyan.github.io/ics-hugo-theme/img/logo.png" alt="">
+        </a>
+        <p class="library-desc">
+          
+            Welcome to the blog site of Steven Shen.
+          
+        </p>
+      </div>
+      <nav id="patterns-nav" class="patterns" role="navigation">
+        <h2 class="vh">Main navigation</h2>
+        <button id="menu-button" aria-expanded="false">
+          
+          Menu
+        </button>
+        
+        <ul id="patterns-list">
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../" >
+              
+              首页
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../about/" >
+              
+              关于
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../blog/" >
+              
+              博客
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../research/" >
+              
+              研究
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../read/" >
+              
+              读书
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../resume/shenweiyan" >
+              
+              简历
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../tweets/" >
+              
+              乱弹
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../other/" >
+              
+              其他
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../feedback/" >
+              
+              留言
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../tags/" >
+              
+              标签
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../archives/" >
+              
+              归档
+            </a>
+          </li>
+          
+          
+
+<li class="pattern">&nbsp;&nbsp;</li>
+
+
+
+<li class="pattern"><a href="https://github.com/shenweiyan/ivs-hugo-theme/edit/master/content/blog/2019-05-18-python-match.md" target="_blank">编辑</a></li>
+
+
+<li class="pattern"><a href="../../blog/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li class="pattern"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
+
+
+        </ul>
+      </nav>
+    </div>
+    </header>
+
+    <article class="main">
+      <header class="title">
+        
+
+<h1>Python 正则匹配总结</h1>
+
+
+
+<h3>
+2019-05-18</h3> 
+
+
+   
+  
+
+
+      </header>
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+
+<p>正则表达式是用于处理字符串的强大工具，拥有自己独特的语法以及一个独立的处理引擎，效率上可能不如 str 自带的方法，但功能十分强大。本文介绍了 Python 对于正则表达式的支持，包括正则表达式基础以及 Python 正则表达式标准库的完整介绍及使用示例。</p>
+
+<p><a name="c87a4eca"></a></p>
+
+<h2 id="1-正则表达式基础">1. 正则表达式基础</h2>
+
+<p><a name="a10b22c5"></a></p>
+
+<h3 id="1-1-介绍">1.1 介绍</h3>
+
+<p>正则表达式并不是 Python 的一部分。正则表达式是用于处理字符串的强大工具，拥有自己独特的语法以及一个独立的处理引擎，效率上可能不如 str 自带的方法，但功能十分强大。得益于这一点，在提供了正则表达式的语言里，正则表达式的语法都是一样的，区别只在于不同的编程语言实现支持的语法数量不同；但不用担心，不被支持的语法通常是不常用的部分。</p>
+
+<p>下图展示了使用正则表达式进行匹配的流程：<br /><a data-fancybox="gallery" href="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1558183748458-b30abed3-8df3-4b3a-af8a-6384f7ee1b22.png#align=left&amp;display=inline&amp;height=177&amp;originHeight=177&amp;originWidth=431&amp;size=0&amp;status=done&amp;width=431"><img src="http://qiniu.bioitee.com/yuque/0/2019/png/126032/1558183748458-b30abed3-8df3-4b3a-af8a-6384f7ee1b22.png#align=left&amp;display=inline&amp;height=177&amp;originHeight=177&amp;originWidth=431&amp;size=0&amp;status=done&amp;width=431" alt=""></a></p>
+
+<p>正则表达式的大致匹配过程是：依次拿出表达式和文本中的字符比较，如果每一个字符都能匹配，则匹配成功；一旦有匹配不成功的字符则匹配失败。</p>
+
+<p><a name="6032a005"></a></p>
+
+<h3 id="1-2-正则表达式模式">1.2 正则表达式模式</h3>
+
+<p>下表列出了 python 正则表达式模式语法中的特殊元素。如果你使用模式的同时提供了可选的标志参数，某些模式元素的含义会改变。</p>
+
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>字符</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>.</td>
+<td>匹配任意字符，除了换行符，当 re.DOTALL 标记被指定时，则可以匹配包括换行符的任意字符。</td>
+<td>a.c</td>
+</tr>
+
+<tr>
+<td>\</td>
+<td>转义字符，使后一个字符改变原来的意思。如果字符串中有字符 * 需要匹配，可以使用 \* 或者字符集 [*]。</td>
+<td>a\.c 或者 a\\c</td>
+</tr>
+
+<tr>
+<td>[&hellip;]</td>
+<td>字符集（字符类），用来表示一组字符。字符集中的字符可单独列出：[amk] 匹配 &lsquo;a&rsquo;，&rsquo;m&rsquo; 或 &lsquo;k&rsquo;；也可以给出范围：[a-c] 匹配 &lsquo;a&rsquo;，&rsquo;b&rsquo; 或 &lsquo;c&rsquo;。</td>
+<td>a[bcd]e</td>
+</tr>
+
+<tr>
+<td>[^&hellip;]</td>
+<td>不在 [] 中的字符：[^abc] 匹配除了 a，b，c 之外的字符。</td>
+<td>[^abc]</td>
+</tr>
+
+<tr>
+<td>预定义字符集（可以写在字符集 [&hellip;] 中）</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>\d</td>
+<td>匹配任意数字，等价于 [0-9]。</td>
+<td>a\dc</td>
+</tr>
+
+<tr>
+<td>\D</td>
+<td>匹配任意非数字，等价于 [^\d]。</td>
+<td>a\Dc</td>
+</tr>
+
+<tr>
+<td>\s</td>
+<td>匹配任意空白字符，等价于 [&lt;空格&gt;\t\n\r\f\v]。</td>
+<td>a\sc</td>
+</tr>
+
+<tr>
+<td>\S</td>
+<td>匹配任意非空字符，等价于 [^\s]。</td>
+<td>a\Sc</td>
+</tr>
+
+<tr>
+<td>\w</td>
+<td>匹配字母数字及下划线：[a-zA-Z0-9_]。</td>
+<td>a\wc</td>
+</tr>
+
+<tr>
+<td>\W</td>
+<td>匹配非字母数字及下划线：[^\w]。</td>
+<td>a\Wc</td>
+</tr>
+
+<tr>
+<td>数量词（可用在字符或 [&hellip;] 后）</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>*</td>
+<td>匹配前一个字符 0 或无限次。</td>
+<td>abc*</td>
+</tr>
+
+<tr>
+<td>+</td>
+<td>匹配前一个字符 1 次或无限次。</td>
+<td>abc+</td>
+</tr>
+
+<tr>
+<td>?</td>
+<td>匹配前一个字符 0 次或 1 次。</td>
+<td>abc?</td>
+</tr>
+
+<tr>
+<td>{m}</td>
+<td>匹配前一个字符 m 次。</td>
+<td>ab{2}c</td>
+</tr>
+
+<tr>
+<td>{m,n}</td>
+<td>匹配前一个字符 m 至 n 次。m 和 n 可以省略：如省略 m，则匹配 0 至 n 次；如省略 n，则匹配 m 至无限次。</td>
+<td>ab{1,2}cd</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="https://www.cnblogs.com/wxshi/p/6827056.html">https://www.cnblogs.com/wxshi/p/6827056.html</a><br /><a href="http://www.runoob.com/python/python-reg-expressions.html">http://www.runoob.com/python/python-reg-expressions.html</a></p>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev"><a href="../../blog/2019-05-18-how-to-use-vim/">vim 使用的一些小技巧</a><br/>&larr;</span>
+  <span class="nav-next"><a href="../../blog/2019-05-18-python-sorted/">利用 python 的 sorted 函数对字典按 key 排序和按 value 排序</a><br/>&rarr;</span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/blog\/2019-05-18-how-to-use-vim\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/blog\/2019-05-18-python-sorted\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>
+
+
+
+
+<script async src="../../js/fix-toc.js"></script>
+
+<script async src="../../js/center-img.js"></script>
+
+<script async src="../../js/right-quote.js"></script>
+
+<script async src="../../js/no-highlight.js"></script>
+
+<script async src="../../js/fix-footnote.js"></script>
+
+<script async src="../../js/math-code.js"></script>
+
+<script async src="../../js/external-link.js"></script>
+
+<script async src="../../js/alt-title.js"></script>
+
+<script async src="../../js/header-link.js"></script>
+
+<script async src="../../js/dom-scripts.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  </body>
+</html>
+

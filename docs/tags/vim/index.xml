@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vim on Steven Shen | 沈维燕</title>
+    <link>https://shenweiyan.github.io/ICS-Hugo-Theme/tags/vim/</link>
+    <description>Recent content in vim on Steven Shen | 沈维燕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cmn-Hans</language>
+    <lastBuildDate>Sat, 18 May 2019 12:47:11 +0000</lastBuildDate>
+    
+	<atom:link href="https://shenweiyan.github.io/ICS-Hugo-Theme/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>vim 使用的一些小技巧</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-how-to-use-vim/</link>
+      <pubDate>Sat, 18 May 2019 12:47:11 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-how-to-use-vim/</guid>
+      <description>tab 分隔文件列对齐 :%!column -t vim 字体颜色看不清 # Ubuntu 中设置 vi /etc/vim/vimrc ··· set background=dark ... # CentOS 在 /etc/vimrc 最后一行加入 hi Comment ctermfg = blue //更改vi中注释内容字体颜色，可修改为：whi</description>
+    </item>
+    
+  </channel>
+</rss>

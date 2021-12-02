@@ -1,0 +1,20 @@
+{{ partial "header.html" . }}
+
+
+  <main id="main">
+    {{ .Content }}
+    {{ range (where (where .Site.Pages "Type" "in" (slice "post" "topic")) "Kind" "page").GroupByDate "2006" }}
+    <h2>{{ .Key }}</h2>
+    <ul>
+    {{ range .Pages }}
+    <li>
+      <span class="date">{{ .Lastmod.Format "2006/01/02" }}</span>
+      <a href="{{ .URL }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+    </ul>
+  {{ end }}
+  </main>
+
+
+{{ partial "footer.html" . }}

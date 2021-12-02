@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件 on Steven Shen | 沈维燕</title>
+    <link>https://shenweiyan.github.io/ICS-Hugo-Theme/tags/%E8%BD%AF%E4%BB%B6/</link>
+    <description>Recent content in 软件 on Steven Shen | 沈维燕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cmn-Hans</language>
+    <lastBuildDate>Wed, 26 Jun 2019 07:34:03 +0000</lastBuildDate>
+    
+	<atom:link href="https://shenweiyan.github.io/ICS-Hugo-Theme/tags/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>windows 常用软件合集</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-06-26-phmze3/</link>
+      <pubDate>Wed, 26 Jun 2019 07:34:03 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-06-26-phmze3/</guid>
+      <description>Snipaste 截图工具（https://zh.snipaste.com/） Snipaste 是一个简单但强大的截图工具，也可以让你将截图贴回到屏幕上！Snipaste 是</description>
+    </item>
+    
+    <item>
+      <title>VS Code 常见配置与使用技巧总结</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-06-21-ksczr1/</link>
+      <pubDate>Fri, 21 Jun 2019 03:58:08 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-06-21-ksczr1/</guid>
+      <description>Visual Studio Code 版本: 1.35.1 (user setup)： 1. 通过配置文件设置 VS Code 的配置文件默认为：settings.json，我们可以通过下面的方式打开该文件进行自定义</description>
+    </item>
+    
+    <item>
+      <title>R 软件的 &#34;CXX11 is not defined&#34; 解决</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-24-dadyai/</link>
+      <pubDate>Fri, 24 May 2019 09:16:56 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-24-dadyai/</guid>
+      <description>在 CentOS-6.5 下使用源码安装的 R-3.6.0 在安装包的时候出现 &amp;ldquo;C++11 standard requested but CXX11 is not defined&amp;rdquo; 错误。下面是参考的解决方法。 &amp;gt; install.packages(&amp;quot;pillar&amp;quot;) also installing the dependencies ‘digest’, ‘vctrs’ trying URL &#39;http://mirror.lzu.edu.cn/CRAN/src/contrib/digest_0.6.19.tar.gz&#39; Content type &#39;application/octet-stream&#39;</description>
+    </item>
+    
+    <item>
+      <title>R 软件 openssl 包与 libssl.so.1.0.0 的一个坑</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-24-nt820f/</link>
+      <pubDate>Fri, 24 May 2019 07:47:26 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-24-nt820f/</guid>
+      <description>在使用 enrichplot 包解决 openssl 包依赖的时候，发现提示 libssl.so.1.0.0 动态库找不到： &amp;gt; install.packages(&amp;quot;openssl&amp;quot;) --- Please select a CRAN mirror for use in this session --- trying URL &#39;http://mirrors.tuna.tsinghua.edu.cn/CRAN/src/contrib/openssl_1.3.tar.gz&#39; Content type &#39;application/x-gzip&#39; length 1218896 bytes (1.2 MB) ================================================== downloaded 1.2 MB * installing *source* package ‘openssl’ ...</description>
+    </item>
+    
+    <item>
+      <title>vim 使用的一些小技巧</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-how-to-use-vim/</link>
+      <pubDate>Sat, 18 May 2019 12:47:11 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-how-to-use-vim/</guid>
+      <description>tab 分隔文件列对齐 :%!column -t vim 字体颜色看不清 # Ubuntu 中设置 vi /etc/vim/vimrc ··· set background=dark ... # CentOS 在 /etc/vimrc 最后一行加入 hi Comment ctermfg = blue //更改vi中注释内容字体颜色，可修改为：whi</description>
+    </item>
+    
+    <item>
+      <title>LEfSe 分析软件安装小记</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-kefse-install/</link>
+      <pubDate>Sat, 18 May 2019 12:43:17 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-kefse-install/</guid>
+      <description>问题 源码下载的 LEfSe，或者使用 conda install -c bioconda lefse 安装完成后，执行分析出现报错： $ lefse-format_input.py hmp_aerobiosis_small.txt hmp_aerobiosis_small.in -c 1 -s 2 -u 3 -o 1000000 $ run_lefse.py hmp_aerobiosis_small.in hmp_aerobiosis_small.res Number of significantly discriminative features: 51 ( 131 ) before internal wilcoxon Number of discriminative features with</description>
+    </item>
+    
+    <item>
+      <title>LEfSe 分析软件安装小记</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-kefse-install/</link>
+      <pubDate>Sat, 18 May 2019 12:43:17 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-kefse-install/</guid>
+      <description>问题 源码下载的 LEfSe，或者使用 conda install -c bioconda lefse 安装完成后，执行分析出现报错： $ lefse-format_input.py hmp_aerobiosis_small.txt hmp_aerobiosis_small.in -c 1 -s 2 -u 3 -o 1000000 $ run_lefse.py hmp_aerobiosis_small.in hmp_aerobiosis_small.res Number of significantly discriminative features: 51 ( 131 ) before internal wilcoxon Number of discriminative features with</description>
+    </item>
+    
+    <item>
+      <title>RedHat 6.5 下安装 PyQt4 详细步骤</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-redhat-install-pyqt-4/</link>
+      <pubDate>Sat, 18 May 2019 12:39:52 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-redhat-install-pyqt-4/</guid>
+      <description>目的： RedHat 6.5 HPC 环境下安装生物信息 STAMP 软件。 服务器环境 系统： Red Hat Enterprise 6.5 gcc version 4.8.5 (GCC) Anaconda 2.5： conda 4.4.4 x86_64-conda_cos6-linux-gnu-</description>
+    </item>
+    
+    <item>
+      <title>RedHat 6.5 下安装 PyQt4 详细步骤</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-redhat-install-pyqt-4/</link>
+      <pubDate>Sat, 18 May 2019 12:39:52 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-redhat-install-pyqt-4/</guid>
+      <description>目的： RedHat 6.5 HPC 环境下安装生物信息 STAMP 软件。 服务器环境 系统： Red Hat Enterprise 6.5 gcc version 4.8.5 (GCC) Anaconda 2.5： conda 4.4.4 x86_64-conda_cos6-linux-gnu-</description>
+    </item>
+    
+    <item>
+      <title>chrome 超详细使用教程</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-chrome-tutorial/</link>
+      <pubDate>Sat, 18 May 2019 12:29:57 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-chrome-tutorial/</guid>
+      <description>调查统计机构 NetMarketShare 发布最新的 7 月份报告，在全球浏览器市场，谷歌浏览器以 61.64% 的市场占有率继续成为世界上排名第一的桌面浏览器，IE 以 12.06% 紧随其后，Fir</description>
+    </item>
+    
+    <item>
+      <title>推荐一个由 AI 生成 LOGO 的网站</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-ai-logo-design/</link>
+      <pubDate>Sat, 18 May 2019 12:28:29 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-ai-logo-design/</guid>
+      <description>在创建项目时，有时需要根据一些文案，设计 LOGO，既要美观大方，又要突出主题。当然，朋友较多的人，去找做 UI 设计的朋友来帮忙，像我这样的&amp;rd</description>
+    </item>
+    
+    <item>
+      <title>Clumpify：能使 Fastq 压缩文件再缩小 30% 并加速后续分析流程</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-clumpify-1714585/</link>
+      <pubDate>Sat, 18 May 2019 12:26:17 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-clumpify-1714585/</guid>
+      <description>Clumpify 是 BBMap 工具包中的一个组件，它与其他工具略有不同的是 Clumpify 不会实际更改你的数据，只是重新排序以最大化 gzip 压缩。因此，输出文件仍然是完全兼容的 gzipped fastq 文件</description>
+    </item>
+    
+    <item>
+      <title>癌症中克隆种群结构统计推断分析软件PyClone安装小记</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-pyclone-install-1714572/</link>
+      <pubDate>Sat, 18 May 2019 12:21:13 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-pyclone-install-1714572/</guid>
+      <description>PyClone 是一种用于推断癌症中克隆种群结构的统计模型。 它是一种贝叶斯聚类方法，用于将深度测序的体细胞突变集分组到假定的克隆簇中，同时估计其细胞流行率</description>
+    </item>
+    
+    <item>
+      <title>癌症中克隆种群结构统计推断分析软件PyClone安装小记</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-pyclone-install-1714572/</link>
+      <pubDate>Sat, 18 May 2019 12:21:13 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-pyclone-install-1714572/</guid>
+      <description>PyClone 是一种用于推断癌症中克隆种群结构的统计模型。 它是一种贝叶斯聚类方法，用于将深度测序的体细胞突变集分组到假定的克隆簇中，同时估计其细胞流行率</description>
+    </item>
+    
+    <item>
+      <title>从 Galaxy Project 用户界面聊聊 Linux 下 Yarn 安装</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-yarn-install/</link>
+      <pubDate>Sat, 18 May 2019 12:19:29 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-yarn-install/</guid>
+      <description>Galaxy 从 release 18.01 版本起，为其用户界面提供支持的客户端代码架构已经过了彻底的变更。 基础代码库已经转换为 ES6，同时启用了 Yarn 支持代码的构建和依赖管理，启</description>
+    </item>
+    
+    <item>
+      <title>从 Galaxy Project 用户界面聊聊 Linux 下 Yarn 安装</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-yarn-install/</link>
+      <pubDate>Sat, 18 May 2019 12:19:29 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-yarn-install/</guid>
+      <description>Galaxy 从 release 18.01 版本起，为其用户界面提供支持的客户端代码架构已经过了彻底的变更。 基础代码库已经转换为 ES6，同时启用了 Yarn 支持代码的构建和依赖管理，启</description>
+    </item>
+    
+    <item>
+      <title>聊一聊 Python 安装中的 --enable-shared</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-python-enable-shared/</link>
+      <pubDate>Sat, 18 May 2019 12:17:49 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-python-enable-shared/</guid>
+      <description>今天在 CentOS 7.4 使用源码编译安装 Python-2.7.15 的时候，发现了一个非常奇怪的问题： $ ./configure --prefix=/home/steven/python-2.7 --enable-shared $ make $ make install 安装完成，进入 /home/steven/python-2.7/bin/python 命令行，发现 Python 变成了 2.7.5。安装过程中既</description>
+    </item>
+    
+    <item>
+      <title>Linux 下 Python 源码编译安装</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-install-python-from-source/</link>
+      <pubDate>Sat, 18 May 2019 12:10:10 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-install-python-from-source/</guid>
+      <description>基于 CentOS Linux release 6.5 源码编译安装 python-2.7.xx(Python-3.x.xx) 的一些步骤，以下为安装记录。 1. 安装环境 os : CentOS Linux release 6.5 (x86_64) gcc: 4.8.5 20150623 2. 安装步骤 如果您拥有 root 权限，请执以下依赖安装： yum install zlib yum install</description>
+    </item>
+    
+    <item>
+      <title>Linux 下 Python 源码编译安装</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-install-python-from-source/</link>
+      <pubDate>Sat, 18 May 2019 12:10:10 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-18-install-python-from-source/</guid>
+      <description>基于 CentOS Linux release 6.5 源码编译安装 python-2.7.xx(Python-3.x.xx) 的一些步骤，以下为安装记录。 1. 安装环境 os : CentOS Linux release 6.5 (x86_64) gcc: 4.8.5 20150623 2. 安装步骤 如果您拥有 root 权限，请执以下依赖安装： yum install zlib yum install</description>
+    </item>
+    
+    <item>
+      <title>Git 的一些常用用法笔记</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-10-oquebf/</link>
+      <pubDate>Fri, 10 May 2019 03:54:24 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-10-oquebf/</guid>
+      <description>本地创建分支 v-1.2 $ git branch v-1.2 $ git branch * master v-1.2 切换本地分支 $ git branch * master v-1.2 $ git checkout v-1.2 Switched to branch &#39;v-1.2&#39; $ git branch master * v-1.2 把本地分支提交到远程分支仓库 $ git add --all $ git commit -m &amp;quot;ASO design for Galaxy version</description>
+    </item>
+    
+  </channel>
+</rss>

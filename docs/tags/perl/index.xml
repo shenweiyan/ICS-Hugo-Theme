@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Perl on Steven Shen | 沈维燕</title>
+    <link>https://shenweiyan.github.io/ics-hugo-theme/tags/perl/</link>
+    <description>Recent content in Perl on Steven Shen | 沈维燕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cmn-Hans</language>
+    <lastBuildDate>Mon, 01 Jul 2019 03:50:35 +0000</lastBuildDate>
+    
+	<atom:link href="https://shenweiyan.github.io/ics-hugo-theme/tags/perl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>各个平台下 Perl 源码安装教程</title>
+      <link>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-01-install-perl-from-source/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ics-hugo-theme/blog/2019-07-01-install-perl-from-source/</guid>
+      <description>Perl 是一种功能丰富的计算机程序语言，运行在超过 100 种计算机平台上，适用广泛，从大型机到便携设备，从快速原型创建到大规模可扩展开发。在生物信息分析</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,15 @@
+{{ if ne .Params.type "cv" }}  <!---Define different behaviors when doc is CV, 20180126 by Likan--->
+{{ if not .IsHome }}
+<h1>{{ .Title }}</h1>
+{{ with .Params.subtitle }}<h1><span class="subtitle">{{ . }}</span></h2>{{ end }}
+{{ if .IsPage }}
+
+<h3>{{ with or (or .Params.author (index .Site.Params.author .Section)) "" }}{{  print . }} &middot {{ end }}
+{{ if .Params.date }}{{ .Date.Format "2006-01-02" }}{{ end }}</h3> <!--- Change from slash to middot by likan 20180701 --->
+<!---
+<h3>{{ with or (or .Params.author (index .Site.Params.author .Section)) "" }}{{  print . " / " }}{{ end }}
+{{ if .Params.date }}{{ .Date.Format "2006-01-02" }}{{ end }}</h3> --->
+{{ end }}
+{{ end }}   <!---Define different behaviors when doc is CV, 20180126 by Likan--->
+<!--- <hr> --->  <!--- remove horizontal line, 20180205 by Likan Zhan --->
+{{ end }}

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    
+    
+    
+    <title>R 软件 openssl 包与 libssl.so.1.0.0 的一个坑 - Steven Shen | 沈维燕</title> 
+    <meta property="og:title" content="R 软件 openssl 包与 libssl.so.1.0.0 的一个坑 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://shenweiyan.github.io/ICS-Hugo-Theme//css/style.css"/>
+    <link rel="stylesheet" href="https://shenweiyan.github.io/ICS-Hugo-Theme//css/fonts.css"/>
+    <script async src="https://shenweiyan.github.io/ICS-Hugo-Theme//js/load-typekit.js"></script>
+
+<link rel="stylesheet" href="https://shenweiyan.github.io/ICS-Hugo-Theme//css/template-styles.css" />
+<link rel="stylesheet" href="https://shenweiyan.github.io/ICS-Hugo-Theme//css/custom.css" />
+
+  </head>
+
+  
+  <body class="blog">
+    
+    
+    <header class="intro-and-nav" role="banner">
+    <div>
+      <div class="intro">
+        <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
+          <img src="https://shenweiyan.github.io/ICS-Hugo-Theme/img/logo.png" alt="">
+        </a>
+        <p class="library-desc">
+          
+            Welcome to the blog site of Steven Shen.
+          
+        </p>
+      </div>
+      <nav id="patterns-nav" class="patterns" role="navigation">
+        <h2 class="vh">Main navigation</h2>
+        <button id="menu-button" aria-expanded="false">
+          
+          Menu
+        </button>
+        
+        <ul id="patterns-list">
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../" >
+              
+              首页
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../about/" >
+              
+              关于
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../blog/" >
+              
+              博客
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../research/" >
+              
+              研究
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../read/" >
+              
+              读书
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../resume/shenweiyan" >
+              
+              简历
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../tweets/" >
+              
+              乱弹
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../other/" >
+              
+              其他
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../feedback/" >
+              
+              留言
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../tags/" >
+              
+              标签
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../archives/" >
+              
+              归档
+            </a>
+          </li>
+          
+          
+
+<li class="pattern">&nbsp;&nbsp;</li>
+
+
+
+<li class="pattern"><a href="https://github.com/shenweiyan/ivs-hugo-theme/edit/master/content/blog/2019-05-24-nt820f.md" target="_blank">编辑</a></li>
+
+
+<li class="pattern"><a href="../../blog/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li class="pattern"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
+
+
+        </ul>
+      </nav>
+    </div>
+    </header>
+
+    <article class="main">
+      <header class="title">
+        
+
+<h1>R 软件 openssl 包与 libssl.so.1.0.0 的一个坑</h1>
+
+
+
+<h3>
+2019-05-24</h3> 
+
+
+   
+  
+
+
+      </header>
+
+
+  
+  
+  
+
+  
+  
+  
+
+  <p>在使用 enrichplot 包解决 openssl 包依赖的时候，发现提示 libssl.so.1.0.0 动态库找不到：</p>
+
+<pre><code class="language-r">&gt; install.packages(&quot;openssl&quot;)
+--- Please select a CRAN mirror for use in this session ---
+trying URL 'http://mirrors.tuna.tsinghua.edu.cn/CRAN/src/contrib/openssl_1.3.tar.gz'
+Content type 'application/x-gzip' length 1218896 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+* installing *source* package ‘openssl’ ...
+** package ‘openssl’ successfully unpacked and MD5 sums checked
+** using staged installation
+Found pkg-config cflags and libs!
+Using PKG_CFLAGS=-I/Bioinfo/Pipeline/SoftWare/Anaconda2/include
+Using PKG_LIBS=-L/Bioinfo/Pipeline/SoftWare/Anaconda2/lib -l:libssl.so.1.0.0 -l:libcrypto.so.1.0.0
+** libs
+......
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Error: package or namespace load failed for ‘openssl’ in dyn.load(file, DLLpath = DLLpath, ...):
+ unable to load shared object '/Bioinfo/Pipeline/SoftWare/R/R-3.6.0/lib64/R/library/00LOCK-openssl/00new/openssl/libs/openssl.so':
+  libssl.so.1.0.0: cannot open shared object file: No such file or directory
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/Bioinfo/Pipeline/SoftWare/R/R-3.6.0/lib64/R/library/openssl’
+
+The downloaded source packages are in
+        ‘/tmp/RtmpTySsWL/downloaded_packages’
+Updating HTML index of packages in '.Library'
+Making 'packages.html' ... done
+Warning message:
+In install.packages(&quot;openssl&quot;) :
+  installation of package ‘openssl’ had non-zero exit status
+</code></pre>
+
+<p>仔细翻查 log 才发现我所用的 R-3.6.0 在安装 R 包的时候，默认调用了 Anaconda2 下面的 PKG_CFLAGS 和 PKG_LIBS，想要更改这两个变量需要更改在安装 R 包时调用的 pkg-config，我的 R-3.6.0 默认使用的是 /Bioinfo/Pipeline/SoftWare/Anaconda2/bin/pkg-config。</p>
+
+<p>重新安装 pkg-config-0.29.2：</p>
+
+<pre><code class="language-bash">$ wget https://pkg-config.freedesktop.org/releases/pkg-config-0.29.2.tar.gz --no-check-certificate
+$ tar zvxf pkg-config-0.29.2.tar.gz
+$ cd pkg-config-0.29.2
+$ ./configure --prefix=/Bioinfo/Pipeline/SoftWare/pkg-config-0.29.2
+$ make
+$ make install
+</code></pre>
+
+<p>把 pkg-config-0.29.2 添加到环境变量：</p>
+
+<pre><code class="language-bash">export PATH=&quot;/Bioinfo/Pipeline/SoftWare/pkg-config-0.29.2/bin:$PATH
+</code></pre>
+
+<p>最后，source ~/.bashrc，使用 install.packages(&ldquo;openssl&rdquo;) 安装，一切正常。</p>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev"><a href="../../blog/2019-05-18-python-sorted/">利用 python 的 sorted 函数对字典按 key 排序和按 value 排序</a><br/>&larr;</span>
+  <span class="nav-next"><a href="../../blog/2019-05-24-dadyai/">R 软件的 &#34;CXX11 is not defined&#34; 解决</a><br/>&rarr;</span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/blog\/2019-05-18-python-sorted\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/blog\/2019-05-24-dadyai\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>
+
+
+
+
+<script async src="../../js/fix-toc.js"></script>
+
+<script async src="../../js/center-img.js"></script>
+
+<script async src="../../js/right-quote.js"></script>
+
+<script async src="../../js/no-highlight.js"></script>
+
+<script async src="../../js/fix-footnote.js"></script>
+
+<script async src="../../js/math-code.js"></script>
+
+<script async src="../../js/external-link.js"></script>
+
+<script async src="../../js/alt-title.js"></script>
+
+<script async src="../../js/header-link.js"></script>
+
+<script async src="../../js/dom-scripts.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  </body>
+</html>
+

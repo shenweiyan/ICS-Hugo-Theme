@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>生信 on Steven Shen | 沈维燕</title>
+    <link>https://shenweiyan.github.io/ICS-Hugo-Theme/tags/%E7%94%9F%E4%BF%A1/</link>
+    <description>Recent content in 生信 on Steven Shen | 沈维燕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cmn-Hans</language>
+    <lastBuildDate>Mon, 05 Aug 2019 06:17:11 +0000</lastBuildDate>
+    
+	<atom:link href="https://shenweiyan.github.io/ICS-Hugo-Theme/tags/%E7%94%9F%E4%BF%A1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bioconductor org.Xx.eg.db 系列包</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-08-05-nd8gh3/</link>
+      <pubDate>Mon, 05 Aug 2019 06:17:11 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-08-05-nd8gh3/</guid>
+      <description>在 bioconductor 的官网里面可以查找到 &amp;ldquo;OrgDb&amp;rdquo; 的包大约有 19 个，基本上跨越了我们生物信息分析中最常用的物种啦！ 完整链接：http://bioconductor.o</description>
+    </item>
+    
+    <item>
+      <title>生物信息学博客与论坛</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-29-bio-blogs-forums/</link>
+      <pubDate>Wed, 29 May 2019 06:12:49 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-29-bio-blogs-forums/</guid>
+      <description>关于生物信息学的博客与论坛。 国内篇： 谢益辉个人主页：http://yihui.name/ R 语言大神个人主页，基于 Hugo。 leoatchina(leo 陶）的博客：ht</description>
+    </item>
+    
+  </channel>
+</rss>

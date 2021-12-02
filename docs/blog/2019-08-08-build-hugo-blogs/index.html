@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.6.3/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    
+    
+    
+    <title>Hugo 博客折腾的一些记录 - Steven Shen | 沈维燕</title> 
+    <meta property="og:title" content="Hugo 博客折腾的一些记录 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://shenweiyan.github.io/ICS-Hugo-Theme//css/style.css"/>
+    <link rel="stylesheet" href="https://shenweiyan.github.io/ICS-Hugo-Theme//css/fonts.css"/>
+    <script async src="https://shenweiyan.github.io/ICS-Hugo-Theme//js/load-typekit.js"></script>
+
+<link rel="stylesheet" href="https://shenweiyan.github.io/ICS-Hugo-Theme//css/template-styles.css" />
+<link rel="stylesheet" href="https://shenweiyan.github.io/ICS-Hugo-Theme//css/custom.css" />
+
+  </head>
+
+  
+  <body class="blog">
+    
+    
+    <header class="intro-and-nav" role="banner">
+    <div>
+      <div class="intro">
+        <a class="logo" href="../../" aria-label="Steven Shen | 沈维燕 home page">
+          <img src="https://shenweiyan.github.io/ICS-Hugo-Theme/img/logo.png" alt="">
+        </a>
+        <p class="library-desc">
+          
+            Welcome to the blog site of Steven Shen.
+          
+        </p>
+      </div>
+      <nav id="patterns-nav" class="patterns" role="navigation">
+        <h2 class="vh">Main navigation</h2>
+        <button id="menu-button" aria-expanded="false">
+          
+          Menu
+        </button>
+        
+        <ul id="patterns-list">
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../" >
+              
+              首页
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../about/" >
+              
+              关于
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../blog/" >
+              
+              博客
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../research/" >
+              
+              研究
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../read/" >
+              
+              读书
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../resume/shenweiyan" >
+              
+              简历
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../tweets/" >
+              
+              乱弹
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../other/" >
+              
+              其他
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../feedback/" >
+              
+              留言
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../tags/" >
+              
+              标签
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+          
+            <a href="../../archives/" >
+              
+              归档
+            </a>
+          </li>
+          
+          
+
+<li class="pattern">&nbsp;&nbsp;</li>
+
+
+
+<li class="pattern"><a href="https://github.com/shenweiyan/ivs-hugo-theme/edit/master/content/blog/2019-08-08-build-hugo-blogs.md" target="_blank">编辑</a></li>
+
+
+<li class="pattern"><a href="../../blog/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li class="pattern"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
+
+
+        </ul>
+      </nav>
+    </div>
+    </header>
+
+    <article class="main">
+      <header class="title">
+        
+
+<h1>Hugo 博客折腾的一些记录</h1>
+
+
+
+<h3>
+2019-08-08</h3> 
+
+
+   
+  
+
+
+      </header>
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+
+<p>模仿 R 语言大神谢益辉，搭建了一个 Hugo+rblogdown 的博客：<a href="https://blog.bioinit.com/">https://blog.bioinit.com</a></p>
+
+<p><a class="fancya" data-fancybox="gallery" href="https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565574651727-e9dc560f-fc43-4758-a227-9b8c343424d0.png#align=left&amp;display=inline&amp;height=660&amp;name=hugo.png&amp;originHeight=660&amp;originWidth=1049&amp;size=121639&amp;status=done&amp;width=1049"><img src="https://note-db.oss-cn-shenzhen.aliyuncs.com/yuque/0/2019/png/126032/1565574651727-e9dc560f-fc43-4758-a227-9b8c343424d0.png#align=left&amp;display=inline&amp;height=660&amp;name=hugo.png&amp;originHeight=660&amp;originWidth=1049&amp;size=121639&amp;status=done&amp;width=1049" alt="hugo.png"></a></p>
+
+<p>主要记录：</p>
+
+<ul>
+<li><code>.Site.BaseURL</code> 不起作用， <code>relURL</code> 、 <code>absURL</code> 也不起作用时，可参考使用 <code>params</code> 方法解决。</li>
+<li>修复原博客 url 的一些 bug，<a href="blog.bioinit.com">blog.bioinit.com</a> 部分链接被直接写死，想要复用的需要重新定义。</li>
+</ul>
+
+<hr />
+
+<p><a name="yKxV0"></a></p>
+
+<h3 id="centos-7-安装-go">CentOS 7 安装 Go</h3>
+
+<pre><code class="language-bash">$ wget https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz
+$ tar zvxf go1.12.7.linux-amd64.tar.gz
+$ mv go go-1.12.7
+
+$ vi ~/.bashrc
+# 在文件最后一行加入以下内容
+export GOPATH=/ifs1/go-projects                #这个是你自己开发的GO代码位置，以后开发可以放这个目录下
+export GOROOT=/usr/local/software/go-1.12.7    #这个就是我们安装的位置了。
+export PATH=$PATH:$GOROOT/bin                  #go语言一些常用的命令引入PATH环境变量
+
+$ go env 		# 查看 Go 的一些环境配置
+</code></pre>
+
+<p><a name="yhPOe"></a></p>
+
+<h3 id="centos-7-安装-hugo">CentOS 7 安装 Hugo</h3>
+
+<pre><code class="language-bash">$ wget https://github.com/gohugoio/hugo/releases/download/v0.54.0/hugo_0.54.0_Linux-64bit.tar.gz
+$ tar zvxf hugo_0.54.0_Linux-64bit.tar.gz -C /usr/local/software/hugo-0.54.0
+$ echo &quot;export PATH=/usr/local/software/hugo-0.54.0:\$PATH&quot; &gt;&gt;~/.bashrc
+$ source ~/.bashrc
+</code></pre>
+
+<p><a name="IsvZa"></a></p>
+
+<h3 id="启动-hugo-博客服务">启动 hugo 博客服务</h3>
+
+<pre><code class="language-bash">shenweiyan@ecs-steven 15:04:06 ~/shenweiyan/home
+$ hugo		# 渲染生成静态站点文件
+
+                   | ZH
++------------------+-----+
+  Pages            | 159
+  Paginator pages  |   0
+  Non-page files   |   2
+  Static files     |  44
+  Processed images |   0
+  Aliases          |   0
+  Sitemaps         |   1
+  Cleaned          |   0
+
+Total in 203 ms
+
+
+$ hugo server --baseUrl=120.77.xx.xx --bind=0.0.0.0		# 启动本地预览服务
+</code></pre>
+
+<p><a name="QdYub"></a></p>
+
+<h3 id="一些问题">一些问题</h3>
+
+<p><strong>问题：</strong><br />hugo-ivy 主题在 0.55 后版本的 Hugo 中 RSS 无法使用，并且在编译时会有如下警告：</p>
+
+<pre><code class="language-bash">Building sites … 
+WARN 2019/08/13 09:03:08 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/08/13 09:03:08 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like:
+    {{ with .OutputFormats.Get &quot;RSS&quot; }}{{ .RelPermalink }}{{ end }}.
+</code></pre>
+
+<p><strong>方法：</strong><br />**</p>
+
+<ol>
+<li><p>网络部分关于将 <code>.URL</code> 相关的文件中 <code>.URL</code> 改成 <code>.Permalink</code> 以解决 <code>.URL</code> 的上述报错的做法（参考：《<a href="https://blog.hgtweb.com/2019/%E4%BF%AE%E5%A4%8Dleaveit%E4%BB%A5%E6%94%AF%E6%8C%81%E6%9C%80%E6%96%B0%E7%89%88hugo/">LeaveIt以支持最新版Hugo</a>》），经测试如果针对 Menu 级别的 html 模板会引发其他错误；而且虽然 hugo 更新到了 0.56.3，但官方文档示例还在使用 <code>.URL</code> ，参考 <a href="https://github.com/gohugoio/hugo/issues/5835">https://github.com/gohugoio/hugo/issues/5835</a>。</p></li>
+
+<li><p>修改包含 <code>.RSSLink</code> 相关的文件，如下：</p>
+
+<pre><code class="language-go">&lt;!-- 修改前 --&gt;
+{{ if .RSSLink }}
+&lt;link href=&quot;{{ .RSSLink | relURL }}&quot; rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;{{ .Site.Title }}&quot; /&gt;
+{{ end }}
+
+&lt;!-- 修改后 --&gt;
+{{ with .OutputFormats.Get &quot;RSS&quot; }}
+&lt;link href=&quot;{{ .RelPermalink | relURL }}&quot; rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;{{ $.Title }}&quot; /&gt;
+{{ end }}
+</code></pre></li>
+</ol>
+
+<p><a name="CiCYG"></a></p>
+
+<h3 id="一些资料">一些资料</h3>
+
+<p>记录一下，搭建部署过程中参考的一些资料：</p>
+
+<ul>
+<li>钟浩光，《<a href="https://cosx.org/2018/01/build-blog-with-blogdown-hugo-netlify-github/">用 R 语言的 blogdown+hugo+netlify+github 建博客</a>》，统计之都</li>
+<li><a href="https://discourse.gohugo.io/t/solved-what-should-be-used-for-the-value-of-site-baseurl/5896">[SOLVED] What should be used for the value of .Site.BaseURL?</a></li>
+<li>chaomifan，《<a href="https://www.jianshu.com/p/076279c9ceea">Hugo+GitHub 静态博客折腾笔记</a>》，简书</li>
+<li>Mogeko，《<a href="https://mogeko.me/2018/024/">链接为 Hugo 添加谈笑风生区 (Gitalk)</a>》，Mogeko`s Blog</li>
+<li>ByQiu，《<a href="https://www.jianshu.com/p/78c64d07124d">为博客添加 Gitalk 评论插件</a>》，简书</li>
+<li>Parsia，《<a href="https://parsiya.net/blog/2016-02-14-archive-page-in-hugo/">Archive Page in Hugo</a>》，Hackerman&rsquo;s Hacking Tutorials</li>
+</ul>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev"><a href="../../blog/2019-08-08-sync-from-yuque-to-qiniu/">语雀图片与七牛云之间的迁移同步</a><br/>&larr;</span>
+  <span class="nav-next"></span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/blog\/2019-08-08-sync-from-yuque-to-qiniu\/';
+    
+  } else if (e.which == 39) {  
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>
+
+
+
+
+<script async src="../../js/fix-toc.js"></script>
+
+<script async src="../../js/center-img.js"></script>
+
+<script async src="../../js/right-quote.js"></script>
+
+<script async src="../../js/no-highlight.js"></script>
+
+<script async src="../../js/fix-footnote.js"></script>
+
+<script async src="../../js/math-code.js"></script>
+
+<script async src="../../js/external-link.js"></script>
+
+<script async src="../../js/alt-title.js"></script>
+
+<script async src="../../js/header-link.js"></script>
+
+<script async src="../../js/dom-scripts.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  </body>
+</html>
+

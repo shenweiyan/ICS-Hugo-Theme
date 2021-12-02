@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>开发 on Steven Shen | 沈维燕</title>
+    <link>https://shenweiyan.github.io/ICS-Hugo-Theme/tags/%E5%BC%80%E5%8F%91/</link>
+    <description>Recent content in 开发 on Steven Shen | 沈维燕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cmn-Hans</language>
+    <lastBuildDate>Thu, 08 Aug 2019 09:05:21 +0000</lastBuildDate>
+    
+	<atom:link href="https://shenweiyan.github.io/ICS-Hugo-Theme/tags/%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo 博客折腾的一些记录</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-08-08-build-hugo-blogs/</link>
+      <pubDate>Thu, 08 Aug 2019 09:05:21 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-08-08-build-hugo-blogs/</guid>
+      <description>模仿 R 语言大神谢益辉，搭建了一个 Hugo+rblogdown 的博客：https://blog.bioinit.com 主要记录： .Site.BaseURL 不起作用， relURL 、 absURL 也不起作用时，可参考使</description>
+    </item>
+    
+    <item>
+      <title>语雀图片与七牛云之间的迁移同步</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-08-08-sync-from-yuque-to-qiniu/</link>
+      <pubDate>Thu, 08 Aug 2019 03:44:11 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-08-08-sync-from-yuque-to-qiniu/</guid>
+      <description>昨天登录 Github Jekyll 博客时候，忽然发现很多文章的图片都出现了 404！后来检查才知道，原来从 2019.08.07 起，语雀上的一些静态图片开启了防外链设置，因此之前通过 api</description>
+    </item>
+    
+    <item>
+      <title>基于 pypiserver 的 PyPI 私有仓库搭建实践</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-06-01-pypiserver-trial/</link>
+      <pubDate>Sat, 01 Jun 2019 07:06:47 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-06-01-pypiserver-trial/</guid>
+      <description>背景 前几天，在不同的 CentOS 7 服务器上尝试部署同一个发行版本的 Galaxy 生物信息分析平台（Galaxy Project：云计算背景下诞生的一个生物信息学可视</description>
+    </item>
+    
+    <item>
+      <title>使用 conda 和 Jupyter 在 R 中实现数据科学分析</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-27-kgrnx4/</link>
+      <pubDate>Mon, 27 May 2019 00:40:09 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-27-kgrnx4/</guid>
+      <description>一、引言 Jupyter（以前叫 iPython）已经被数据科学家，研究人员和分析师广泛采用。Jupyter 的笔记本用户界面可以将可执行代码与叙</description>
+    </item>
+    
+    <item>
+      <title>国内 GitHub 访问加速</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-09-xpurpl/</link>
+      <pubDate>Thu, 09 May 2019 00:53:25 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-05-09-xpurpl/</guid>
+      <description>GitHub 自从私有库免费后，涌入大批量的开发爱好者，小 S 也将自己的部分代码转为了私库，但是在中国访问 GitHub 的速度不忍直视，那就叫一个慢！下面小 C 就用下面</description>
+    </item>
+    
+  </channel>
+</rss>

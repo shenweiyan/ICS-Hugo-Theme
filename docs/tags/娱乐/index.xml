@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>娱乐 on Steven Shen | 沈维燕</title>
+    <link>https://shenweiyan.github.io/ICS-Hugo-Theme/tags/%E5%A8%B1%E4%B9%90/</link>
+    <description>Recent content in 娱乐 on Steven Shen | 沈维燕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cmn-Hans</language>
+    <lastBuildDate>Mon, 29 Apr 2019 00:41:03 +0000</lastBuildDate>
+    
+	<atom:link href="https://shenweiyan.github.io/ICS-Hugo-Theme/tags/%E5%A8%B1%E4%B9%90/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>命名风格</title>
+      <link>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-04-29-xdlz2f/</link>
+      <pubDate>Mon, 29 Apr 2019 00:41:03 +0000</pubDate>
+      
+      <guid>https://shenweiyan.github.io/ICS-Hugo-Theme/blog/2019-04-29-xdlz2f/</guid>
+      <description>关于码云 gitee 后缀 ee 附于动词后，表示动作的受动者。与之相应，动作的施动者则由后缀 er/or 表示。gitee 的意思就是“使用git 的群体”，你懂了吗？ 反正</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+
+  {{ $reAltIn := "<img src=\"([^\"]+)\" alt=\"([^\"]*)\" />" }}
+  {{ $reAltOut := "<a class=\"fancya\" data-fancybox=\"gallery\" href=\"$1\"><img src=\"$1\" alt=\"$2\"></a>" }}
+  {{ $altContent := .Content | replaceRE $reAltIn $reAltOut | safeHTML }}
+
+  {{ $reAltTitleIn := "<img src=\"([^\"]+)\" alt=\"([^\"]+)\" title=\"([^\"]+)\" />" }}
+  {{ $reAltTitleOut := "<a class=\"fancya\" data-fancybox=\"gallery\" href=\"$1\"><img src=\"$1\" alt=\"$2\" title=\"$3\"></a>" }}
+  {{ $finalContent := $altContent | replaceRE $reAltTitleIn $reAltTitleOut | safeHTML }}
+
+  {{ $finalContent }}
+
+{{ partial "footer.html" . }}
