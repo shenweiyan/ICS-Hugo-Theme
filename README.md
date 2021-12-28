@@ -1,6 +1,5 @@
 # ics-hugo-theme
 
-[English](README.en.md) | [简体中文](README.md)
 
 一个简洁轻量化的响应式 [Hugo](https://gohugo.io/) 博客主题。
 

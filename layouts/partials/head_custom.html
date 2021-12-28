@@ -1,4 +1,6 @@
-<script async src="{{ $.Site.Params.siteurl }}/js/load-typekit.js"></script>
+{{ if .Site.Params.loadTypekit }}
+    <script async src="{{ $.Site.Params.siteurl }}/js/load-typekit.js"></script>
+{{ end }}
 {{ if lt (.Date.Year) 2017 }}
 <script>
 (function(u, c) {
@@ -6,7 +8,7 @@
   o.src = u;
   if (c) { o.addEventListener('load', function (e) { c(e); }); }
   s.parentNode.insertBefore(o, s);
-})('//cdn.bootcss.com/pangu/3.3.0/pangu.min.js', function() {
+})('//cdn.jsdelivr.net/npm/pangu@3.3.0/dist/browser/pangu.min.js', function() {
   pangu.spacingPage();
 });
 </script>
