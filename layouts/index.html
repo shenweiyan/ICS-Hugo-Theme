@@ -19,18 +19,21 @@
   {{ end }}
 </ul-->
 
+{{ if .Site.Params.recentPosts }}
+
 </br>
 <p>最近更新文章</p>
 
- <ul>
-  {{ range first 10 ( where .Site.Pages "Type" "post") }}
-  <li>
-    <span class="date">{{ .Lastmod.Format "2006/01/02" }}</span>
-    <a href="{{ .URL }}">{{ .Title }}</a>
-  </li>
-  {{ end }}
+<ul>
+    {{ range first 5 ( where .Site.Pages "Type" "post") }}
+    <li>
+       <span class="date">{{ .Lastmod.Format "2006/01/02" }}</span>
+       <a href="{{ .URL }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+</ul>
 </ul>
 
-</ul>
+{{ end }}
 
 {{ partial "footer.html" . }}
