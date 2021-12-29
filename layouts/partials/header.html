@@ -39,8 +39,8 @@
     <link href="{{ .RelPermalink | relURL }}" rel="alternate" type="application/rss+xml" title="{{ $.Title }}" />
     {{ end }}
   
-    <link rel="stylesheet" href="{{ $.Site.Params.siteurl }}/css/style.css"/>
-    <link rel="stylesheet" href="{{ $.Site.Params.siteurl }}/css/fonts.css"/>
+    <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/style.css"/>
+    <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/fonts.css"/>
     {{ partial "head_custom.html" . }}
   </head>
 

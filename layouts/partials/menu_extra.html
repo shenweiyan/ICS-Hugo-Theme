@@ -12,5 +12,5 @@
 {{ with .Section }}
 <li class="pattern"><a href="/{{ . }}/index.xml" type="application/rss+xml" title="RSS feed">{{ default "订阅" (index $.Site.Params.lang.subscribe $section) }}</a></li>
 {{ end }}
-<li class="pattern"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">{{ default "版权" (index $.Site.Params.lang.license $section) }}</a></li>
+<li class="pattern"><a href="/license/" title="License">{{ default "版权" (index $.Site.Params.lang.license $section) }}</a></li>
 {{ end }}
