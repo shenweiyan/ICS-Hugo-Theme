@@ -1,4 +1,4 @@
-# ics-hugo-theme
+# ICS-Hugo-Theme
 
 
 一个简洁轻量化的响应式 [Hugo](https://gohugo.io/) 博客主题。
