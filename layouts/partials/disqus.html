@@ -3,9 +3,6 @@
   <div id="disqus_thread"></div>
   <script>
   var disqus_config = function () {
-  {{ with .Site.Params.disqusURL }}
-    this.page.url = "{{ . }}" +{{ if eq $.Kind "404" }} "/404.html" {{ else }} location.pathname{{ end }};
-  {{ end }}
   };
   (function() {
     var inIFrame = function() {
