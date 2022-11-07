@@ -80,7 +80,8 @@ publishDir = "docs"
     highlightjsTheme = "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/github.min.css"
     dateFormat  = "2019-01-01"	# "2019-01-01, Mon, "
     loadTypekit = false
-    recentPosts = false    	#首页最近更新文章
+    recentPosts = true    	#首页最近更新文章
+    fancybox = true
 
 [params.footer]
     copyright = "<br/><br/>&copy; Powered by [ICS-Hugo-Theme](https://github.com/shenweiyan/ICS-Hugo-Theme) and [Hugo](https://gohugo.io) | [Bio IT 爱好者](https://www.bioitee.com/) 2018 - {year} | [粤ICP备16023717号](http://beian.miit.gov.cn/)<br/>"

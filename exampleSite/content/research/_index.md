@@ -3,6 +3,7 @@ title: 研究项目
 author: "沈维燕"
 date: '2019-01-01'
 disable_comments: true
+description: '研究'
 ---
 
 ## Bio IT 相关研究

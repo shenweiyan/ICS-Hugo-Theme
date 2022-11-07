@@ -27,6 +27,11 @@ document.addEventListener('keyup', function(e) {
 <script async src="{{ . | relURL }}"></script>
 {{ end }}
 
+{{if .Page.Site.Params.fancybox }}
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+{{ end }}
 <script async src="{{ $.Site.BaseURL }}/js/fix-toc.js"></script>
 <script async src="{{ $.Site.BaseURL }}/js/center-img.js"></script>
 <script async src="{{ $.Site.BaseURL }}/js/right-quote.js"></script>

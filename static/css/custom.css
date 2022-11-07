@@ -15,6 +15,9 @@ body {
     hyphens: auto;
     border-left: none;
   }
+  .post-img-view a {
+    border-bottom: none;
+  }
   .menu li:not([class]) a, a:hover, .copyright a {
     border-bottom: none;
   }
