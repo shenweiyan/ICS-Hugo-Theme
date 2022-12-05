@@ -1,8 +1,9 @@
 ---
 title: "The predictive power of tumor mutational burden in lung cancer immunotherapy response is influenced by patients’ sex"
-author: "王诗翔"
+author: "沈维燕"
 date: "2019-06-20"
 lastmod: "2019-06-20"
+type:  
 slug: ""
 ---
 

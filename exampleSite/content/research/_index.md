@@ -6,7 +6,4 @@ disable_comments: true
 description: '研究'
 ---
 
-## Bio IT 相关研究
-
-- [Galaxy is a web application that allows processing of large datasets using powerful infrastructure that the user never sees or directly interacts with.](https://galaxyproject.org)
-
+- [Galaxy is a web application that allows processing of large datasets using powerful infrastructure that the user never sees or directly interacts with.](https://galaxyproject.org)i
