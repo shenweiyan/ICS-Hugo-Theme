@@ -237,7 +237,7 @@ body {
   margin-bottom: 40px;
 }
 
-.title h3 {
+.title h3, h4 {
   font-weight: normal;
   text-align: center;
 }
