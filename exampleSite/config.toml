@@ -68,10 +68,11 @@ publishDir = "docs"
     customJS    = []
     githubContentURL = "https://github.com/shenweiyan/ICS-Hugo-Theme/edit/main/content/"
     highlightjsTheme = "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/github.min.css"
-    dateFormat  = "2019-01-01"	# "2019-01-01, Mon, "
+    dateFormat  = "2019-01-01"			# "2019-01-01, Mon, "
     loadTypekit = false
-    recentPosts = true    	#首页最近更新文章
-    fancybox = true
+    recentPosts = true    			# 首页最近更新文章
+    fancybox    = true
+    baiduSiteVerificateID = "code-HxM5pCr1nD"   # 百度搜索资源平台HTML标签验证码
 
 [params.footer]
     copyright = "<br/><br/>&copy; Powered by [ICS-Hugo-Theme](https://github.com/shenweiyan/ICS-Hugo-Theme) and [Hugo](https://gohugo.io) | [Bio IT 爱好者](https://www.bioitee.com/) 2018 - {year} | [粤ICP备16023717号](http://beian.miit.gov.cn/)<br/>"
