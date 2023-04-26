@@ -4,7 +4,7 @@
 title: 生信服务器入门级基本设置
 slug: bio-server-basic
 date: 2020-06-03
-type: post
+type: posts
 published: true
 author: 沈维燕
 category: 

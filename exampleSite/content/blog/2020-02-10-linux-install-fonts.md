@@ -4,7 +4,7 @@
 title: LaTeX 折腾系列 | Linux 字体安装的一点记录
 slug: linux-install-fonts
 date: 2020-02-10
-type: post
+type: posts
 published: true
 author: 沈维燕
 category: 
