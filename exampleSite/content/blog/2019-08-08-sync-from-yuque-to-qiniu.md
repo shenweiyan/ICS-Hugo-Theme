@@ -4,7 +4,7 @@
 title: 语雀图片的同步迁移解决方案
 slug: sync-from-yuque-to-qiniu
 date: 2019-08-08
-type: post
+type: posts
 published: true
 author: 沈维燕
 category: 
