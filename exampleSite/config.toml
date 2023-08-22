@@ -12,66 +12,71 @@ enableEmoji = true
 footnotereturnlinkcontents = "↩"
 MetaDataFormat = "yaml" 			  # format of a new post
 enableGitInfo = false
-publishDir = "docs"
+publishDir = "public"
 
 
 [[menu.main]]
-    name = "首页"
-    url = "/"
+    name   = "首页"
+    url    = "/"
     weight = 1
 
 [[menu.main]]
-    name = "关于"
-    url = "/about/"
+    name   = "关于"
+    url    = "/about/"
     weight = 2
 
 [[menu.main]]
-    name = "博客"
-    url = "/blog/"
+    name   = "博客"
+    url    = "/blog/"
     weight = 3
 
 [[menu.main]]
-    name = "研究"
-    url = "/research/"
+    name   = "研究"
+    url    = "/research/"
     weight = 4
 
 [[menu.main]]
-    name = "简历"
-    url = "/resume/shenweiyan"
+    name   = "简历"
+    url    = "/resume/shenweiyan"
     weight = 5
 
 [[menu.main]]
-    name = "乱弹"
-    url = "/tweets/"
+    name   = "乱弹"
+    url    = "/tweets/"
     weight = 6
 
 [[menu.main]]
-    name = "留言"
-    url = "/feedback/"
+    name   = "留言"
+    url    = "/feedback/"
     weight = 7
 
 [[menu.main]]
-    name = "标签"
-    url = "/tags/"
+    name   = "搜索"
+    url    = "/search/"
     weight = 8
 
 [[menu.main]]
-    name = "归档"
-    url = "/archives/"
+    name   = "标签"
+    url    = "/tags/"
     weight = 9
+
+[[menu.main]]
+    name   = "归档"
+    url    = "/archives/"
+    weight = 10
 
 
 [params]
-    siteurl     = "https://shenweiyan.github.io/ICS-Hugo-Theme/"
-    description = "Welcome to the blog site of Steven Shen."
-    disqusURL   = "https://shenweiyan.github.io/home/"
-    customJS    = []
+    siteurl          = "https://shenweiyan.github.io/ICS-Hugo-Theme/"
+    description      = "Welcome to the blog site of Steven Shen."
+    disqusURL        = "https://shenweiyan.github.io/home/"
+    customJS         = []
     githubContentURL = "https://github.com/shenweiyan/ICS-Hugo-Theme/edit/main/content/"
     highlightjsTheme = "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/github.min.css"
-    dateFormat  = "2019-01-01"			# "2019-01-01, Mon, "
-    loadTypekit = false
-    recentPosts = true    			# 首页最近更新文章
-    fancybox    = true
+    dateFormat       = "2019-01-01"			# "2019-01-01, Mon, "
+    loadTypekit      = false
+    recentPosts      = true    			# 首页最近更新文章
+    fancybox         = true
     baiduSiteVerificateID = "code-HxM5pCr1nD"   # 百度搜索资源平台HTML标签验证码
 
 [params.footer]
@@ -95,18 +100,18 @@ publishDir = "docs"
 [params.lang.subscribe]
     cn = "订阅"
 
-#disqusShortname = "shen-bioinit" # 关闭 disqus 评论
+#disqusShortname = ""    # 关闭 disqus 评论
 [params.utteranc]
-    enable = true
-    repo = "shenweiyan/issues"    # utteranc 的评论默认存储在 github，这里填写你的 github repo，格式为 owner/repo
-    issueTerm = "title"           # 表示你选择以那种方式让github issue的评论和你的文章关联可以选择默认的 pathname。
-    theme = "github-light"        # 样式主题
+    enable    = true
+    repo      = "shenweiyan/issues"   # utteranc 的评论默认存储在 github，这里填写你的 github repo，格式为 owner/repo
+    issueTerm = "title"               # 表示你选择以那种方式让github issue的评论和你的文章关联可以选择默认的 pathname。
+    theme     = "github-light"        # 样式主题
 
 
 [taxonomies]
-    tag = "tags"
-    series = "series"
+    tag      = "tags"
+    series   = "series"
     category = "categories"
 
 [markup.goldmark.renderer]
-    unsafe= true
+    unsafe = true
