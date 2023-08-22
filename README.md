@@ -7,6 +7,7 @@
 
 ### 站点
 
+- <https://ics.weiyan.cc>
 - <https://blog.weiyan.cc>
 
 ### 预览
