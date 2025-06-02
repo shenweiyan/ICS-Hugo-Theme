@@ -2,7 +2,7 @@
 title: "简历"
 disable_comments: yes
 date: '2019-05-30'
-lastmod: "`r Sys.Date()`"
+lastmod: 2019-05-30
 output:
   pdf_document:
     includes:

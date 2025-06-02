@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/img/logo.png"> <!--- Likan Icon --->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="baidu-site-verification" content="{{ .Site.Params.baiduSiteVerificateID }}" />
-    {{ if eq .URL "/" }}
+    {{ if eq .RelPermalink "/" }}
     <title>{{ .Site.Title }}</title>
     <meta property="og:title" content="{{ .Site.Title }}" />
     <meta property="og:type" content="website">
@@ -23,7 +23,7 @@
     <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
     {{ end }}
 
-    {{ if eq .URL "/" }}
+    {{ if eq .RelPermalink "/" }}
     <meta property="description" content="{{ .Site.Params.description }}">
     {{ else }}
       {{ if .Description }}
@@ -44,7 +44,7 @@
     {{ partial "head_custom.html" . }}
   </head>
 
-  {{ $.Scratch.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .URL) }}
+  {{ $.Scratch.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .RelPermalink) }}
   <body class="{{ if .IsHome }}home{{ else }}{{ $.Scratch.Get "section" }}{{ end }}">
     {{/*
     <header class="masthead">

@@ -1,14 +1,16 @@
 ---
 title: "博客和笔记的那些事情"
-date: '2019-05-30'
+date: '2022-12-05'
 lastmod: '2022-12-05'
 author: 沈维燕
 type: posts
-published: true
 ---
 
 这些年来笔记换的比较少——主要是从 2018 年以来，一直用语雀作为主力笔记懒得去折腾了。但是到了 2022 年，事情似乎出现了一些转变。
-![](https://1.bp.blogspot.com/-sP6euyqs1pc/XUMAy04i4gI/AAAAAAAGpAM/MThDM11XjO8B3WoScwLaGsvnz_uVhaN-QCLcBGAs/s1600/StockSnap_TBJ9OPDGMK%2B%255B2%255D.jpg#crop=0&crop=0&crop=1&crop=1&from=url&id=Xwf5S&originHeight=903&originWidth=1600&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+
+<!-- more -->
+
+![](https://1.bp.blogspot.com/-sP6euyqs1pc/XUMAy04i4gI/AAAAAAAGpAM/MThDM11XjO8B3WoScwLaGsvnz_uVhaN-QCLcBGAs/s1600/StockSnap_TBJ9OPDGMK%2B%255B2%255D.jpg#from=url&id=Xwf5S&originHeight=903&originWidth=1600&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 首先，是语雀的个人用户的话题知识库下线——并入了空间；
 其次，语雀的问题反馈，由原来的公开可讨论转变成了类似私信一样的单向反馈；
 第三，语雀 2022 年秋季知识库大会的会员收费风波！——语雀的定位改变为**创作工具**，而不在是**内容社区**，相应的新的付费策略，也会造成了免费用户无法继续用语雀作为自己的个人博客。这是最致命的一次信任危机。
@@ -18,7 +20,7 @@ published: true
 - [如何看待语雀付费策略？](https://www.zhihu.com/question/562238887) - 知乎
 
 虽然个人的语雀付费已经到了 2037 年，但是随着越来越多的文档托管在了语雀，不支持批量 md 导出的确让人心生忧虑。
-![](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/Obsidian/20221031140408.png#crop=0&crop=0&crop=1&crop=1&id=z0esY&originHeight=271&originWidth=695&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://shub.weiyan.tech/yuque/elog-notebook-img/FmTgoSK6IXHA4fWaCxC0WVjS7dpU.png)
 
 几经考虑之下，在开始 Plan B 前先明确一下个人使用云端笔记无非基于几点考虑：
 
@@ -30,11 +32,11 @@ published: true
 6. ..............
 
 现在 Obsidian 进行探索中，强悍的搜索，丰富的插件，算是吸引我的一个方面；如果不是官方提供的同步和发布插件价格相对贵了一些，或许早就从语雀开始往 Obsidian 进行迁移了吧！
-![image.png](https://shumlab.oss-cn-guangzhou.aliyuncs.com/yuque/2022/1667352679969-ee0e3e29-4564-4a02-93a4-74fb21678677.png)
+![image.png](https://shub.weiyan.tech/yuque/elog-notebook-img/Fn-sssMzVTYiuY-A7jth6NzAZGqH.png)
 Obsidian 也是书本式的文章结构，这一点跟语雀是一致的，但界面的设计和逻辑要比语雀要好太多太多了，**退一万步来说语雀甚至可以参考一下 Obsidian 的一些界面设计！**
 
 Obsidian 结合一些插件使用，可谓事半功倍。
-![image.png](https://shumlab.oss-cn-guangzhou.aliyuncs.com/yuque/2022/1667352766238-c6fa4314-3ccf-4ac5-9644-e2e5724e3ec3.png)
+![image.png](https://shub.weiyan.tech/yuque/elog-notebook-img/FhZ4GJBNWpfihTd4KUimGAzE0I1w.png)
 
 **不得不说的一点体验。**
 

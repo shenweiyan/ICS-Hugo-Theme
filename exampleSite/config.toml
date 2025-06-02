@@ -1,16 +1,16 @@
 baseurl = "https://shenweiyan.github.io/ICS-Hugo-Theme/"
 RelativeURLs=true
 CanonifyURLs=true
-languageCode = "zh-cn"	                  # html的lang属性值
-DefaultContentLanguage = "zh-cn"   	  # 默认内容语言用于选择i18n语言模板
+languageCode = "zh-cn"	                  		# html的lang属性值
+DefaultContentLanguage = "zh-cn"   	  		# 默认内容语言用于选择i18n语言模板
 title = "ICS-Hugo-Theme | Bio IT 爱好者"
 theme = "ICS-Hugo-Theme"
 #googleAnalytics = "UA-112592341-1"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
-hasCJKLanguage = true                             # .WordCount works correctly for chinese
+hasCJKLanguage = true					# .WordCount works correctly for chinese
 enableEmoji = true
 footnotereturnlinkcontents = "↩"
-MetaDataFormat = "yaml" 			  # format of a new post
+MetaDataFormat = "yaml" 			  	# format of a new post
 enableGitInfo = false
 publishDir = "public"
 
@@ -80,15 +80,16 @@ publishDir = "public"
     baiduSiteVerificateID = "code-HxM5pCr1nD"   # 百度搜索资源平台HTML标签验证码
 
 [params.footer]
-    copyright = "<br/><br/>&copy; Powered by [ICS-Hugo-Theme](https://github.com/shenweiyan/ICS-Hugo-Theme) and [Hugo](https://gohugo.io) | [Bio IT 爱好者](https://www.bioitee.com/) 2018 - {year} | [粤ICP备16023717号](http://beian.miit.gov.cn/)<br/>"
-    moreinfo = "<br/><br/>[![yuque](https://img.shields.io/badge/沈维燕-语雀知识库-blueviolet)](https://www.yuque.com/shenweiyan) [![wechat](https://img.shields.io/badge/沈维燕-微信公众号-important)](https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioitee/bioitee.png) [![zhihu](https://img.shields.io/badge/沈维燕-知乎-blue)](https://www.zhihu.com/people/shenweiyan) [![bioitee](https://img.shields.io/badge/沈维燕-BioIT爱好者-green)](https://www.bioitee.com/)"
+    fancybox = true 
+    copyright = "<br/><br/>&copy; Powered by [ICS-Hugo-Theme](https://github.com/shenweiyan/ICS-Hugo-Theme) and [Hugo](https://gohugo.io) | [Bio IT 爱好者](https://github.com/bioitee/) 2018 - {year} | [粤ICP备16023717号](http://beian.miit.gov.cn/)<br/>"
+    moreinfo = "<br/><br/><a href=''><img src='https://img.shields.io/badge/MkDocs--Material-知识花园-blueviolet'></a> <a href=''><img src='https://img.shields.io/badge/微信公众号-BioIT爱好者-important'></a> <a href='https://github.com/PagesX'><img src='https://img.shields.io/badge/GitHub-PagesX-blue'></a> <a href='https://github.com/bioitee'><img src='https://img.shields.io/badge/GitHub-BioITee-green'></a>"
 
 [params.author]
     en = "Steven Shum"
     cn = "沈维燕"
 
 [params.logo.en]
-    img = "https://apps-db.oss-cn-shenzhen.aliyuncs.com/logos/shenweiyan.png"
+    img = "img/logo.png"
     url = "/"
     alt = "Steven Shum"
     tag = ""

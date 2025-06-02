@@ -1,28 +1,25 @@
-
-
 ---
 title: SCI 投稿中像素、DPI、图片分辨率的一些知识
-slug: xo4ieg
+slug: pixel-dpi-ppi
 date: 2020-07-03
 type: posts
-published: true
 author: 沈维燕
 category: 
 tags: 
 ---
 
-
-
-> 欢迎关注 "BioIT爱好者" 公众号(ID：bioitee)，或者点击 [这里](https://www.yuque.com/shenweiyan/cookbook/xo4ieg) 阅读原文。
-
-<br/>
+<style>
+.post-img-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
 
 > 最近在学习 Linux 命令行下的 ImageMagick 图像处理，对图像本身的一些概念有点懵，搜集整理了一点资料，仅供自己和大家学习与参考。
 
-
-
 SCI 期刊对分辨率大多都有一定的要求，例如一段来自 Elsevier 旗下期刊的稿约：
-> **Formats **
+> **Formats** 
 > - If your electronic artwork is created in a Microsoft Office application (Word, PowerPoint, Excel) then please supply 'as is' in the native document format. 
 > - Regardless of the application used other than Microsoft Office, when your electronic artwork is finalized, please 'Save as' or convert the images to one of the following formats (note the resolution requirements for line drawings, halftones, and line/halftone combinations given below): 
 >    - EPS (or PDF): Vector drawings, embed all used fonts. 
@@ -54,7 +51,9 @@ SCI 期刊对分辨率大多都有一定的要求，例如一段来自 Elsevier 
 
 
 像素主要是相对位图而言的，无论其格式是哪种，只要是位图如果不停放大，最终你都会看到图片实际上都是以一个个的彩色方块相互堆叠而成，这样的一个彩色方块就是一个像素，英文名为 Pixel，简写为 PX。
-![px.png](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1593763307861-8ba94fcf-1e1a-4519-9571-6ff8fdeed1c0.png)
+![px.png](../../img/2020/1593763307861-8ba94fcf-1e1a-4519-9571-6ff8fdeed1c0.png)
+
+
 ## 2. 关于分辨率和 DPI
 
 
@@ -62,8 +61,9 @@ SCI 期刊对分辨率大多都有一定的要求，例如一段来自 Elsevier 
 
 
 图像分辨率的基本计量单位是每英寸的像素数，简写为 ppi。一张图的分辨率是用横向像素量 x 纵向像素量来表示，比如 640×480 像素、1280×960 像素等，一张分辨率为 640 x 480 的图片它的分辨率就达到了 307,200 像素，也就是我们常说的 30 万像素;而一张分辨率为 1600 x 1200 的图片，它的像素就是 200 万。图片的分辨率和图片的宽、高尺寸一起决定了图像文件的大小及图像质量。比如，一幅图宽 12 英寸、高 6 英寸，分辨率为 66PPI，如果保持图像文件的大小不变，也就是总的像素数不变，将分辨率降为 33PPI，在宽高比不变的情况下，图像的宽将变为 24 英寸、高将变为 12 英寸。
-![原图.png](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1593763940714-688fc70e-c775-4294-a958-f8994aa73b7d.png)
-![改图.png](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1593763963490-f49c1a07-997e-4e0f-8d53-4c0566fad069.png)
+![原图.png](../../img/2020/1593763940714-688fc70e-c775-4294-a958-f8994aa73b7d.png)
+
+![改图.png](../../img/2020/1593763963490-f49c1a07-997e-4e0f-8d53-4c0566fad069.png)
 
 
 而决定图像输出质量的是图像的输出分辨率，描述的是设备输出图像时每英寸可产生的点数(dpi)，以dpi为单位。大部分时候我们说的输出分辨率主要是指印刷需要的分辨率。——如果你搞不清输出分辨率是怎么回事也不要紧，你只要记住下面的常识就行了：
@@ -74,7 +74,7 @@ SCI 期刊对分辨率大多都有一定的要求，例如一段来自 Elsevier 
 
 另外再给你一张表，对照表看就更清楚了：
 
-![图像分辨率对照表.png](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1593764095134-542ed5e5-3fa9-4d70-a08f-e418ff902a64.png)
+![图像分辨率对照表.png](../../img/2020/1593764095134-542ed5e5-3fa9-4d70-a08f-e418ff902a64.png)
 
 
 从技术角度说，“像素”只存在于电脑显示领域，而“点”只出现于打印或印刷领域。对电脑显示屏，分辨率是用像素数目衡量;对数字文件印刷，分辨率是通常用每英寸所含点或像素〔dpi〕来衡量。
@@ -82,55 +82,47 @@ SCI 期刊对分辨率大多都有一定的要求，例如一段来自 Elsevier 
 
 ## 3. 相同的分辨率，更高的 DPI 表现为物理尺寸更小
 
+![px-dpi-1.png](../../img/2020/1593764256797-b5cc0e99-57da-4638-b86e-50c0bac4b67c.png)
 
-![px-dpi-1.png](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1593764256797-b5cc0e99-57da-4638-b86e-50c0bac4b67c.png)
-![px-dpi-2.png](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1593764266528-f5e4d85a-4587-4650-a386-95955c82818d.png)
+![px-dpi-2.png](../../img/2020/1593764266528-f5e4d85a-4587-4650-a386-95955c82818d.png)
 在这里，右图中的像素跟左边的原始图像是一样，我们将 DPI 值从72提高到了 300，效果是每英寸现在有更多的点，但是由于构成图像的总像素数没有变化，所以数学上表现的是图像变小，构成图像的每个像素变得更小。
 
 
 以简化的图像表达就是：
-![px-dpi-3.png](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1593764322284-25bbaa42-3484-4f93-834a-5fba18f64af5.png)
+![px-dpi-3.png](../../img/2020/1593764322284-25bbaa42-3484-4f93-834a-5fba18f64af5.png)
 
 
 ## 4. 物理尺寸相同，DPI 较低表现为较低的分辨率
 
-
-![px-dpi-a.png](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1593764402545-9d5acf9a-709b-4690-a04c-2c92257c1a86.png)
-![px-dpi-b.png](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1593764410787-e7b93adf-231c-4379-b812-e9bd9538a92e.png)
+![px-dpi-a.png](../../img/2020/1593764402545-9d5acf9a-709b-4690-a04c-2c92257c1a86.png)
+![px-dpi-b.png](../../img/2020/1593764410787-e7b93adf-231c-4379-b812-e9bd9538a92e.png)
 
 简单的来说，图像分辨率(每英寸像素数)和 DPI (每英寸点数)两者相互影响，这点希望你得搞清楚。
-![px-dpi-c.png](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/png/126032/1593764423430-8acff127-af41-4bc6-ade3-2c4cbec9d7d2.png)
+![px-dpi-c.png](../../img/2020/1593764423430-8acff127-af41-4bc6-ade3-2c4cbec9d7d2.png)
 
-## 5. **修改图片分辨率**
-**
+## 5. 修改图片分辨率
+
 把基本的一些概念搞清楚，明确图片的要求后，接下来就是动手操作的时候了。这里参考的是筑研医学公众号《[投稿教学 | SCI 投稿之图片分辨率问题](https://mp.weixin.qq.com/s/F6yDgJ0tz9Wttn2qiCuXyA)》的操作，即 Adobe Photoshop CC 2019，其他的版本在操作上也是几乎一样的。
 
 
 1. 用 Photoshop（PS）打开图片，点击【图像】-【图像大小】。
-
-![01.jpg](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/jpeg/126032/1593764985151-0339bc21-0a64-4e62-9418-7af8356087fa.jpeg)
+   ![01.jpg](../../img/2020/1593764985151-0339bc21-0a64-4e62-9418-7af8356087fa.jpeg)
 
 2. 然后就可以看到如下界面，是不是看到了上面梳理过的概念？
-
-![02.jpg](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/jpeg/126032/1593765038806-f612d260-f800-4e34-a0f9-27a1cbc53af1.jpeg)
-默认情况下，分辨率用像素密度来表示，单位是 ppi；宽度和高度则以厘米为单位，说明以目前指定的像素密度来呈现该尺寸的图片，在实际的物理世界中会是 141.11 x 115.57 cm 的大小；
-
+   ![02.jpg](../../img/2020/1593765038806-f612d260-f800-4e34-a0f9-27a1cbc53af1.jpeg)
+   默认情况下，分辨率用像素密度来表示，单位是 ppi；宽度和高度则以厘米为单位，说明以目前指定的像素密度来呈现该尺寸的图片，在实际的物理世界中会是 141.11 x 115.57 cm 的大小；
 
 3. 当然，我们可以自由地更改图像大小和分辨率的表示方式，比如我们将高度和宽度的单位从默认的【厘米】换成【像素】，数值就会和上面的【尺寸】是一样的啦：
-
-![03.jpg](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/jpeg/126032/1593765160616-1da2733a-de40-4d95-854b-90db9228926b.jpeg)
+   ![03.jpg](../../img/2020/1593765160616-1da2733a-de40-4d95-854b-90db9228926b.jpeg)
 
 4. 我们记住这张图的宽度是 4000 像素，然后按照期刊的要求，将这张彩色照片的分辨率调整为 300 像素/英寸，然后 PS 就自动用插值的方式，帮我们保留了图片的物理尺寸 141.11 x 115.57 cm，让这张图片的像素数暴涨：
-
-![04.jpg](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/jpeg/126032/1593765243748-bac5270d-cf71-45fb-a80f-651a3c037f71.jpeg)
+   ![04.jpg](../../img/2020/1593765243748-bac5270d-cf71-45fb-a80f-651a3c037f71.jpeg)
 
 5. 这不是我们想要的，我们需要手动将图片的像素数纠正过来，在【宽度】里重新填入原先的 4000 像素，一切就正常了：
-
-![05.jpg](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/jpeg/126032/1593765286088-ba7713d5-e578-4f15-a411-5bb91cb35de3.jpeg)
+   ![05.jpg](../../img/2020/1593765286088-ba7713d5-e578-4f15-a411-5bb91cb35de3.jpeg)
 
 6. 接下来还没完哦！把【宽度】的单位修改成【英寸】、【厘米】，或者【毫米】这样的物理单位，检查一下这张图片修改成 300 ppi 分辨率后，其“物理尺寸”是否符合期刊的要求：
-
-![06.jpg](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/jpeg/126032/1593765388648-12a47577-0112-4f8b-95a8-6a9f9970d16f.jpeg)
+   ![06.jpg](../../img/2020/1593765388648-12a47577-0112-4f8b-95a8-6a9f9970d16f.jpeg)
 有些出版社对作者提交的图片的物理尺寸是有要求的，除了分辨率要达到指定的清晰度，图片的尺寸也不能超过一定的版面大小，否则无法正常印刷。我们来看 Springer 旗下某期刊对图片大小的要求：
 
 
@@ -142,22 +134,22 @@ SCI 期刊对分辨率大多都有一定的要求，例如一段来自 Elsevier 
 
 
 可见，该期刊要求图片尺寸至少要满足“不大于 174 x 234 mm”的要求，那我们这张图明显是超出了的：
-![6-0.jpg](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/jpeg/126032/1593765516501-2d219777-0031-4650-bb8a-dbe2df8b0989.jpeg)
+![6-0.jpg](../../img/2020/1593765516501-2d219777-0031-4650-bb8a-dbe2df8b0989.jpeg)
 
 
 遇到这种问题，我们要分情况讨论：
 
 
 1) 如果这张图是多张小图拼合而成的，那么我们可以考虑重新换一种排版方式来拼图，比如这张（已打码），是 2x2 的排列方式，我们可以改成 4x1 的纵列，然后把总的宽度控制在 174mm 以内即可：
-![6-1.jpg](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/jpeg/126032/1593765634435-f0fa189b-1501-47d6-93b5-879bbbf275b6.jpeg)
+![6-1.jpg](../../img/2020/1593765634435-f0fa189b-1501-47d6-93b5-879bbbf275b6.jpeg)
 2) 如果这张图是一张照片，那么在不影响可读性的情况下，我们直接把宽度改成 174mm，进行缩小的操作，并保存：
-![6-2.jpg](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/jpeg/126032/1593765722436-840d0855-4d39-4be7-b4d3-f677887b83b4.jpeg)
+![6-2.jpg](../../img/2020/1593765722436-840d0855-4d39-4be7-b4d3-f677887b83b4.jpeg)
 3) 如果缩小后会导致看不清照片的细节，那么可以考虑适当裁剪，舍弃照片中无意义或不重要的部分：
-![6-3.jpg](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/jpeg/126032/1593765774381-20d99a47-17ed-4469-bbd1-b5ded2ace199.jpeg)
+![6-3.jpg](../../img/2020/1593765774381-20d99a47-17ed-4469-bbd1-b5ded2ace199.jpeg)
 
 
 4) 如果缩小会影响图片的可读性，比如图片中的含有较多字号比较小的文字，可以提高分辨率，到 600 ppi，试试宽度是否可以控制在期刊要求内，这张就可以：
-![6-4.jpg](https://note-1251708715.cos.ap-guangzhou.myqcloud.com/yuque/0/2020/jpeg/126032/1593765842629-4fb7acd7-0a36-4161-9022-b7f63acd91b3.jpeg)
+![6-4.jpg](../../img/2020/1593765842629-4fb7acd7-0a36-4161-9022-b7f63acd91b3.jpeg)
 5) 如果上述方法都不理想，比如图片中有大量非矢量的图线和文字不方便缩放，或缩放效果不佳，建议重新用作图软件导出为矢量图，或修改图片中的文字，保证至少有 8 pt 的大小（注意，是阿拉伯数字的“8”号字，不是“小四”这种字号）再导出。
 
 
@@ -165,9 +157,3 @@ SCI 期刊对分辨率大多都有一定的要求，例如一段来自 Elsevier 
 
 
 本文章的内容主要来源于搜狐秒秒学的《[搞不清像素、DPI、图片分辨率的看过来!](https://www.sohu.com/a/139247123_409010) 》和筑研医学公众号的《[投稿教学 | SCI 投稿之图片分辨率问题](https://mp.weixin.qq.com/s/F6yDgJ0tz9Wttn2qiCuXyA)》一文，部分内容有增删改，仅作交流与学习使用。
-
-
-
-
-
-

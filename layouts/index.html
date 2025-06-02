@@ -22,13 +22,13 @@
 {{ if .Site.Params.recentPosts }}
 
 </br>
-<p>最近更新文章</p>
+<p><b>最近更新文章</b></p>
 
 <ul>
-    {{ range first 5 ( where .Site.Pages "Type" "post") }}
+    {{ range first 5 .Site.RegularPages.ByDate.Reverse }}
     <li>
-       <span class="date">{{ .Lastmod.Format "2006/01/02" }}</span>
-       <a href="{{ .URL }}">{{ .Title }}</a>
+       <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+       <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     </li>
     {{ end }}
 </ul>

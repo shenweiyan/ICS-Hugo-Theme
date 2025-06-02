@@ -1,17 +1,12 @@
-
-
 ---
-title: LaTeX 折腾系列 | Linux 字体安装的一点记录
+title: LaTeX 折腾系列之 Linux 字体安装
 slug: linux-install-fonts
 date: 2020-02-10
 type: posts
-published: true
 author: 沈维燕
 category: 
 tags: 
 ---
-
-
 
 > 欢迎关注 "BioIT爱好者" 公众号(ID：bioitee)，或者点击 [这里](https://www.yuque.com/shenweiyan/cookbook/linux-install-fonts) 阅读原文。
 
@@ -61,4 +56,3 @@ WenQuanYi Zen Hei Mono,文泉驛等寬正黑,文泉驿等宽正黑:style=Regular
 AR PL UMing TW MBE:style=Light
 WenQuanYi Zen Hei Sharp,文泉驛點陣正黑,文泉驿点阵正黑:style=Regular
 ```
-
