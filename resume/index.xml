@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Resumes on ICS-Hugo-Theme | Bio IT 爱好者</title>
+    <link>https://ics.weiyan.cc/resume/</link>
+    <description>Recent content in Resumes on ICS-Hugo-Theme | Bio IT 爱好者</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 30 May 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ics.weiyan.cc/resume/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>简历</title>
+      <link>https://ics.weiyan.cc/resume/shenweiyan/</link>
+      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://ics.weiyan.cc/resume/shenweiyan/</guid>
+      <description>&lt;h1 id=&#34;沈维燕&#34;&gt;沈维燕&lt;/h1&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;联系方式&#34;&gt;联系方式&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;地址：广州市黄埔区科学城科学大道182号创新大厦&lt;/li&gt;&#xA;&lt;li&gt;邮箱：&lt;a href=&#34;mailto:shenweiyan@aliyun.com&#34;&gt;shenweiyan@aliyun.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;网站：&lt;a href=&#34;https://weiyan.cc&#34;&gt;https://weiyan.cc&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;专业技能&#34;&gt;专业技能&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Python、R、Linux、Html、Perl .etc.&lt;/li&gt;&#xA;&lt;li&gt;写作技能。我喜欢用 Markdown 和 R Markdown 等现代书写工具写作。&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

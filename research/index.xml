@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>研究项目 on ICS-Hugo-Theme | Bio IT 爱好者</title>
+    <link>https://ics.weiyan.cc/research/</link>
+    <description>Recent content in 研究项目 on ICS-Hugo-Theme | Bio IT 爱好者</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 20 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ics.weiyan.cc/research/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>APOBEC3B and APOBEC mutational signature as potential predictive markers for immunotherapy response in non-small cell lung cancer</title>
+      <link>https://ics.weiyan.cc/research/apobec3b_signature/</link>
+      <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://ics.weiyan.cc/research/apobec3b_signature/</guid>
+      <description>&lt;p&gt;主要发现：APOBEC mutational signature 在 NSCLC 免疫治疗反应组内特异性富集。&lt;/p&gt;&#xA;&lt;h2 id=&#34;摘要&#34;&gt;摘要&lt;/h2&gt;&#xA;&lt;p&gt;Non-small cell lung cancer (NSCLC) is known to carry heavy mutation load. Besides smoking, cytidine deaminase APOBEC3B plays a key role in the mutation process of NSCLC. APOBEC3B is also reported to be upregulated and predicts bad prognosis in NSCLC. However, targeting APOBEC3B high NSCLC is still a big challenge. Here we show that APOBEC3B upregulation is significantly associated with immune gene expression, and APOBEC3B expression positively correlates with known immunotherapy response biomarkers, including: PD-L1 expression and T-cell infiltration in NSCLC. Importantly, APOBEC mutational signature is specifically enriched in NSCLC patients with durable clinical benefit after immunotherapy and APOBEC mutation count can be better than total mutation in predicting immunotherapy response. In together, this work provides evidence that APOBEC3B upregulation and APOBEC mutation count can be used as novel predictive markers in guiding NSCLC checkpoint blockade immunotherapy.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The predictive power of tumor mutational burden in lung cancer immunotherapy response is influenced by patients’ sex</title>
+      <link>https://ics.weiyan.cc/research/tmb_diff_in_sex/</link>
+      <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://ics.weiyan.cc/research/tmb_diff_in_sex/</guid>
+      <description>&lt;p&gt;主要发现：NSCLC 中，TMB 对于免疫治疗反应的预测效果在不同的性别中有差异。&lt;/p&gt;&#xA;&lt;h2 id=&#34;摘要&#34;&gt;摘要&lt;/h2&gt;&#xA;&lt;p&gt;Immunotherapy, represented by immune checkpoint inhibitors (ICI), is transforming the treatment of cancer. However, only a fraction of patients show response to ICI, and there is an unmet need for biomarkers that will identify patients more likely to respond to ICI. Here we report that the ICI response prediction biomarker tumor mutational burden (TMB) shows significant sex differences. TMB&amp;rsquo;s predictive power is significantly better for female than for male lung cancer patients. Receiver operating characteristic curve analysis was performed and the area under the curve (AUC) was reported to evaluate the predictive power of TMB in lung cancer ICI response. Hazard ratios (HR) of TMB‐high vs. TMB‐low patients were compared between male and female patients. Both AUC and HR differences between female and male are significant in all available independent lung cancer datasets. However, the AUC of programmed death ligand 1 (PD‐L1) expression does not show a difference between female and male, suggesting TMB, but not PD‐L1 expression has a better predictive power for female than for male lung cancer patients. Our study suggests significant sex differences in the performance of TMB in ICI response prediction. Future development of ICI biomarker should consider sex differences and special efforts should be paid to improve the performance of ICI predictive biomarkers for male lung cancer patients.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
