@@ -3,6 +3,8 @@ html {
     line-height: 1.5;
     color: #111;
     background-color: #fefefe;
+    background-image: url('../img/paper-pattern-clean.png');
+    overflow-y: auto;
 }
 
 
