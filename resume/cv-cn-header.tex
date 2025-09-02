@@ -1,0 +1,16 @@
+\usepackage[fontsize=13pt]{scrextend}
+\usepackage{ctex}
+\usepackage{fontspec}
+\setmainfont{Optima} % English font
+\setCJKmainfont{STKaiti} % Chinese serif font: Source Han Serif SC
+\usepackage{hyperref}
+%% 2. Change page style
+\usepackage{datetime2}
+\usepackage{fancyhdr}
+\usepackage{lastpage} % LastPage
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{}
+\rhead{沈维燕的简历}
+\rfoot{最近更新：\today}
+\fancyfoot[C]{--~\thepage/\pageref*{LastPage}~--}

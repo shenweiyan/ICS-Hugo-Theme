@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>可视化 on ICS-Hugo-Theme | Bio IT 爱好者</title>
+    <link>https://ics.weiyan.cc/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
+    <description>Recent content in 可视化 on ICS-Hugo-Theme | Bio IT 爱好者</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 12 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ics.weiyan.cc/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基于 Dash Bio 的生物信息学数据可视化</title>
+      <link>https://ics.weiyan.cc/blog/dash-bio/</link>
+      <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://ics.weiyan.cc/blog/dash-bio/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;欢迎关注 &amp;ldquo;BioIT爱好者&amp;rdquo; 公众号(ID：bioitee)，或者点击 &lt;a href=&#34;https://www.yuque.com/shenweiyan/cookbook/tp85x1&#34;&gt;这里&lt;/a&gt; 阅读原文。&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&#xA;&lt;div class=&#34;post-img-view&#34;&gt;&#xA;&lt;a data-fancybox=&#34;gallery&#34; href=&#34;../../img/2019/1570847929839-ad885a4c-c01d-4091-af3e-0f29d8b35b0c.png&#34;&gt;&#xA;&lt;img src=&#34;../../img/2019/1570847929839-ad885a4c-c01d-4091-af3e-0f29d8b35b0c.png&#34; alt=&#34;bio-dash.png&#34;  /&gt;&#xA;&lt;/a&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://plot.ly/dash/&#34;&gt;Dash&lt;/a&gt; 是用于搭建响应式 Web 应用的 Python 开源库。Dash Bio 是面向生物信息学，且与 Dash 兼容的组件，它可以将生物信息学领域中常见的数据整合到 Dash 应用程序，以实现响应式的生物信息学数据可视化。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

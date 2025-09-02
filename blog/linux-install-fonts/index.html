@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"> 
+    <link rel="stylesheet" href="../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="baidu-site-verification" content="code-HxM5pCr1nD" />
+    
+    
+    
+    
+    
+    
+    <title>LaTeX 折腾系列之 Linux 字体安装 - ICS-Hugo-Theme | Bio IT 爱好者</title> 
+    <meta property="og:title" content="LaTeX 折腾系列之 Linux 字体安装 - ICS-Hugo-Theme | Bio IT 爱好者">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://ics.weiyan.cc//css/style.css"/>
+    <link rel="stylesheet" href="https://ics.weiyan.cc//css/fonts.css"/>
+    
+
+<link rel="stylesheet" href="https://ics.weiyan.cc//css/template-styles.css" />
+<link rel="stylesheet" href="https://ics.weiyan.cc//css/custom.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/github.min.css">
+
+
+  </head>
+
+  
+  <body class="blog">
+    
+    
+    <header class="intro-and-nav" role="banner">
+    <div>
+      <div class="intro">
+        <a class="logo" href="../../" aria-label="ICS-Hugo-Theme | Bio IT 爱好者 home page">
+          <img src="https://ics.weiyan.cc/img/logo.png" alt="">
+        </a>
+        <p class="library-desc">
+          
+            Welcome to the blog site of Steven Shen.
+          
+        </p>
+      </div>
+      <nav id="patterns-nav" class="patterns" role="navigation">
+        <h2 class="vh">Main navigation</h2>
+        <button id="menu-button" aria-expanded="false">
+          
+          目录
+        </button>
+        
+        <ul id="patterns-list">
+          
+          <li class="pattern">
+          
+          
+	  
+          
+          
+            <a href="../../" >
+              
+              首页
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+	  
+          
+          
+            <a href="../../about/" >
+              
+              关于
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+	  
+          
+          
+            <a href="../../blog/" >
+              
+              博客
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+	  
+          
+          
+            <a href="../../research/" >
+              
+              研究
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+	  
+          
+          
+            <a href="../../resume/shenweiyan" >
+              
+              简历
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+	  
+          
+          
+            <a href="../../tweets/" >
+              
+              乱弹
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+	  
+          
+          
+            <a href="../../feedback/" >
+              
+              留言
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+	  
+          
+          
+            <a href="../../search/" >
+              
+              搜索
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+	  
+          
+          
+            <a href="../../tags/" >
+              
+              标签
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+	  
+          
+          
+            <a href="../../archives/" >
+              
+              归档
+            </a>
+          </li>
+          
+          
+
+<li class="pattern">&nbsp;&nbsp;</li>
+
+
+
+<li class="pattern"><a href="https://github.com/shenweiyan/ICS-Hugo-Theme/edit/main/content/blog/2020-02-10-linux-install-fonts.md" target="_blank">编辑</a></li>
+
+
+<li class="pattern"><a href="../../blog/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li class="pattern"><a href="../../license/" title="License">版权</a></li>
+
+
+        </ul>
+      </nav>
+    </div>
+    </header>
+
+    <article class="main">
+      <header class="title">
+        
+
+<h1>LaTeX 折腾系列之 Linux 字体安装</h1>
+
+
+
+<h4>沈维燕 &middot 
+2020-02-10</h4> 
+
+
+   
+  
+
+
+      </header>
+
+
+  
+
+  <blockquote>
+<p>欢迎关注 &ldquo;BioIT爱好者&rdquo; 公众号(ID：bioitee)，或者点击 <a href="https://www.yuque.com/shenweiyan/cookbook/linux-install-fonts">这里</a> 阅读原文。</p></blockquote>
+<p>在使用 LaTeX 进行中文字体编译排版过程中，发现 CentOS 6.5 中缺乏很大一部分中文字体，以至于在编译过程中频繁抛出缺乏字体的错误。 现在基于 windows 的 ttf 字体，以 <strong>“微软雅黑”</strong> 体为例，简单记录一下 Linux 下如何安装 windows 字体。</p>
+<p>1 . 首先获得一套”微软雅黑”字体库( Google 去下载，或者去 <code>C:\Windows\Fonts</code> 下直接复制)，包含两个文件 msyh.ttf （普通）、 msyhbd.ttf （加粗）；</p>
+<p>2 . 在 <code>/usr/share/fonts</code> 目录下建立一个子目录，例如 <code>win</code> ，命令如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mkdir /usr/share/fonts/win
+</span></span></code></pre></div><ol start="3">
+<li>将 <code>msyh.ttf</code> 和 <code>msyhbd.ttf</code> 复制到该目录下，例如这两个文件放在 <code>/home/shenweiyan</code> 下，使用命令：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cd /home/shenweiyan
+</span></span><span style="display:flex;"><span>$ cp msyh.ttf msyhbd.ttf  /usr/share/fonts/win/
+</span></span></code></pre></div><p>4 . 建立字体索引信息，更新字体缓存：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cd /usr/share/fonts/win
+</span></span><span style="display:flex;"><span>$ mkfontscale
+</span></span><span style="display:flex;"><span>$ mkfontdir
+</span></span><span style="display:flex;"><span>$ fc-cache
+</span></span></code></pre></div><p>至此，字体已经安装完毕！如果想要查看本机器所安装的中文字体，可通过 <code>fc-list</code> 命令查看：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>shenweiyan@localhost 14:23:19 ~ 
+</span></span><span style="display:flex;"><span>$ fc-list :lang<span style="color:#f92672">=</span>zh-cn
+</span></span><span style="display:flex;"><span>AR PL UMing TW:style<span style="color:#f92672">=</span>Light
+</span></span><span style="display:flex;"><span>AR PL UMing HK:style<span style="color:#f92672">=</span>Light
+</span></span><span style="display:flex;"><span>AR PL UMing CN:style<span style="color:#f92672">=</span>Light
+</span></span><span style="display:flex;"><span>Microsoft YaHei,微软雅黑:style<span style="color:#f92672">=</span>Regular,Normal,obyčejné,Standard,Κανονικά,Normaali,Normál,Normale,Standaard,Normalny,Обычный,Normálne,Navadno,Arrunta
+</span></span><span style="display:flex;"><span>Microsoft YaHei UI,Microsoft YaHei UI Light:style<span style="color:#f92672">=</span>Light,Regular
+</span></span><span style="display:flex;"><span>AR PL UKai TW MBE:style<span style="color:#f92672">=</span>Book
+</span></span><span style="display:flex;"><span>AR PL UKai CN:style<span style="color:#f92672">=</span>Book
+</span></span><span style="display:flex;"><span>AR PL UKai HK:style<span style="color:#f92672">=</span>Book
+</span></span><span style="display:flex;"><span>AR PL UKai TW:style<span style="color:#f92672">=</span>Book
+</span></span><span style="display:flex;"><span>Microsoft YaHei UI:style<span style="color:#f92672">=</span>Regular,Normal,obyčejné,Standard,Κανονικά,Normaali,Normál,Normale,Standaard,Normalny,Обычный,Normálne,Navadno,Arrunta
+</span></span><span style="display:flex;"><span>Microsoft YaHei,微软雅黑,Microsoft YaHei Light,微软雅黑 Light:style<span style="color:#f92672">=</span>Light,Regular
+</span></span><span style="display:flex;"><span>WenQuanYi Zen Hei,文泉驛正黑,文泉驿正黑:style<span style="color:#f92672">=</span>Regular
+</span></span><span style="display:flex;"><span>Microsoft YaHei UI:style<span style="color:#f92672">=</span>Bold,Negreta,tučné,fed,Fett,Έντονα,Negrita,Lihavoitu,Gras,Félkövér,Grassetto,Vet,Halvfet,Pogrubiony,Negrito,Полужирный,Fet,Kalın,Krepko,Lodia
+</span></span><span style="display:flex;"><span>Microsoft YaHei,微软雅黑:style<span style="color:#f92672">=</span>Bold,Negreta,tučné,fed,Fett,Έντονα,Negrita,Lihavoitu,Gras,Félkövér,Grassetto,Vet,Halvfet,Pogrubiony,Negrito,Полужирный,Fet,Kalın,Krepko,Lodia
+</span></span><span style="display:flex;"><span>WenQuanYi Zen Hei Mono,文泉驛等寬正黑,文泉驿等宽正黑:style<span style="color:#f92672">=</span>Regular
+</span></span><span style="display:flex;"><span>AR PL UMing TW MBE:style<span style="color:#f92672">=</span>Light
+</span></span><span style="display:flex;"><span>WenQuanYi Zen Hei Sharp,文泉驛點陣正黑,文泉驿点阵正黑:style<span style="color:#f92672">=</span>Regular
+</span></span></code></pre></div>
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev"><a href="../../blog/dash-bio/">基于 Dash Bio 的生物信息学数据可视化</a><br/>&larr;</span>
+  <span class="nav-next"><a href="../../blog/pixel-dpi-ppi/">SCI 投稿中像素、DPI、图片分辨率的一些知识</a><br/>&rarr;</span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/blog\/dash-bio\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/blog\/pixel-dpi-ppi\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script async src="https://ics.weiyan.cc//js/fix-toc.js"></script>
+<script async src="https://ics.weiyan.cc//js/center-img.js"></script>
+<script async src="https://ics.weiyan.cc//js/right-quote.js"></script>
+<script async src="https://ics.weiyan.cc//js/fix-footnote.js"></script>
+<script async src="https://ics.weiyan.cc//js/math-code.js"></script>
+<script async src="https://ics.weiyan.cc//js/external-link.js"></script>
+<script async src="https://ics.weiyan.cc//js/alt-title.js"></script>
+<script async src="https://ics.weiyan.cc//js/header-link.js"></script>
+<script async src="https://ics.weiyan.cc//js/dom-scripts.js"></script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+
+
+  
+
+  <div class="copyright">
+      <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+
+  
+      <br/><br/><a href=''><img src='https://img.shields.io/badge/MkDocs--Material-知识花园-blueviolet'></a> <a href=''><img src='https://img.shields.io/badge/微信公众号-BioIT爱好者-important'></a> <a href='https://github.com/PagesX'><img src='https://img.shields.io/badge/GitHub-PagesX-blue'></a> <a href='https://github.com/bioitee'><img src='https://img.shields.io/badge/GitHub-BioITee-green'></a>
+  
+
+  
+       
+      <br/><br/>© Powered by <a href="https://github.com/shenweiyan/ICS-Hugo-Theme">ICS-Hugo-Theme</a> and <a href="https://gohugo.io">Hugo</a> | <a href="https://github.com/bioitee/">Bio IT 爱好者</a> 2018 - 2025 | <a href="http://beian.miit.gov.cn/">粤ICP备16023717号</a><br/>
+  
+
+  </div>
+  
+
+  </footer>
+  </article>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  </body>
+</html>
+
