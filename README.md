@@ -16,3 +16,6 @@
 
 ![ics-hugo-theme about preview](https://raw.githubusercontent.com/shenweiyan/ICS-Hugo-Theme/main/static/img/ics-hugo-theme-about.jpg)
 
+
+
+<!-- Security scan triggered at 2025-09-02 14:24:01 -->
